@@ -16,6 +16,7 @@ export default function Page() {
 
       {/* Hero Section */}
       <div className="relative h-screen w-full">
+        
         {/* Background Image */}
         <Image
           src="/assests/images/banner.jpg"
@@ -49,6 +50,7 @@ export default function Page() {
 
         {/* Content */}
         <div className="relative flex items-center justify-between z-30 max-w-[1000px] mx-auto text-white">
+          
           {/* Left Text */}
       <div className="max-w-[380px] ml-0 font-sans mt-[170px]">
   {/* Badge */}
@@ -112,15 +114,17 @@ export default function Page() {
 
 
           {/* Right Image */}
-          <div>
-            <Image
-              src="/speaker.png"
-              alt="Speaker"
-              width={500}
-              height={600}
-              className="object-contain"
-            />
-          </div>
+         {/* Right Image */}
+<div className="relative ">
+  <Image
+    src=""
+    alt="Speaker"
+    width={500}
+    height={600}
+    className="object-contain mix-blend-screen opacity-80"
+  />
+</div>
+
         </div>
       </div>
 <Ticker />
