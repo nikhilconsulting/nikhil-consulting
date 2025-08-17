@@ -25,10 +25,27 @@ export default function Page() {
         />
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(22,34,69,0.81),rgba(122,137,187))] z-10"></div>
+       <div
+  className="absolute inset-0 z-10"
+ style={{
+  backgroundImage: `
+    linear-gradient(90deg, rgba(82,79,112,8.1) 0%, rgba(120,137,188,0.9) 50%, rgba(82,79,112,8.1) 100%)
+  `,
+}}
+
+></div>
+{/* Bottom Overlay Gradient */}
+<div
+  className="absolute inset-x-0 bottom-0 h-[500px] z-20"
+  style={{
+    backgroundImage: "linear-gradient(to bottom, transparent, #382933)",
+  }}
+></div>
+
+
 
         {/* Spotlight */}
-        <div className="absolute top-1/2 left-[70%] -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(175,209,250)_0%,transparent_70%)] z-20"></div>
+       {/* <div className="absolute top-1/2 left-[70%] -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-[radial-gradient(circle,#B3D6FA_0%,#9AB4E5_50%,transparent_70%)] z-20"></div> */}
 
         {/* Content */}
         <div className="relative flex items-center justify-between z-30 max-w-[1000px] mx-auto text-white">
