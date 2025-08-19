@@ -19,7 +19,7 @@ export default function Page() {
         
         {/* Background Image */}
         <Image
-          src="/assests/images/banner.jpg"
+          src="/assests/images/Banner1.jpg"
           alt="Background"
           fill
           className="object-cover z-0"
@@ -30,7 +30,7 @@ export default function Page() {
   className="absolute inset-0 z-10"
  style={{
   backgroundImage: `
-    linear-gradient(90deg, rgba(82,79,112,8.1) 0%, rgba(120,137,188,0.9) 50%, rgba(82,79,112,8.1) 100%)
+    linear-gradient(90deg, rgba(82,79,112,0.1) 0%, rgba(120,137,188,0.2) 70%, rgba(82,79,112,8.1) 100%)
   `,
 }}
 

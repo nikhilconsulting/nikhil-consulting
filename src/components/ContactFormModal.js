@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 export default function ContactFormModal({ showForm, setShowForm }) {
   const [name, setName] = useState("");
@@ -36,10 +38,6 @@ export default function ContactFormModal({ showForm, setShowForm }) {
     }
     if (hasWebsite === "Yes" && websiteName.trim() === "") {
       setError("Please enter your website name.");
-      return;
-    }
-    if (message.trim() === "") {
-      setError("Please enter your message.");
       return;
     }
 
@@ -102,7 +100,7 @@ export default function ContactFormModal({ showForm, setShowForm }) {
             <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
               <input
                 type="text"
-                placeholder="Your Name"
+                placeholder="Your Name  (Example: XYZ)"
                 required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -120,7 +118,7 @@ export default function ContactFormModal({ showForm, setShowForm }) {
 
               <input
                 type="email"
-                placeholder="Your Email"
+                placeholder="Your Email  (Example: xyz@gmail.com)"
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -136,26 +134,35 @@ export default function ContactFormModal({ showForm, setShowForm }) {
   }}
               />
 
-              <input
-                type="tel"
-                placeholder="Your Phone Number"
-                required
-                value={phone}
-                onChange={(e) =>
-                  setPhone(e.target.value.replace(/[^0-9]/g, ""))
-                }
-                className="text-white placeholder-white/40 bg-black/15 backdrop-blur-sm focus:outline-none p-2"
-                maxLength="10"
-                       style={{
+   <PhoneInput
+  country={"in"}
+  value={phone}
+  onChange={(phone) => setPhone(phone)}
+  containerClass="w-full"
+  inputClass="!w-full !bg-black/15 !text-white !pl-14 !h-11 
+    !focus:outline-none placeholder-white/40 backdrop-blur-sm 
+    !rounded-none !border-0"
+  buttonClass="!bg-transparent !border-none !flex !items-center
+    !h-11 w-10 justify-center hover:!bg-transparent focus:!bg-transparent active:!bg-transparent"
+  dropdownClass="!bg-black/90 !text-white !mt-65 !rounded-lg !shadow-lg 
+    [&_li:hover]:!bg-white/80 [&_li:hover]:!text-black 
+    [&_.highlight]:!bg-transparent [&_.highlight]:!text-white"
+  inputStyle={{
     borderBottom: `2px solid transparent`,
     backgroundImage:
       "linear-gradient(to right, rgba(255,255,255,0.3), rgba(255,255,255,0))",
     backgroundRepeat: "no-repeat",
-     backgroundSize: "100% 2px",
+    backgroundSize: "100% 2px",
     backgroundPosition: "left bottom",
-
   }}
-              />
+/>
+
+
+
+
+
+
+
 
               <div>
                 <label className="block mb-3 text-[#D3E9FD]">
@@ -201,7 +208,7 @@ export default function ContactFormModal({ showForm, setShowForm }) {
              {selected === "Yes" && (
         <input
           type="text"
-          placeholder="Enter website name"
+          placeholder="Enter website name  (Example: www.xyz.com)"
           value={website}
           onChange={(e) => setWebsite(e.target.value)}
           required={selected === "Yes"}
@@ -233,8 +240,6 @@ export default function ContactFormModal({ showForm, setShowForm }) {
 
   }}
               ></textarea>
-
-              {error && <p className="text-red-500 text-sm">{error}</p>}
 
               <button
                 type="submit"

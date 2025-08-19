@@ -6,13 +6,13 @@ export default function AboutSection() {
     <section
       className="relative h-screen text-white py-16 px-6 md:px-20 flex flex-col md:flex-row items-center md:items-start gap-10 overflow-hidden"
       style={{
-        backgroundImage: `url('/assests/images/banner2.png')`,
+        backgroundImage: `url('/assests/images/Landing Page 02 A.jpg')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
       {/* Dark diagonal gradient overlay - lighter on left */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#025EB8]/60  to-[#362D39]/100 z-0 "></div>
+      {/* <div className="absolute inset-0 bg-gradient-to-r from-[#025EB8]/60  to-[#362D39]/100 z-0 "></div> */}
 
       {/* Extra subtle overall dim layer (NEW strong overlay) */}
       <div className="absolute right-0 inset-0 bg-gradient-to-r from-[#362D39]/5  to-[#362D39]/100 z-0"></div>
@@ -22,13 +22,13 @@ export default function AboutSection() {
 
       {/* Left side - Image */}
       <div className="relative z-10 mt-40 w-full md:w-1/2 flex justify-center ml-40">
-        <Image
+        {/* <Image
           src="/profile.png"
           alt="Profile photo"
           width={420}
           height={420}
           className="relative z-10 rounded-lg"
-        />
+        /> */}
       </div>
 
       {/* Right side - Text */}
