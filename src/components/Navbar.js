@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import ContactFormModal from "./ContactFormModal"; // Import the new component
+import { Menu, X } from "lucide-react";
+
+import ContactFormModal from "./ContactFormModal";
 
 export default function GlassNavbar() {
   const [open, setOpen] = useState(false); // Mobile nav
@@ -19,16 +21,22 @@ export default function GlassNavbar() {
     <>
       <header className="fixed top-0 left-0 right-0 z-50 w-full">
         <nav
-          className="relative flex items-center justify-center text-[16px] w-full gap-4 bg-white/5 backdrop-blur-[20px] shadow-lg px-8 py-4"
+          className="relative flex items-center justify-between text-[16px] w-full gap-4 bg-white/5 backdrop-blur-[20px] shadow-lg px-8 py-4"
           aria-label="Main navigation"
         >
-          {/* Center Nav Items */}
-          <ul className="flex gap-16 list-none m-0 p-[10px] tracking-[2.1px]">
+          {/* Logo or Brand */}
+          <div className="text-white font-bold tracking-wide"></div>
+
+          {/* Desktop Nav Items (visible >= md ~ 768px) */}
+          <ul className="hidden md:flex gap-16 list-none m-0 p-[10px] tracking-[2.1px]">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="block py-2 text-white no-underline transition-colors duration-200 hover:text-gray-300"
+                  className="relative block py-2 text-white no-underline transition-colors duration-200 hover:text-gray-300
+             after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 
+             after:bg-gradient-to-r after:from-white after:to-transparent 
+             after:transition-all after:duration-300 hover:after:w-full"
                 >
                   {item.label}
                 </Link>
@@ -36,49 +44,75 @@ export default function GlassNavbar() {
             ))}
           </ul>
 
-          {/* Contact Us Button */}
-      <div className="absolute right-50">
-  <button
-    onClick={() => {
-      // 1. Footer tak smooth scroll
-      const footer = document.getElementById("contact-us");
-      if (footer) {
-        footer.scrollIntoView({ behavior: "smooth" });
-      }
+          {/* Contact Us Button (only desktop >= md) */}
+          <div className="hidden md:block">
+            <button
+              onClick={() => {
+                const footer = document.getElementById("contact-us");
+                if (footer) {
+                  footer.scrollIntoView({ behavior: "smooth" });
+                }
+                setTimeout(() => {
+                  setShowForm(true);
+                }, 100);
+              }}
+              className="px-6 py-2 text-white font-semibold cursor-pointer shadow-lg tracking-[1.9px] hover:opacity-90 transition-all duration-300"
+              style={{
+                background:
+                  "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
+              }}
+            >
+              Contact Us
+            </button>
+          </div>
 
-      // 2. Thoda delay ke baad modal open karo
-      setTimeout(() => {
-        setShowForm(true);
-      }, 100); // 600ms = scroll hone ka time
-    }}
-    className="px-6 py-2 text-white font-semibold cursor-pointer shadow-lg tracking-[1.9px] hover:opacity-90 transition-all duration-300"
-    style={{
-      background:
-        "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
-    }}
-  >
-    Contact Us
-  </button>
-</div>
-
-
+          {/* Hamburger Icon (only < md ~ below 768px) */}
+          <button
+            className="md:hidden text-white"
+            onClick={() => setOpen(!open)}
+          >
+            {open ? <X size={28} /> : <Menu size={28} />}
+          </button>
         </nav>
 
-        {/* Mobile Dropdown */}
+        {/* Mobile Dropdown (only < md) */}
         {open && (
-          <div className="mt-2 w-full bg-white/5 backdrop-blur-[20px] shadow-lg border-b border-white/20 px-8 py-2">
-            <ul className="list-none m-0 p-0">
+          <div className="md:hidden w-full bg-white/5 backdrop-blur-[20px] shadow-lg border-b border-white/20 px-8 py-4">
+            <ul className="list-none m-0 p-0 flex flex-col gap-4">
               {navItems.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    className="block py-3 text-white no-underline"
+                    className="block py-2 text-white no-underline"
                   >
                     {item.label}
                   </Link>
                 </li>
               ))}
+
+              {/* Contact Button in mobile menu */}
+              <li>
+                <button
+                  onClick={() => {
+                    const footer = document.getElementById("contact-us");
+                    if (footer) {
+                      footer.scrollIntoView({ behavior: "smooth" });
+                    }
+                    setTimeout(() => {
+                      setShowForm(true);
+                    }, 100);
+                    setOpen(false);
+                  }}
+                  className="w-full px-6 py-2 text-white font-semibold cursor-pointer shadow-lg tracking-[1.9px] hover:opacity-90 transition-all duration-300"
+                  style={{
+                    background:
+                      "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
+                  }}
+                >
+                  Contact Us
+                </button>
+              </li>
             </ul>
           </div>
         )}
