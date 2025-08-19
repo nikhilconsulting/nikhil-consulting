@@ -11,7 +11,7 @@ export default function GlassFooter() {
   }, []);
 
   return (
-    <footer className="px-6 py-12 text-center bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] text-white backdrop-blur-[15px] gap-4 text-lg">
+    <footer id="contact-us" className="px-6 py-12 text-center bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] text-white backdrop-blur-[15px] gap-4 text-lg">
       {/* Brand Section */}
       <div>
         <h2 className="text-[1.8rem] font-bold mb-4">Brand</h2>

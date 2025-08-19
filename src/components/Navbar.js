@@ -37,18 +37,31 @@ export default function GlassNavbar() {
           </ul>
 
           {/* Contact Us Button */}
-          <div className="absolute right-50">
-            <button
-              onClick={() => setShowForm(true)}
-              className="px-6 py-2 text-white font-semibold cursor-pointer shadow-lg tracking-[1.9px] hover:opacity-90 transition-all duration-300"
-              style={{
-                background:
-                  "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
-              }}
-            >
-              Contact Us
-            </button>
-          </div>
+      <div className="absolute right-50">
+  <button
+    onClick={() => {
+      // 1. Footer tak smooth scroll
+      const footer = document.getElementById("contact-us");
+      if (footer) {
+        footer.scrollIntoView({ behavior: "smooth" });
+      }
+
+      // 2. Thoda delay ke baad modal open karo
+      setTimeout(() => {
+        setShowForm(true);
+      }, 100); // 600ms = scroll hone ka time
+    }}
+    className="px-6 py-2 text-white font-semibold cursor-pointer shadow-lg tracking-[1.9px] hover:opacity-90 transition-all duration-300"
+    style={{
+      background:
+        "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
+    }}
+  >
+    Contact Us
+  </button>
+</div>
+
+
         </nav>
 
         {/* Mobile Dropdown */}

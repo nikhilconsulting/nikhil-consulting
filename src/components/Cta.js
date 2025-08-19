@@ -19,7 +19,7 @@ export default function CTASection() {
       {/* Button */}
       <button 
       onClick={() => setShowForm(true)}
-      className="mt-3 md:mt-0 flex items-center gap-2 bg-white text-gray-500 font-semibold py-2 px-6 mr-55 rounded shadow transition cursor-pointer">
+      className="mt-3 md:mt-0 flex items-center gap-2 bg-white text-black font-semibold py-2 px-6 mr-55 rounded shadow transition cursor-pointer">
         GET IN TOUCH
       </button>
 

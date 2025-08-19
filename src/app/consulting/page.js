@@ -44,6 +44,7 @@ export default function Page() {
 
 
 
+
         {/* Spotlight */}
        {/* <div className="absolute top-1/2 left-[70%] -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-[radial-gradient(circle,#B3D6FA_0%,#9AB4E5_50%,transparent_70%)] z-20"></div> */}
 

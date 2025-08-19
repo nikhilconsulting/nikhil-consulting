@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import PhoneInput from "react-phone-input-2";
+import { parsePhoneNumberFromString } from "libphonenumber-js";
 import "react-phone-input-2/lib/style.css";
 
 export default function ContactFormModal({ showForm, setShowForm }) {
@@ -17,46 +18,54 @@ export default function ContactFormModal({ showForm, setShowForm }) {
   const [open, setOpen] = useState(false);
   const options = ["No", "Yes"];
   const [website, setWebsite] = useState("");
+  const [lastCountry, setLastCountry] = useState("in"); // default
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setError("");
+const handleSubmit = (e) => {
+  e.preventDefault();
+  setError("");
 
-    if (name.trim() === "") {
-      setError("Please enter your name.");
-      return;
-    }
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (email.trim() === "" || !emailRegex.test(email)) {
-      setError("Please enter a valid email address.");
-      return;
-    }
-    const phoneRegex = /^[0-9]{10}$/;
-    if (!phoneRegex.test(phone)) {
-      setError("Please enter a valid 10-digit phone number.");
-      return;
-    }
-    if (hasWebsite === "Yes" && websiteName.trim() === "") {
-      setError("Please enter your website name.");
-      return;
-    }
+  if (name.trim() === "") {
+    setError("Please enter your name.");
+    return;
+  }
 
-    console.log("Form submitted successfully", {
-      name,
-      email,
-      phone,
-      hasWebsite,
-      websiteName,
-      message,
-    });
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (email.trim() === "" || !emailRegex.test(email)) {
+    setError("Please enter a valid email address.");
+    return;
+  }
 
-    setShowThankYou(true);
-  };
+  // ✅ Phone validation with libphonenumber-js
+  const phoneNumber = parsePhoneNumberFromString("+" + phone);
+
+  if (!phoneNumber || !phoneNumber.isValid()) {
+    setError("Please enter a valid phone number.");
+    return;
+  }
+
+  if (selected === "Yes" && website.trim() === "") {
+    setError("Please enter your website name.");
+    return;
+  }
+
+  console.log("Form submitted successfully ✅", {
+    name,
+    email,
+    phone: phoneNumber.formatInternational(), // nicely formatted number
+    website,
+    message,
+  });
+
+  setShowThankYou(true);
+};
+
+
 
   if (!showForm) return null;
 
   return (
-    <div className="fixed inset-0 bg-black/65 backdrop-blur-sm flex items-center justify-center z-[999]"onClick={() => setShowForm(false)} >
+  
+    <section  id="contact-us" className="fixed inset-0 bg-black/65 backdrop-blur-sm flex items-center justify-center z-[999]"onClick={() => setShowForm(false)} >
       <div className=" rounded-lg p-6 w-[600px] shadow-lg relative"
              style={{
     backgroundImage:
@@ -65,12 +74,13 @@ export default function ContactFormModal({ showForm, setShowForm }) {
 
   }}  onClick={(e) => e.stopPropagation()}>
         {/* Close Button */}
-        <button
-          onClick={() => setShowForm(false)}
-          className="absolute top-2 right-3 text-[#D3E9FD] px-3 py-1 rounded-lg cursor-pointer"
-        >
-          ✕
-        </button>
+       <button
+  onClick={() => setShowForm(false)}
+  className="absolute top-2 right-3 bg-red-600 text-white px-3 py-1 rounded-lg cursor-pointer border border-red-600 hover:bg-red-700 hover:border-red-700 transition"
+>
+  ✕
+</button>
+
 
         {/* Thank You State */}
         {showThankYou ? (
@@ -133,29 +143,46 @@ export default function ContactFormModal({ showForm, setShowForm }) {
 
   }}
               />
+<PhoneInput
+        country={lastCountry}
+        value={phone}
+        onChange={(value, country) => {
+          // ✅ agar user ne country change ki
+          if (country?.countryCode !== lastCountry) {
+            setLastCountry(country.countryCode); // naya country save karo
+            setPhone(""); // number reset karo
+          } else {
+            setPhone(value); // normal typing pe number set karo
+          }
+        }}
+        inputProps={{
+          required: true,
+          name: "phone",
+          autoComplete: "tel",
+          placeholder: "Your Phone Number",
+        }}
+        containerClass="w-full"
+        inputClass="!w-full !bg-black/15 !text-white !pl-14 !h-11 
+          !focus:outline-none placeholder-white/40 backdrop-blur-sm 
+          !rounded-none !border-0"
+        buttonClass="!bg-transparent !border-none !flex !items-center
+          !h-11 w-10 justify-center hover:!bg-transparent focus:!bg-transparent active:!bg-transparent"
+        dropdownClass="!bg-black/90 !text-white !mt-65 !rounded-sm !shadow-lg max-h-60 !w-138 overflow-y-auto
+          [&_li]:!px-3 [&_li]:!py-2
+          [&_li:hover]:!bg-white/80 [&_li:hover]:!text-black 
+          [&_li[aria-selected='true']]:!bg-white/20 [&_li[aria-selected='true']]:!text-white
+          !absolute !left-0"
+      />
 
-   <PhoneInput
-  country={"in"}
-  value={phone}
-  onChange={(phone) => setPhone(phone)}
-  containerClass="w-full"
-  inputClass="!w-full !bg-black/15 !text-white !pl-14 !h-11 
-    !focus:outline-none placeholder-white/40 backdrop-blur-sm 
-    !rounded-none !border-0"
-  buttonClass="!bg-transparent !border-none !flex !items-center
-    !h-11 w-10 justify-center hover:!bg-transparent focus:!bg-transparent active:!bg-transparent"
-  dropdownClass="!bg-black/90 !text-white !mt-65 !rounded-lg !shadow-lg 
-    [&_li:hover]:!bg-white/80 [&_li:hover]:!text-black 
-    [&_.highlight]:!bg-transparent [&_.highlight]:!text-white"
-  inputStyle={{
-    borderBottom: `2px solid transparent`,
-    backgroundImage:
-      "linear-gradient(to right, rgba(255,255,255,0.3), rgba(255,255,255,0))",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "100% 2px",
-    backgroundPosition: "left bottom",
-  }}
-/>
+{/* ✅ Error message */}
+{error && (
+  <p className="text-red-400 text-sm mt-1">{error}</p>
+)}
+
+
+
+
+
 
 
 
@@ -255,6 +282,7 @@ export default function ContactFormModal({ showForm, setShowForm }) {
           </>
         )}
       </div>
-    </div>
+    </section>
+    
   );
 }

@@ -120,7 +120,7 @@ Através da sua própria experiência de transformação, acabou acidentalmente 
         }
       `}</style>
      {/* Divider Wrapper so it's clearly below content */}
-<div className="relative z-20 pt-46">
+<div className="relative z-20 pt-54">
   <div
     className="h-[2px] w-full max-w-[1000px] mx-auto"
     style={{
