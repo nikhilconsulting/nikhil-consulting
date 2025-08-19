@@ -19,7 +19,7 @@ export default function Page() {
         
         {/* Background Image */}
         <Image
-          src="/assests/images/Banner1.jpg"
+          src="/assests/images/Landing Page 13.jpg"
           alt="Background"
           fill
           className="object-cover z-0"
