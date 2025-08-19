@@ -1,7 +1,6 @@
 
 import GlassFooter from "@/components/Footer";
 import GlassNavbar from "@/components/Navbar";
-import Ticker from "@/components/Ticker";
 import Image from "next/image";
 import Faqs from "@/components/Faqs";
 import AboutSection from "@/components/About";
@@ -127,7 +126,6 @@ export default function Page() {
 
         </div>
       </div>
-<Ticker />
 <TextImageSection />
 <Benefits />
 <AboutSection />
