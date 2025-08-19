@@ -19,14 +19,14 @@ export default function Page() {
         
         {/* Background Image */}
         <Image
-          src="/assests/images/Landing Page 13.jpg"
+          src="/assests/images/Landing Page 015.jpg"
           alt="Background"
           fill
           className="object-cover z-0"
         />
 
         {/* Overlay */}
-       <div
+       {/* <div
   className="absolute inset-0 z-10"
  style={{
   backgroundImage: `
@@ -34,10 +34,10 @@ export default function Page() {
   `,
 }}
 
-></div>
+></div> */}
 {/* Bottom Overlay Gradient */}
 <div
-  className="absolute inset-x-0 bottom-0 h-[500px] z-20"
+  className="absolute inset-x-0 bottom-0 h-[300px] z-20"
   style={{
     backgroundImage: "linear-gradient(to bottom, transparent, #382933)",
   }}
