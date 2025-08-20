@@ -20,7 +20,7 @@ export default function ContactFormModal({ showForm, setShowForm }) {
   const [website, setWebsite] = useState("");
   const [lastCountry, setLastCountry] = useState("in"); // default
 
-const handleSubmit = (e) => {
+const handleSubmit = async (e) => {
   e.preventDefault();
   setError("");
 
@@ -56,8 +56,34 @@ const handleSubmit = (e) => {
     message,
   });
 
-  setShowThankYou(true);
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name,
+        email,
+        phone: phoneNumber.formatInternational(),
+        website,
+        message,
+      }),
+    });
+
+    const data = await res.json();
+
+    if (res.ok) {
+      console.log("✅ Email sent:", data);
+      setShowThankYou(true);
+    } else {
+      console.error("❌ API error:", data);
+      setError(data.error || "Something went wrong. Please try again.");
+    }
+  } catch (err) {
+    console.error("❌ Network error:", err);
+    setError("Failed to send message. Please try again later.");
+  }
 };
+
 
 
 
