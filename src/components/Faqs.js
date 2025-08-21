@@ -35,84 +35,78 @@ export default function DigitalMarketingFAQs() {
 
   return (
     <>
-      
-    <div
-  className="h-screen flex flex-col justify-start items-center px-6 pt-20"
-  style={{
-    background: "linear-gradient(to bottom, #382933, #372935, #372831)",
-  }}
->
+      <div
+        className="min-h-screen flex flex-col justify-start items-center px-4 sm:px-6 md:px-8 lg:px-20 pt-16 sm:pt-20"
+        style={{
+          background: "linear-gradient(to bottom, #382933, #372935, #372831)",
+        }}
+      >
+        {/* Constrain the FAQ container width for large screens */}
+        <div className="w-full max-w-4xl p-4 md:p-8">
+          <h2 className="text-center text-2xl sm:text-2xl md:text-2xl lg:text-2xl font-bold text-[#D3E9FD] mb-12 sm:mb-12 md:mb-16">
+            Perguntas Frequentes sobre Marketing Digital
+          </h2>
 
-      <div className="max-w-4xl w-full p-8">
-        
-      
-
-        <h2 className="text-center text-2xl font-bold text-[#D3E9FD] mb-16">
-          Perguntas Frequentes sobre Marketing Digital
-        </h2>
-
-        <div className="space-y-4 ">
-          {faqs.map((faq, idx) => (
-            <div
-              key={idx}
-              className="overflow-hidden  backdrop-blur-md shadow-lg hover:scale-[1.01] transition-transform duration-300"
-              style={{
-                background:
-                  "linear-gradient(to right, rgba(55,42,51,0.6), rgba(58,45,56,0.6), rgba(59,48,60,0.6), rgba(62,51,66,0.6))",
-              }}
-            >
-              {/* Question */}
-              <button
-                onClick={() =>
-                  setOpenIndex(openIndex === idx ? null : idx)
-                }
-                className="w-full flex justify-between items-center p-4 cursor-pointer"
+          <div className="space-y-4">
+            {faqs.map((faq, idx) => (
+              <div
+                key={idx}
+                className="overflow-hidden backdrop-blur-md shadow-lg hover:scale-[1.01] transition-transform duration-300 rounded-lg"
                 style={{
-                  borderBottom: `2px solid transparent`,
-                  backgroundImage:
-                    "linear-gradient(to right, rgba(255,255,255,0.3), rgba(255,255,255,0))",
-                  backgroundRepeat: "no-repeat",
-                  backgroundSize: "100% 2px",
-                  backgroundPosition: "left bottom",
+                  background:
+                    "linear-gradient(to right, rgba(55,42,51,0.6), rgba(58,45,56,0.6), rgba(59,48,60,0.6), rgba(62,51,66,0.6))",
                 }}
               >
-                <span className="text-left font-medium text-gray-100">
-                  {faq.question}
-                </span>
-                <ChevronDownIcon
-                  className={`h-5 w-5 text-gray-300 transform transition-transform duration-300 ${
-                    openIndex === idx ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
+                {/* Question */}
+                <button
+                  onClick={() =>
+                    setOpenIndex(openIndex === idx ? null : idx)
+                  }
+                  className="w-full flex justify-between items-center p-3 sm:p-4 cursor-pointer"
+                  style={{
+                    borderBottom: `2px solid transparent`,
+                    backgroundImage:
+                      "linear-gradient(to right, rgba(255,255,255,0.3), rgba(255,255,255,0))",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "100% 2px",
+                    backgroundPosition: "left bottom",
+                  }}
+                >
+                  <span className="text-left font-medium text-gray-100 text-sm sm:text-base md:text-lg lg:text-lg">
+                    {faq.question}
+                  </span>
+                  <ChevronDownIcon
+                    className={`h-4 w-4 sm:h-5 sm:w-5 text-gray-300 transform transition-transform duration-300 ${
+                      openIndex === idx ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
 
-              {/* Smooth animated answer */}
-              <div
-                className={`grid transition-all duration-500 ease-in-out ${
-                  openIndex === idx
-                    ? "grid-rows-[1fr] opacity-100"
-                    : "grid-rows-[0fr] opacity-0"
-                }`}
-              >
-                <div className="overflow-hidden">
-                  <p
-                    className="p-4 text-gray-300"
-                    style={{
-                      background:
-                        "linear-gradient(to right, rgba(55,42,51,0.4), rgba(58,45,56,0.4), rgba(59,48,60,0.4), rgba(62,51,66,0.4))",
-                    }}
-                  >
-                    {faq.answer}
-                  </p>
+                {/* Smooth animated answer */}
+                <div
+                  className={`grid transition-all duration-500 ease-in-out ${
+                    openIndex === idx
+                      ? "grid-rows-[1fr] opacity-100"
+                      : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <p
+                      className="p-3 sm:p-4 text-gray-300 text-sm sm:text-base md:text-base lg:text-base"
+                      style={{
+                        background:
+                          "linear-gradient(to right, rgba(55,42,51,0.4), rgba(58,45,56,0.4), rgba(59,48,60,0.4), rgba(62,51,66,0.4))",
+                      }}
+                    >
+                      {faq.answer}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-
-       
       </div>
-    </div>
     </>
   );
 }
