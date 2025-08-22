@@ -72,7 +72,7 @@ const cards = [
         {/* Prev Button */}
         <button
           onClick={prevSlide}
-          className="p-3 rounded-full bg-gray-700/70 hover:bg-gray-600 transition absolute left-50 z-10 cursor-pointer"
+          className="p-3 rounded-full bg-gray-700/70 hover:bg-gray-600 transition hover:scale-105 absolute left-50 z-10 cursor-pointer"
           style={{
     background:
       "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
@@ -146,7 +146,7 @@ if (pos === 0) {
         {/* Next Button */}
       <button
   onClick={nextSlide}
-  className="p-3 rounded-full transition absolute right-4 z-10 cursor-pointer right-50"
+  className="p-3 rounded-full transition hover:scale-105 absolute right-4 z-10 cursor-pointer right-50"
   style={{
     background:
       "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",

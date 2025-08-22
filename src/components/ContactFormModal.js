@@ -102,7 +102,7 @@ const handleSubmit = async (e) => {
         {/* Close Button */}
        <button
   onClick={() => setShowForm(false)}
-  className="absolute top-2 right-3 bg-red-600 text-white px-3 py-1 rounded-lg cursor-pointer border border-red-600 hover:bg-red-700 hover:border-red-700 transition"
+  className="absolute top-2 right-3 bg-red-600 text-white px-3 py-1 transition hover:scale-105 cursor-pointer border border-red-600 hover:bg-red-700 hover:border-red-700 transition"
 >
   ✕
 </button>
@@ -131,7 +131,7 @@ const handleSubmit = async (e) => {
           </div>
         ) : (
           <>
-            <h2 className="text-2xl text-center font-bold mb-4 text-[#D3E9FD] ">Contact Us</h2>
+            <h2 className="text-2xl text-center font-bold mb-4 text-[#D3E9FD]  ">Contact Us</h2>
 
             <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
               <input
@@ -296,7 +296,7 @@ const handleSubmit = async (e) => {
 
               <button
                 type="submit"
-                className="px-4 py-2 text-white rounded-lg cursor-pointer"
+                className="px-4 py-2 text-white cursor-pointer transition hover:scale-105"
                 style={{
                   background:
                     "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",

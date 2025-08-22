@@ -8,6 +8,7 @@ import TextImageSection from "@/components/TextImageSection";
 import Benefits from "@/components/Benefits";
 import HeroSection from "@/components/HeroSection";
 import ServiceProcess from "@/components/ServiceProcess";
+import WhyChooseUs from "@/components/WhyChooseUs";
 export default function Page() {
   return (
     <>
@@ -15,6 +16,7 @@ export default function Page() {
       <HeroSection />
       <TextImageSection />  
       <Benefits />
+      <WhyChooseUs />
       <AboutSection />
       
       <ServiceProcess />      

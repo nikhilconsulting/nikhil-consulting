@@ -64,7 +64,7 @@ export default function GlassNavbar() {
                   setShowForm(true);
                 }, 100);
               }}
-              className="px-6 py-2 text-white font-semibold cursor-pointer shadow-lg tracking-[1.9px] hover:opacity-90 transition-all duration-300"
+              className="px-6 py-2 text-white font-semibold cursor-pointer shadow-lg tracking-[1.9px] hover:opacity-90 transition hover:scale-105"
               style={{
                 background:
                   "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
@@ -76,7 +76,7 @@ export default function GlassNavbar() {
 
           {/* Hamburger Icon (only < md ~ below 768px) */}
           <button
-            className="lg:hidden text-white"
+            className="lg:hidden text-white transition hover:scale-105"
             onClick={() => setOpen(!open)}
           >
             {open ? <X size={28} /> : <Menu size={28} />}
@@ -112,7 +112,7 @@ export default function GlassNavbar() {
                     }, 100);
                     setOpen(false);
                   }}
-                  className="w-full px-6 py-2 text-white font-semibold cursor-pointer shadow-lg tracking-[1.9px] hover:opacity-90 transition-all duration-300"
+                  className="w-full transition hover:scale-105 px-6 py-2 text-white font-semibold cursor-pointer tracking-[1.9px] "
                   style={{
                     background:
                       "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",

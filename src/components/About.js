@@ -59,7 +59,7 @@ export default function AboutSection() {
           <button
           onClick={() => setShowForm(true)}
             type="submit"
-            className="w-36 sm:w-40 px-4 mt-8 sm:mt-10 py-3 sm:py-4 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] 
+            className="w-36 transition hover:scale-105 sm:w-40 px-4 mt-8 sm:mt-10 py-3 sm:py-4 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] 
                        text-white font-medium text-[10px] sm:text-xs cursor-pointer tracking-[2px] sm:tracking-[2.5px] uppercase"
           >
             Know More 

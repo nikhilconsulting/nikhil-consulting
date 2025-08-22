@@ -135,7 +135,7 @@ const handleSubmit = async (e) => {
 
         <button
           type="submit"
-          className="px-3 mt-2 py-3 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] text-white font-semibold text-xs cursor-pointer tracking-[2.5px] uppercase"
+          className="px-3 transition hover:scale-105 mt-2 py-3 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] text-white font-semibold text-xs cursor-pointer tracking-[2.5px] uppercase"
         >
           Get Inquiry
         </button>

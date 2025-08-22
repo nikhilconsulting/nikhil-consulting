@@ -71,11 +71,11 @@ export default function GlassFooter() {
             Miami, FL 33160 <br />
             United States
           </p>
-          <a href="mailto:info@example.com" className="block mb-2 text-sm hover:underline">
-            ✉ info@example.com
+          <a href="mailto:rankinventiv@gmail.com" className="block mb-2 text-sm hover:underline">
+           rankinventiv@gmail.com
           </a>
-          <a href="tel:+00012345688" className="block mb-4 text-sm hover:underline">
-            📞 +000 (123) 456 88
+          <a href="tel:+91-9310962725" className="block mb-4 text-sm hover:underline">
+           +91-9310962725
           </a>
          
         </div>

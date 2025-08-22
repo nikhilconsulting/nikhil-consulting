@@ -74,7 +74,7 @@ export default function TextImageSection() {
           <div className="flex justify-center xl:justify-start">
             <button
             onClick={() => setShowForm(true)}
-             className="px-6 py-3 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] text-white font-semibold text-xs cursor-pointer tracking-[2.5px] uppercase"
+             className="px-6 transition hover:scale-105 py-3 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] text-white font-semibold text-xs cursor-pointer tracking-[2.5px] uppercase"
          style={{
                 background:
                   "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
