@@ -69,7 +69,7 @@ const handleSubmit = async (e) => {
               {/* Content */}
               <div className="relative flex flex-col md:flex-row items-center justify-between z-30 max-w-[1000px] mx-auto text-white px-4 md:px-0">
                 {/* Left Text */}
-                <div className="w-full md:max-w-[520px] mt-28 md:mt-[170px] text-center md:text-left md:ml-12">
+                <div className="w-full md:max-w-[520px] mt-28 md:mt-[170px] text-center md:text-left md:ml-12  ">
                   {/* Badge */}
                   <div className="mb-5">
                     <div className="inline-block bg-black/30 px-4 py-1 rounded-full text-xs tracking-wider text-white">
@@ -86,7 +86,7 @@ const handleSubmit = async (e) => {
                   </h1>
       
                   {/* Subtext */}
-                  <p className="text-[14px] sm:text-[18px] md:text-[19px] mb-5 text-white/75 leading-relaxed tracking-[0.2px]">
+                  <p className="text-lg mb-5 text-white/75 leading-relaxed tracking-[0.2px]">
                     Invest where it counts. Our expert consulting uses SEO, Local SEO, Google & Meta Ads to grow your visibility and attract real customers.
  {/* <span className="text-[#D3E9FD] font-bold">
                       liberdade financeira
@@ -95,11 +95,13 @@ const handleSubmit = async (e) => {
       
                   {/* Form */}
                    <form
+
         onSubmit={handleSubmit} 
         className="flex flex-col gap-2 max-w-md mx-auto md:mx-0"
       >
         <input
           type="text"
+          required
           placeholder="Enter Your Name"
           value={form.name}
           onChange={(e) => setForm({ ...form, name: e.target.value })}
@@ -115,6 +117,7 @@ const handleSubmit = async (e) => {
         />
 
         <input
+        required
           type="email"
           placeholder="Enter Your E-mail"
           value={form.email}

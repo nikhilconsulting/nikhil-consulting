@@ -5,29 +5,29 @@ import { useState } from "react";
 export default function DigitalMarketingFAQs() {
   const faqs = [
     {
-      question: "O que é marketing digital?",
+      question: "Why should I hire a consultant instead of doing digital marketing myself?",
       answer:
-        "Marketing digital é um conjunto de estratégias online usadas para promover produtos, serviços ou marcas por meio de canais digitais como redes sociais, e-mail marketing, SEO e anúncios pagos.",
+        "Doing it yourself can lead to mistakes, wasted money, and slow results. A consultant brings expertise, proven strategies, and a clear growth plan. You save time, reduce trial-and-error, and get faster, more reliable results.",
     },
     {
-      question: "Por que minha empresa precisa de marketing digital?",
+      question: "How does Digital Marketing Consulting help me save budget and grow my business?",
       answer:
-        "Com o marketing digital, sua empresa pode alcançar um público muito maior, segmentar clientes ideais e medir resultados com mais precisão do que no marketing tradicional.",
+        " Consulting gives you a clear strategy so you don’t waste money on random ads or wrong targeting. With expert guidance, your budget is used only on proven methods like SEO, Google Ads, Meta Ads, and Local SEO. This way you save cost while achieving measurable growth.",
     },
     {
-      question: "Quanto tempo leva para ter resultados?",
+      question: "How much should I spend on ads, and how will consulting help me?",
       answer:
-        "Os resultados variam de acordo com a estratégia, mas normalmente campanhas de tráfego pago mostram resultados rápidos, enquanto SEO e marketing de conteúdo exigem mais tempo e consistência.",
+        " Ad spend depends on your business type, target market, and goals. Some businesses grow with ₹5,000/month while others need more. As a consultant, I guide you on the right budget, design ad campaigns that reach the correct audience, and ensure you get maximum ROI from every rupee spent.",
     },
     {
-      question: "Marketing digital é caro?",
+      question: "Can consulting work for different people in different fields?",
       answer:
-        "Não necessariamente. É possível começar com orçamentos reduzidos e escalar gradualmente, conforme os resultados começam a aparecer.",
+        "Yes! Every business is unique, and consulting is customized. Whether you are in retail, services, education, healthcare, or startups — strategies are tailored to your industry, location, and customers. This ensures you get results that actually matter for your field.",
     },
     {
-      question: "Posso fazer marketing digital sozinho?",
+      question: " Is there any course available if I want to learn Digital Marketing?",
       answer:
-        "Sim, mas contar com especialistas pode acelerar resultados e evitar erros comuns que podem custar caro no longo prazo.",
+        " Yes, along with consulting, we also provide training and courses for students, entrepreneurs, and business owners. These cover SEO, Google Ads, Meta Ads, and Local SEO. With this, you not only grow your business but also gain the knowledge to manage marketing on your own.",
     },
   ];
 
@@ -43,14 +43,8 @@ export default function DigitalMarketingFAQs() {
       >
         {/* Constrain the FAQ container width for large screens */}
         <div className="w-full max-w-4xl p-4 md:p-8">
-          <h2
-  className="text-center text-2xl sm:text-2xl md:text-2xl lg:text-3xl font-bold mb-12 sm:mb-12 md:mb-16 bg-clip-text text-transparent"
-  style={{
-    backgroundImage:
-      "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
-  }}
->
-  Perguntas Frequentes sobre Marketing Digital
+          <h2 className="text-center text-2xl sm:text-2xl md:text-2xl lg:text-3xl font-bold mb-12 sm:mb-12 md:mb-16 bg-clip-text text-white">
+  FAQs 
 </h2>
 
 
@@ -79,7 +73,7 @@ export default function DigitalMarketingFAQs() {
                     backgroundPosition: "left bottom",
                   }}
                 >
-                  <span className="text-left font-medium text-gray-100 text-sm sm:text-base md:text-lg lg:text-lg">
+                  <span className="text-left font-medium text-gray-100 text-base sm:text-base md:text-base lg:text-base">
                     {faq.question}
                   </span>
                   <ChevronDownIcon
@@ -99,7 +93,7 @@ export default function DigitalMarketingFAQs() {
                 >
                   <div className="overflow-hidden">
                     <p
-                      className="p-3 sm:p-4 text-gray-300 text-sm sm:text-base md:text-base lg:text-base"
+                      className="p-3 sm:p-4 text-gray-300 text-base sm:text-base md:text-base lg:text-base"
                       style={{
                         background:
                           "linear-gradient(to right, rgba(55,42,51,0.4), rgba(58,45,56,0.4), rgba(59,48,60,0.4), rgba(62,51,66,0.4))",

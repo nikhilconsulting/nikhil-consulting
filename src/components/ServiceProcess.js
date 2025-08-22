@@ -1,4 +1,6 @@
 "use client";
+import { useState } from "react";
+import ContactFormModal from "./ContactFormModal";
 
 import { FaArrowRight } from "react-icons/fa";
 
@@ -6,23 +8,23 @@ export default function ProcessSection() {
   const steps = [
     {
       id: "01",
-      title: "Choose a Plan",
-      desc: "Select the flexible or premium plan that suits your business needs",
+      title: "Business & Market Audit",
+      desc: " We review your current marketing, competitors, and industry trends to find key gaps.",
     },
     {
       id: "02",
-      title: "Subscribe Instantly",
-      desc: "Activate your subscription with just a click – no forms, no hassle.",
+      title: "Data Analysis",
+      desc: " Your reports, ad spend, and performance metrics are analyzed to identify where money is being wasted.",
     },
     {
       id: "03",
-      title: "Get Tailored Solutions",
-      desc: "Receive personalized products & support for your operations.",
+      title: "Expert Assignment",
+      desc: "Based on your niche, we assign a consultant who understands your business and target audience.",
     },
     {
       id: "04",
-      title: "Receive Your Supplies",
-      desc: "Sit back as your chemicals are delivered on time, every time.",
+      title: " Consultant Session",
+      desc: " You get a personalized session with the expert, where we share insights, strategies, and a clear growth roadmap.",
     },
   ];
 
@@ -40,8 +42,9 @@ export default function ProcessSection() {
   // Card Inner Background (reusable)
   const cardBg =
     "linear-gradient(to bottom, rgba(56,41,51,0.9), rgba(55,41,53,0.9), rgba(55,40,49,0.9))";
-
+const [showForm, setShowForm] = useState(false);
   return (
+    <>
     <section
       className="w-full min-h-screen text-white flex flex-col justify-center py-16 px-4 sm:px-6 md:px-12 lg:px-20"
       style={{
@@ -152,13 +155,18 @@ className="mx-auto mt-6 h-[1px] w-32 sm:w-40 md:w-56 lg:w-64"
           </div>
 
           {/* Button */}
-          <button className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white text-[#0A1A3A] font-medium px-5 py-2 rounded-full hover:bg-gray-200 transition cursor-pointer">
+          <button onClick={() => setShowForm(true)} className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white text-[#fff] font-medium px-5 py-2 hover:bg-gray-200 transition cursor-pointer"
+              style={{
+                    background:
+                      "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
+                  }}>
             Start Now <FaArrowRight className="text-sm" />
           </button>
         </div>
       </div>
       
     </section>
-    
+    <ContactFormModal showForm={showForm} setShowForm={setShowForm} />
+    </>
   );
 }

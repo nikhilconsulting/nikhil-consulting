@@ -1,8 +1,14 @@
-// components/AboutSection.tsx
+"use client";
+import React from "react";
 import Image from "next/image";
+import { useState } from "react";
+import ContactFormModal from "./ContactFormModal";
+
 
 export default function AboutSection() {
+  const [showForm, setShowForm] = useState(false);
   return (
+    <>
     <section className="relative min-h-screen text-white py-12 px-4 sm:px-8 md:px-16 lg:px-20 flex flex-col xl:flex-row items-center xl:items-start gap-10 overflow-hidden">
       {/* Responsive Background Image */}
       <div className="absolute inset-0 -z-10">
@@ -39,54 +45,29 @@ export default function AboutSection() {
 
       {/* Right side - Text */}
       <div className="relative z-10 w-full xl:w-1/2 mt-10 xl:mt-20 flex flex-col justify-center text-justify px-2 sm:px-6 xl:ml-10 xl:mr-20">
-       <h2
-  className="text-2xl sm:text-3xl md:text-4xl font-bold text-center xl:text-left bg-clip-text text-transparent"
-  style={{
-    backgroundImage:
-      "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
-  }}
->
-  LUCIANO FERNANDES
+       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center xl:text-left bg-clip-text">
+  About US
 </h2>
 
-        <p className="mt-4 text-gray-300 leading-relaxed text-sm sm:text-base md:text-lg">
-          Médico Cirurgião Digestivo, largou a medicina no dia{" "}
-          <span className="font-semibold">10 de Setembro de 2018</span> e fundou o{" "}
-          <span className="font-semibold text-blue-400">
-            Grupo de Inteligência Financeira
-          </span>
-          , que já ajudou milhares de pessoas em todo o Brasil.
-        </p>
-        <p className="mt-4 text-gray-300 leading-relaxed text-sm sm:text-base md:text-lg">
-          Através da sua própria experiência de transformação, acabou
-          acidentalmente criando um{" "}
-          <span className="font-semibold text-blue-400">
-            método completamente novo
-          </span>
-          , que desenvolve a Inteligência Financeira de{" "}
-          <span className="underline">PESSOAS COMUNS</span> e,{" "}
-          <span className="underline">
-            de forma natural, as transforma em INVESTIDORES de sucesso
-          </span>
-          <br />
-          Através da sua própria experiência de transformação, acabou
-          acidentalmente criando um{" "}
-          Através da sua própria experiência de transformação, acabou
-          acidentalmente criando um{" "}
-          .
-        </p>
+        <p className="mt-4 text-gray-300 leading-relaxed text-base">
+        RankInventiv is a Noida-based Digital Marketing Agency with a strong presence in Varanasi. We work closely with startups, business owners, and founders to help them achieve real growth through SEO, Google Ads, Meta Ads, and website solutions. Our focus is on building strategies that save budget, avoid wasted efforts, and bring measurable results. </p>
+        <p className="mt-4 text-gray-300 leading-relaxed text-base">
+       What makes us different is our niche-based consulting approach. We assign expert consultants who understand your specific industry needs, ensuring you get reliable and targeted guidance. If you are spending high on marketing but not seeing results, simply share your reports with us. We analyse, find the root problem, and provide the right direction to improve ROI and long-term growth.  </p>
 
         {/* Button */}
         <div className="flex justify-center xl:justify-start items-center">
           <button
+          onClick={() => setShowForm(true)}
             type="submit"
             className="w-36 sm:w-40 px-4 mt-8 sm:mt-10 py-3 sm:py-4 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] 
-                       text-white font-medium text-[10px] sm:text-xs cursor-pointer tracking-[2px] sm:tracking-[2.5px] uppercase rounded-lg"
+                       text-white font-medium text-[10px] sm:text-xs cursor-pointer tracking-[2px] sm:tracking-[2.5px] uppercase"
           >
-            APERTE AQUI →
+            Know More 
           </button>
         </div>
       </div>
     </section>
+    <ContactFormModal showForm={showForm} setShowForm={setShowForm} />
+</>
   );
 }

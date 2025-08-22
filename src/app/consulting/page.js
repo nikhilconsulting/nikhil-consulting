@@ -13,17 +13,17 @@ export default function Page() {
     <>
       <GlassNavbar />
       <HeroSection />
-      <TextImageSection />
-      
+      <TextImageSection />  
+      <Benefits />
       <AboutSection />
-       <ServiceProcess /> 
+      
+      <ServiceProcess />      
+      
+      <Testimonials />
+
         <Faqs /> 
         <CTASection />
       <GlassFooter />
-
-     
-      {/* <Benefits /> */}
-      {/* <Testimonials /> */}
       
     </>
   );
