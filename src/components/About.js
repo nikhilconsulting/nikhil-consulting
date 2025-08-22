@@ -39,9 +39,16 @@ export default function AboutSection() {
 
       {/* Right side - Text */}
       <div className="relative z-10 w-full xl:w-1/2 mt-10 xl:mt-20 flex flex-col justify-center text-justify px-2 sm:px-6 xl:ml-10 xl:mr-20">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center xl:text-left">
-          LUCIANO FERNANDES
-        </h2>
+       <h2
+  className="text-2xl sm:text-3xl md:text-4xl font-bold text-center xl:text-left bg-clip-text text-transparent"
+  style={{
+    backgroundImage:
+      "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
+  }}
+>
+  LUCIANO FERNANDES
+</h2>
+
         <p className="mt-4 text-gray-300 leading-relaxed text-sm sm:text-base md:text-lg">
           Médico Cirurgião Digestivo, largou a medicina no dia{" "}
           <span className="font-semibold">10 de Setembro de 2018</span> e fundou o{" "}

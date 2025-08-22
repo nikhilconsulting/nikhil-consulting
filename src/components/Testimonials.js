@@ -14,7 +14,7 @@ export default function Testimonials() {
   return (
     <section
       id="clients-testimonials"
-      className="h-screen px-6 pt-25 text-white flex flex-col justify-between relative"
+      className="h-screen px-6 pt-25 text-white flex flex-col justify-between relative overflow-x-hidden"
       style={{
         background: "linear-gradient(to bottom, #382933, #372935, #372831)",
       }}

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState , useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 import ContactFormModal from "./ContactFormModal";
@@ -16,6 +16,14 @@ export default function GlassNavbar() {
     { href: "#clients-testimonials", label: "Clients Testimonials" },
     { href: "#faqs", label: "Faqs" },
   ];
+   // 👇 Auto-open form after 3 seconds on first visit
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowForm(true);
+    }, 3000); // 3 sec delay
+
+    return () => clearTimeout(timer); // cleanup
+  }, []);
 
   return (
     <>
@@ -28,7 +36,7 @@ export default function GlassNavbar() {
           <div className="text-white font-bold tracking-wide"></div>
 
           {/* Desktop Nav Items (visible >= md ~ 768px) */}
-          <ul className="hidden md:flex gap-16 list-none m-0 p-[10px] tracking-[2.1px]">
+          <ul className="hidden lg:flex gap-16 list-none m-0 p-[10px] tracking-[2.1px]">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link
@@ -45,7 +53,7 @@ export default function GlassNavbar() {
           </ul>
 
           {/* Contact Us Button (only desktop >= md) */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block mr-20">
             <button
               onClick={() => {
                 const footer = document.getElementById("contact-us");
@@ -68,7 +76,7 @@ export default function GlassNavbar() {
 
           {/* Hamburger Icon (only < md ~ below 768px) */}
           <button
-            className="md:hidden text-white"
+            className="lg:hidden text-white"
             onClick={() => setOpen(!open)}
           >
             {open ? <X size={28} /> : <Menu size={28} />}
@@ -77,7 +85,7 @@ export default function GlassNavbar() {
 
         {/* Mobile Dropdown (only < md) */}
         {open && (
-          <div className="md:hidden w-full bg-white/5 backdrop-blur-[20px] shadow-lg border-b border-white/20 px-8 py-4">
+          <div className="lg:hidden w-full bg-white/5 backdrop-blur-[20px] shadow-lg border-b border-white/20 px-8 py-4">
             <ul className="list-none m-0 p-0 flex flex-col gap-4">
               {navItems.map((item) => (
                 <li key={item.href}>

@@ -42,13 +42,20 @@ export default function TextImageSection() {
   </div>
 
   {/* Main Content */}
-  <div className="max-w-7xl mx-auto grid grid-cols-1 xl:grid-cols-2 gap-12 xl:gap-20 items-center relative z-10">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 xl:grid-cols-2 gap-12 xl:gap-20 items-center relative z-10 lg:mb-6 xl:mb-22">
 
     {/* Left Side - Text */}
     <div className="text-center xl:text-left px-2 sm:px-6 order-last xl:order-first">
-      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-        Your Catchy Heading Here
-      </h2>
+    <h2
+  className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl font-bold mb-6 leading-tight bg-clip-text text-transparent"
+  style={{
+    backgroundImage:
+      "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
+  }}
+>
+  Your Catchy Heading Here
+</h2>
+
       <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-8 leading-relaxed text-justify">
         LUCIANO FERNANDES Médico Cirurgião Digestivo, largou a medicina no dia
         10 de Setembro de 2018 e fundou o Grupo de Inteligência Financeira, que
@@ -130,15 +137,17 @@ export default function TextImageSection() {
   `}</style>
 
   {/* Divider */}
-  <div className="relative z-20 mt-20 sm:mt-28 md:mt-36 lg:mt-44">
-    <div
-      className="h-[2px] w-full max-w-[1000px] mx-auto"
-      style={{
-        background:
-          "linear-gradient(to right, rgba(211,233,253,0.3), rgba(211,233,253,0))",
-      }}
-    ></div>
-  </div>
+{/* Divider at section bottom */}
+<div className="absolute bottom-0 left-0 w-full z-20">
+  <div
+    className="h-[2px] w-full max-w-[1000px] mx-auto"
+    style={{
+      background:
+        "linear-gradient(to right, rgba(211,233,253,0.3), rgba(211,233,253,0))",
+    }}
+  ></div>
+</div>
+
 </section>
 
 

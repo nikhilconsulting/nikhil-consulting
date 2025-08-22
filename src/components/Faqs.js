@@ -43,9 +43,16 @@ export default function DigitalMarketingFAQs() {
       >
         {/* Constrain the FAQ container width for large screens */}
         <div className="w-full max-w-4xl p-4 md:p-8">
-          <h2 className="text-center text-2xl sm:text-2xl md:text-2xl lg:text-2xl font-bold text-[#D3E9FD] mb-12 sm:mb-12 md:mb-16">
-            Perguntas Frequentes sobre Marketing Digital
-          </h2>
+          <h2
+  className="text-center text-2xl sm:text-2xl md:text-2xl lg:text-3xl font-bold mb-12 sm:mb-12 md:mb-16 bg-clip-text text-transparent"
+  style={{
+    backgroundImage:
+      "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
+  }}
+>
+  Perguntas Frequentes sobre Marketing Digital
+</h2>
+
 
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
