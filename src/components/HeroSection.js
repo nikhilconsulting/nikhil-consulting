@@ -35,7 +35,7 @@ const handleSubmit = async (e) => {
   return (
     <>
        {/* Hero Section */}
-            <div className="relative h-screen w-full">
+            <section className="relative h-screen w-full"  style={{ fontFamily: "var(--font-poppins)" }}>
               {/* Background Image */}
               <Image
                 src="/assests/images/Landing Page 015.jpg"
@@ -67,7 +67,8 @@ const handleSubmit = async (e) => {
               {/* <div className="absolute top-1/2 left-[70%] -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-[radial-gradient(circle,#B3D6FA_0%,#9AB4E5_50%,transparent_70%)] z-20"></div> */}
       
               {/* Content */}
-              <div className="relative flex flex-col md:flex-row items-center justify-between z-30 max-w-[1000px] mx-auto text-white px-4 md:px-0">
+              <div className="relative flex flex-col md:flex-row items-center justify-between z-30 max-w-[1100px] mx-auto text-white px-4 md:px-0 pt-5  "
+             >
                 {/* Left Text */}
                 <div className="w-full md:max-w-[520px] mt-28 md:mt-[170px] text-center md:text-left md:ml-12  ">
                   {/* Badge */}
@@ -80,15 +81,14 @@ const handleSubmit = async (e) => {
                   </div>
       
                   {/* Heading */}
-                  <h1 className="text-[24px] sm:text-[32px] md:text-[36px] font-bold leading-tight mb-3 tracking-[-0.3px]">
-                    Smart Marketing Strategies for   <br className="hidden sm:block" />
+                  <h1 className=" mb-3 tracking-[-0.3px]">
+                   Targeted Digital Marketing Strategies for
                     Your Business
                   </h1>
       
                   {/* Subtext */}
                   <p className="text-lg mb-5 text-white/75 leading-relaxed tracking-[0.2px]">
-                    Invest where it counts. Our expert consulting uses SEO, Local SEO, Google & Meta Ads to grow your visibility and attract real customers.
- {/* <span className="text-[#D3E9FD] font-bold">
+                    Don’t waste your budget in the wrong place. Our Digital Marketing Consulting helps you invest smartly with SEO, Local SEO, Google Business Profile, Google Ads, and Meta Ads to boost online growth, visibility, and real customers. {/* <span className="text-[#D3E9FD] font-bold">
                       liberdade financeira
                     </span> */}
                   </p>
@@ -143,7 +143,7 @@ const handleSubmit = async (e) => {
       </form>
                 </div>
               </div>
-            </div>
+            </section>
     </>
   )
 }

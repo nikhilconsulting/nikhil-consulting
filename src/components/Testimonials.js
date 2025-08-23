@@ -3,59 +3,60 @@ import { Lock, FileText, MapPin, ChevronLeft, ChevronRight } from "lucide-react"
 
 export default function Testimonials() {
   const testimonials = [
-    { title: "TESTEMUNHO 1", name: "JOÃO SILVA", text: "Graças a este método, consegui organizar minhas finanças e alcançar meus primeiros investimentos de sucesso!", icon: Lock },
-    { title: "TESTEMUNHO 2", name: "MARIA OLIVEIRA", text: "Nunca pensei que seria possível investir com tão pouco dinheiro. Este curso mudou minha visão sobre finanças.", icon: FileText },
-    { title: "TESTEMUNHO 3", name: "CARLOS PEREIRA", text: "A clareza e simplicidade das aulas me ajudaram a criar um plano sólido para minha independência financeira.", icon: MapPin },
-    { title: "TESTEMUNHO 4", name: "ANA COSTA", text: "Finalmente consegui quitar minhas dívidas e começar a investir, algo que sempre achei impossível!", icon: Lock },
-    { title: "TESTEMUNHO 5", name: "PEDRO ALMEIDA", text: "A metodologia é simples e prática, facilitando meu caminho rumo à liberdade financeira.", icon: FileText },
-    { title: "TESTEMUNHO 6", name: "FERNANDA LIMA", text: "Nunca imaginei que pudesse organizar minha vida financeira com tanta clareza e confiança.", icon: MapPin },
-  ];
+    { title: "Testimonial 1", name: "RAHUL", text: "Graças a este método, consegui organizar minhas finanças e alcançar meus primeiros investimentos de sucesso!", icon: Lock },
+    { title: "Testimonial 2", name: "SOUMYA", text: "Nunca pensei que seria possível investir com tão pouco dinheiro. Este curso mudou minha visão sobre finanças.", icon: FileText },
+    { title: "Testimonial 3", name: "VISHAL", text: "A clareza e simplicidade das aulas me ajudaram a criar um plano sólido para minha independência financeira.", icon: MapPin },
+    { title: "Testimonial 4", name: "SARANSH", text: "Finalmente consegui quitar minhas dívidas e começar a investir, algo que sempre achei impossível!", icon: Lock },
+    ];
+     const prevSlide = () => {
+    setCurrent((prev) => (prev === 0 ? cards.length - 1 : prev - 1));
+  };
+
+  const nextSlide = () => {
+    setCurrent((prev) => (prev === cards.length - 1 ? 0 : prev + 1));
+  };
 
   return (
     <section
       id="clients-testimonials"
-      className="h-screen px-6 pt-25 text-white flex flex-col justify-between relative overflow-x-hidden"
+      className="h-screen px-6 pt-16 md:pt-20 text-white flex flex-col justify-between relative overflow-x-hidden"
       style={{
         background: "linear-gradient(to bottom, #382933, #372935, #372831)",
       }}
     >
       {/* Heading + Description */}
-      <div className="max-w-4xl mx-auto text-center mb-16">
+      <div className="max-w-4xl mx-auto text-center mb-8 md:mb-0">
         <span
-          className="text-4xl font-bold bg-clip-text text-transparent"
-          style={{
-            backgroundImage:
-              "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
-          }}
-        >
-          O que nossos alunos dizem
+          className="text-4xl font-bold bg-clip-text">
+         What Our Clients Say ?
+
         </span>
 
-        <p className="text-gray-300 text-lg mt-2">
-          Histórias reais de pessoas que transformaram sua vida financeira
-          através do nosso método.
+        <p className="text-gray-300 text-lg mt-6">
+          Stories of cost-saving, smarter strategies, and business growth through Consulting
+
         </p>
       </div>
 
       {/* Slider container */}
-      <div className="overflow-hidden max-w-4xl mx-auto relative">
-        <div
-          className="flex gap-6 animate-slide"
-          style={{
-            animation: "slide 20s linear infinite",
-          }}
-        >
-          {[...testimonials, ...testimonials].map((t, index) => {
-            const Icon = t.icon;
-            return (
-              <div
-                key={index}
-                className="flex-shrink-0 w-[calc(33.333%-1rem)] overflow-hidden backdrop-blur-md shadow-lg hover:scale-[1.01] transition-transform duration-300 rounded-xl p-6 relative"
-                style={{
-                  background:
-                    "linear-gradient(to right, rgba(55,42,51,0.6), rgba(58,45,56,0.6), rgba(59,48,60,0.6), rgba(62,51,66,0.6))",
-                }}
-              >
+      <div className="overflow-hidden max-w-3xl md:max-w-2xl mx-auto relative">
+       <div
+  className="flex gap-8 animate-slide"
+  style={{
+    animation: "slide 20s linear infinite",
+  }}
+>
+  {[...testimonials, ...testimonials].map((t, index) => {
+    const Icon = t.icon;
+    return (
+      <div
+        key={index}
+        className="flex-shrink-0 w-[calc(40%-0.75rem)] overflow-hidden backdrop-blur-md shadow-lg hover:scale-[1.01] transition-transform duration-300 rounded-xl p-6 relative"
+        style={{
+          background:
+            "linear-gradient(to right, rgba(55,42,51,0.6), rgba(58,45,56,0.6), rgba(59,48,60,0.6), rgba(62,51,66,0.6))",
+        }}
+      >
                 {/* Border */}
                 <div
                   className="absolute inset-0 rounded-xl pointer-events-none"
@@ -107,19 +108,35 @@ export default function Testimonials() {
         </div>
       </div>
 
-      {/* Prev Button (outside left) */}
-      <button className="absolute top-1/2 left-50 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 p-3 rounded-full shadow-md">
-        <ChevronLeft size={28} />
-      </button>
+       <div className="mt-8 md:mt-0 flex justify-center gap-6">
+  {/* Prev Button */}
+  <button
+    onClick={prevSlide}
+    className="p-4 rounded-full hover:scale-105 transition"
+    style={{
+      background:
+        "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
+    }}
+  >
+    <ChevronLeft size={28} />
+  </button>
 
-      {/* Next Button (outside right) */}
-      <button className="absolute top-1/2 right-50 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 p-3 rounded-full shadow-md">
-        <ChevronRight size={28} />
-      </button>
-
-      {/* Bottom divider */}
+  {/* Next Button */}
+  <button
+    onClick={nextSlide}
+    className="p-4 rounded-full hover:scale-105 transition"
+    style={{
+      background:
+        "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
+    }}
+  >
+    <ChevronRight size={28} color="white" />
+  </button>
+ 
+</div>
+{/* Bottom divider */}
       <div
-        className="mt-20 h-[2px] w-[1000px] mx-auto"
+        className="mt-10 md:mt-0 h-[2px] w-[1000px] mx-auto"
         style={{
           background:
             "linear-gradient(to right, rgba(211,233,253,0.3), rgba(211,233,253,0))",
