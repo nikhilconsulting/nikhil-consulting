@@ -54,7 +54,8 @@ const cards = [
   const getIndex = (index) => (index + cards.length) % cards.length;
 
   return (
-    <section className="relative w-full py-20 sm:py-24 min-h-screen text-white overflow-hidden " style={{
+    <>
+    <section className="relative w-full py-12 md:py-20 min-h-screen text-white overflow-hidden " style={{
     background: "linear-gradient(to bottom, #382933, #372935, #372831)",
   }}>
       {/* Title */}
@@ -169,10 +170,22 @@ if (pos === 0) {
   >
     <ChevronRight size={28} color="white" />
   </button>
+   {/* Divider */}
+<div className="absolute bottom-0 left-0 w-full z-20">
+  <div
+    className="h-[2px] w-full max-w-[1000px] mx-auto"
+    style={{
+      background:
+        "linear-gradient(to right, rgba(211,233,253,0.3), rgba(211,233,253,0))",
+    }}
+  ></div>
+</div>
 </div>
 
       
     
     </section>
+   
+</>
   );
 }
