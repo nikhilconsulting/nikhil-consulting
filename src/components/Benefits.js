@@ -55,11 +55,11 @@ const cards = [
 
   return (
     <>
-    <section className="relative w-full py-12 md:py-20 min-h-screen text-white overflow-hidden " style={{
+    <section className="relative w-full pt-16  min-h-screen text-white overflow-hidden" style={{
     background: "linear-gradient(to bottom, #382933, #372935, #372831)",
   }}>
       {/* Title */}
-      <h2 className="text-center text-3xl md:text-4xl font-bold mb-4 md:mb-16 ">
+      <h2 className="text-center text-3xl md:text-4xl font-bold mb-4 md:mb-16 mt-6 md:mt-0 ">
   Service {" "}
    Section
 </h2>
@@ -141,7 +141,7 @@ if (pos === 0) {
 
         </div>
 
-      {/* Buttons below carousel */}
+   
 
 
 
@@ -183,9 +183,7 @@ if (pos === 0) {
 </div>
 
       
-    
     </section>
-   
 </>
   );
 }
