@@ -59,7 +59,7 @@ const cards = [
     background: "linear-gradient(to bottom, #382933, #372935, #372831)",
   }}>
       {/* Title */}
-      <h2 className="text-center text-3xl md:text-4xl font-bold mb-4 md:mb-16 mt-6 md:mt-0 ">
+      <h2 className="text-center text-3xl md:text-4xl font-bold mb-4 md:mb-16 mt-14 md:mt-0 ">
   Service {" "}
    Section
 </h2>
