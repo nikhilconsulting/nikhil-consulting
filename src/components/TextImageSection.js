@@ -67,12 +67,12 @@ export default function TextImageSection() {
             {/* Added Major Problems List */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-8 max-w-3xl mx-auto">
               {[
-                "Wasted ad spend",
-                "Low online visibility",
-                "Outdated strategies",
-                "Competitors ahead",
-                "Wrong audience reach",
-                "No clear ROI",
+                "Wasted Ads Spend",
+                "Low Online Visibility",
+                "Outdated Strategies",
+                "Competitors Ahead",
+                "Wrong Audience Reach",
+                "No Clear ROI",
               ].map((point, index) => (
                 <div key={index} className="flex items-center gap-2">
                   {/* Number Circle */}

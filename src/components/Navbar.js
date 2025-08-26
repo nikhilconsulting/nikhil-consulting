@@ -42,7 +42,7 @@ useEffect(() => {
         >
 
           {/* Desktop Nav Items (visible >= md ~ 768px) */}
-          <ul className="hidden lg:flex flex-1 justify-end xl:mr-20 gap-16 list-none  p-[10px] tracking-[2.1px]">
+          <ul className="hidden lg:flex flex-1 justify-end xl:mr-20 gap-16 list-none text-base  p-[10px] tracking-[1.0px]">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link
@@ -70,7 +70,7 @@ useEffect(() => {
                   setShowForm(true);
                 }, 100);
               }}
-              className="px-6 py-2 text-white font-semibold cursor-pointer shadow-lg tracking-[1.9px] hover:opacity-90 transition hover:scale-105"
+              className="px-6 py-2 text-white font-semibold text-base cursor-pointer shadow-lg tracking-[1.0px] hover:opacity-90 transition hover:scale-105"
               style={{
                 background:
                   "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",

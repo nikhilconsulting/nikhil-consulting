@@ -72,8 +72,8 @@ const handleSubmit = async (e) => {
                 {/* Left Text */}
                 <div className="w-full md:max-w-[520px] mt-28 md:mt-[170px] text-center md:text-left md:ml-12  ">
                   {/* Badge */}
-                  <div className="mb-5">
-                    <div className="inline-block bg-black/30 px-4 py-1 rounded-full text-xs tracking-wider text-white">
+                  <div className="mb-2 ml-20">
+                    <div className="inline-block bg-black/30 px-4 py-1 rounded-full text-sm tracking-wider text-white">
                       Your   {" "}
                       <span className="text-[#5ec2f4] font-bold"> Digital Edge</span> in
                       Business
@@ -87,7 +87,7 @@ const handleSubmit = async (e) => {
                   </h1>
       
                   {/* Subtext */}
-                  <p className="text-lg mb-5 text-white/75 leading-relaxed tracking-[0.2px]">
+                  <p className="text-base mb-5 text-white/75 leading-relaxed tracking-[0.2px]">
                     Don’t waste your budget in the wrong place. Our Digital Marketing Consulting helps you invest smartly with SEO, Local SEO, Google Business Profile, Google Ads, and Meta Ads to boost online growth, visibility, and real customers. {/* <span className="text-[#D3E9FD] font-bold">
                       liberdade financeira
                     </span> */}
@@ -135,7 +135,7 @@ const handleSubmit = async (e) => {
 
         <button
           type="submit"
-          className="px-3 transition hover:scale-105 mt-2 py-3 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] text-white font-semibold text-xs cursor-pointer tracking-[2.5px] uppercase"
+          className="px-3 transition hover:scale-105 mt-2 py-3 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] text-white font-semibold text-base cursor-pointer tracking-[1.5px] uppercase"
         >
           Book a free consultation
         </button>
