@@ -21,7 +21,7 @@ export default function WhyChooseUs() {
         <div className="grid grid-cols-1 xl:grid-cols-2 items-center ">
           {/* Right - Image */}
           <div className="flex justify-center md:justify-center lg:mb-4 ">
-            <div className="w-full max-w-sm md:max-w-md lg:max-w-lg overflow-hidden shadow-lg h-[300px] lg:h-[520px]">
+            <div className="w-full max-w-sm md:max-w-md lg:max-w-lg overflow-hidden shadow-lg h-[300px] lg:h-[480px]">
               <img
                 src="/assests/images/WhyChooseUs.jpg"
                 alt="Our Team"
