@@ -1,3 +1,4 @@
+"use client";
 import GlassFooter from "@/components/Footer";
 import GlassNavbar from "@/components/Navbar";
 import Faqs from "@/components/Faqs";

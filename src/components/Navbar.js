@@ -10,12 +10,13 @@ export default function GlassNavbar() {
   const [open, setOpen] = useState(false); // Mobile nav
   const [showForm, setShowForm] = useState(false); // Modal
 
-  const navItems = [
-    { href: "", label: "Home" },
-    { href: "", label: "About Us" },
-    { href: "", label: "Company" },
-    { href: "", label: "Contact" },
-  ];
+const navItems = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About Us" },
+  { href: "/company", label: "Company" },
+  { href: "/#contact-us", label: "Contact" },
+];
+
    // 👇 Auto-open form after 3 seconds on first visit
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -24,10 +25,13 @@ export default function GlassNavbar() {
 
     return () => clearTimeout(timer); // cleanup
   }, []);
-const footer = document.getElementById("contact-us");
-if (footer) {
-  footer.scrollIntoView({ behavior: "smooth" });
-}
+useEffect(() => {
+  const footer = document.getElementById("contact-us");
+  if (footer) {
+    footer.scrollIntoView({ behavior: "smooth" });
+  }
+}, []);
+
 
   return (
     <>
@@ -90,16 +94,11 @@ if (footer) {
           <div className="lg:hidden w-full bg-white/5 backdrop-blur-[20px] shadow-lg border-b border-white/20 px-8 py-4">
             <ul className="list-none m-0 p-0 flex flex-col gap-4">
               {navItems.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                    className="block py-2 text-white no-underline"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
+  <li key={item.href || item.label}>
+    <Link href={item.href}>{item.label}</Link>
+  </li>
+))}
+
 
               {/* Contact Button in mobile menu */}
               <li>
