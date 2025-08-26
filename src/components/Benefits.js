@@ -1,9 +1,35 @@
 "use client";
-import { useState } from "react";
+import { useState , useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
+import ContactFormModal from "./ContactFormModal";
 
 export default function Benefits() {
+   const [showForm, setShowForm] = useState(false);
+  useEffect(() => {
+  let interval;
+
+  const handleResize = () => {
+    if (window.innerWidth < 640 && !interval) {
+      interval = setInterval(() => {
+        nextSlide();
+      }, 2000);
+    } else if (window.innerWidth >= 640 && interval) {
+      clearInterval(interval);
+      interval = null;
+    }
+  };
+
+  handleResize(); // Run once on mount
+
+  window.addEventListener("resize", handleResize);
+
+  return () => {
+    if (interval) clearInterval(interval);
+    window.removeEventListener("resize", handleResize);
+  };
+}, []);
+
   
 const cards = [
   {
@@ -55,13 +81,12 @@ const cards = [
 
   return (
     <>
-    <section className="relative w-full pt-16 min-h-screen text-white overflow-hidden" style={{
+    <section className="relative w-full pt-20 h-screen text-white overflow-hidden" style={{
     background: "linear-gradient(to bottom, #382933, #372935, #372831)",
   }}>
       {/* Title */}
       <h2 className="text-center text-3xl md:text-4xl font-bold mb-4 md:mb-16 ">
-  Service {" "}
-   Section
+  Consultant Expertise You Can Rely On 
 </h2>
 
 
@@ -146,11 +171,25 @@ if (pos === 0) {
 
 
       </div>
-       <div className="mt-6 md:mt-18 flex justify-center gap-6">
-  {/* Prev Button */}
+      <div className="mt-8 flex justify-center">
+  <button
+    onClick={() => setShowForm(true)}
+    className="px-6 py-3 lg:mt-8 text-lg font-semibold shadow-md transition-transform transform hover:scale-105 cursor-pointer"
+    style={{
+      background:
+        "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
+      color: "#fff",
+    }}
+  >
+    Claim Your Free Audit
+  </button>
+</div>
+
+    {/* Prev Button - hidden on small screens, positioned left */}
+<div className="hidden sm:flex absolute left-40 top-1/2 transform -translate-y-1/2 z-40">
   <button
     onClick={prevSlide}
-    className="p-4 rounded-full hover:scale-105 transition"
+    className="p-4 rounded-full hover:scale-105 transition cursor-pointer"
     style={{
       background:
         "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
@@ -158,11 +197,13 @@ if (pos === 0) {
   >
     <ChevronLeft size={28} />
   </button>
+</div>
 
-  {/* Next Button */}
+{/* Next Button - hidden on small screens, positioned right */}
+<div className="hidden sm:flex absolute right-40 top-1/2 transform -translate-y-1/2 z-40">
   <button
     onClick={nextSlide}
-    className="p-4 rounded-full hover:scale-105 transition"
+    className="p-4 rounded-full hover:scale-105 transition cursor-pointer"
     style={{
       background:
         "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
@@ -170,7 +211,8 @@ if (pos === 0) {
   >
     <ChevronRight size={28} color="white" />
   </button>
-   {/* Divider */}
+</div>
+
 <div className="absolute bottom-0 left-0 w-full z-20">
   <div
     className="h-[2px] w-full max-w-[1000px] mx-auto"
@@ -180,10 +222,9 @@ if (pos === 0) {
     }}
   ></div>
 </div>
-</div>
-
       
     </section>
+     <ContactFormModal showForm={showForm} setShowForm={setShowForm} />
 </>
   );
 }

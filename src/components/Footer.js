@@ -7,6 +7,8 @@ import {
   FaTwitter,
   FaYoutube,
   FaWhatsapp,
+  FaPhone,
+  FaEnvelope
 } from "react-icons/fa";
 
 export default function GlassFooter() {
@@ -19,18 +21,66 @@ export default function GlassFooter() {
   }, []);
 
   return (
-    <footer className="px-6 py-12 text-white bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px]">
+    <footer id="contact-us" className=" py-12 text-white bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px]">
       {/* Top Section */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1.5fr] gap-16">
+    <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-y-10 gap-x-6">
+
         {/* Left: Brand */}
-        <div>
-          <h2 className="text-2xl font-bold mb-4">DESIGNRUSH</h2>
-          <p className="text-sm leading-relaxed text-gray-100">
-            DesignRush is the premier agency directory, awards platform, and
-            media hub connecting brands with top agencies in software, app
-            development, design, and marketing. We deliver vetted reviews,
-            insights, and trends to drive business growth.
+        <div className="xl:col-span-2 xl:mr-4">
+          <p className="text-base leading-relaxed text-gray-100">
+           At RankInventiv, we connect your business with the right experts—whether in digital marketing, tech, or ads. Our goal is simple: help you grow smarter, save budget, and achieve maximum ROI with strategies customized just for you.
           </p>
+          {/* Embedded Google Map */}
+  <div className="mt-4 overflow-hidden">
+    <iframe
+      title="RankInventiv Location"
+      src="https://www.google.com/maps?q=2nd%20Floor,%20Lahurabir%20Rd,%20Jagatganj,%20Near%20Sanskrit%20University,%20Varanasi,%20Uttar%20Pradesh%20221002&output=embed"
+      width="100%"
+      height="180"
+      style={{ border: 0 }}
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+        </div>
+        
+
+        {/* Middle Left: For Businesses */}
+        <div className="xl:ml-1">
+          <h3 className="font-semibold mb-4 text-lg ">For Businesses</h3>
+          <ul className="space-y-2 text-base">
+            <li><a href="#" className="hover:underline">Talk With SEO Expert</a></li>
+            <li><a href="#" className="hover:underline">Talk With Ads Specialist</a></li>
+            <li><a href="#" className="hover:underline">Talk With Branding Expert</a></li>
+            <li><a href="#" className="hover:underline">Talk With Social Media Expert</a></li>
+             <li><a href="#" className="hover:underline">Talk With Tech Expert</a></li>
+          </ul>
+        </div>
+
+        {/* Middle Right: For Agencies */}
+        <div className="xl:ml-10">
+          <h3 className="font-semibold mb-4 text-lg ">Quick Links</h3>
+          <ul className="space-y-2 text-base">
+            <li><a href="#" className="hover:underline">Home</a></li>
+            <li><a href="#" className="hover:underline">About Us</a></li>
+            <li><a href="#" className="hover:underline">Company</a></li>
+            <li><a href="#" className="hover:underline">Contact</a></li>
+          </ul>
+        </div>
+
+        {/* Right: Contact */}
+        <div>
+          <h3 className="font-semibold mb-4 text-lg">Get in Touch</h3>
+          <p className="text-base mb-3 leading-relaxed">
+            2nd Floor, Lahurabir Rd, Jagatganj, Near Sanskrit University, Varanasi, Uttar Pradesh 221002
+          </p>
+          <a href="mailto:rankinventiv@gmail.com" className="flex items-center gap-2 mb-2 text-base hover:underline">
+  <FaEnvelope /> rankinventiv@gmail.com
+</a>
+<a href="tel:+91-9310962725" className="flex items-center gap-2 mb-4 text-base hover:underline">
+  <FaPhone /> +91-9310962725
+</a>
            <div className="flex gap-4 mt-4  text-2xl md:text-3xl">
             <FaLinkedin className="cursor-pointer hover:scale-110 transition" />
             <FaInstagram className="cursor-pointer hover:scale-110 transition" />
@@ -38,46 +88,6 @@ export default function GlassFooter() {
             <FaTwitter className="cursor-pointer hover:scale-110 transition" />
             <FaWhatsapp className="cursor-pointer hover:scale-110 transition" />
           </div>
-        </div>
-        
-
-        {/* Middle Left: For Businesses */}
-        <div>
-          <h3 className="font-semibold mb-4 text-lg ">For Businesses</h3>
-          <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:underline">Agencies Categories</a></li>
-            <li><a href="#" className="hover:underline">Agency Ranking Methodology</a></li>
-            <li><a href="#" className="hover:underline">Trends Articles</a></li>
-            <li><a href="#" className="hover:underline">FAQs</a></li>
-          </ul>
-        </div>
-
-        {/* Middle Right: For Agencies */}
-        <div>
-          <h3 className="font-semibold mb-4 text-lg">For Agencies</h3>
-          <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:underline">Benefits Of Listing With Us</a></li>
-            <li><a href="#" className="hover:underline">Submit An Agency</a></li>
-            <li><a href="#" className="hover:underline">Sponsorship</a></li>
-            <li><a href="#" className="hover:underline">All Agencies</a></li>
-          </ul>
-        </div>
-
-        {/* Right: Contact */}
-        <div>
-          <h3 className="font-semibold mb-4 text-lg">Get in Touch</h3>
-          <p className="text-sm mb-3 leading-relaxed">
-            18117 Biscayne Blvd <br />
-            Miami, FL 33160 <br />
-            United States
-          </p>
-          <a href="mailto:rankinventiv@gmail.com" className="block mb-2 text-sm hover:underline">
-           rankinventiv@gmail.com
-          </a>
-          <a href="tel:+91-9310962725" className="block mb-4 text-sm hover:underline">
-           +91-9310962725
-          </a>
-         
         </div>
       </div>
 

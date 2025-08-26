@@ -36,19 +36,20 @@ export default function DigitalMarketingFAQs() {
   return (
     <>
       <div
-        className="min-h-screen flex flex-col justify-start items-center px-4 sm:px-6 md:px-8 lg:px-20 pt-16 sm:pt-20"
+        className="relative h-screen flex flex-col justify-start items-center px-4 sm:px-6 md:px-8 lg:px-20 sm:pt-20"
         style={{
           background: "linear-gradient(to bottom, #382933, #372935, #372831)",
         }}
       >
-        {/* Constrain the FAQ container width for large screens */}
-        <div className="w-full max-w-4xl p-4 md:p-8">
-          <h2 className="text-center text-2xl sm:text-2xl md:text-2xl lg:text-3xl font-bold mb-12 sm:mb-12 md:mb-16 bg-clip-text text-white">
+          <span className="flex justify-center  text-2xl sm:text-2xl md:text-2xl lg:text-5xl font-bold mb-2 sm:mb-12 md:mb-4 bg-clip-text text-white">
   FAQs 
-</h2>
+</span>
+        {/* Constrain the FAQ container width for large screens */}
+        <div className="w-full max-w-4xl p-4 md:p-10 ">
+        
 
 
-          <div className="space-y-4">
+          <div className="space-y-6 ">
             {faqs.map((faq, idx) => (
               <div
                 key={idx}

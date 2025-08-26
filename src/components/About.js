@@ -13,7 +13,7 @@ export default function AboutSection() {
       {/* Responsive Background Image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/assests/images/Landing Page 02 A.jpg"
+          src="/assests/images/why us (2).jpg"
           alt="Background"
           fill
           sizes="100vw"
@@ -66,6 +66,7 @@ export default function AboutSection() {
           </button>
         </div>
       </div>
+      
     </section>
     <ContactFormModal showForm={showForm} setShowForm={setShowForm} />
 </>

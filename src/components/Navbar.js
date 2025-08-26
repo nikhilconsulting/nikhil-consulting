@@ -11,10 +11,10 @@ export default function GlassNavbar() {
   const [showForm, setShowForm] = useState(false); // Modal
 
   const navItems = [
-    { href: "#our-values", label: "Our Values" },
-    { href: "#why-choose-us", label: "Why Choose Us" },
-    { href: "#clients-testimonials", label: "Clients Testimonials" },
-    { href: "#faqs", label: "Faqs" },
+    { href: "", label: "Home" },
+    { href: "", label: "About Us" },
+    { href: "", label: "Company" },
+    { href: "", label: "Contact" },
   ];
    // 👇 Auto-open form after 3 seconds on first visit
   useEffect(() => {
@@ -24,6 +24,10 @@ export default function GlassNavbar() {
 
     return () => clearTimeout(timer); // cleanup
   }, []);
+const footer = document.getElementById("contact-us");
+if (footer) {
+  footer.scrollIntoView({ behavior: "smooth" });
+}
 
   return (
     <>
@@ -32,11 +36,9 @@ export default function GlassNavbar() {
           className="relative flex items-center justify-between text-[16px] w-full gap-4 bg-white/5 backdrop-blur-[20px] shadow-lg px-8 py-4"
           aria-label="Main navigation"
         >
-          {/* Logo or Brand */}
-          <div className="text-white font-bold tracking-wide"></div>
 
           {/* Desktop Nav Items (visible >= md ~ 768px) */}
-          <ul className="hidden lg:flex gap-16 list-none m-0 p-[10px] tracking-[2.1px]">
+          <ul className="hidden lg:flex flex-1 justify-end xl:mr-20 gap-16 list-none  p-[10px] tracking-[2.1px]">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link
@@ -70,7 +72,7 @@ export default function GlassNavbar() {
                   "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
               }}
             >
-              Contact Us
+              Book Consulting
             </button>
           </div>
 

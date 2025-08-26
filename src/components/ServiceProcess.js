@@ -9,22 +9,22 @@ export default function ProcessSection() {
     {
       id: "01",
       title: "Business & Market Audit",
-      desc: " We review your current marketing, competitors, and industry trends to find key gaps.",
+      desc: " We carefully review your current marketing efforts, competitors, and industry trends to identify gaps, missed opportunities, and areas where your business can grow effectively.",
     },
     {
       id: "02",
       title: "Data Analysis",
-      desc: " Your reports, ad spend, and performance metrics are analyzed to identify where money is being wasted.",
+      desc: " Your ad spend, reports, and performance metrics are deeply analyzed to highlight wasted investments, uncover improvement areas, and ensure every rupee is directed toward measurable business growth.",
     },
     {
       id: "03",
       title: "Expert Assignment",
-      desc: "Based on your niche, we assign a consultant who understands your business and target audience.",
+      desc: "Based on your niche, we assign an experienced consultant who understands your industry, target customers, and goals, ensuring strategies are relevant, effective, and tailored specifically to you.",
     },
     {
       id: "04",
       title: " Consultant Session",
-      desc: " You get a personalized session with the expert, where we share insights, strategies, and a clear growth roadmap.",
+      desc: "You receive a personalized consulting session where we share clear insights, proven strategies, and a customized growth roadmap designed to maximize results and minimize unnecessary spending.",
     },
   ];
 
@@ -46,24 +46,20 @@ const [showForm, setShowForm] = useState(false);
   return (
     <>
     <section
-      className="w-full min-h-screen text-white flex flex-col justify-center py-16 px-4 sm:px-6 md:px-12 lg:px-20"
+      className="relative w-full h-screen text-white flex flex-col justify-center py-16 px-4 sm:px-6 md:px-12 lg:px-20"
       style={{
         background: "linear-gradient(to bottom, #382933, #372935, #372831)",
       }}
     >
      {/* Heading */}
 <div className="text-center max-w-3xl mx-auto mb-12">
-  <p className="text-xs sm:text-sm text-white font-medium mb-2">
+  <p className="text-xs sm:text-sm text-[#89C3FB] font-medium mb-2">
     4 SIMPLE STEPS
   </p>
 <h2
-  className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold leading-snug bg-clip-text text-transparent"
-  style={{
-    backgroundImage:
-      "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
-  }}
+  className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold leading-snug bg-clip-text text-white"
 >
-  Effortless Process, <br className="hidden sm:block" /> Continuous Supply
+ The Proven 4-Step Formula for Business Growth
 </h2>
 
  {/* Gradient underline */}
@@ -148,9 +144,8 @@ className="mx-auto mt-6 h-[1px] w-32 sm:w-40 md:w-56 lg:w-64"
                 className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white"
               />
             </div>
-            <p className="text-xs sm:text-sm text-gray-200">
-              Align with Businesses that{" "}
-              <span className="font-semibold text-white">Choose Quality</span>
+            <p className="text-xs sm:text-sm text-gray-200 font-semibold">
+             Still Thinking?  Take the First Step Towards Online Growth
             </p>
           </div>
 
@@ -160,11 +155,20 @@ className="mx-auto mt-6 h-[1px] w-32 sm:w-40 md:w-56 lg:w-64"
                     background:
                       "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
                   }}>
-            Start Now <FaArrowRight className="text-sm" />
+            Book My Free Call <FaArrowRight className="text-sm" />
           </button>
         </div>
       </div>
-      
+       {/* Divider */}
+      <div className="absolute bottom-0 left-0 w-full z-20">
+        <div
+          className="h-[2px] w-full max-w-[1000px] mx-auto"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(211,233,253,0.3), rgba(211,233,253,0))",
+          }}
+        ></div>
+      </div>
     </section>
     <ContactFormModal showForm={showForm} setShowForm={setShowForm} />
     </>

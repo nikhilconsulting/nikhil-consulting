@@ -38,7 +38,7 @@ const handleSubmit = async (e) => {
             <section className="relative h-screen w-full"  style={{ fontFamily: "var(--font-poppins)" }}>
               {/* Background Image */}
               <Image
-                src="/assests/images/Landing Page 015.jpg"
+                src="/assests/images/1.jpg"
                 alt="Background"
                 fill
                 className="object-cover z-0"
@@ -74,9 +74,9 @@ const handleSubmit = async (e) => {
                   {/* Badge */}
                   <div className="mb-5">
                     <div className="inline-block bg-black/30 px-4 py-1 rounded-full text-xs tracking-wider text-white">
-                      ONLINE •{" "}
-                      <span className="text-[#5ec2f4] font-bold">GRATUITA</span> • AO
-                      VIVO
+                      Your   {" "}
+                      <span className="text-[#5ec2f4] font-bold"> Digital Edge</span> in
+                      Business
                     </div>
                   </div>
       
@@ -137,12 +137,22 @@ const handleSubmit = async (e) => {
           type="submit"
           className="px-3 transition hover:scale-105 mt-2 py-3 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] text-white font-semibold text-xs cursor-pointer tracking-[2.5px] uppercase"
         >
-          Get Inquiry
+          Book a free consultation
         </button>
         {status && <p className="text-sm mt-2 text-white/80">{status}</p>}
       </form>
                 </div>
               </div>
+               {/* Divider */}
+      <div className="absolute bottom-0 left-0 w-full z-20">
+        <div
+          className="h-[2px] w-full max-w-[1000px] mx-auto"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(211,233,253,0.3), rgba(211,233,253,0))",
+          }}
+        ></div>
+      </div>
             </section>
     </>
   )

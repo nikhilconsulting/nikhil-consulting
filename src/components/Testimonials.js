@@ -1,157 +1,178 @@
 "use client";
-import { Lock, FileText, MapPin, ChevronLeft, ChevronRight } from "lucide-react";
+import React, { useState } from "react";
+import {  ShieldCheck, ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Testimonials() {
   const testimonials = [
-    { title: "Testimonial 1", name: "RAHUL", text: "Graças a este método, consegui organizar minhas finanças e alcançar meus primeiros investimentos de sucesso!", icon: Lock },
-    { title: "Testimonial 2", name: "SOUMYA", text: "Nunca pensei que seria possível investir com tão pouco dinheiro. Este curso mudou minha visão sobre finanças.", icon: FileText },
-    { title: "Testimonial 3", name: "VISHAL", text: "A clareza e simplicidade das aulas me ajudaram a criar um plano sólido para minha independência financeira.", icon: MapPin },
-    { title: "Testimonial 4", name: "SARANSH", text: "Finalmente consegui quitar minhas dívidas e começar a investir, algo que sempre achei impossível!", icon: Lock },
-    ];
-     const prevSlide = () => {
-    setCurrent((prev) => (prev === 0 ? cards.length - 1 : prev - 1));
+    {
+      title: "Testimonial 1",
+      name: "RAHUL",
+      text: "Consulting gave me a detailed understanding of digital marketing services and helped me save costs.",
+      icon:  ShieldCheck,
+    },
+    {
+      title: "Testimonial 2",
+      name: "SOUMYA",
+      text: "I gained complete knowledge about Google My Business, which became a powerful tool to reach local customers and reduce website expenses.",
+      icon:  ShieldCheck,
+    },
+    {
+      title: "Testimonial 3",
+      name: "VISHAL",
+      text: "Earlier, I spent too much on SEO, but with proper consulting I learned to target the right audience and use my budget wisely.",
+      icon:  ShieldCheck,
+    },
+    {
+      title: "Testimonial 4",
+      name: "SARANSH",
+      text: "The guidance also saved me from wasting money on ads without knowing the right strategies.",
+      icon:  ShieldCheck,
+    },
+  ];
+
+  // We show 2 testimonials per slide, so total slides = total testimonials / 2
+  const slidesCount = Math.ceil(testimonials.length / 2);
+  const [current, setCurrent] = useState(0);
+
+  const prevSlide = () => {
+    setCurrent((prev) => (prev === 0 ? slidesCount - 1 : prev - 1));
   };
 
   const nextSlide = () => {
-    setCurrent((prev) => (prev === cards.length - 1 ? 0 : prev + 1));
+    setCurrent((prev) => (prev === slidesCount - 1 ? 0 : prev + 1));
   };
 
   return (
     <section
       id="clients-testimonials"
-      className="h-screen px-6 pt-16 md:pt-20 text-white flex flex-col justify-between relative overflow-x-hidden"
+      className="relative h-screen px-6 pt-16 md:pt-30 text-white flex flex-col justify-between relative overflow-x-hidden"
       style={{
         background: "linear-gradient(to bottom, #382933, #372935, #372831)",
       }}
     >
       {/* Heading + Description */}
-      <div className="max-w-4xl mx-auto text-center mb-8 md:mb-0">
-        <span
-          className="text-4xl font-bold bg-clip-text">
-         What Our Clients Say ?
-
+      <div className="max-w-4xl mx-auto text-center mb-8  md:mb-0">
+        <span className="text-4xl font-bold bg-clip-text">
+          What Our Clients Say ?
         </span>
 
-        <p className="text-gray-300 text-lg mt-6">
+        <p className="text-gray-300 text-xl mt-6">
           Stories of cost-saving, smarter strategies, and business growth through Consulting
-
         </p>
       </div>
 
-      {/* Slider container */}
-      <div className="overflow-hidden max-w-3xl md:max-w-2xl mx-auto relative">
-       <div
-  className="flex gap-8 animate-slide"
+      {/* Slider Container */}
+      <div className="overflow-hidden max-w-4xl mx-auto mb-25 relative">
+    <div
+  className="flex transition-transform duration-500 ease-in-out"
   style={{
-    animation: "slide 20s linear infinite",
+    width: `${slidesCount * 100}%`,
+    transform: `translateX(-${current * (100 / slidesCount)}%)`,  // Important!
   }}
 >
-  {[...testimonials, ...testimonials].map((t, index) => {
-    const Icon = t.icon;
-    return (
-      <div
-        key={index}
-        className="flex-shrink-0 w-[calc(40%-0.75rem)] overflow-hidden backdrop-blur-md shadow-lg hover:scale-[1.01] transition-transform duration-300 rounded-xl p-6 relative"
-        style={{
-          background:
-            "linear-gradient(to right, rgba(55,42,51,0.6), rgba(58,45,56,0.6), rgba(59,48,60,0.6), rgba(62,51,66,0.6))",
-        }}
-      >
-                {/* Border */}
-                <div
-                  className="absolute inset-0 rounded-xl pointer-events-none"
-                  style={{
-                    padding: "2px",
-                    background:
-                      "linear-gradient(to top, rgba(211,233,253,0.8), rgba(211,233,253,0) 70%)",
-                    WebkitMask:
-                      "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                    WebkitMaskComposite: "xor",
-                    maskComposite: "exclude",
-                  }}
-                ></div>
-
-                {/* Icon top-left */}
-                <div className="absolute top-4 left-4">
-                  <Icon
-                    size={40}
-                    strokeWidth={0.9}
+  {Array.from({ length: slidesCount }).map((_, slideIndex) => (
+    <div
+      key={slideIndex}
+      className="flex gap-6 px-2"
+      style={{ width: `${100 / slidesCount}%` }} // <-- Set width here
+    >
+              {[0, 1].map((idx) => {
+                const testimonial = testimonials[slideIndex * 2 + idx];
+                if (!testimonial) return null;
+                const Icon = testimonial.icon;
+                return (
+                  <div
+                    key={idx}
+                    className="flex-1 backdrop-blur-md shadow-lg hover:scale-[1.01] transition-transform duration-300 rounded-xl p-6 relative xl:h-[300px]"
                     style={{
-                      stroke: "url(#icon-gradient)",
+                      background:
+                        "linear-gradient(to right, rgba(55,42,51,0.6), rgba(58,45,56,0.6), rgba(59,48,60,0.6), rgba(62,51,66,0.6))",
                     }}
-                  />
-                  <svg width="0" height="0">
-                    <defs>
-                      <linearGradient
-                        id="icon-gradient"
-                        x1="0"
-                        y1="0"
-                        x2="1"
-                        y2="1"
-                      >
-                        <stop offset="0%" stopColor="#D3E9FD" />
-                        <stop offset="100%" stopColor="#8FB3D9" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                </div>
+                  >
+                    {/* Border */}
+                    <div
+                      className="absolute inset-0 rounded-xl pointer-events-none"
+                      style={{
+                        padding: "2px",
+                        background:
+                          "linear-gradient(to top, rgba(211,233,253,0.8), rgba(211,233,253,0) 70%)",
+                        WebkitMask:
+                          "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                        WebkitMaskComposite: "xor",
+                        maskComposite: "exclude",
+                      }}
+                    ></div>
 
-                {/* Text content */}
-                <h4 className="text-[#D3E9FD] tracking-widest text-sm mb-2 mt-12">
-                  {t.title}
-                </h4>
-                <h2 className="text-xl font-bold mb-4">{t.name}</h2>
-                <p className="text-gray-200">{t.text}</p>
-              </div>
-            );
-          })}
-        </div>
-      </div>
+                    {/* Icon */}
+                    <div className="absolute top-4 left-4">
+                      <Icon
+                        size={40}
+                        strokeWidth={0.9}
+                        style={{ stroke: "url(#icon-gradient)" }}
+                      />
+                      <svg width="0" height="0">
+                        <defs>
+                          <linearGradient
+                            id="icon-gradient"
+                            x1="0"
+                            y1="0"
+                            x2="1"
+                            y2="1"
+                          >
+                            <stop offset="0%" stopColor="#D3E9FD" />
+                            <stop offset="100%" stopColor="#8FB3D9" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </div>
 
-       <div className="mt-8 md:mt-0 flex justify-center gap-6">
-  {/* Prev Button */}
-  <button
-    onClick={prevSlide}
-    className="p-4 rounded-full hover:scale-105 transition"
-    style={{
-      background:
-        "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
-    }}
-  >
-    <ChevronLeft size={28} />
-  </button>
-
-  {/* Next Button */}
-  <button
-    onClick={nextSlide}
-    className="p-4 rounded-full hover:scale-105 transition"
-    style={{
-      background:
-        "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
-    }}
-  >
-    <ChevronRight size={28} color="white" />
-  </button>
- 
+                    {/* Content */}
+                   <div className="pt-12 space-y-4">
+  <h6 className="text-[#D3E9FD] tracking-widest text-base">{testimonial.title}</h6>
+  <span className="text-md">{testimonial.name}</span>
+  <p className="text-gray-200">{testimonial.text}</p>
 </div>
-{/* Bottom divider */}
+
+                  </div>
+                );
+              })}
+            </div>
+          ))}
+        </div>
+
+      
+ 
+      </div>
+ {/* Prev Button */}
+        <button
+          onClick={prevSlide}
+          className="hidden sm:flex absolute left-40 top-1/2 -translate-y-1/2 z-50 p-4 rounded-full hover:scale-105 transition cursor-pointer"
+          style={{
+            background:
+              "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
+          }}
+        >
+          <ChevronLeft size={28} color="white" />
+        </button>
+
+        {/* Next Button */}
+        <button
+          onClick={nextSlide}
+          className="hidden sm:flex absolute right-40 top-1/2 -translate-y-1/2 z-50 p-4 rounded-full hover:scale-105 transition cursor-pointer"
+          style={{
+            background:
+              "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
+          }}
+        >
+          <ChevronRight size={28} color="white" />
+        </button>
+      {/* Bottom divider */}
       <div
         className="mt-10 md:mt-0 h-[2px] w-[1000px] mx-auto"
         style={{
-          background:
-            "linear-gradient(to right, rgba(211,233,253,0.3), rgba(211,233,253,0))",
+          background: "linear-gradient(to right, rgba(211,233,253,0.3), rgba(211,233,253,0))",
         }}
       ></div>
-
-      {/* Animation */}
-      <style>
-        {`
-          @keyframes slide {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-          }
-        `}
-      </style>
     </section>
   );
 }

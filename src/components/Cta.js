@@ -10,9 +10,8 @@ export default function CTASection() {
       <section className="w-full bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] py-10 px-4 sm:px-6 md:px-10 lg:px-20 flex flex-col md:flex-col lg:flex-row items-center lg:items-start justify-between relative text-center lg:text-left">
         
         {/* Text */}
-        <p className="text-white xl:ml-40 text-base sm:text-lg md:text-xl lg:text-lg max-w-full md:max-w-2xl mb-4 lg:mb-0">
-          CADA RETIRO REALIZADO GERA UM LITRO COM DESTINO A PROJETOS DE RECUPERAÇÃO
-          QUE OBJETIVAM NÃO VIDA DE PESSOAS.
+        <p className="text-white xl:ml-40 text-base sm:text-lg md:text-xl lg:text-3xl max-w-full md:max-w-3xl mb-4 lg:mb-0">
+        Ready to Scale Your Business? Connect With an Expert Today
         </p>
 
         {/* Button */}
@@ -20,7 +19,7 @@ export default function CTASection() {
           onClick={() => setShowForm(true)}
           className="flex items-center xl:mr-40 gap-2 bg-white text-black font-semibold py-2 px-6 cursor-pointer shadow transition hover:scale-105 lg:ml-6"
         >
-          GET IN TOUCH
+          Connect With Expert
         </button>
 
         {/* Bottom divider */}

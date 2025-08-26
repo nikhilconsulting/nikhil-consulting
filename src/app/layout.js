@@ -1,11 +1,7 @@
-import { Poppins, Roboto, Lato, DM_Sans, Inter } from "next/font/google";
+import { Roboto} from "next/font/google";
 import "./globals.css";
 
-const poppins = Poppins({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-  variable: "--font-poppins",
-});
+
 
 const roboto = Roboto({
   weight: ["400", "500", "700"],
@@ -13,23 +9,6 @@ const roboto = Roboto({
   variable: "--font-roboto",
 });
 
-const lato = Lato({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-  variable: "--font-lato",
-});
-
-const dmSans = DM_Sans({
-  weight: ["400", "500", "700"],
-  subsets: ["latin"],
-  variable: "--font-dmsans",
-});
-
-const inter = Inter({
-  weight: ["400", "500", "700"],
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
 
 export const metadata = {
   title: "Create Next App",
@@ -40,7 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${roboto.variable} ${lato.variable} ${dmSans.variable} ${inter.variable} antialiased`}
+        className={` ${roboto.variable} antialiased`}
       >
         {children}
       </body>
