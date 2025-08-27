@@ -25,10 +25,10 @@ export default function Page() {
         {/* <meta name="robots" content="index, follow" /> */}
 
 
-      {/* <GlassNavbar /> */}
-      <HeroSection />
-      {/* <TextImageSection />  
-      <Benefits />
+      {/* <GlassNavbar />
+      <HeroSection /> */}
+      <TextImageSection />  
+      {/* <Benefits />
       <WhyChooseUs />
       <AboutSection />
       

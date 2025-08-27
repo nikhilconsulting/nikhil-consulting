@@ -85,7 +85,7 @@ return (
           <div className="mt-8 space-y-4 text-gray-200 text-base">
             <div>
               <p className="font-semibold text-[#8CC8FD]">Contact Support</p>
-              <a href="#" className="underline text-gray-300 hover:text-white">+91-9310962725</a>
+              <a href="tel:+918527665635" className="underline text-gray-300 hover:text-white">+91-8527665635</a>
             </div>
             <div>
               <p className="font-semibold text-[#8CC8FD]">General Inquiries</p>
