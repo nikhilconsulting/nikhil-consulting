@@ -145,7 +145,7 @@ export default function TextImageSection() {
               ></div>
               <div className="relative rounded-lg p-[3px] sm:p-[5px] bg-black/35 backdrop-blur shadow-lg">
                 <img
-                  src="/assests/images/MajorProblemsBusinessesFaceImage1.jpg"
+                  src="/assests/images/MajorProblemsBusinessesFaceImage1.png"
                   alt="Main Image"
                   className="rounded-lg h-[200px] sm:h-[280px] md:h-[360px] lg:h-[440px] w-full object-cover"
                 />
@@ -153,16 +153,16 @@ export default function TextImageSection() {
             </div>
 
             {/* Overlay Image */}
-            <div className="absolute -bottom-16 sm:-bottom-20 lg:-bottom-26 left-1/2 -translate-x-1/2 w-[90%] sm:w-[500px] md:w-[600px] lg:w-[700px] h-[100px] sm:h-[140px] md:h-[180px] lg:h-[200px] rounded-lg overflow-hidden z-20">
+            <div className="absolute -bottom-16 sm:-bottom-20 lg:-bottom-26 left-1/2 -translate-x-1/2 w-[90%] sm:w-[500px] md:w-[600px] lg:w-[700px] h-[100px] sm:h-[140px] md:h-[180px] lg:h-[180px] rounded-lg overflow-hidden z-20">
               <div className="absolute inset-0 rounded-lg bg-white blur-3xl opacity-50"></div>
               <div className="relative w-full h-full rounded-lg p-[3px] sm:p-[5px] bg-black/35 backdrop-blur">
                 <div className="relative w-full h-full rounded-md overflow-hidden">
                   <img
-                    src="/assests/images/MajorProblemsBusinessesFaceImage2.jpg"
+                    src="/assests/images/MajorProblemsBusinessesFaceImage2.png"
                     alt="Overlay Image"
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-black/40"></div>
+                  <div className="absolute inset-0 bg-black/20"></div>
                 </div>
               </div>
             </div>

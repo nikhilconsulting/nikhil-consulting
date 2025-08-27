@@ -9,11 +9,11 @@ export default function AboutSection() {
   const [showForm, setShowForm] = useState(false);
   return (
     <>
-    <section className="relative min-h-screen text-white py-12 px-4 sm:px-8 md:px-16 lg:px-20 flex flex-col xl:flex-row items-center xl:items-start gap-10 overflow-hidden">
+    <section id="about-us" className="relative min-h-screen text-white py-12 px-4 sm:px-8 md:px-16 lg:px-20 flex flex-col xl:flex-row items-center xl:items-start gap-10 overflow-hidden">
       {/* Responsive Background Image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/assests/images/why us (2).jpg"
+          src="/assests/images/2banner.png"
           alt="Background"
           fill
           sizes="100vw"

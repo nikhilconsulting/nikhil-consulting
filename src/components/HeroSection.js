@@ -38,7 +38,7 @@ const handleSubmit = async (e) => {
             <section className="relative h-screen w-full"  style={{ fontFamily: "var(--font-poppins)" }}>
               {/* Background Image */}
               <Image
-                src="/assests/images/1.jpg"
+                src="/assests/images/Speaker1.png"
                 alt="Background"
                 fill
                 className="object-cover z-0"
