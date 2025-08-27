@@ -32,7 +32,7 @@ const navItems = [
 
     }, 3000); // 3 sec delay
 
-    return () => clearTimeout(timer); // cleanup
+    return () => clearTimeout(timer);
   }, []);
 useEffect(() => {
   const footer = document.getElementById("book-consulting");
