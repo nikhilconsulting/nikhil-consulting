@@ -32,34 +32,25 @@ export default function AboutSection() {
   "
 ></div>
 
-      {/* Left side - Image */}
-      <div className="relative z-10 mt-12 xl:mt-40 w-full xl:w-1/2 flex justify-center xl:justify-start xl:ml-10 2xl:ml-40">
-        {/* <Image
-          src="/profile.png"
-          alt="Profile photo"
-          width={320}
-          height={320}
-          className="rounded-lg object-contain md:w-[420px] md:h-[420px]"
-        /> */}
-      </div>
+   
 
       {/* Right side - Text */}
-      <div className="relative z-10 w-full xl:w-1/2 mt-10 xl:mt-20 flex flex-col justify-center text-justify px-2 sm:px-6 xl:ml-10 xl:mr-20">
+      <div className="relative z-10 w-full xl:w-1/2  mt-10 xl:mt-20 flex flex-col justify-center text-justify px-2 sm:px-6 xl:mr-10 xl:ml-auto">
+
        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center xl:text-left bg-clip-text">
   About US
 </h2>
 
         <p className="mt-4 text-gray-300 leading-relaxed text-base">
-        RankInventiv is a Noida-based Digital Marketing Agency with a strong presence in Varanasi. We work closely with startups, business owners, and founders to help them achieve real growth through SEO, Google Ads, Meta Ads, and website solutions. Our focus is on building strategies that save budget, avoid wasted efforts, and bring measurable results. </p>
-        <p className="mt-4 text-gray-300 leading-relaxed text-base">
-       What makes us different is our niche-based consulting approach. We assign expert consultants who understand your specific industry needs, ensuring you get reliable and targeted guidance. If you are spending high on marketing but not seeing results, simply share your reports with us. We analyse, find the root problem, and provide the right direction to improve ROI and long-term growth.  </p>
-
+      RankInventiv is a Noida-based Digital Marketing Agency with a strong presence in Varanasi. We work with startups, business owners, and founders to achieve measurable growth through SEO, Google Ads, Meta Ads, and website solutions. Our strategies are built to maximize ROI, save budgets, and eliminate wasted marketing efforts. Every campaign is designed with precision, focusing on sustainable and long-term business growth rather than short-term vanity results.</p>  <p className="mt-4 text-gray-300 leading-relaxed text-base">
+ What makes us truly different is our niche-based digital marketing consulting approach. Instead of offering one-size-fits-all solutions, we assign industry-specific experts who understand your unique business challenges. This ensures you receive accurate, targeted, and actionable guidance. If you’re spending high on marketing but not getting results, share your reports with us. We’ll analyze them, identify the root problems, and provide the right direction to optimize performance and drive real growth.
+</p>
         {/* Button */}
-        <div className="flex justify-center xl:justify-start items-center">
+        <div className="flex justify-center xl:justify-start items-center ">
           <button
           onClick={() => setShowForm(true)}
             type="submit"
-            className="w-36 transition hover:scale-105 sm:w-40 px-4 mt-8 sm:mt-10 py-3 sm:py-4 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] 
+            className="w-36 transition hover:scale-105 sm:w-40 px-4 sm:mt-10 py-3 sm:py-4 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] 
                        text-white font-medium text-[10px] sm:text-xs cursor-pointer tracking-[2px] sm:tracking-[2.5px] uppercase"
           >
             Know More 
