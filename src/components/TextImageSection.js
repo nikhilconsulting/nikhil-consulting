@@ -89,16 +89,16 @@ export default function TextImageSection() {
 
             {/* Left Side - Text */}
           <div className="text-center xl:text-left px-0 sm:px-0 xl:pr-12 order-last xl:order-first">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl font-bold mb-3  leading-tight bg-clip-text mt-10 lg:mt-0">
+            <h2 className="font-bold mb-3  leading-tight bg-clip-text mt-10 lg:mt-0">
               Major Problems Businesses Face
             </h2>
-            <p className="text-sm sm:text-base md:text-lg lg:text-base text-gray-300 leading-relaxed text-justify">
+            <p className="text-base text-gray-300 leading-relaxed text-justify">
               Many businesses waste marketing budgets due to poor targeting and
               ineffective strategies. Without expert digital marketing
               consulting, results suffer. This results in low visibility, weak
               engagement, and competitor advantage.
             </p>{" "}
-            <p className="text-sm sm:text-base md:text-lg lg:text-base text-gray-300 mb-4 lg:mt-0 mt-2 leading-relaxed text-justify">
+            <p className="text-base text-gray-300 mb-4 lg:mt-0 mt-2 leading-relaxed text-justify">
               Our consulting helps you invest wisely with SEO, Local SEO, Google
               Business Profile, Google Ads, and Meta Ads. We create targeted
               strategies that bring higher visibility, the right customers, and

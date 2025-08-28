@@ -46,9 +46,11 @@ useEffect(() => {
     <>
       <header className="fixed top-0 left-0 right-0 z-50 w-full">
         <nav
-          className="relative flex items-center justify-between text-[16px] w-full gap-4 bg-white/5 backdrop-blur-[20px] shadow-lg px-8 py-4"
+          className="relative flex items-center text-[16px] w-full gap-4 bg-white/5 backdrop-blur-[20px] shadow-lg px-8 py-4"
           aria-label="Main navigation"
         >
+  {/* Left side (can be logo later) */}
+  {/* <div className="flex-1"></div> */}
 
           {/* Desktop Nav Items (visible >= md ~ 768px) */}
           <ul className="hidden lg:flex flex-1 justify-end xl:mr-20 gap-16 list-none text-base  p-[10px] tracking-[1.0px]">
@@ -106,12 +108,14 @@ useEffect(() => {
           </div>
 
           {/* Hamburger Icon (only < md ~ below 768px) */}
-          <button
-            className="lg:hidden text-white transition hover:scale-105"
-            onClick={() => setOpen(!open)}
-          >
-            {open ? <X size={28} /> : <Menu size={28} />}
-          </button>
+         <div className="flex lg:hidden ml-auto">
+    <button
+      className="text-white transition hover:scale-105"
+      onClick={() => setOpen(!open)}
+    >
+      {open ? <X size={28} /> : <Menu size={28} />}
+    </button>
+  </div>
         </nav>
 
         {/* Mobile Dropdown (only < md) */}

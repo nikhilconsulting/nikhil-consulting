@@ -81,7 +81,7 @@ const cards = [
 
   return (
     <>
-    <section className="relative w-full pt-20 h-screen text-white overflow-hidden" style={{
+    <section className="relative w-full pt-12 md:pt-20 h-screen text-white overflow-hidden" style={{
     background: "linear-gradient(to bottom, #382933, #372935, #372831)",
   }}>
       {/* Title */}

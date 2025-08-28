@@ -49,12 +49,12 @@ export default function HeroSection() {
       ></div>
 
       {/* Content */}
-      <div className="relative z-30 max-w-[1100px] mx-auto text-white px-4 pt-20 sm:pt-28 md:pt-36 flex flex-col md:flex-row items-center justify-between">
+      <div className="relative z-30 max-w-[1100px] mx-auto text-white px-4 pt-30 md:pt-36 flex flex-col md:flex-row items-center justify-between">
         {/* Left Text */}
         <div className="w-full md:max-w-[520px] text-center md:text-left md:ml-10">
           {/* Badge */}
           <div className="mb-2">
-            <div className="inline-block bg-black/30 px-4 py-1 rounded-full text-sm tracking-wider text-white">
+            <div className="inline-block bg-black/30 px-4 py-1 mt-6 md:mt-0 rounded-full text-sm tracking-wider text-white">
               Your{" "}
               <span className="text-[#5ec2f4] font-bold">Digital Edge</span> in
               Business
@@ -62,12 +62,12 @@ export default function HeroSection() {
           </div>
 
           {/* Heading */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-semibold mb-4 tracking-tight leading-snug">
+          <h1 className=" font-semibold mb-4 tracking-tight leading-snug">
             Targeted Digital Marketing Strategies for Your Business
           </h1>
 
           {/* Subtext */}
-          <p className="text-sm sm:text-base mb-5 text-white/75 leading-relaxed tracking-[0.2px]">
+          <p className="text-base mb-5 text-white/75 leading-relaxed tracking-[0.2px]">
             Don’t waste your budget in the wrong place. Our Digital Marketing
             Consulting helps you invest smartly with SEO, Local SEO, Google
             Business Profile, Google Ads, and Meta Ads to boost online growth,
@@ -77,7 +77,7 @@ export default function HeroSection() {
           {/* Form */}
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col gap-3 w-full max-w-md mx-auto md:mx-0"
+            className="flex flex-col gap-3 w-full md:mt-0 mt-8 max-w-md mx-auto md:mx-0"
           >
             <input
               type="text"
@@ -115,7 +115,7 @@ export default function HeroSection() {
 
             <button
               type="submit"
-              className="px-3 py-3 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] text-white font-semibold text-sm sm:text-base cursor-pointer tracking-[1.5px] uppercase transition hover:scale-105"
+              className="px-3 py-3 mt-4 md:mt-0 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] text-white font-semibold text-base cursor-pointer tracking-[1.5px] uppercase transition hover:scale-105"
             >
               Book a free consultation
             </button>
