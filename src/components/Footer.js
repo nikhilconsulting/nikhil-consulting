@@ -76,7 +76,7 @@ const [selectedExpert, setSelectedExpert] = useState('');
           <div className="xl:ml-10">
             <h3 className="font-semibold mb-4 text-lg">Quick Links</h3>
             <ul className="space-y-2 text-base cursor-pointer">
-              <li><a href="/consulting" className="hover:underline">Home</a></li>
+              <li><a href="/digital-marketing-consultant" className="hover:underline">Home</a></li>
               <li><a href="#about-us" className="hover:underline">About Us</a></li>
               <li><a href="/company" className="hover:underline">Company</a></li>
               <li>

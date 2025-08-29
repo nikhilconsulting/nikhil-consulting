@@ -1,3 +1,4 @@
+import CTASection from '@/components/Cta';
 import GlassFooter from '@/components/Footer';
 import GlassNavbar from '@/components/Navbar';
 import React from 'react';
@@ -70,10 +71,11 @@ const page = () => {
 
         <div className="pt-8 border-t border-rgba(211,233,253,0.3) mt-10 text-sm text-center text-gray-400">
           Contact: <a href="mailto:rankinventiv@gmail.com" className="underline text-blue-400 hover:text-white">rankinventiv@gmail.com</a> |{' '}
-          <a href="tel:+919310962725" className="underline text-blue-400 hover:text-white">+91-9310962725</a> |{' '}
+          <a href="tel:+918527665635" className="underline text-blue-400 hover:text-white">+91-8527665635</a> |{' '}
           <a href="https://www.rankinventiv.com" target="_blank" rel="noopener noreferrer" className="underline text-blue-400 hover:text-white">www.rankinventiv.com</a>
         </div>
       </main>
+      <CTASection />
       <GlassFooter />
       </div>
     </>

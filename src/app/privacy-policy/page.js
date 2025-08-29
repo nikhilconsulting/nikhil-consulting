@@ -1,3 +1,4 @@
+import CTASection from "@/components/Cta";
 import GlassFooter from "@/components/Footer";
 import GlassNavbar from "@/components/Navbar";
 import React from "react";
@@ -163,8 +164,8 @@ const PrivacyPolicy = () => {
               </a>
             </li>
             <li> Phone: 
-              <a href="tel:+919310962725" class="text-blue-400 hover:text-white underline">
-                +91-9310962725
+              <a href="tel:+918527665635" class="text-blue-400 hover:text-white underline">
+                +91-8527665635
               </a>
             </li>
 
@@ -180,7 +181,7 @@ const PrivacyPolicy = () => {
           </ul>
         </section>
       </main>
-
+<CTASection />
       <GlassFooter />
     </div>
   );

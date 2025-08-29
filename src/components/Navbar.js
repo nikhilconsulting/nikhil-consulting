@@ -19,7 +19,7 @@ const handleContactClick = () => {
 
 // ✅ Now define navItems
 const navItems = [
-  { href: "/consulting", label: "Home" },
+  { href: "/digital-marketing-consultant", label: "Home" },
   { href: "#about-us", label: "About Us" },
   { href: "/company", label: "Company" },
   { label: "Contact", onClick: handleContactClick },
