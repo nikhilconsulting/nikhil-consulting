@@ -28,8 +28,12 @@ export default function Page() {
       <GlassNavbar />
       <HeroSection />
       <TextImageSection />  
+
+
       <Benefits />
+      
       <WhyChooseUs />
+
       <AboutSection />
       
       <ServiceProcess />      

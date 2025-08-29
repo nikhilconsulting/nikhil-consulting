@@ -46,7 +46,7 @@ const [showForm, setShowForm] = useState(false);
   return (
     <>
     <section
-      className="relative w-full h-screen text-white flex flex-col justify-center py-16 px-4 sm:px-6 md:px-12 lg:px-20"
+      className="relative w-full min-h-screen text-white flex flex-col justify-center py-16 px-4 sm:px-6 md:px-12 lg:px-20"
       style={{
         background: "linear-gradient(to bottom, #382933, #372935, #372831)",
       }}

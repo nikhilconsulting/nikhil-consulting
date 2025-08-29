@@ -57,9 +57,9 @@ export default function ContactFormModal({ showForm, setShowForm }) {
 
 
 return (
-  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 bg-opacity-20 backdrop-blur-sm px-4 font-roboto">
-    <div className="bg-black/70 shadow-lg max-w-4xl w-full p-8 relative"
-     style={{
+<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm px-2 sm:px-4 py-8 overflow-y-auto">
+   <div className="bg-black/70 shadow-lg max-w-4xl w-full p-4 sm:p-8 relative max-h-[90vh] overflow-y-auto"
+  style={{
     backgroundImage:
       "linear-gradient( rgba(255,255,255,0.2), rgba(255,255,255,0))",
     backgroundRepeat: "no-repeat",
@@ -74,12 +74,11 @@ return (
         >
           ✕
         </button>
-      <div className="flex flex-col lg:flex-row py-6">
+      <div className="flex flex-col lg:flex-row py-6 gap-8">
         {/* Left Side Info */}
         <div className="lg:w-1/2 mb-10 lg:mb-0 pr-6 ">
-          <h2 className="text-4xl font-light leading-snug text-gray-200">
-            Get in touch <br />
-            with our <span className="italic font-normal">specialists today</span>
+          <h2 className="text-4xl font-light leading-snug  text-gray-200">
+            Get in touch
           </h2>
 
           <div className="mt-8 space-y-4 text-gray-200 text-base">
@@ -89,7 +88,14 @@ return (
             </div>
             <div>
               <p className="font-semibold text-[#8CC8FD]">General Inquiries</p>
-              <a href="mailto:info@cendyn.com" className="underline text-gray-300 hover:text-white">rankinventiv@gmail.com</a>
+              <a href="rankinventiv@gmail.com" className="underline text-gray-300 hover:text-white">rankinventiv@gmail.com</a>
+            </div>
+              <div>
+              <p className="font-semibold text-[#8CC8FD]">Consulting Hours:</p>
+              <span className="text-gray-300 hover:text-white">Monday – Friday: 11:00 AM – 6:00 PM
+Saturday: 3:00 PM – 7:00 PM
+Sunday: Closed
+</span>
             </div>
             <div>
               <p className="font-semibold text-[#8CC8FD]">Mailing Address</p>

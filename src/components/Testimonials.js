@@ -45,7 +45,7 @@ export default function Testimonials() {
   return (
     <section
       id="clients-testimonials"
-      className="relative h-screen px-6 pt-16 md:pt-30 text-white flex flex-col justify-between relative overflow-x-hidden"
+      className="relative min-h-screen px-6 pt-16 md:pt-30 text-white flex flex-col justify-between relative overflow-x-hidden"
       style={{
         background: "linear-gradient(to bottom, #382933, #372935, #372831)",
       }}
@@ -143,29 +143,33 @@ export default function Testimonials() {
       
  
       </div>
- {/* Prev Button */}
-        <button
-          onClick={prevSlide}
-          className="hidden sm:flex absolute left-40 top-1/2 -translate-y-1/2 z-50 p-4 rounded-full hover:scale-105 transition cursor-pointer"
-          style={{
-            background:
-              "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
-          }}
-        >
-          <ChevronLeft size={28} color="white" />
-        </button>
+    {/* Prev Button - hidden on small screens, positioned left */}
+<div className=" absolute left-40 top-1/2 transform -translate-y-1/2 z-40">
+  <button
+    onClick={prevSlide}
+    className="p-4 rounded-full hover:scale-105 transition cursor-pointer"
+    style={{
+      background:
+        "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
+    }}
+  >
+    <ChevronLeft size={28} />
+  </button>
+</div>
 
-        {/* Next Button */}
-        <button
-          onClick={nextSlide}
-          className="hidden sm:flex absolute right-40 top-1/2 -translate-y-1/2 z-50 p-4 rounded-full hover:scale-105 transition cursor-pointer"
-          style={{
-            background:
-              "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
-          }}
-        >
-          <ChevronRight size={28} color="white" />
-        </button>
+{/* Next Button - hidden on small screens, positioned right */}
+<div className=" absolute right-40 top-1/2 transform -translate-y-1/2 z-40">
+  <button
+    onClick={nextSlide}
+    className="p-4 rounded-full hover:scale-105 transition cursor-pointer"
+    style={{
+      background:
+        "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
+    }}
+  >
+    <ChevronRight size={28} color="white" />
+  </button>
+</div>
       {/* Bottom divider */}
       <div
         className="mt-10 md:mt-0 h-[2px] w-[1000px] mx-auto"

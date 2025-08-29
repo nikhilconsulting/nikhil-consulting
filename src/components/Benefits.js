@@ -81,7 +81,7 @@ const cards = [
 
   return (
     <>
-    <section className="relative w-full pt-12 md:pt-20 h-screen text-white overflow-hidden" style={{
+    <section className="relative w-full pt-12 md:pt-20 min-h-screen text-white overflow-hidden" style={{
     background: "linear-gradient(to bottom, #382933, #372935, #372831)",
   }}>
       {/* Title */}
@@ -118,7 +118,7 @@ if (pos === 0) {
       key={index}
       animate={style}
       transition={{ duration: 0.6, ease: "easeInOut" }}
-     className={`absolute w-[90%] sm:w-[75%] md:w-[300px] h-[90%] sm:h-[350px] md:h-[400px] rounded-lg overflow-hidden shadow-xl
+     className={`absolute w-[90%] sm:w-[45%] md:w-[300px] h-[90%] sm:h-[350px] md:h-[400px] rounded-lg overflow-hidden shadow-xl
         ${isSideCard ? "cursor-pointer" : "cursor-default"}`}
       onClick={() => {
         if (pos === cards.length - 1) prevSlide();
@@ -171,7 +171,7 @@ if (pos === 0) {
 
 
       </div>
-      <div className="mt-8 flex justify-center">
+      <div className="mt-6 md:mt-14 flex justify-center">
   <button
     onClick={() => setShowForm(true)}
     className="px-6 py-3 lg:mt-8 text-lg font-semibold shadow-md transition-transform transform hover:scale-105 cursor-pointer"
@@ -186,7 +186,7 @@ if (pos === 0) {
 </div>
 
     {/* Prev Button - hidden on small screens, positioned left */}
-<div className="hidden sm:flex absolute left-40 top-1/2 transform -translate-y-1/2 z-40">
+<div className=" absolute left-40 top-1/2 transform -translate-y-1/2 z-40">
   <button
     onClick={prevSlide}
     className="p-4 rounded-full hover:scale-105 transition cursor-pointer"
@@ -200,7 +200,7 @@ if (pos === 0) {
 </div>
 
 {/* Next Button - hidden on small screens, positioned right */}
-<div className="hidden sm:flex absolute right-40 top-1/2 transform -translate-y-1/2 z-40">
+<div className=" absolute right-40 top-1/2 transform -translate-y-1/2 z-40">
   <button
     onClick={nextSlide}
     className="p-4 rounded-full hover:scale-105 transition cursor-pointer"

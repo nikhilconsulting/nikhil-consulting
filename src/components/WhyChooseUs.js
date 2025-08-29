@@ -5,7 +5,7 @@ export default function WhyChooseUs() {
   return (
     <>
       <section
-        className="relative w-full h-screen flex flex-col justify-center py-16 px-4 sm:px-8 md:px-16 lg:px-20 text-white"
+        className="relative w-full min-h-screen flex flex-col justify-center py-16 px-4 sm:px-8 md:px-16 lg:px-20 text-white"
         style={{
           background: "linear-gradient(to bottom, #382933, #372935, #372831)",
         }}
