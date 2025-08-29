@@ -164,7 +164,7 @@ const PrivacyPolicy = () => {
               </a>
             </li>
             <li> Phone: 
-              <a href="tel:+918527665635" class="text-blue-400 hover:text-white underline">
+              <a href="tel:+918527665635" className="text-blue-400 hover:text-white underline">
                 +91-8527665635
               </a>
             </li>

@@ -14,7 +14,7 @@ import {
 } from "react-icons/fa";
 import ContactFormModal from "./ContactFormModal";
 
-export default function GlassFooter() {
+export default function GlassFooter2() {
 
   const [scrolled, setScrolled] = useState(false);
   const [showForm, setShowForm] = useState(false);
@@ -76,16 +76,12 @@ const [selectedExpert, setSelectedExpert] = useState('');
           <div className="xl:ml-10">
             <h3 className="font-semibold mb-4 text-lg">Quick Links</h3>
             <ul className="space-y-2 text-base cursor-pointer">
-              <li><a href="/digital-marketing-consultant" className="hover:underline">Home</a></li>
-              <li><a href="#about-us" className="hover:underline">About Us</a></li>
-              <li><a href="/" className="hover:underline">Company</a></li>
-              <li>
-                <button
-                  onClick={() => setShowForm(true)}
-                  className="hover:underline text-left cursor-pointer"
-                >
-                  Contact
-                </button>
+              <li><a href="/" className="hover:underline">Home</a></li>
+
+              <li><a href="/why-choose-us" className="hover:underline">Why Choose Us</a></li>
+                            <li><a href="/services" className="hover:underline">Services</a></li>
+              <li><a href="/digital-marketing-consultant" className="hover:underline">Consultancy</a></li>
+              <li><a href="/contact-us" className="hover:underline">Contact Us</a>
               </li>
             </ul>
           </div>

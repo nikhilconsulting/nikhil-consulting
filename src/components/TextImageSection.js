@@ -64,7 +64,7 @@ export default function TextImageSection() {
               ></div>
               <div className="relative rounded-lg p-[3px] sm:p-[5px] bg-black/35 backdrop-blur shadow-lg">
                 <img
-                  src="/assests/images/MajorProblemsBusinessesFaceImage1.png"
+                  src="/assets/images/MajorProblemsBusinessesFaceImage1.png"
                   alt="Main Image"
                   className="rounded-lg h-[200px] sm:h-[280px] md:h-[360px] lg:h-[440px] w-full object-cover"
                 />
@@ -77,7 +77,7 @@ export default function TextImageSection() {
               <div className="relative w-full h-full rounded-lg p-[3px] sm:p-[5px] bg-black/35 backdrop-blur">
                 <div className="relative w-full h-full rounded-md overflow-hidden">
                   <img
-                    src="/assests/images/MajorProblemsBusinessesFaceImage2.png"
+                    src="/assets/images/MajorProblemsBusinessesFaceImage2.png"
                     alt="Overlay Image"
                     className="w-full h-full object-cover"
                   />

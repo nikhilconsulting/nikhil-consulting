@@ -23,7 +23,7 @@ export default function WhyChooseUs() {
           <div className="flex justify-center md:justify-center lg:mb-4 ">
             <div className="w-full max-w-sm md:max-w-md lg:max-w-lg overflow-hidden shadow-lg h-[300px] lg:h-[480px]">
               <img
-                src="/assests/images/WhyChooseUs.png"
+                src="/assets/images/WhyChooseUs.png"
                 alt="Our Team"
                 className="w-full h-full object-cover"
               />

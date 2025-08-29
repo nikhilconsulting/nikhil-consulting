@@ -33,7 +33,7 @@ export default function HeroSection() {
     <section className="relative h-screen w-full">
       {/* Background Image */}
       <Image
-        src="/assests/images/Speaker1.png"
+        src="/assets/images/Speaker1.png"
         alt="Background"
         fill
         className="object-cover z-0"
