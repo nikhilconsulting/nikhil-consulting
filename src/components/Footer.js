@@ -15,8 +15,16 @@ import {
 import ContactFormModal from "./ContactFormModal";
 
 export default function GlassFooter() {
+
   const [scrolled, setScrolled] = useState(false);
   const [showForm, setShowForm] = useState(false);
+const [selectedExpert, setSelectedExpert] = useState('');
+
+  const handleClick = (expertName) => {
+  setSelectedExpert(expertName);
+  setShowForm(true);
+};
+
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 0);
@@ -53,13 +61,15 @@ export default function GlassFooter() {
           {/* For Businesses */}
           <div className="xl:ml-1">
             <h3 className="font-semibold mb-4 text-lg">For Businesses</h3>
-            <ul className="space-y-2 text-base">
-              <li><a href="#" className="hover:underline">Talk With SEO Expert</a></li>
-              <li><a href="#" className="hover:underline">Talk With Ads Specialist</a></li>
-              <li><a href="#" className="hover:underline">Talk With Branding Expert</a></li>
-              <li><a href="#" className="hover:underline">Talk With Social Media Expert</a></li>
-              <li><a href="#" className="hover:underline">Talk With Tech Expert</a></li>
-            </ul>
+         <ul className="space-y-2 text-base">
+  <li onClick={() => handleClick('SEO Expert')} className="hover:underline cursor-pointer">Talk With SEO Expert</li>
+  <li onClick={() => handleClick('Ads Specialist')} className="hover:underline cursor-pointer">Talk With Ads Specialist</li>
+  <li onClick={() => handleClick('Branding Expert')} className="hover:underline cursor-pointer">Talk With Branding Expert</li>
+  <li onClick={() => handleClick('Social Media Expert')} className="hover:underline cursor-pointer">Talk With Social Media Expert</li>
+  <li onClick={() => handleClick('Tech Expert')} className="hover:underline cursor-pointer">Talk With Tech Expert</li>
+</ul>
+
+
           </div>
 
           {/* Quick Links */}
@@ -128,7 +138,12 @@ export default function GlassFooter() {
       </footer>
 
       {/* Modal Component */}
-      <ContactFormModal showForm={showForm} setShowForm={setShowForm} />
+     <ContactFormModal 
+  showForm={showForm} 
+  setShowForm={setShowForm}
+  selectedExpert={selectedExpert}
+/>
+
     </>
   );
 }

@@ -13,7 +13,9 @@ import {
   FaGooglePlusG
 } from "react-icons/fa";
 
-export default function ContactFormModal({ showForm, setShowForm }) {
+export default function ContactFormModal({ showForm, setShowForm, selectedExpert }) {
+
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -77,9 +79,11 @@ return (
       <div className="flex flex-col lg:flex-row py-6 gap-8">
         {/* Left Side Info */}
         <div className="lg:w-1/2 mb-10 lg:mb-0 pr-6 ">
-          <h2 className="text-4xl font-light leading-snug  text-gray-200">
-            Get in touch
-          </h2>
+       <h2 className="text-4xl font-light leading-snug text-gray-200">
+  {selectedExpert ? `Talk With ${selectedExpert}` : "Get in Touch"}
+</h2>
+
+
 
           <div className="mt-8 space-y-4 text-gray-200 text-base">
             <div>
