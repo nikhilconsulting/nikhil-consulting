@@ -5,6 +5,7 @@ const ServiceSection = ({
   imageSrc,
   imageAlt,
   heading,
+  headingsmall,
   subheading,
   description,
   seoTitle,
@@ -44,11 +45,15 @@ const ServiceSection = ({
 
             {/* Text Content */}
             <div className="w-full lg:w-1/2 mt-6 lg:mt-0">
-              <h3 className="text-2xl sm:text-3xl font-semibold leading-snug text-white">
+              {/* 🆕 New Heading */}
+  <span className="text-3xl sm:text-xl font-bold text-left text-white mb-2">
+    {headingsmall}
+  </span>
+              <h2 className="text-2xl sm:text-3xl font-semibold leading-snug text-white">
                 {heading}
                 <br className="hidden sm:block" />
                 {subheading}
-              </h3>
+              </h2>
               <p className="mt-4 text-gray-200 text-justify text-sm sm:text-base">
                 {description}
               </p>

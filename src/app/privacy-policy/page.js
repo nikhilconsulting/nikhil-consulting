@@ -4,14 +4,16 @@ import GlassNavbar from "@/components/Navbar";
 import React from "react";
 
 const PrivacyPolicy = () => {
+
   return (
+    <><GlassNavbar /> 
     <div
       className="min-h-screen w-full text-gray-200"
       style={{
         background: "linear-gradient(to bottom, #382933, #372935, #372831)",
       }}
     >
-      <GlassNavbar />
+      
 
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-30 space-y-12 text-justify">
         <span className="text-2xl font-bold text-center text-white block mb-10">
@@ -181,9 +183,11 @@ const PrivacyPolicy = () => {
           </ul>
         </section>
       </main>
-<CTASection />
-      <GlassFooter />
+
     </div>
+    <CTASection />
+      <GlassFooter />
+    </>
   );
 };
 

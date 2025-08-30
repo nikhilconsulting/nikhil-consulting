@@ -3,7 +3,8 @@ import ServiceSection from "@/components/props/ServiceSection";
 import GlassNavbar2 from "@/components/Navbar2";
 import GlassFooter2 from "@/components/Footer2";
 
-const MetaPage = () => {
+
+const SMMPage = () => {
   return (
     <>
     <GlassNavbar2 />
@@ -13,7 +14,9 @@ const MetaPage = () => {
       heading="Social Media Marketing"
       headingsmall="Add Small Heading Here"
       subheading="Overview"
-      description={`Social media marketing helps your brand connect with the right audience. In this section, we show how we create strong strategies that drive engagement, followers, and leads. From creative content planning to ad campaign management, we make sure your business gets noticed. With regular updates, original ideas, and consistent performance tracking, we grow your online presence across platforms like Facebook, Instagram, and others—helping you build trust, stay relevant, and turn social media into a powerful tool for business growth.`}
+      description={`Social media marketing helps your brand connect with the right audience. In this section, we show how we create strong strategies that drive engagement, followers, and leads. From creative content planning to ad campaign management, we make sure your business gets noticed. With regular updates, original ideas, and consistent performance tracking, we grow your online presence across platforms like Facebook, Instagram, and others—helping you build trust, stay relevant, and turn social media into a powerful tool for business growth. We Provide Best Modern SEO
+Service For Your Business. We Provide Best Modern SEO
+Service For Your Business.`}
       seoTitle="Creative Social Media Growth"
       seoContent="We manage your social media pages to attract, engage, and convert followers into customers. Our services include content creation, posting schedules, reels, videos, and ad campaign setup. We use trending hashtags, creative captions, and viral formats to make your brand stand out. Whether you run a shop, offer services, or run a startup, we keep your pages active and visible. Our team builds your online presence with daily posts, engaging visuals, and consistent branding. We also manage paid ads to drive traffic, generate inquiries, and boost sales. Using platform insights, we monitor performance, track growth, and adjust strategies weekly to improve results—ensuring your business stays ahead and gets noticed on Facebook, Instagram, and other platforms."
       seoPoints={[
@@ -44,4 +47,4 @@ const MetaPage = () => {
   );
 };
 
-export default MetaPage;
+export default SMMPage;

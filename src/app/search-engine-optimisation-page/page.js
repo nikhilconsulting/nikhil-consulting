@@ -1,5 +1,5 @@
 import React from "react";
-import ServiceSection from "@/components/ServiceSection";
+import ServiceSection from "@/components/props/ServiceSection";
 import GlassNavbar2 from "@/components/Navbar2";
 import GlassFooter2 from "@/components/Footer2";
 const SEOPage = () => {
@@ -7,13 +7,14 @@ const SEOPage = () => {
     <>
     <GlassNavbar2 />
     <ServiceSection
-      imageSrc="/assets/images/serviceimage.jpg"
+      imageSrc="/assets/images/image.png"
       imageAlt="SEO project"
       heading="SEO Strategy, Planning & Growth"
+      headingsmall="Add Small Heading Here"
       subheading="Overview"
       description={`Running a successful SEO campaign requires clear steps and proper teamwork. This section gives an overview of how we plan and execute SEO strategies.
 Our goal is to increase visibility, improve search rankings, and drive organic traffic. By working closely with clients and reviewing performance, we ensure SEO efforts meet your business goals. Running a successful SEO campaign requires clear steps and proper teamwork. This section gives an overview of how we plan and execute SEO strategies.
-Our goal is to increase visibility, improve search rankings, and drive organic traffic. By working closely with clients and reviewing performance, we ensure SEO efforts meet your business goals.Running a successful SEO campaign requires clear steps and proper teamwork.`}
+Our goal is to increase visibility, improve search rankings, and drive organic traffic. By working closely with clients and reviewing performance, we ensure SEO efforts meet your business goals.`}
       seoTitle="Search Engine Optimization (SEO)"
       seoContent="We help businesses improve their visibility on search engines like Google. Our SEO services include keyword research, on-page optimization, content creation, and link building. We also focus on improving technical aspects like site speed and mobile usability. With a strong SEO foundation, your website can reach the right audience and generate leads consistently. From meta tags to structured data, we handle every SEO element carefully. We analyze your site’s health and fix errors affecting your rankings. Whether you need local SEO or national targeting, we customize strategies that suit your needs."
       seoPoints={[

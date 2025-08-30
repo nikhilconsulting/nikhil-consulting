@@ -4,11 +4,28 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import ContactFormModal from "./ContactFormModal";
+import { usePathname } from "next/navigation";
 
 export default function GlassNavbar2() {
   const [open, setOpen] = useState(false); // Mobile nav
   const [showForm, setShowForm] = useState(false); // Modal
   const [showContactForm, setShowContactForm] = useState(false); // 👈 New state
+  const pathname = usePathname();
+//   const [showScrollTop, setShowScrollTop] = useState(false);
+
+// useEffect(() => {
+//   const handleScroll = () => {
+//     setShowScrollTop(window.scrollY > 200); // Show button after scrolling 200px
+//   };
+
+//   window.addEventListener("scroll", handleScroll);
+//   return () => window.removeEventListener("scroll", handleScroll);
+// }, []);
+
+// const scrollToTop = () => {
+//   window.scrollTo({ top: 0, behavior: "smooth" });
+// };
+
   // ✅ Define handler function FIRST
   const handleContactClick = () => {
     setShowContactForm(true);
@@ -16,34 +33,25 @@ export default function GlassNavbar2() {
   };
 
   // ✅ Now define navItems
-  const navItems = [
-    { href: "/", label: "Home" },
-    { href: "/why-choose-us", label: "Why Choose Us" },
-    {
-      label: "Services",
-      children: [
-        {
-          href: "/social-media-marketing-page",
-          label: "Social Media Marketing ",
-        },
-        {
-          href: "/search-engine-optimisation-page",
-          label: "Search Engine Optimisation (SEO)",
-        },
-        { href: "/local-seo-page", label: "Local SEO" },
-        {
-          href: "/google-&-meta-ads-page",
-          label: "Google & Meta Ads",
-        },
-        {
-          href: "/website-development-page",
-          label: "Website Development",
-        },
-      ],
-    },
-    { href: "/digital-marketing-consultant", label: "Consultancy" },
-    { href: "/contact-us", label: "Contact Us" },
-  ];
+ const navItems = [
+  { href: "/", label: "Home" },
+  { href: "/why-choose-us", label: "Why Choose Us" },
+  {
+    href: "/services",
+    label: "Services",
+    children: [
+      { href: "/social-media-marketing-page", label: "Social Media Marketing" },
+      { href: "/search-engine-optimisation-page", label: "Search Engine Optimisation (SEO)" },
+      { href: "/local-seo-page", label: "Local SEO" },
+      { href: "/google-&-meta-ads-page", label: "Google & Meta Ads" },
+      { href: "/website-development-page", label: "Website Development" },
+        { href: "/pay-per-click-page", label: "Pay Per Click (PPC)" },
+    ],
+  },
+  { href: "/digital-marketing-consultant", label: "Consultancy" },
+  { href: "/contact-us", label: "Contact Us" },
+];
+
 
   // 👇 Auto-open form after 3 seconds on first visit
   useEffect(() => {
@@ -53,15 +61,13 @@ export default function GlassNavbar2() {
 
     return () => clearTimeout(timer);
   }, []);
-  useEffect(() => {
-    const footer = document.getElementById("book-consulting");
-    if (footer) {
-      footer.scrollIntoView({ behavior: "smooth" });
-    }
-  }, []);
+ useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [pathname]);
 
   return (
     <>
+    
       <header className="fixed top-0 left-0 right-0 z-50 w-full">
         <nav
           className="relative flex items-center text-[16px] w-full gap-4 text-white bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px] shadow-lg px-8 py-4"
@@ -82,13 +88,13 @@ export default function GlassNavbar2() {
                   </Link>
                 ) : (
                   <>
-                    <button className="flex items-center gap-1 py-2 text-white transition-colors duration-200 cursor-pointer">
+                    <Link href={item.href}  className="flex items-center gap-1 py-2 text-white transition-colors duration-200 cursor-pointer">
                       {item.label}
                       <ChevronDown
                         size={16}
                         className="transition-transform duration-300 group-hover:rotate-180 "
                       />
-                    </button>
+                    </Link>
                     <ul className="absolute -left-25 opacity-0 cursor-pointer invisible group-hover:visible group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 flex-col gap-2 text-white bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px] rounded-sm mt-7 p-2 shadow-lg z-50 min-w-[330px]">
                       {item.children.map((child) => (
                         <li key={child.href}>
@@ -167,6 +173,17 @@ export default function GlassNavbar2() {
         showForm={showContactForm}
         setShowForm={setShowContactForm}
       />
+    {/* {showScrollTop && (
+  <button
+    onClick={scrollToTop}
+    className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-[9999] bg-indigo-600 hover:bg-indigo-700 text-white p-3 shadow-lg transition-all rounded-full"
+    aria-label="Scroll to top"
+  >
+    ↑
+  </button>
+)} */}
+
+
     </>
   );
 }

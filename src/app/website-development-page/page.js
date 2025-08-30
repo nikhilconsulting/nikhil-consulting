@@ -1,5 +1,5 @@
 import React from "react";
-import ServiceSection from "@/components/ServiceSection";
+import ServiceSection from "@/components/props/ServiceSection";
 import GlassNavbar2 from "@/components/Navbar2";
 import GlassFooter2 from "@/components/Footer2";
 
@@ -8,7 +8,7 @@ const SMMPage = () => {
     <>
     <GlassNavbar2 />
     <ServiceSection
-      imageSrc="/assets/images/serviceimage.jpg"
+      imageSrc="/assets/images/image.png"
       imageAlt="SEO project"
       heading="Social Media Marketing"
       subheading="Overview"

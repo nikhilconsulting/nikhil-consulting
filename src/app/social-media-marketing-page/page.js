@@ -1,5 +1,5 @@
 import React from "react";
-import ServiceSection from "@/components/ServiceSection";
+import ServiceSection from "@/components/props/ServiceSection";
 import GlassNavbar2 from "@/components/Navbar2";
 import GlassFooter2 from "@/components/Footer2";
 
@@ -8,9 +8,10 @@ const SMMPage = () => {
     <>
     <GlassNavbar2 />
     <ServiceSection
-      imageSrc="/assets/images/serviceimage.jpg"
+      imageSrc="/assets/images/image.png"
       imageAlt="SEO project"
       heading="Social Media Marketing"
+      headingsmall="Add Small Heading Here"
       subheading="Overview"
       description={`Social media marketing helps your brand connect with the right audience. In this section, we show how we create strong strategies that drive engagement, followers, and leads. From creative content planning to ad campaign management, we make sure your business gets noticed. With regular updates, original ideas, and consistent performance tracking, we grow your online presence across platforms like Facebook, Instagram, and others—helping you build trust, stay relevant, and turn social media into a powerful tool for business growth.`}
       seoTitle="Creative Social Media Growth"
