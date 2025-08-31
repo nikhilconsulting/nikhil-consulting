@@ -11,7 +11,7 @@ export default function CTASection() {
         
         {/* Text */}
         <p className="text-white xl:ml-40 text-base sm:text-lg md:text-xl lg:text-3xl max-w-full md:max-w-3xl mb-4 lg:mb-0">
-        Ready to Scale Your Business? Connect With an Expert Today
+        Helping 20+ Local Businesses in Varanasi to Scale Online
         </p>
 
         {/* Button */}

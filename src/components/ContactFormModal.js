@@ -33,11 +33,12 @@ export default function ContactFormModal({ showForm, setShowForm, selectedExpert
     e.preventDefault();
 
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+     const res = await fetch("/api/contact", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ ...formData, expert: selectedExpert }),
+});
+
 
       const data = await res.json();
 
@@ -88,16 +89,16 @@ return (
           <div className="mt-8 space-y-4 text-gray-200 text-base">
             <div>
               <p className="font-semibold text-[#8CC8FD]">Contact Support</p>
-              <a href="tel:+918527665635" className="underline text-gray-300 hover:text-white">+91-8527665635</a>
+              <Link href="tel:+918527665635" className="underline text-gray-300 hover:text-white">+91-8527665635</Link>
             </div>
             <div>
               <p className="font-semibold text-[#8CC8FD]">General Inquiries</p>
-              <a href="rankinventiv@gmail.com" className="underline text-gray-300 hover:text-white">rankinventiv@gmail.com</a>
+              <Link href="rankinventiv@gmail.com" className="underline text-gray-300 hover:text-white">rankinventiv@gmail.com</Link>
             </div>
               <div>
               <p className="font-semibold text-[#8CC8FD]">Consulting Hours:</p>
-              <span className="text-gray-300 hover:text-white">Monday – Friday: 11:00 AM – 6:00 PM
-Saturday: 3:00 PM – 7:00 PM
+              <span>Monday – Friday: 11:00 AM – 6:00 PM <br />
+Saturday: 3:00 PM – 7:00 PM <br />
 Sunday: Closed
 </span>
             </div>
@@ -112,12 +113,15 @@ Sunday: Closed
              <Link href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer">
                <FaInstagram className="cursor-pointer hover:scale-110 transition hover:text-[#8CC8FD]" />
              </Link>
-             <Link href="https://www.facebook.com/your-profile" target="_blank" rel="noopener noreferrer">
+             <Link href="" target="_blank" rel="noopener noreferrer">
                <FaFacebook className="cursor-pointer hover:scale-110 transition hover:text-[#8CC8FD]" />
              </Link>
              <Link href="https://www.twitter.com/your-profile" target="_blank" rel="noopener noreferrer">
                <FaTwitter className="cursor-pointer hover:scale-110 transition hover:text-[#8CC8FD]" />
              </Link>
+              <Link href="https://www.youtube.com/@Rankinventiv" target="_blank" rel="noopener noreferrer">
+                <FaYoutube className="cursor-pointer hover:scale-110 transition hover:text-[#8CC8FD]" />
+              </Link>
              <Link href="https://maps.app.goo.gl/MNbdJh3Mn9J7joEn6" target="_blank" rel="noopener noreferrer">
                <FaGooglePlusG className="cursor-pointer hover:scale-150 transition scale-[1.4] hover:text-[#8CC8FD]" />
              </Link>

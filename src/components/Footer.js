@@ -111,11 +111,15 @@ const [selectedExpert, setSelectedExpert] = useState('');
               <Link href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer">
                 <FaInstagram className="cursor-pointer hover:scale-110 transition" />
               </Link>
-              <Link href="https://www.facebook.com/your-profile" target="_blank" rel="noopener noreferrer">
+              <Link href="https://www.facebook.com/rankinventiv/" target="_blank" rel="noopener noreferrer">
                 <FaFacebook className="cursor-pointer hover:scale-110 transition" />
               </Link>
+              
               <Link href="https://www.twitter.com/your-profile" target="_blank" rel="noopener noreferrer">
                 <FaTwitter className="cursor-pointer hover:scale-110 transition" />
+              </Link>
+              <Link href="https://www.youtube.com/@Rankinventiv" target="_blank" rel="noopener noreferrer">
+                <FaYoutube className="cursor-pointer hover:scale-110 transition" />
               </Link>
               <Link href="https://maps.app.goo.gl/MNbdJh3Mn9J7joEn6" target="_blank" rel="noopener noreferrer">
                 <FaGooglePlusG className="cursor-pointer hover:scale-150 transition scale-[1.4]" />

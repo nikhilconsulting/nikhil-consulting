@@ -117,7 +117,7 @@ export default function HeroSection() {
               type="submit"
               className="px-3 py-3 mt-4 md:mt-0 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] text-white font-semibold text-base cursor-pointer tracking-[1.5px] uppercase transition hover:scale-105"
             >
-              Book a free consultation
+              Book A Consultation
             </button>
             {status && <p className="text-sm mt-2 text-white/80">{status}</p>}
           </form>

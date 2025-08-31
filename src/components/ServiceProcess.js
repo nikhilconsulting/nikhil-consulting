@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import ContactFormModal from "./ContactFormModal";
 
 import { FaArrowRight } from "react-icons/fa";
@@ -150,13 +151,13 @@ className="mx-auto mt-6 h-[1px] w-32 sm:w-40 md:w-56 lg:w-64"
           </div>
 
           {/* Button */}
-          <button onClick={() => setShowForm(true)} className="w-full hover:scale-105 sm:w-auto flex items-center justify-center gap-2 bg-white text-[#fff] font-medium px-5 py-2 hover:bg-gray-200 transition cursor-pointer"
+          <Link href={"tel:+918527665635"} className="w-full hover:scale-105 sm:w-auto flex items-center justify-center gap-2 bg-white text-[#fff] font-medium px-5 py-2 hover:bg-gray-200 transition cursor-pointer"
               style={{
                     background:
                       "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
                   }}>
             Book My Free Call <FaArrowRight className="text-sm" />
-          </button>
+          </Link>
         </div>
       </div>
        {/* Divider */}

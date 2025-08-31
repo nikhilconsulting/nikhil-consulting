@@ -36,7 +36,7 @@ export default function DigitalMarketingFAQs() {
   return (
     <>
       <div
-        className="relative min-h-screen flex flex-col justify-start items-center px-4 sm:px-6 md:px-8 lg:px-20 sm:pt-20 pt-15 "
+        className="relative min-h-screen flex flex-col justify-start items-center px-4 sm:px-6 md:px-8 lg:px-20 sm:pt-15 pt-15 "
         style={{
           background: "linear-gradient(to bottom, #382933, #372935, #372831)",
         }}
