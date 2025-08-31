@@ -97,8 +97,8 @@ const [selectedExpert, setSelectedExpert] = useState('');
             <a href="mailto:rankinventiv@gmail.com" className="flex items-center gap-2 mb-2 text-base hover:underline">
               <FaEnvelope /> rankinventiv@gmail.com
             </a>
-            <a href="tel:+918527665635" className="flex items-center gap-2 mb-4 text-base hover:underline">
-              <FaPhone /> +91-8527665635
+            <a href="tel:+919310962725" className="flex items-center gap-2 mb-4 text-base hover:underline">
+              <FaPhone /> +91- 93109 62725
             </a>
             <div className="flex gap-4 text-2xl sm:text-3xl">
               <Link href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">

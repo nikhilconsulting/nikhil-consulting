@@ -40,12 +40,15 @@ export default function GlassNavbar2() {
     href: "/services",
     label: "Services",
     children: [
-      { href: "/social-media-marketing-page", label: "Social Media Marketing" },
-      { href: "/search-engine-optimisation-page", label: "Search Engine Optimisation (SEO)" },
-      { href: "/local-seo-page", label: "Local SEO" },
-      { href: "/google-&-meta-ads-page", label: "Google & Meta Ads" },
-      { href: "/website-development-page", label: "Website Development" },
-        { href: "/pay-per-click-page", label: "Pay Per Click (PPC)" },
+        { href: "/services/search-engine-optimisation-page", label: "Search Engine Optimisation (SEO)" },
+     
+    
+      { href: "/services/local-seo-page", label: "Local SEO" },
+      { href: "/services/google-ads-page", label: "Google Ads" },
+     
+        { href: "/services/meta-ads-page", label: "Meta Ads" },
+         { href: "/services/website-development-page", label: "Website Development" },
+         { href: "/services/social-media-marketing-page", label: "Social Media Marketing" },
     ],
   },
   { href: "/digital-marketing-consultant", label: "Consultancy" },

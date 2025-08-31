@@ -7,43 +7,45 @@ const services = [
     title: "Search Engine Optimization",
     description:
       "We help improve your website’s visibility on search engines like Google, increasing traffic and brand awareness.  Explore what we can do to boost your business online.",
-    link: "/search-engine-optimisation-page",
+    link: "/services/search-engine-optimisation-page",
   },
   {
     image: "/assets/images/service_thumb_2.jpg",
     title: "Local SEO",
     description:
       "Reach nearby customers effectively with our tailored local SEO strategies that improve local search rankings. Explore what we can do to boost your business online.",
-    link: "/local-seo-page",
+    link: "/services/local-seo-page",
   },
-  {
-    image: "/assets/images/service_thumb_3.jpg",
-    title: "Website Design & Development",
-    description:
-      "Get a stunning and high-performing website that delivers seamless user experience and drives conversions. Explore what we can do to boost your business online.",
-    link: "/website-development-page",
-  },
+ 
   {
     image: "/assets/images/service_thumb_4.jpg",
-    title: "Google & Meta Ads",
+    title: "Google Ads",
     description:
       "Boost visibility instantly with our result-driven Google & Meta Ads campaigns to generate leads fast. Explore what we can do to boost your business online.",
-    link: "/google-&-meta-ads-page",
+    link: "/services/google-ads-page",
+  },
+    {
+    image: "/assets/images/service_thumb_6.png",
+    title: "Meta Ads",
+    description:
+      "Maximize ROI with data-driven PPC strategies that attract the right audience and boost conversions. Explore what we can do to boost your business online.",
+    link: "/services/meta-ads-page",
+  },
+   {
+    image: "/assets/images/service_thumb_3.jpg",
+    title: "Website Development",
+    description:
+      "Get a stunning and high-performing website that delivers seamless user experience and drives conversions. Explore what we can do to boost your business online.",
+    link: "/services/website-development-page",
   },
   {
     image: "/assets/images/service_thumb_5.jpg",
     title: "Social Media Marketing",
     description:
       "Build your brand, engage your audience, and grow followers across platforms like Instagram and Facebook. Explore what we can do to boost your business online.",
-    link: "/social-media-marketing-page",
+    link: "/services/social-media-marketing-page",
   },
-  {
-    image: "/assets/images/service_thumb_6.png",
-    title: "Pay Per Click (PPC)",
-    description:
-      "Maximize ROI with data-driven PPC strategies that attract the right audience and boost conversions. Explore what we can do to boost your business online.",
-    link: "/pay-per-click-page",
-  },
+
 ];
 
 const borderStyle = {

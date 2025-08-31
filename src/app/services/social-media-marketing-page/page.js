@@ -11,6 +11,7 @@ const SMMPage = () => {
       imageSrc="/assets/images/image.png"
       imageAlt="SEO project"
       heading="Social Media Marketing"
+      headingsmall="Add Small Heading Here"
       subheading="Overview"
       description={`Social media marketing helps your brand connect with the right audience. In this section, we show how we create strong strategies that drive engagement, followers, and leads. From creative content planning to ad campaign management, we make sure your business gets noticed. With regular updates, original ideas, and consistent performance tracking, we grow your online presence across platforms like Facebook, Instagram, and others—helping you build trust, stay relevant, and turn social media into a powerful tool for business growth.`}
       seoTitle="Creative Social Media Growth"
@@ -28,10 +29,10 @@ const SMMPage = () => {
         "Visual Branding",
       ]}
       cardTwoIconClass="fas fa-desktop"
-      cardTwoTitle="Elevating Businesses Through Edge"
+      cardTwoTitle="Helping Brands Stand Out On Social Media"
       cardTwoContent="Web designing in a powerful way of just not an only professions, however, in a passion for our Company. We have to a tendency to believe the idea that smart looking of any website"
       finalTitle="User-Friendly SEO Implementation"
-      finalContent="Throughout the project, effective communication and collaboration among the project team members, including designers, developers, marketers, and stakeholders, are crucial for its success. Regular reviews and feedback loops should be established to ensure that the digital product and branding align with the project's goals and objectives. Throughout the project, effective communication and collaboration among the project team members, including designers, developers, marketers, and stakeholders, are crucial for its success. Regular reviews and feedback loops should be established to ensure that the digital product and branding align with the project's goals and objectives."
+      finalContent="A good social media profile is both attractive and strategic. We design eye-catching posts, write engaging captions, and use relevant hashtags to boost your reach. Every piece of content aligns with your brand voice and goals. We also optimize your bio, story highlights, and call-to-action buttons to drive more engagement. Whether it’s festive campaigns, product promotions, or daily updates, we make sure your brand stays active and appealing. A strong, well-managed profile helps build trust, attract followers, and turn them into loyal customers over time."
       finalPoints={[
         "Create content calendar with trending ideas",
         "Design & post reels, graphics, and carousels",
