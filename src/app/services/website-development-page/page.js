@@ -2,8 +2,31 @@ import React from "react";
 import ServiceSection from "@/components/props/ServiceSection";
 import GlassNavbar2 from "@/components/Navbar2";
 import GlassFooter2 from "@/components/Footer2";
+import WorkingProcess from "@/components/props/WorkingProcess";
 
 const SMMPage = () => {
+   const workingSteps = [
+    {
+      icon: '/assets/images/icon.png',
+      title: 'Business Goal & Design Brief',
+      description: 'We understand what your business does and what your website should achieve',
+    },
+    {
+      icon: '/assets/images/icon.png',
+      title: 'Website Structure & Mock Design',
+      description: 'We plan the pages, content flow, and create design samples for your approval',
+    },
+    {
+      icon: '/assets/images/icon.png',
+      title: 'Development & Responsive Setup',
+      description: 'We build the full website and test it across mobile, tablet, and desktop screens',
+    },
+    {
+      icon: '/assets/images/icon.png',
+      title: 'Launch, Support & Handover',
+      description: 'We launch your website, provide training if needed, and offer regular updates if you want',
+    },
+  ];
   return (
     <>
     <GlassNavbar2 />
@@ -39,6 +62,11 @@ const SMMPage = () => {
         "Secure hosting, SSL & backups included",
       ]}
     />
+       <WorkingProcess
+        title="We Complete Our Work to Follow Some Easy Ways"
+        steps={workingSteps}
+        background="linear-gradient(to bottom, #382933, #372935, #372831)"
+      />
     <GlassFooter2 />
     </>
   );

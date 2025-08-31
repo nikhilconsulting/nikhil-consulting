@@ -2,28 +2,28 @@ import React from "react";
 import ServiceSection from "@/components/props/ServiceSection";
 import GlassNavbar2 from "@/components/Navbar2";
 import GlassFooter2 from "@/components/Footer2";
-import WorkingProcess from "@/components/WorkingProcess";
+import WorkingProcess from "@/components/props/WorkingProcess";
 const SEOPage = () => {
     const workingSteps = [
     {
-      icon: '/assets/img/working-process/icon-1.png',
-      title: 'Discovery & Analysis',
-      description: 'Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium',
+      icon: '/assets/images/icon.png',
+      title: 'Website Audit & Keyword Research',
+      description: 'We analyze your website and find the best keywords that your target audience is searching for',
     },
     {
-      icon: '/assets/img/working-process/icon-2.png',
-      title: 'Competitor Analysis',
-      description: 'Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium',
+      icon: '/assets/images/icon.png',
+      title: 'Competitor SEO Analysis',
+      description: 'We study your competitor s strategies to find content gaps, backlink opportunities, and ranking factors',
     },
     {
-      icon: '/assets/img/working-process/icon-3.png',
-      title: 'Strategy & Execution',
-      description: 'Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium',
+      icon: '/assets/images/icon.png',
+      title: 'SEO Strategy & Implementation',
+      description: 'Our team applies smart SEO practices, optimizes content, and builds links to improve your rankings',
     },
     {
-      icon: '/assets/img/working-process/icon-4.png',
-      title: 'Get 3x Results',
-      description: 'Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium',
+      icon: '/assets/images/icon.png',
+      title: 'Results & Growth Tracking',
+      description: 'We deliver visible improvements - more traffic, better rankings, and real business leads',
     },
   ];
   return (
@@ -63,7 +63,7 @@ const SEOPage = () => {
     />
 
      <WorkingProcess
-        title="We Complete Our Work to Follow\nSome Easy Ways"
+        title="We Complete Our Work to Follow Some Easy Ways"
         steps={workingSteps}
         background="linear-gradient(to bottom, #382933, #372935, #372831)"
       />

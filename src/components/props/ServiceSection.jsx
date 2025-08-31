@@ -22,8 +22,8 @@
     finalPoints = [],
   }) => {
     return (
-      <section
-    className="pt-32 pb-16 lg:pt-36 lg:pb-20"
+      <>      <section
+    className="relative pt-32 pb-16 lg:pt-36 lg:pb-20"
     style={{
       background: "linear-gradient(to bottom, #382933, #372935, #372831)",
     }}
@@ -138,7 +138,20 @@
             </div>
           </div>
         </div>
+         {/* Divider */}
+        <div className="absolute bottom-0 left-0 w-full z-20">
+          <div
+            className="h-[2px] w-full max-w-[1000px] mx-auto"
+            style={{
+              background:
+                "linear-gradient(to right, rgba(211,233,253,0.3), rgba(211,233,253,0))",
+            }}
+          ></div>
+        </div>
       </section>
+      
+        </>
+
     );
   };
 

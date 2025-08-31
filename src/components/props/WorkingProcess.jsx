@@ -7,7 +7,7 @@ const WorkingProcess = ({
 }) => {
   return (
     <section
-      className="py-12 lg:py-16 "
+      className="py-12 lg:py-18 "
       style={{ background }}
     >
       <div className="container mx-auto min-h-screen">
@@ -49,16 +49,16 @@ const WorkingProcess = ({
 
                 {/* Card */}
                 <div className="lg:w-5/12 w-full px-4 mx-auto">
-                  <div className="bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] text-white flex items-center justify-between px-6 py-5 rounded-2xl">
+                  <div className="bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] text-white flex items-center justify-between px-6 py-5 rounded-xl">
                     <div className="icon">
                       <Image
                         src={step.icon}
                         alt="step icon"
-                        width={40}
-                        height={40}
+                        width={60}
+                        height={60}
                       />
                     </div>
-                    <div className="content flex-1 text-left">
+                    <div className="content flex-1 text-left ml-6">
                       <span
                         className="sub-title inline-block shadow-md text-white font-medium text-sm px-5 py-2 mb-4 rounded-full"
                         style={{ background }}

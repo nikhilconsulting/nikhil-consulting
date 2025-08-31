@@ -2,9 +2,31 @@ import React from "react";
 import ServiceSection from "@/components/props/ServiceSection";
 import GlassNavbar2 from "@/components/Navbar2";
 import GlassFooter2 from "@/components/Footer2";
-
+import WorkingProcess from "@/components/props/WorkingProcess";
 
 const SMMPage = () => {
+   const workingSteps = [
+    {
+      icon: '/assets/images/icon.png',
+      title: 'Discovery & Analysis',
+      description: 'Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium',
+    },
+    {
+      icon: '/assets/images/icon.png',
+      title: 'Competitor Analysis',
+      description: 'Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium',
+    },
+    {
+      icon: '/assets/images/icon.png',
+      title: 'Strategy & Execution',
+      description: 'Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium',
+    },
+    {
+      icon: '/assets/images/icon.png',
+      title: 'Get 3x Results',
+      description: 'Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium',
+    },
+  ];
   return (
     <>
     <GlassNavbar2 />
@@ -42,6 +64,11 @@ Service For Your Business.`}
         "Track engagement, insights & improve weekly",
       ]}
     />
+       <WorkingProcess
+        title="We Complete Our Work to Follow Some Easy Ways"
+        steps={workingSteps}
+        background="linear-gradient(to bottom, #382933, #372935, #372831)"
+      />
     <GlassFooter2 />
     </>
   );

@@ -2,8 +2,31 @@ import React from "react";
 import ServiceSection from "@/components/props/ServiceSection";
 import GlassNavbar2 from "@/components/Navbar2";
 import GlassFooter2 from "@/components/Footer2";
+import WorkingProcess from "@/components/props/WorkingProcess";
 
 const SMMPage = () => {
+   const workingSteps = [
+    {
+      icon: '/assets/images/icon.png',
+      title: 'Social Media Audit & Goal Setup',
+      description: 'We review your profile, understand your brand, and set clear goals for growth and engagement',
+    },
+    {
+      icon: '/assets/images/icon.png',
+      title: 'Competitor & Trend Analysis',
+      description: 'We explore what works in your industry, study top trends, and plan content that stands out',
+    },
+    {
+      icon: '/assets/images/icon.png',
+      title: 'Content Strategy & Campaigns',
+      description: 'We create and post content, run ad campaigns, and handle your daily social activity',
+    },
+    {
+      icon: '/assets/images/icon.png',
+      title: 'Track Growth & Get More Leads',
+      description: 'You’ll see more likes, comments, followers - and most importantly - real leads and conversions',
+    },
+  ];
   return (
     <>
     <GlassNavbar2 />
@@ -39,6 +62,11 @@ const SMMPage = () => {
         "Track engagement, insights & improve weekly",
       ]}
     />
+       <WorkingProcess
+        title="We Complete Our Work to Follow Some Easy Ways"
+        steps={workingSteps}
+        background="linear-gradient(to bottom, #382933, #372935, #372831)"
+      />
     <GlassFooter2 />
     </>
   );

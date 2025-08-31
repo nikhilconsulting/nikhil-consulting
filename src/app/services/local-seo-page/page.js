@@ -2,9 +2,32 @@ import React from "react";
 import ServiceSection from "@/components/props/ServiceSection";
 import GlassNavbar2 from "@/components/Navbar2";
 import GlassFooter2 from "@/components/Footer2";
+import WorkingProcess from "@/components/props/WorkingProcess";
 
 
 const SMMPage = () => {
+   const workingSteps = [
+    {
+      icon: '/assets/images/icon.png',
+      title: 'Local Business Audit & Keyword Research',
+      description: 'We check your website and GMB profile, then find keywords your local customers are using',
+    },
+    {
+      icon: '/assets/images/icon.png',
+      title: 'Competitor & Listing Analysis',
+      description: 'We review local competitors, top-ranking businesses, and listing sites that boost your visibility',
+    },
+    {
+      icon: '/assets/images/icon.png',
+      title: 'Local SEO Strategy & Execution',
+      description: 'We update your listings, website, keywords, and reviews - all with a focus on local ranking',
+    },
+    {
+      icon: '/assets/images/icon.png',
+      title: '3× More Local Leads & Calls',
+      description: 'You get higher map rankings, more calls, and better walk-in traffic from nearby customers',
+    },
+  ];
   return (
     <>
     <GlassNavbar2 />
@@ -41,6 +64,11 @@ const SMMPage = () => {
         "Test mobile UX and site speed for local users",
       ]}
     />
+       <WorkingProcess
+        title="We Complete Our Work to Follow Some Easy Ways"
+        steps={workingSteps}
+        background="linear-gradient(to bottom, #382933, #372935, #372831)"
+      />
     <GlassFooter2 />
     </>
   );
