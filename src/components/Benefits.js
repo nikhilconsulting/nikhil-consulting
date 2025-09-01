@@ -81,7 +81,7 @@ const cards = [
 
   return (
     <>
-    <section className="relative w-full pt-12 md:pt-20 min-h-screen text-white overflow-hidden" style={{
+    <section className="relative  w-full pt-12 md:py-12 min-h-screen text-white overflow-hidden" style={{
     background: "linear-gradient(to bottom, #382933, #372935, #372831)",
   }}>
       {/* Title */}
@@ -118,7 +118,7 @@ if (pos === 0) {
       key={index}
       animate={style}
       transition={{ duration: 0.6, ease: "easeInOut" }}
-     className={`absolute w-[90%] sm:w-[45%] md:w-[300px] h-[90%] sm:h-[350px] md:h-[400px] rounded-lg overflow-hidden shadow-xl
+     className={`absolute w-[90%] sm:w-[70%] md:w-[300px] h-[280px] sm:h-[320px] md:h-[400px] rounded-lg overflow-hidden shadow-xl
         ${isSideCard ? "cursor-pointer" : "cursor-default"}`}
       onClick={() => {
         if (pos === cards.length - 1) prevSlide();

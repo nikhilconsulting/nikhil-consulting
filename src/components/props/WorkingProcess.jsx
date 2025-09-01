@@ -7,12 +7,12 @@ const WorkingProcess = ({
 }) => {
   return (
     <section
-      className="py-12 lg:py-18 "
+      className="relative py-12 lg:py-18 "
       style={{ background }}
     >
       <div className="container mx-auto min-h-screen">
         <div className="section-title text-center mb-12">
-          <h2 className="wow fadeInUp text-2xl md:text-3xl font-semibold text-white">
+          <h2 className="wow fadeInUp text-2xl md:text-3xl font-bold text-white">
             {title.split('\n').map((line, i) => (
               <span key={i}>
                 {line}
@@ -25,8 +25,8 @@ const WorkingProcess = ({
         <div className="space-y-10">
           {steps.map((step, index) => {
             const isEven = index % 2 === 1;
-            const arrowDown = '/assets/images/arrow-down (1).png';
-            const arrowRevers = '/assets/images/arrow-revers (1).png';
+            const arrowDown = '/assets/images/service-detail-page-images/1.png';
+            const arrowRevers = '/assets/images/service-detail-page-images/2.png';
 
             return (
               <div
@@ -35,13 +35,13 @@ const WorkingProcess = ({
               >
                 {/* Arrow for even steps (reverse) */}
                 {isEven && (
-                  <div className="hidden lg:flex lg:w-3/12 justify-center">
-                    <div className="arrow-image text-center">
+                  <div className="hidden lg:flex lg:w-3/12 justify-end">
+                    <div className="mb-5">
                       <Image
                         src={arrowRevers}
                         alt="arrow"
-                        width={70}
-                        height={200}
+                        width={160}
+                        height={150}
                       />
                     </div>
                   </div>
@@ -73,13 +73,14 @@ const WorkingProcess = ({
 
                 {/* Arrow for odd steps (down) */}
                 {!isEven && (
-                  <div className="hidden lg:flex lg:w-3/12 justify-start">
-                    <div className="arrow-image mt-10">
+                  <div className="hidden lg:flex lg:w-4/12 justify-start">
+                    <div className="mt-5">
                       <Image
                         src={arrowDown}
                         alt="arrow"
-                        width={100}
+                        width={160}
                         height={200}
+                        className=''
                       />
                     </div>
                   </div>
@@ -89,6 +90,16 @@ const WorkingProcess = ({
           })}
         </div>
       </div>
+        {/* Divider */}
+        <div className="absolute bottom-0 left-0 w-full z-20">
+          <div
+            className="h-[2px] w-full max-w-[1000px] mx-auto"
+            style={{
+              background:
+                "linear-gradient(to right, rgba(211,233,253,0.3), rgba(211,233,253,0))",
+            }}
+          ></div>
+        </div>
     </section>
   );
 };
