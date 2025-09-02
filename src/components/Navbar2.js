@@ -35,7 +35,8 @@ export default function GlassNavbar2() {
   // ✅ Now define navItems
  const navItems = [
   { href: "/", label: "Home" },
-  { href: "/why-choose-us", label: "Why Choose Us" },
+  { href: "/about-us", label: "About Us" },
+   { href: "/blogs", label: "Blogs" },
   {
     href: "/services",
     label: "Services",
