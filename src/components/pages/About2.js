@@ -1,11 +1,9 @@
-import GlassFooter2 from '@/components/pages/Footer2';
-import GlassNavbar2 from '@/components/pages/Navbar2';
+
 import Image from 'next/image';
 
 export default function page() {
   return (
     <>
-    <GlassNavbar2 />
     <section className="relative w-full min-h-screen flex flex-col justify-center py-16 px-4 sm:px-8 md:px-16 lg:px-20 "
      style={{
           background: "linear-gradient(to bottom, #382933, #372935, #372831)",
@@ -99,7 +97,6 @@ export default function page() {
 
       </div>
     </section>
-    <GlassFooter2 />
     </>
   );
 }

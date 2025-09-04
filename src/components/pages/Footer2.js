@@ -12,7 +12,7 @@ import {
   FaEnvelope,
   FaGooglePlusG
 } from "react-icons/fa";
-import ContactFormModal from "./ContactFormModal";
+import ContactFormModal from "../ContactFormModal";
 
 export default function GlassFooter2() {
 

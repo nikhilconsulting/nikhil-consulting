@@ -1,5 +1,5 @@
-import GlassFooter2 from '@/components/Footer2'
-import GlassNavbar2 from '@/components/Navbar2'
+import GlassFooter2 from '@/components/pages/Footer2'
+import GlassNavbar2 from '@/components/pages/Navbar2'
 import React from 'react'
 
 export default function page() {
