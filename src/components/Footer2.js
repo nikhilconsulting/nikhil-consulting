@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Cta2 from "@/components/Cta2";
 import { useState, useEffect } from "react";
 import {
   FaLinkedin,
@@ -12,7 +13,7 @@ import {
   FaEnvelope,
   FaGooglePlusG
 } from "react-icons/fa";
-import ContactFormModal from "../ContactFormModal";
+import ContactFormModal from "./ContactFormModal";
 
 export default function GlassFooter2() {
 
@@ -34,7 +35,13 @@ const [selectedExpert, setSelectedExpert] = useState('');
 
   return (
     <>
-      <footer id="book-consulting" className="py-12 text-white bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px]">
+    <div className="relative mt-32">
+        <div className="absolute -top-32 left-0 w-full h-40 bg-[linear-gradient(to_bottom,_#382933,_#372935,_#372831)] -z-10"></div>
+
+     <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 z-10">
+      <Cta2 />
+    </div>
+      <footer id="book-consulting" className="py-12 lg:pt-30 text-white bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px]">
         {/* Top Section */}
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2  xl:grid-cols-5 gap-y-10 gap-x-6 px-4 sm:px-6 lg:px-6 xl:ml-30 md:ml-20 lg:mr-25 ">
           {/* Brand Section */}
@@ -78,7 +85,9 @@ const [selectedExpert, setSelectedExpert] = useState('');
             <ul className="space-y-2 text-base cursor-pointer">
               <li><a href="/" className="hover:underline">Home</a></li>
 
-              <li><a href="/why-choose-us" className="hover:underline">Why Choose Us</a></li>
+              <li><a href="/about-us" className="hover:underline">About Us</a></li>
+              <li><a href="/blogs" className="hover:underline">Blogs</a></li>
+
                             <li><a href="/services" className="hover:underline">Services</a></li>
               <li><a href="/digital-marketing-consultant" className="hover:underline">Consultancy</a></li>
               <li><a href="/contact-us" className="hover:underline">Contact Us</a>
@@ -135,7 +144,7 @@ const [selectedExpert, setSelectedExpert] = useState('');
           </p>
         </div>
       </footer>
-
+</div>
       {/* Modal Component */}
      <ContactFormModal 
   showForm={showForm} 

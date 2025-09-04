@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { FiArrowUpRight } from "react-icons/fi";
 
 const services = [
   {
@@ -10,11 +11,11 @@ const services = [
       "Drive organic traffic with our comprehensive SEO solutions tailored for your niche and location. SEO-friendly, responsive websites built to convert visitors into loyal customers. SEO-friendly, responsive websites built to convert visitors into loyal customers. SEO-friendly, responsive websites built to convert visitors into loyal customers.SEO-friendly, responsive websites built to convert visitors into loyal customers.SEO-friendly, responsive websites built to convert visitors into loyal customers.SEO-friendly, responsive websites built to convert visitors into loyal customers.",
     image: "/assets/images/service_thumb_1.jpg",
     hashtags: [
-      "#ModelingIndustry",
-      "#BrandEstablishment",
-      "#MilestoneAchievement",
-      "#MilestoneAchievement",
-      "#MilestoneAchievement",
+      "ModelingIndustry",
+      "BrandEstablishment",
+      "MilestoneAchievement",
+      "MilestoneAchievement",
+      "MilestoneAchievement",
     ],
   },
   {
@@ -24,11 +25,11 @@ const services = [
       "Engage and grow your loyal community through our strategic content and paid campaign expertise.Engage and grow your loyal community through our strategic content and paid campaign expertise.Engage and grow your loyal community through our strategic content and paid campaign expertise.Engage and grow your loyal community through our strategic content and paid campaign expertise.Engage and grow your loyal community through our strategic content and paid campaign expertise.",
     image: "/assets/images/service_thumb_2.jpg",
     hashtags: [
-      "#ModelingIndustry",
-      "#BrandEstablishment",
-      "#MilestoneAchievement",
-      "#ModelingIndustry",
-      "#BrandEstablishment",
+      "ModelingIndustry",
+      "BrandEstablishment",
+      "MilestoneAchievement",
+      "ModelingIndustry",
+      "BrandEstablishment",
     ],
   },
   {
@@ -38,11 +39,11 @@ const services = [
       "From search ads to display and Facebook promotions, we are a certified Google Ads service provider in Varanasi. Engage and grow your loyal community through our strategic content and paid campaign expertise. Engage and grow your loyal community through our strategic content and paid campaign expertise.Engage and grow your loyal community through our strategic content and paid campaign expertise.Engage and grow your loyal community through our strategic content and paid campaign expertise.",
     image: "/assets/images/service_thumb_3.jpg",
     hashtags: [
-      "#ModelingIndustry",
-      "#BrandEstablishment",
-      "#MilestoneAchievement",
-      "#ModelingIndustry",
-      "#BrandEstablishment",
+      "ModelingIndustry",
+      "BrandEstablishment",
+      "MilestoneAchievement",
+      "ModelingIndustry",
+      "BrandEstablishment",
     ],
   },
   {
@@ -52,11 +53,11 @@ const services = [
       "Rank your business on Google Maps and local search with our GMB listing service in Varanasi. Engage and grow your loyal community through our strategic content and paid campaign expertise.Engage and grow your loyal community through our strategic content and paid campaign expertise.Engage and grow your loyal community through our strategic content and paid campaign expertise.Engage and grow your loyal community through our strategic content and paid campaign expertise.",
     image: "/assets/images/service_thumb_4.jpg",
     hashtags: [
-      "#ModelingIndustry",
-      "#BrandEstablishment",
-      "#MilestoneAchievement",
-      "#ModelingIndustry",
-      "#BrandEstablishment",
+      "ModelingIndustry",
+      "BrandEstablishment",
+      "MilestoneAchievement",
+      "ModelingIndustry",
+      "BrandEstablishment",
     ],
   },
   {
@@ -66,11 +67,11 @@ const services = [
       "SEO-friendly, responsive websites built to convert visitors into loyal customers. Engage and grow your loyal community through our strategic content and paid campaign expertise. Engage and grow your loyal community through our strategic content and paid campaign expertise.Engage and grow your loyal community through our strategic content and paid campaign expertise.Engage and grow your loyal community through our strategic content and paid campaign expertise.",
     image: "/assets/images/service_thumb_5.jpg",
     hashtags: [
-      "#ModelingIndustry",
-      "#BrandEstablishment",
-      "#MilestoneAchievement",
-      "#ModelingIndustry",
-      "#BrandEstablishment",
+      "ModelingIndustry",
+      "BrandEstablishment",
+      "MilestoneAchievement",
+      "ModelingIndustry",
+      "BrandEstablishment",
     ],
   },
   {
@@ -80,11 +81,11 @@ const services = [
       "SEO-friendly, responsive websites built to convert visitors into loyal customers. Engage and grow your loyal community through our strategic content and paid campaign expertise. Engage and grow your loyal community through our strategic content and paid campaign expertise.Engage and grow your loyal community through our strategic content and paid campaign expertise.Engage and grow your loyal community through our strategic content and paid campaign expertise.",
     image: "/assets/images/image.png",
     hashtags: [
-      "#ModelingIndustry",
-      "#BrandEstablishment",
-      "#MilestoneAchievement",
-      "#ModelingIndustry",
-      "#BrandEstablishment",
+      "ModelingIndustry",
+      "BrandEstablishment",
+      "MilestoneAchievement",
+      "ModelingIndustry",
+      "BrandEstablishment",
     ],
   },
 ];
@@ -142,12 +143,28 @@ export default function ServicesScrollSticky() {
               ref={(el) => (itemRefs.current[index] = el)}
               className="h-screen flex flex-col justify-center"
             >
-              <h2 className="text-white text-3xl sm:text-4xl font-extrabold mb-3">
-                {service.id} {service.title}
-              </h2>
-              <p className="text-gray-100 text-base sm:text-lg leading-relaxed mb-6">
-                {service.description}
-              </p>
+             <div className="flex items-center gap-4 mb-3">
+  <h2 className="text-white text-3xl sm:text-4xl font-extrabold">
+    {service.id} {service.title}
+  </h2>
+
+ <Link
+  href="/services"
+  className="flex items-center gap-4 text-white 
+    bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] 
+    rounded-full w-14 h-14 shadow-lg justify-center
+    hover:bg-none hover:bg-white hover:text-black 
+    transition-colors duration-300 ease-in-out transition hover:scale-105"
+>
+  <FiArrowUpRight className="w-7 h-7" />
+</Link>
+
+</div>
+
+<p className="text-gray-100 text-base sm:text-lg leading-relaxed mb-6 text-justify">
+  {service.description}
+</p>
+
 
               {/* Hashtags Section */}
               <div className="flex flex-wrap gap-4">
@@ -164,15 +181,36 @@ export default function ServicesScrollSticky() {
           ))}
         </div>
 
-        {/* Right Sticky Image */}
-        <div className="sticky top-38 lg:flex-1 h-[300px] sm:h-[400px] lg:h-[70vh] flex items-center justify-center">
-          <img
-            src={services[activeIndex].image}
-            alt={services[activeIndex].title}
-            key={services[activeIndex].id}
-            className="w-full max-w-[600px] h-full rounded-xl object-cover shadow-lg transition-opacity duration-500 ease-in-out"
-          />
-        </div>
+      {/* Right Sticky Image */}
+<div className="sticky top-38 lg:flex-1 h-[300px] sm:h-[400px] lg:h-[70vh] flex items-center justify-center relative">
+
+  {/* 1. Spotlight Glow Behind Image */}
+  <div className="absolute inset-0 flex items-center justify-center z-0">
+    <div className="w-[250px] sm:w-[350px] md:w-[450px] lg:w-[500px] h-[250px] sm:h-[350px] md:h-[450px] lg:h-[500px] bg-gradient-radial from-[#8FCDFF]/40 via-[#5F69A8]/25 to-transparent rounded-full blur-3xl"></div>
+  </div>
+
+  {/* 2. Image Container with Aura */}
+  <div className="relative z-10 w-full max-w-[600px] h-full">
+    
+    {/* 2a. Aura Behind Image */}
+    <div
+      className="absolute inset-0 rounded-xl blur-xl opacity-50"
+      style={{
+        background:
+          "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
+      }}
+    ></div>
+
+    {/* 2b. Actual Image */}
+    <img
+      src={services[activeIndex].image}
+      alt={services[activeIndex].title}
+      key={services[activeIndex].id}
+      className="w-full h-full object-cover rounded-xl relative"
+    />
+  </div>
+</div>
+
       </div>
     </section>
   );

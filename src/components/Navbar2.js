@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import ContactFormModal from "../ContactFormModal";
+import ContactFormModal from "./ContactFormModal";
 import { usePathname } from "next/navigation";
 
 export default function GlassNavbar2() {

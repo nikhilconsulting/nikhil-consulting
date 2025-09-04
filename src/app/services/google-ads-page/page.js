@@ -1,7 +1,7 @@
 import React from "react";
 import ServiceSection from "@/components/props/ServiceSection";
-import GlassNavbar2 from "@/components/pages/Navbar2";
-import GlassFooter2 from "@/components/pages/Footer2";
+import GlassNavbar2 from "@/components/Navbar2";
+import GlassFooter2 from "@/components/Footer2";
 import WorkingProcess from "@/components/props/WorkingProcess";
 import DigitalMarketingFAQs from "@/components/props/Faqs";
 const MetaPage = () => {
