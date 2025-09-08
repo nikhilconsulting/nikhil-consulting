@@ -35,15 +35,10 @@ const [selectedExpert, setSelectedExpert] = useState('');
 
   return (
     <>
-    <div className="relative mt-32">
-        <div className="absolute -top-32 left-0 w-full h-40 bg-[linear-gradient(to_bottom,_#382933,_#372935,_#372831)] -z-10"></div>
-
-     <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 z-10">
+           <footer id="book-consulting" className="py-12 text-white bg-[linear-gradient(to_bottom,_#382933,_#372935,_#372831)] backdrop-blur-[15px]">
       <Cta2 />
-    </div>
-      <footer id="book-consulting" className="py-12 lg:pt-30 text-white bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px]">
         {/* Top Section */}
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2  xl:grid-cols-5 gap-y-10 gap-x-6 px-4 sm:px-6 lg:px-6 xl:ml-30 md:ml-20 lg:mr-25 ">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2  xl:grid-cols-5 gap-y-10 gap-x-6 px-4 sm:px-6 lg:px-6 xl:ml-30 md:ml-20 lg:mr-25 pt-10 ">
           {/* Brand Section */}
           <div className="xl:col-span-2 xl:mr-4">
             <p className="text-base leading-relaxed text-gray-100">
@@ -83,14 +78,15 @@ const [selectedExpert, setSelectedExpert] = useState('');
           <div className="xl:ml-10">
             <h3 className="font-semibold mb-4 text-lg">Quick Links</h3>
             <ul className="space-y-2 text-base cursor-pointer">
-              <li><a href="/" className="hover:underline">Home</a></li>
+              <li><Link href="/" className="hover:underline">Home</Link></li>
 
-              <li><a href="/about-us" className="hover:underline">About Us</a></li>
-              <li><a href="/blogs" className="hover:underline">Blogs</a></li>
+              <li><Link href="/about-us" className="hover:underline">About Us</Link></li>
+              <li><Link href="/blogs" className="hover:underline">Blogs</Link></li>
 
-                            <li><a href="/services" className="hover:underline">Services</a></li>
-              <li><a href="/digital-marketing-consultant" className="hover:underline">Consultancy</a></li>
-              <li><a href="/contact-us" className="hover:underline">Contact Us</a>
+                            <li><Link href="/services" className="hover:underline">Services</Link></li>
+              <li><Link href="/digital-marketing-consultant" className="hover:underline">Consultancy</Link></li>
+              <li><Link href="/career" className="hover:underline">Career</Link></li>
+              <li><Link href="/contact-us" className="hover:underline">Contact Us</Link>
               </li>
             </ul>
           </div>
@@ -135,16 +131,15 @@ const [selectedExpert, setSelectedExpert] = useState('');
         {/* Footer Bottom */}
         <div className="max-w-7xl mx-auto mt-12 border-t border-white/30 pt-6 flex flex-col sm:flex-row items-center justify-between text-sm px-4 sm:px-6 lg:px-8">
           <div className="flex gap-6 mb-4 sm:mb-0 text-xs">
-            <a href="/privacy-policy" className="hover:underline">Privacy Policy</a>
+            <Link href="/privacy-policy" className="hover:underline">Privacy Policy</Link>
             <span>|</span>
-            <a href="/terms-&-conditions" className="hover:underline">Terms of Service</a>
+            <Link href="/terms-&-conditions" className="hover:underline">Terms of Service</Link>
           </div>
           <p className="text-sm sm:text-base">
             © {new Date().getFullYear()} All Rights Reserved
           </p>
         </div>
       </footer>
-</div>
       {/* Modal Component */}
      <ContactFormModal 
   showForm={showForm} 

@@ -53,6 +53,7 @@ export default function GlassNavbar2() {
     ],
   },
   { href: "/digital-marketing-consultant", label: "Consultancy" },
+  { href: "/career", label: "Career" },
   { href: "/contact-us", label: "Contact Us" },
 ];
 

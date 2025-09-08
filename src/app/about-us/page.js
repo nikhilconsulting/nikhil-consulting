@@ -3,7 +3,8 @@ import About2 from '@/components/About2';
 import GlassFooter2 from '@/components/Footer2';
 import GlassNavbar2 from '@/components/Navbar2';
 import Image from 'next/image';
-import WorkingProcess2 from '@/components/WorkingProcess2';
+import AboutSection4 from '@/components/AboutSection4';
+
 
 export default function page() {
   return (
@@ -12,7 +13,7 @@ export default function page() {
  
    <AboutSection3 />
      <About2 />
-     {/* <WorkingProcess2 /> */}
+     <AboutSection4 />
     <GlassFooter2 />
     </>
   );

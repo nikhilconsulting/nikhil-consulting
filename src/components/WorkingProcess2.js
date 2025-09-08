@@ -27,43 +27,65 @@ const workingSteps = [
 
 export default function WorkingProcess2() {
   return (
-    <section className="relative bg-gradient-to-r from-[#111827] to-[#5b21b6] text-white py-24 px-4">
-      <div className="max-w-7xl mx-auto text-center mb-16">
+   <section className="relative bg-[linear-gradient(to_bottom,_#382933,_#372935,_#372831)] backdrop-blur-[15px] text-white px-4 overflow-hidden h-screen flex flex-col justify-center">
+   <div className="max-w-7xl mx-auto text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold">
           DOMINATE YOUR MARKET WITH OUR BATTLE-TESTED{" "}
-          <span className="text-purple-400">FRAMEWORK</span>
+          <span className="bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px] p-2">FRAMEWORK</span>
         </h2>
       </div>
 
-      {/* Timeline Container */}
-      <div className="relative w-full max-w-6xl mx-auto">
+      <div className="relative max-w-6xl mx-auto">
         {/* Horizontal Line */}
-        <div className="absolute left-0 right-0 top-1/2 transform -translate-y-1/2 h-1 bg-white/30 z-0" />
+        <div className="absolute left-0 right-0 top-1/2 h-0.5 bg-white/30 z-0 transform -translate-y-1/2" />
 
-        {/* Circles on line */}
-        <div className="absolute left-0 right-0 top-1/2 transform -translate-y-1/2 flex justify-between px-4 z-10">
-          {workingSteps.map((_, index) => (
+        {/* Timeline Dots */}
+        <div className="absolute top-1/2 left-0 right-0 flex justify-between px-4 z-10 transform -translate-y-1/2 ">
+          {[...Array(4)].map((_, idx) => (
             <div
-              key={index}
-              className="w-4 h-4 bg-white rounded-full border-4 border-white z-10"
+              key={idx}
+              className="w-4 h-4 bg-white rounded-full border-4 border-white"
             />
           ))}
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-2 gap-y-24 gap-x-8 relative z-10 mt-10">
-          {workingSteps.map((step, index) => (
-            <div
-              key={index}
-              className={`max-w-sm ${
-                index < 2 ? "justify-self-start text-left" : "justify-self-end text-left"
-              }`}
-            >
-              <h3 className="text-lg font-bold mb-2">{step.title}</h3>
-              <p className="text-sm text-white/80">{step.description}</p>
-            </div>
-          ))}
-        </div>
+       {/* Top Row */}
+<div className="grid grid-cols-8 gap-8 relative z-10 mb-24">
+  <div></div>
+  <div className="col-span-3 text-left px-4"> {/* col-span-3 for more width */}
+    <h3 className="text-lg font-bold mb-2">{workingSteps[0].title}</h3>
+    <p className="text-base text-white/80">
+      {workingSteps[0].description}
+    </p>
+  </div>
+  <div></div>
+  <div className="col-span-3 text-left px-4"> {/* col-span-3 for more width */}
+    <h3 className="text-lg font-bold mb-2">{workingSteps[1].title}</h3>
+    <p className="text-base text-white/80">
+      {workingSteps[1].description}
+    </p>
+  </div>
+  <div></div>
+</div>
+
+{/* Bottom Row */}
+<div className="grid grid-cols-8 gap-8 relative z-10 mt-12">
+  <div className="col-span-3 text-left px-4">
+    <h3 className="text-lg font-bold mb-2">{workingSteps[2].title}</h3>
+    <p className="text-base text-white/80">
+      {workingSteps[2].description}
+    </p>
+  </div>
+  <div></div>
+  <div className="col-span-3 text-left px-4">
+    <h3 className="text-lg font-bold mb-2">{workingSteps[3].title}</h3>
+    <p className="text-base text-white/80">
+      {workingSteps[3].description}
+    </p>
+  </div>
+  <div></div>
+</div>
+
       </div>
     </section>
   );
