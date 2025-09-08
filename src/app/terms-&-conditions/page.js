@@ -1,6 +1,6 @@
-import CTASection from '@/components/Cta';
-import GlassFooter from '@/components/Footer';
-import GlassNavbar from '@/components/Navbar';
+"use client";
+import GlassFooter2 from '@/components/Footer2';
+import GlassNavbar2 from '@/components/Navbar2';
 import React from 'react';
 
 const page = () => {
@@ -12,7 +12,7 @@ const page = () => {
         background: "linear-gradient(to bottom, #382933, #372935, #372831)",
       }}
     >
-      <GlassNavbar />
+      <GlassNavbar2 />
       <main className="px-6 sm:px-10 py-30 max-w-4xl mx-auto text-white space-y-6 text-justify">
         <div className="text-2xl font-semibold mb-2 text-center">
           Terms & Conditions – RankInventiv
@@ -75,8 +75,7 @@ const page = () => {
           <a href="https://www.rankinventiv.com" target="_blank" rel="noopener noreferrer" className="underline text-blue-400 hover:text-white">www.rankinventiv.com</a>
         </div>
       </main>
-      <CTASection />
-      <GlassFooter />
+      <GlassFooter2 />
       </div>
     </>
   );

@@ -1,13 +1,20 @@
-import GlassFooter2 from '@/components/Footer2'
-import GlassNavbar2 from '@/components/Navbar2'
-import React from 'react'
+"use client";
 
-export default function page() {
+
+import GlassNavbar2 from "@/components/Navbar2";
+import GlassFooter2 from "@/components/Footer2";
+import Connect from "@/components/Connect";
+import ContactUsPage from "@/components/ContactUsPage";
+
+export default function ContactPage() {
+
+
   return (
-    <>
-      <GlassNavbar2 />
-      contact us
-      <GlassFooter2 />
+<>
+<GlassNavbar2 />
+  <ContactUsPage />
+    <Connect />
+    <GlassFooter2 />
     </>
-  )
+  );
 }

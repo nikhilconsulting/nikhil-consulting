@@ -1,12 +1,12 @@
-import CTASection from "@/components/Cta";
-import GlassFooter from "@/components/Footer";
-import GlassNavbar from "@/components/Navbar";
+"use client";
+import GlassFooter2 from "@/components/Footer2";
+import GlassNavbar2 from "@/components/Navbar2";
 import React from "react";
 
 const PrivacyPolicy = () => {
 
   return (
-    <><GlassNavbar /> 
+    <><GlassNavbar2 /> 
     <div
       className="min-h-screen w-full text-gray-200"
       style={{
@@ -185,8 +185,7 @@ const PrivacyPolicy = () => {
       </main>
 
     </div>
-    <CTASection />
-      <GlassFooter />
+      <GlassFooter2 />
     </>
   );
 };
