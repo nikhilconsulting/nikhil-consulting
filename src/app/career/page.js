@@ -4,7 +4,7 @@ import GlassFooter2 from '@/components/Footer2';
 import GlassNavbar2 from '@/components/Navbar2';
 import CareerFormModal from '@/components/CareerFormModal';
 import Image from 'next/image';
-import { useState } from 'react';
+import React , { useState } from 'react';
 
 
 
@@ -177,18 +177,19 @@ const jobs = [
         </div>
       </section>
        {showModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50">
-          <div className="relative w-full max-w-5xl mx-auto p-4">
-            <button
-              className="absolute top-2 right-2 text-2xl font-bold text-white"
-              onClick={() => setShowModal(false)}
-            >
-              ×
-            </button>
-            <CareerFormModal job={selectedJob} />
-          </div>
-        </div>
-      )}
+  <div className="fixed inset-0 flex justify-center items-center z-50">
+    <div className="relative w-full max-w-5xl mx-auto p-4">
+      <button
+        className="absolute top-2 right-2 text-2xl font-bold text-white"
+        onClick={() => setShowModal(false)}
+      >
+        ×
+      </button>
+      <CareerFormModal job={selectedJob} onClose={() => setShowModal(false)} />
+    </div>
+  </div>
+)}
+
       <GlassFooter2 />
     </>
   );
