@@ -1,7 +1,7 @@
 "use client";
 
 import { FaSearch, FaPlay, FaArrowRight } from 'react-icons/fa';
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import Image from 'next/image';
 import GlassNavbar2 from '@/components/Navbar2';
 import GlassFooter2 from '@/components/Footer2';
@@ -38,20 +38,24 @@ const visibleNavItems = showAllNav ? navItems : navItems.slice(0, 5);
     { title: 'Blog 12 Title Example', category: 'Category 12', image: '/assets/kimetsu-no-yaiba-rengoku-with-katana-desktop-wallpaper.jpg' },
   ];
 const [filterDay, setFilterDay] = useState('Today');
-
-const today = new Date();
-const yesterday = new Date();
-yesterday.setDate(today.getDate() + 1);
-
+const [today, setToday] = useState(null);
 function formatDate(date) {
   return date.toISOString().split('T')[0]; // 'YYYY-MM-DD'
 }
 
+useEffect(() => {
+  setToday(new Date());
+}, []);
+
+const yesterday = today ? new Date(today) : null;
+if (yesterday) yesterday.setDate(today.getDate() - 1);
+
 const filteredTrailers = blogs.filter((blog) => {
+  if (!today) return false; // avoid mismatch during SSR
   if (filterDay === 'Today') {
     return blog.date === formatDate(today);
   }
-  if (filterDay === 'Tomorrow') {
+  if (filterDay === 'Yesterday') {
     return blog.date === formatDate(yesterday);
   }
   return false;
@@ -79,7 +83,7 @@ const filteredTrailers = blogs.filter((blog) => {
   <header className="flex justify-between items-center px-6 py-4 bg-[#2c2c2c]">
   {/* Search Bar Left Aligned */}
   <div className="flex items-center gap-4">
-    <div className="flex items-center bg-[#3b3b3b] px-3 py-1 rounded-lg w-80">
+    <div className="flex items-center bg-[#3b3b3b] px-3 py-1 rounded-lg w-full max-w-xs sm:max-w-sm">
       <FaSearch className="text-gray-400 mr-2" />
       <input
         type="text"
@@ -90,12 +94,12 @@ const filteredTrailers = blogs.filter((blog) => {
   </div>
 
   {/* Nav Items Right Aligned */}
-  <nav className="flex gap-3 items-center flex-wrap">
+  <nav className="flex flex-wrap gap-3 items-center justify-end">
     {visibleNavItems.map((item, index) => (
       <button
         key={index}
-        className="bg-[#3b3b3b] text-gray-300 hover:bg-blue-600 hover:text-white px-4 py-1.5 rounded-full text-sm transition duration-200"
-      >
+       className="bg-[#3b3b3b] text-gray-300 hover:bg-blue-600 hover:text-white px-3 py-1 rounded-full text-xs sm:text-sm transition duration-200"
+   >
         {item}
       </button>
     ))}
@@ -115,9 +119,10 @@ const filteredTrailers = blogs.filter((blog) => {
 
 
       {/* Main Section */}
-      <div className="flex px-6 py-6 space-x-6">
+      <div className="flex flex-col lg:flex-row px-4 sm:px-6 md:px-8 py-6 space-y-6 lg:space-y-0 lg:space-x-6">
+
         {/* Left Sidebar */}
-        <aside className="w-1/4 space-y-6 hidden lg:block">
+        <aside className="w-full lg:w-1/4 space-y-6 hidden lg:block">
          
           {/* New Posts Section */}
 <div className="bg-[#2c2c2c] rounded-xl p-4">
@@ -260,11 +265,11 @@ const filteredTrailers = blogs.filter((blog) => {
         <button className="text-sm text-gray-400 hover:text-white">See all</button>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-6">
        {currentBlogs.map((item, i) => (
   <div key={i} className="bg-[#2c2c2c] rounded-xl overflow-hidden shadow-lg flex flex-col">
     {/* Image */}
-    <div className="relative h-40 w-full">
+   <div className="relative h-40 sm:h-48 md:h-40 w-full">
       <Image
         src={item.image}
         alt={item.title}
