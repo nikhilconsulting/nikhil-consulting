@@ -114,7 +114,7 @@ export default function ServicesScrollSticky() {
 
   return (
     <section
-      className="w-full min-h-screen text-gray-200 pt-32 lg:pt-20 lg:pb-20"
+      className="relative w-full min-h-screen text-gray-200 pt-32 lg:pt-20 lg:pb-20"
       style={{
         background: "linear-gradient(to bottom, #382933, #372935, #372831)",
       }}
@@ -212,6 +212,16 @@ export default function ServicesScrollSticky() {
 </div>
 
       </div>
+       {/* Divider */}
+        <div className="absolute bottom-0 left-0 w-full z-20">
+          <div
+            className="h-[2px] w-full max-w-[1000px] mx-auto"
+            style={{
+              background:
+                "linear-gradient(to right, rgba(211,233,253,0.3), rgba(211,233,253,0))",
+            }}
+          ></div>
+        </div>
     </section>
   );
 }

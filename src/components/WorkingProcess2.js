@@ -87,6 +87,16 @@ export default function WorkingProcess2() {
 </div>
 
       </div>
+       {/* Divider */}
+        <div className="absolute bottom-0 left-0 w-full z-20">
+          <div
+            className="h-[2px] w-full max-w-[1000px] mx-auto"
+            style={{
+              background:
+                "linear-gradient(to right, rgba(211,233,253,0.3), rgba(211,233,253,0))",
+            }}
+          ></div>
+        </div>
     </section>
   );
 }

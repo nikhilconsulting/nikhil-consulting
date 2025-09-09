@@ -12,6 +12,7 @@ import Image from "next/image";
 import NextAndProgress from "@/components/NextAndProgress";
 import Slide from "@/components/Slide";
 import Slider from "@/components/Slider";
+import HomeBlogSection from "@/components/HomeBlogSection";
 
 
 export default function Home() {
@@ -19,7 +20,7 @@ export default function Home() {
 <>
 <GlassNavbar2 />
 
-<HeroSection2 />
+{/* <HeroSection2 /> */}
   {/* <div className="relative h-screen w-screen overflow-hidden bg-stone-800">
        <Image 
   src="/assets/pngwing.com.png" 
@@ -31,15 +32,19 @@ export default function Home() {
         <Slider />
         <NextAndProgress />
       </div > */}
+       <ServicesScrollSticky />
+<WorkingProcess2 />
+
+      <HomeBlogSection />
 
 {/* <ServicesSection2 /> */}
 
-{/* <WorkingProcess2 />
- <ServicesScrollSticky />
+
+
 
  <Testimonials2 />
 
-<GlassFooter2 /> */}
+<GlassFooter2 />
 
 </>
   );
