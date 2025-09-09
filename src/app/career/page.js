@@ -2,10 +2,14 @@
 
 import GlassFooter2 from '@/components/Footer2';
 import GlassNavbar2 from '@/components/Navbar2';
+import CareerFormModal from '@/components/CareerFormModal';
 import Image from 'next/image';
 import { useState } from 'react';
 
-const categories = ['All','UI/UX Design', 'Development', 'Data Science', 'Business', 'Financial'];
+
+
+export default function CareerSection() {
+  const categories = ['All','UI/UX Design', 'Development', 'Data Science', 'Business', 'Financial'];
 
 const jobs = [
   {
@@ -82,15 +86,19 @@ const jobs = [
   },
 ];
 
-
-export default function CareerSection() {
   const [selectedCategory, setSelectedCategory] = useState('All');
+    const [showModal, setShowModal] = useState(false); // 👈 NEW
+  const [selectedJob, setSelectedJob] = useState(null); // Optional: Pass job info
+
 
   const filteredJobs = selectedCategory === 'All'
   ? jobs
   : jobs.filter(job => job.tag === selectedCategory);
 
-
+  const handleApplyClick = (job) => {
+    setSelectedJob(job);
+    setShowModal(true);
+  };
   return (
     <>
       <GlassNavbar2 />
@@ -149,7 +157,9 @@ export default function CareerSection() {
       </div>
     </div>
 
-    <button className="mt-2 bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px] text-white font-bold px-4 py-2 transition hover:scale-105 cursor-pointer">
+    <button
+    onClick={() => handleApplyClick(job)}
+    className="mt-2 bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px] text-white font-bold px-4 py-2 transition hover:scale-105 cursor-pointer">
       APPLY NOW
     </button>
   </div>
@@ -166,6 +176,19 @@ export default function CareerSection() {
           </div>
         </div>
       </section>
+       {showModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50">
+          <div className="relative w-full max-w-5xl mx-auto p-4">
+            <button
+              className="absolute top-2 right-2 text-2xl font-bold text-white"
+              onClick={() => setShowModal(false)}
+            >
+              ×
+            </button>
+            <CareerFormModal job={selectedJob} />
+          </div>
+        </div>
+      )}
       <GlassFooter2 />
     </>
   );
