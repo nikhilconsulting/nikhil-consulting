@@ -8,6 +8,7 @@ import GlassFooter2 from '@/components/Footer2';
 
 
 export default function Home() {
+  
   const navItems = [
   "SEO",
   "Google Ads",
