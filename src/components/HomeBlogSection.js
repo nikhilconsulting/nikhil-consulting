@@ -1,44 +1,7 @@
 "use client";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
-const stories = [
-  {
-    id: 1,
-    title: "Los Angeles food & drinks guide: 10 things to try in LA",
-    description:
-      "From hidden gems in downtown LA to iconic food trucks and rooftop bars, this guide covers it  a traveler looking guide covers authentic bite, weve rounded up our top picks for your next flavor adventure all. Whether youre a local foodie or a traveler looking for an authentic bite, weve rounded up our top picks for your next flavor adventure ...",
-    category: "Food and Drink",
-    image: "/assets/demon-slayer-giyu-tomioka-cool-desktop-wallpaper-4k.jpg",
-    date: "2025-08-20",
-    readingTime: "5 min read",
-    featured: true,
-  },
-  {
-    id: 2,
-    title: "12 Events London Markets You’ll Love",
-    category: "Travel",
-    image: "/assets/demon-slayer-mitsuri-cherry-blossom-desktop-wallpaper.jpg",
-    date: "2025-08-18",
-    readingTime: "4 min read",
-  },
-  {
-    id: 3,
-    title: "10 Incredible hotels around the world you can book",
-    category: "Hotels",
-    image: "/assets/demon-slayer-tanjiro-with-katana-epic-desktop-wallpaper.jpg",
-    date: "2025-08-15",
-    readingTime: "6 min read",
-  },
-  {
-    id: 4,
-    title: "Visiting Chicago on a Budget: Affordable Eats and Attractions",
-    category: "Travel Budget",
-    image: "/assets/kimetsu-no-yaiba-rengoku-with-katana-desktop-wallpaper.jpg",
-    date: "2025-08-12",
-    readingTime: "3 min read",
-  },
-];
 
 function formatDate(dateStr) {
   const options = { year: "numeric", month: "short", day: "numeric" };
@@ -46,8 +9,26 @@ function formatDate(dateStr) {
 }
 
 export default function HomeBlogSection() {
-  const featured = stories.find((s) => s.featured);
-  const others = stories.filter((s) => !s.featured);
+  const [stories, setStories] = useState([]);
+
+useEffect(() => {
+  fetch("/api/blogs")
+    .then((res) => res.json())
+    .then((data) => {
+      console.log("Fetched data:", data);
+      setStories(Array.isArray(data) ? data : []);
+    })
+    .catch((err) => console.error(err));
+}, []);
+
+
+  if (stories.length === 0) {
+    return <p className="text-white">Loading blogs...</p>;
+  }
+
+  const featured = stories[0]; // pick first blog as featured
+  const others = stories.slice(1, 4); // only next 3 blogs
+
 
   return (
     <section className="relative min-h-screen bg-[linear-gradient(to_bottom,_#382933,_#372935,_#372831)] px-4 sm:px-6 md:px-12 py-8 flex flex-col justify-center">
@@ -69,8 +50,10 @@ export default function HomeBlogSection() {
           {/* Featured Blog */}
           <div className="md:col-span-2 flex flex-col">
             <div className="relative w-full h-64 sm:h-80 md:h-[450px] lg:h-[330px] rounded-xl overflow-hidden">
-              <Image src={featured?.image || ""} alt={featured?.title || ""} fill className="object-cover" />
-            </div>
+              {featured?.image && (
+  <Image src={featured.image} alt={featured?.title || ""} fill className="object-cover" />
+)}
+ </div>
 
             <div className="mt-4">
               {/* Category + Date/Time */}
@@ -86,10 +69,10 @@ export default function HomeBlogSection() {
 
               {/* Description */}
               <div className="mt-3">
-  <p className="text-gray-100 line-clamp-3 text-base text-justify ">{featured.description}</p>
-  <button className="text-gray-100  text-lg md:text-base font-medium underline cursor-pointer mt-2">
+  <p className="text-gray-100 line-clamp-3 text-base text-justify ">{featured?.description}</p>
+  <Link href={`/blogs/${featured?.slug}`} className="text-gray-100  text-lg md:text-base font-medium underline cursor-pointer mt-2">
     Read more →
-  </button>
+  </Link>
 </div>
 
             </div>
@@ -103,22 +86,24 @@ export default function HomeBlogSection() {
                 className="flex gap-4 items-start bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px] rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow"
               >
                 {/* Image */}
-                <Link href="/blogs/blog-details-page" className="relative w-30 h-30 sm:w-28 sm:h-28 rounded-lg overflow-hidden flex-shrink-0">
-                  <Image src={story.image} alt={story.title} fill className="object-cover" />
-                </Link>
+                <Link href={`/blogs/${story.slug}` } className="relative w-30 h-30 sm:w-28 sm:h-28 rounded-lg overflow-hidden flex-shrink-0">
+              {story.image && (
+  <Image src={story.image} alt={story.title} fill className="object-cover" />
+)}
+   </Link>
 
                 {/* Text content */}
                 <div className="flex flex-col justify-between flex-1">
                   <div>
                     <p className="text-sm md:text-sm text-gray-100">{story.category}</p>
-                    <h4 className="text-sm sm:text-base font-semibold text-white leading-tight">{story.title}</h4>
+                    <span className="text-sm sm:text-lg font-semibold  text-white leading-tight">{story.title}</span>
                     <p className="text-sm sm:text-sm text-gray-100 mt-1">
                       {formatDate(story.date)} · {story.readingTime}
                     </p>
                   </div>
 
                   {/* Read More Button */}
-                  <button className="mt-1 text-gray-100 text-md sm:text-base underline cursor-pointer w-fit">Read more →</button>
+                  <Link href={`/blogs/${story.slug}`} className="mt-1 text-gray-100 text-md sm:text-base underline cursor-pointer w-fit">Read more →</Link>
                 </div>
               </div>
             ))}

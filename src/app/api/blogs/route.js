@@ -2,10 +2,20 @@
 import { NextResponse } from "next/server";
 import mysql from "mysql2/promise";
 
+// helper function to calculate reading time
+function calculateReadingTime(text) {
+  const wordsPerMinute = 200; // average reading speed
+  const words = text?.replace(/<[^>]+>/g, "") // HTML tags hatao agar hain
+                     .trim()
+                     .split(/\s+/).length || 0;
+  const minutes = Math.ceil(words / wordsPerMinute);
+  return `${minutes} min read`;
+}
+
 export async function GET() {
   try {
     const db = await mysql.createConnection({
-      host: "127.0.0.1", // update if remote
+      host: "127.0.0.1",
       user: "root",
       password: "",
       database: "rankinventiv",
@@ -18,14 +28,22 @@ export async function GET() {
         blog_description AS description,
         blog_feature_image AS image,
         blog_date_time AS date,
-        blog_tag AS category,
-        blog_slug AS slug
+        blog_tag AS tag,
+        blog_category AS category,
+        blog_slug AS slug,
+        blog_content AS content
       FROM blogs 
       WHERE blog_status = '1'
       ORDER BY blog_date_time DESC
     `);
 
-    return NextResponse.json(rows);
+    // Add dynamic reading time based on full content
+    const withReadingTime = rows.map((row) => ({
+      ...row,
+      readingTime: calculateReadingTime(row.content || row.description),
+    }));
+
+    return NextResponse.json(withReadingTime);
   } catch (error) {
     console.error(error);
     return NextResponse.json({ error: "Failed to fetch blogs" }, { status: 500 });
