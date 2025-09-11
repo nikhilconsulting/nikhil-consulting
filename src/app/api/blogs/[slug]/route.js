@@ -4,10 +4,10 @@ import mysql from "mysql2/promise";
 export async function GET(req, { params }) {
   try {
     const db = await mysql.createConnection({
-      host: "127.0.0.1",
-      user: "root",
-      password: "",
-      database: "rankinventiv",
+      host: "sql12.freesqldatabase.com",
+      user: "sql12798187",
+      password: "aZLl7UNLgk",
+      database: "sql12798187",
     });
 
     const [rows] = await db.execute(
