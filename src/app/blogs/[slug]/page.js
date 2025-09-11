@@ -91,7 +91,8 @@ export default function BlogDetails() {
   return (
     <>
     <GlassNavbar2 />
-    <section className="max-w-7xl mx-auto p-6 flex flex-col lg:flex-row gap-12 py-32">
+    <section className="bg-gray-100">
+    <div className="max-w-7xl mx-auto p-6 flex flex-col lg:flex-row gap-12 py-32">
       {/* Main Content */}
       <main className="flex-1">
         <div className="mb-6">
@@ -283,6 +284,7 @@ export default function BlogDetails() {
   </section>
 </aside>
 
+    </div>
     </section>
     <GlassFooter2 />
     </>
