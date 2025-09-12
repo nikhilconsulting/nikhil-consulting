@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+     reactStrictMode: true,
+  images: {
+    domains: ['wmhindia.s3-eu-central-2.ionoscloud.com'],
+  }
+};
 
 export default nextConfig;

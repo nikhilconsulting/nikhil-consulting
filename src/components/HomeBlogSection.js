@@ -15,6 +15,7 @@ useEffect(() => {
   fetch("/api/blogs")
     .then((res) => res.json())
     .then((data) => {
+      console.log(data);
       console.log("Fetched data:", data);
       setStories(Array.isArray(data) ? data : []);
     })
