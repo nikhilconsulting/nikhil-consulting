@@ -1,4 +1,4 @@
-"use client"; // client component hona chahiye, tabhi browser events kaam karenge
+"use client";
 
 import { useEffect } from "react";
 import { Roboto } from "next/font/google";
