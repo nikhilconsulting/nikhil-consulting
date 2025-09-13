@@ -1,5 +1,5 @@
 // app/api/db-test/route.js
-import db from '../../../libs/db';
+import db from '../../../../lib/db';
 
 export async function GET() {
   try {
