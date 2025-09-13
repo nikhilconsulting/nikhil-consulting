@@ -1,6 +1,6 @@
 // app/dashboard/page.js (or .jsx/.tsx)
 
-'use client';
+"use client";
 
 import React, { useState, useEffect } from 'react';
 import { Eye, Pencil, Trash2 } from 'lucide-react';
@@ -66,14 +66,8 @@ export default function page() {
 
       {/* Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 mt-3">
-        {[{
-          label: 'Total Blogs',
-          count: totalBlogs,
-        }].map((item, index) => (
-          <div
-            key={index}
-            className="bg-[linear-gradient(to_bottom,_#382933,_#372935,_#372831)] text-white shadow-xl rounded-2xl p-6 flex flex-col justify-between transition hover:scale-[1.02]"
-          >
+        {[{ label: 'Total Blogs', count: totalBlogs }].map((item) => (
+  <div key={item.label} className="bg-[linear-gradient(to_bottom,_#382933,_#372935,_#372831)] text-white shadow-xl rounded-2xl p-6 flex flex-col justify-between transition hover:scale-[1.02]">
             <div className="text-base font-medium text-blue-400 mb-2">{item.label}</div>
             <div className="flex justify-between items-center mt-auto">
               <span className="text-2xl font-semibold">{item.count}</span>
@@ -106,10 +100,11 @@ export default function page() {
                 </tr>
               ) : (
                 blogs.map((blog, index) => (
-                  <tr
-                    key={blog.blog_id}
-                    className="border-b hover:bg-gray-50 transition md:table-row flex flex-col md:flex-row mb-4 md:mb-0"
-                  >
+  <tr
+    key={blog.blog_id || `blog-${index}`}
+    className="border-b hover:bg-gray-50 transition md:table-row flex flex-col md:flex-row mb-4 md:mb-0"
+  >
+
                     <td className="py-3 font-medium">{index + 1}</td>
                     <td className="py-3">
                       <img

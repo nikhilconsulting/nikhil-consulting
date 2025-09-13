@@ -3,9 +3,7 @@ import { useState } from "react";
 import ContactFormModal from "./ContactFormModal";
 
 export default function TextImageSection() {
-  const sparkles = Array.from({ length: 100 });
-  const colors = ["bg-white", "bg-[#8FCDFF]", "bg-[#5F69A8]"];
-  const blurs = ["blur-[1px]", "blur-[2px]", "blur-[3px]"];
+  
   const [showForm, setShowForm] = useState(false);
   return (
     <>
@@ -13,34 +11,8 @@ export default function TextImageSection() {
           background: "linear-gradient(to bottom, #382933, #372935, #372831)",
         }}
       >
-        {/* Sparkles */}
-        {/* <div className="absolute inset-0 pointer-events-none z-0">
-        {sparkles.map((_, i) => {
-          const top = Math.random() * 100;
-          const left = Math.random() * 100;
-          const size = Math.random() * 3 + 2;
-          const color = colors[Math.floor(Math.random() * colors.length)];
-          const blur = blurs[Math.floor(Math.random() * blurs.length)];
-          const delay = Math.random() * 5;
-          const duration = 2 + Math.random() * 2;
-
-          return (
-            <span
-              key={i}
-              className={`absolute rounded-full ${color} ${blur} animate-bounce`}
-              style={{
-                top: `${top}%`,
-                left: `${left}%`,
-                width: `${size}px`,
-                height: `${size}px`,
-                opacity: 0.8,
-                animation: `bounce ${duration}s infinite, twinkle 3s infinite`,
-                animationDelay: `${delay}s`,
-              }}
-            ></span>
-          );
-        })}
-      </div> */}
+       
+          
 
         {/* Main Content */}
        <div className="max-w-7xl mx-auto grid grid-cols-1 xl:grid-cols-2 gap-8 sm:gap-12 xl:gap-20 items-start relative z-10">

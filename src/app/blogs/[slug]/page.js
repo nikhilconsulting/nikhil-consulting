@@ -151,7 +151,7 @@ export default function BlogDetails() {
  {/* Author section with social media */}
   <div className="flex flex-col sm:flex-row items-center gap-6 border-t border-gray-300 pt-6 mt-10">
     <Image
-      src="/author.jpg" // Replace with your author image
+      src="/assets/images/logo.png" // Replace with your author image
       alt="Author"
       width={60}
       height={60}
