@@ -13,6 +13,7 @@ import NextAndProgress from "@/components/NextAndProgress";
 import Slide from "@/components/Slide";
 import Slider from "@/components/Slider";
 import HomeBlogSection from "@/components/HomeBlogSection";
+import HomeAboutSection from "@/components/HomeAboutSection";
 
 
 export default function Home() {
@@ -32,10 +33,12 @@ export default function Home() {
         <Slider />
         <NextAndProgress />
       </div > */}
+     
        <ServicesScrollSticky />
+        <HomeAboutSection />
 <WorkingProcess2 />
 
-      <HomeBlogSection />
+      {/* <HomeBlogSection /> */}
 
 {/* <ServicesSection2 /> */}
 

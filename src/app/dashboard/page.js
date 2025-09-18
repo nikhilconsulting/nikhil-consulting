@@ -1,4 +1,4 @@
-// app/dashboard/page.js (or .jsx/.tsx)
+
 
 "use client";
 
@@ -121,7 +121,7 @@ export default function page() {
                     </td>
                     <td className="py-2 px-2">
                       <div className="flex space-x-3">
-                        <Link href={`${baseUrl}/blog/${blog.blog_slug}`}>
+                        <Link href={`${baseUrl}/blogs/${blog.blog_slug}`}>
                           <Eye className="w-4 h-4 text-slate-500 hover:text-blue-600 cursor-pointer" />
                         </Link>
                         <button onClick={() => router.push(`/dashboard/update-blog/${blog.blog_id}`)}>

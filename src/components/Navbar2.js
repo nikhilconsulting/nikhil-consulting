@@ -36,7 +36,7 @@ export default function GlassNavbar2() {
  const navItems = [
   { href: "/", label: "Home" },
   { href: "/about-us", label: "About Us" },
-   { href: "/blogs", label: "Blogs" },
+  //  { href: "/blogs", label: "Blogs" },
   {
     href: "/services",
     label: "Services",
@@ -53,7 +53,7 @@ export default function GlassNavbar2() {
     ],
   },
   { href: "/digital-marketing-consultant", label: "Consultancy" },
-  { href: "/career", label: "Career" },
+  // { href: "/career", label: "Career" },
   { href: "/contact-us", label: "Contact Us" },
 ];
 

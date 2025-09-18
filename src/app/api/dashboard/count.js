@@ -2,10 +2,10 @@
 
 export async function GET(request) {
   try {
-    const [totalWebitorials] = await db.query(`
-      SELECT COUNT(*) AS total_webitorials
-      FROM webitorials
-      WHERE status = 1
+    const [totalBlogs] = await db.query(`
+      SELECT COUNT(*) AS total_blogs
+      FROM blogs
+      WHERE status = '1'
     `);
 
 

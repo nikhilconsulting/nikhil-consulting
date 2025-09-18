@@ -26,11 +26,15 @@ const [selectedExpert, setSelectedExpert] = useState('');
 };
 
 
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 0);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+ useEffect(() => {
+  // Scroll to top smoothly on page load
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  const handleScroll = () => setScrolled(window.scrollY > 0);
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
 
   return (
     <>

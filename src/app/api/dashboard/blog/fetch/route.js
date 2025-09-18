@@ -1,4 +1,7 @@
-import { NextResponse } from "next/server";
+// app/api/blogs/route.js
+
+import { NextResponse } from 'next/server';
+import pool from '../../../../../../lib/db'; // ✅ Your MySQL connection pool
 
 export async function GET(request) {
   try {
@@ -9,7 +12,7 @@ export async function GET(request) {
     const offset = (page - 1) * limit;
 
     // ✅ Fetch paginated blogs
-    const [blogs] = await db.query(
+    const [blogs] = await pool.query(
       `
       SELECT 
         blog_id,
@@ -26,14 +29,19 @@ export async function GET(request) {
     );
 
     // ✅ Get total count
-    const [countResult] = await db.query(`
-      SELECT COUNT(*) AS total_blogs FROM blogs WHERE status = 1
+    const [countResult] = await pool.query(`
+      SELECT COUNT(*) AS total_blogs 
+      FROM blogs 
+      WHERE status = '1' AND blog_status = '1'
     `);
 
     return NextResponse.json({
       blogs,
       total_blogs: countResult[0].total_blogs,
+      page,
+      limit,
     });
+
   } catch (error) {
     console.error("❌ Error fetching blogs:", error.message);
     return NextResponse.json(
