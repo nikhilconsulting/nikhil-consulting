@@ -1,34 +1,53 @@
 "use client";
-import { useState , useEffect } from "react";
+import { useState , useEffect , useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import ContactFormModal from "./ContactFormModal";
 
 export default function Benefits() {
    const [showForm, setShowForm] = useState(false);
-  useEffect(() => {
-  let interval;
+const intervalRef = useRef(null);
 
-  const handleResize = () => {
-    if (window.innerWidth < 640 && !interval) {
-      interval = setInterval(() => {
-        nextSlide();
+useEffect(() => {
+  const startAutoSlide = () => {
+    if (window.innerWidth < 640 && !intervalRef.current) {
+      intervalRef.current = setInterval(() => {
+        setCurrent((prev) => (prev === cards.length - 1 ? 0 : prev + 1));
       }, 2000);
-    } else if (window.innerWidth >= 640 && interval) {
-      clearInterval(interval);
-      interval = null;
     }
   };
 
-  handleResize(); // Run once on mount
+  const stopAutoSlide = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  };
 
+  const handleResize = () => {
+    stopAutoSlide();
+    startAutoSlide();
+  };
+
+  handleResize();
   window.addEventListener("resize", handleResize);
 
   return () => {
-    if (interval) clearInterval(interval);
+    stopAutoSlide();
     window.removeEventListener("resize", handleResize);
   };
 }, []);
+
+const prevSlide = () => {
+  if (intervalRef.current) { clearInterval(intervalRef.current); intervalRef.current = null; } // stop auto
+  setCurrent((prev) => (prev === 0 ? cards.length - 1 : prev - 1));
+};
+
+const nextSlide = () => {
+  if (intervalRef.current) { clearInterval(intervalRef.current); intervalRef.current = null; } // stop auto
+  setCurrent((prev) => (prev === cards.length - 1 ? 0 : prev + 1));
+};
+
 
   
 const cards = [
@@ -68,20 +87,14 @@ const cards = [
 
   const [current, setCurrent] = useState(0);
 
-  const prevSlide = () => {
-    setCurrent((prev) => (prev === 0 ? cards.length - 1 : prev - 1));
-  };
 
-  const nextSlide = () => {
-    setCurrent((prev) => (prev === cards.length - 1 ? 0 : prev + 1));
-  };
 
   // Utility: cyclic index
   const getIndex = (index) => (index + cards.length) % cards.length;
 
   return (
     <>
-    <section className="relative  w-full pt-12 md:py-12 min-h-screen text-white overflow-hidden" style={{
+    <section className="relative  w-full pt-20 md:py-12 h-screen md:min-h-screen text-white overflow-hidden" style={{
     background: "linear-gradient(to bottom, #382933, #372935, #372831)",
   }}>
       {/* Title */}
@@ -141,10 +154,10 @@ if (pos === 0) {
 
 
     >
-    <div className="flex flex-col justify-center items-center text-center h-full px-6">
-      <span className="text-3xl font-bold mb-2" >{card.id}</span>
+    <div className="flex flex-col justify-center items-center text-center h-full px-7">
+      <span className="text-2xl bg-gradient-to-b from-[#382933] via-[#372935] to-[#372831] rounded-full p-2 font-bold   mb-2 " >{card.id}</span>
   <h3 className="text-xl font-bold mb-2">{card.title}</h3>
-  <p className="text-base text-gray-200 ">{card.description}</p>
+  <p className="text-lg text-gray-200 ">{card.description}</p>
 </div>
 
       {/* Gradient Border Overlay */}
@@ -153,7 +166,7 @@ if (pos === 0) {
         style={{
           padding: "2px",
           background:
-            "linear-gradient(to top, rgba(211,233,253,0.8), rgba(211,233,253,0) 70%)",
+            "linear-gradient(to right, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
           WebkitMask:
             "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
           WebkitMaskComposite: "xor",
@@ -171,7 +184,7 @@ if (pos === 0) {
 
 
       </div>
-      <div className="mt-6 md:mt-14 flex justify-center">
+      <div className=" mt-26 md:mt-14 flex justify-center">
   <button
     onClick={() => setShowForm(true)}
     className="px-6 py-3 lg:mt-8 text-lg font-semibold shadow-md transition-transform transform hover:scale-105 cursor-pointer"
@@ -185,8 +198,8 @@ if (pos === 0) {
   </button>
 </div>
 
-    {/* Prev Button - hidden on small screens, positioned left */}
-<div className=" absolute left-40 top-1/2 transform -translate-y-1/2 z-40">
+  {/* Prev Button */}
+<div className="absolute lg:left-40 lg:top-1/2 top-[70%] left-1/4 transform -translate-y-1/2 z-40">
   <button
     onClick={prevSlide}
     className="p-4 rounded-full hover:scale-105 transition cursor-pointer"
@@ -199,8 +212,8 @@ if (pos === 0) {
   </button>
 </div>
 
-{/* Next Button - hidden on small screens, positioned right */}
-<div className=" absolute right-40 top-1/2 transform -translate-y-1/2 z-40">
+{/* Next Button */}
+<div className="absolute lg:right-40 lg:top-1/2 top-[70%] right-1/4 transform -translate-y-1/2 z-40">
   <button
     onClick={nextSlide}
     className="p-4 rounded-full hover:scale-105 transition cursor-pointer"
@@ -212,6 +225,7 @@ if (pos === 0) {
     <ChevronRight size={28} color="white" />
   </button>
 </div>
+
 
 <div className="absolute bottom-0 left-0 w-full z-20">
   <div

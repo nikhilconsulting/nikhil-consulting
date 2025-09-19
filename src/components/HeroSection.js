@@ -30,7 +30,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative h-screen w-full">
+    <section className="relative min-h-screen w-full md:pb-0 pb-15 ">
       {/* Background Image */}
       <Image
         src="/assets/images/Speaker1.png"
@@ -49,7 +49,7 @@ export default function HeroSection() {
       ></div>
 
       {/* Content */}
-      <div className="relative z-30 max-w-[1100px] mx-auto text-white px-4 pt-30 md:pt-36 flex flex-col md:flex-row items-center justify-between">
+      <div className="relative z-30 max-w-[1100px] mx-auto text-white px-4 pt-20 md:pt-36 flex flex-col md:flex-row items-center justify-between">
         {/* Left Text */}
         <div className="w-full md:max-w-[520px] text-center md:text-left md:ml-10">
           {/* Badge */}

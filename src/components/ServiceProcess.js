@@ -139,13 +139,9 @@ className="mx-auto mt-6 h-[1px] w-32 sm:w-40 md:w-56 lg:w-64"
                 alt="user3"
                 className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white"
               />
-              <img
-                src="https://randomuser.me/api/portraits/women/4.jpg"
-                alt="user4"
-                className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white"
-              />
+              
             </div>
-            <p className="text-xs sm:text-sm text-gray-200 font-semibold">
+            <p className="ml-6 md:ml-0 text-sm sm:text-base text-gray-200 font-semibold">
              Still Thinking?  Take the First Step Towards Online Growth
             </p>
           </div>
