@@ -63,7 +63,7 @@ const ServiceCards = () => {
       <div className="max-w-3xl mx-auto text-center mb-6">
         <h2 className="text-3xl sm:text-4xl font-bold text-white">Our Services</h2>
         <p className="mt-4 text-gray-300 text-base sm:text-lg">
-          Explore what we can do to boost your business online. Explore what we can do to boost your business online.  Explore what we can do to boost your business online.
+          Explore what we can do to boost your business online. Explore what we can do to boost your business online.  Explore what we can do to boost your business business online.
         </p>
       </div>
 
