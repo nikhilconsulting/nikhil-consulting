@@ -7,29 +7,28 @@ import DigitalMarketingFAQs from "@/components/props/Faqs";
 const SEOPage = () => {
   const faqsData = [
   {
-    question: "Why should I hire a consultant instead of doing digital marketing myself?",
+    question: "How long does SEO take to show results?",
     answer:
-      "Doing it yourself can lead to mistakes, wasted money, and slow results. A consultant brings expertise, proven strategies, and a clear growth plan. You save time, reduce trial-and-error, and get faster, more reliable results.",
+      "SEO is a long-term strategy. You can expect small improvements within 2–3 months, but significant traffic and ranking growth usually happens in 6–9 months.",
   },
   {
-    question: "How does Digital Marketing Consulting help me save budget and grow my business?",
+    question: "What makes your SEO services different from others?",
     answer:
-      " Consulting gives you a clear strategy so you don’t waste money on random ads or wrong targeting. With expert guidance, your budget is used only on proven methods like SEO, Google Ads, Meta Ads, and Local SEO. This way you save cost while achieving measurable growth.",
+      "We focus on personalized strategies. Instead of applying the same formula to every business, we study your industry, audience, and goals to deliver meaningful, lasting results.",
   },
   {
-    question: "How much should I spend on ads, and how will consulting help me?",
+    question: "Can SEO really help a small or local business like mine?",
     answer:
-      " Ad spend depends on your business type, target market, and goals. Some businesses grow with ₹5,000/month while others need more. As a consultant, I guide you on the right budget, design ad campaigns that reach the correct audience, and ensure you get maximum ROI from every rupee spent.",
+      "Yes! Local SEO helps small businesses appear in Google Maps and local searches. This brings more calls, visits, and inquiries from customers nearby who are ready to buy. " },
+  {
+    question: "Do I need to keep investing in SEO once I start ranking?",
+    answer:
+      "Yes, SEO is ongoing. Search engines update regularly, and competitors also optimize. Continuous SEO keeps your business visible, growing, and ahead of the competition.",
   },
   {
-    question: "Can consulting work for different people in different fields?",
+    question: " Do you use only safe and ethical SEO practices?",
     answer:
-      "Yes! Every business is unique, and consulting is customized. Whether you are in retail, services, education, healthcare, or startups — strategies are tailored to your industry, location, and customers. This ensures you get results that actually matter for your field.",
-  },
-  {
-    question: " Is there any course available if I want to learn Digital Marketing?",
-    answer:
-      " Yes, along with consulting, we also provide training and courses for students, entrepreneurs, and business owners. These cover SEO, Google Ads, Meta Ads, and Local SEO. With this, you not only grow your business but also gain the knowledge to manage marketing on your own.",
+      "Yes, we follow white-hat SEO strategies that align with Google’s guidelines, ensuring long-term rankings without the risk of penalties.",
   },
 ];
     const workingSteps = [

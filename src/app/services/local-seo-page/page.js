@@ -7,33 +7,34 @@ import DigitalMarketingFAQs from "@/components/props/Faqs";
 
 
 const SMMPage = () => {
-  const faqsData = [
+const faqsData = [
   {
-    question: "Why should I hire a consultant instead of doing digital marketing myself?",
+    question: "What is Local SEO and why is it important?",
     answer:
-      "Doing it yourself can lead to mistakes, wasted money, and slow results. A consultant brings expertise, proven strategies, and a clear growth plan. You save time, reduce trial-and-error, and get faster, more reliable results.",
+      "Local SEO helps your business appear in Google Maps and “near me” searches, bringing more calls, visits, and customers from your local area.",
   },
   {
-    question: "How does Digital Marketing Consulting help me save budget and grow my business?",
+    question: "How long does it take to see results with Local SEO?",
     answer:
-      " Consulting gives you a clear strategy so you don’t waste money on random ads or wrong targeting. With expert guidance, your budget is used only on proven methods like SEO, Google Ads, Meta Ads, and Local SEO. This way you save cost while achieving measurable growth.",
+      "You may notice improvements within 4–6 weeks, but stronger rankings, reviews, and consistent customer growth usually take 3–6 months.",
   },
   {
-    question: "How much should I spend on ads, and how will consulting help me?",
+    question: "Can Local SEO help small businesses compete with big brands?",
     answer:
-      " Ad spend depends on your business type, target market, and goals. Some businesses grow with ₹5,000/month while others need more. As a consultant, I guide you on the right budget, design ad campaigns that reach the correct audience, and ensure you get maximum ROI from every rupee spent.",
+      "Yes! Local SEO gives small businesses an edge by targeting nearby customers who are ready to buy—helping you compete without a huge budget.",
   },
   {
-    question: "Can consulting work for different people in different fields?",
+    question: "What’s included in your Local SEO services?",
     answer:
-      "Yes! Every business is unique, and consulting is customized. Whether you are in retail, services, education, healthcare, or startups — strategies are tailored to your industry, location, and customers. This ensures you get results that actually matter for your field.",
+      "We optimize your Google Business Profile, improve local citations, manage reviews, and target local keywords—everything needed to grow visibility in your city.",
   },
   {
-    question: " Is there any course available if I want to learn Digital Marketing?",
+    question: "Do online reviews affect Local SEO rankings?",
     answer:
-      " Yes, along with consulting, we also provide training and courses for students, entrepreneurs, and business owners. These cover SEO, Google Ads, Meta Ads, and Local SEO. With this, you not only grow your business but also gain the knowledge to manage marketing on your own.",
+      "Yes. Positive reviews improve your Google Business Profile visibility, attract more customers, and play a big role in boosting local search rankings.",
   },
 ];
+
    const workingSteps = [
     {
       icon: '/assets/images/icon.png',

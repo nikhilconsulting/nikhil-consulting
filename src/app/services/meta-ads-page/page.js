@@ -8,31 +8,32 @@ import DigitalMarketingFAQs from "@/components/props/Faqs";
 const SMMPage = () => {
   const faqsData = [
   {
-    question: "Why should I hire a consultant instead of doing digital marketing myself?",
+    question: "How do Meta Ads help my business grow?",
     answer:
-      "Doing it yourself can lead to mistakes, wasted money, and slow results. A consultant brings expertise, proven strategies, and a clear growth plan. You save time, reduce trial-and-error, and get faster, more reliable results.",
+      "Meta Ads (Facebook & Instagram) reach the right audience by targeting their interests, behaviors, and location. This means more visibility, leads, and sales for your business.",
   },
   {
-    question: "How does Digital Marketing Consulting help me save budget and grow my business?",
+    question: "What budget should I start with for Meta Ads?",
     answer:
-      " Consulting gives you a clear strategy so you don’t waste money on random ads or wrong targeting. With expert guidance, your budget is used only on proven methods like SEO, Google Ads, Meta Ads, and Local SEO. This way you save cost while achieving measurable growth.",
+      "You can start with a small daily budget and scale as you see results. We guide you on spending wisely for maximum returns.",
   },
   {
-    question: "How much should I spend on ads, and how will consulting help me?",
+    question: "Are Meta Ads only useful for big brands?",
     answer:
-      " Ad spend depends on your business type, target market, and goals. Some businesses grow with ₹5,000/month while others need more. As a consultant, I guide you on the right budget, design ad campaigns that reach the correct audience, and ensure you get maximum ROI from every rupee spent.",
+      "Not at all. Small and local businesses benefit greatly from Meta Ads because they allow precise targeting—helping you connect with customers who actually need your services.",
   },
   {
-    question: "Can consulting work for different people in different fields?",
+    question: "Will I get reports to track my ad performance?",
     answer:
-      "Yes! Every business is unique, and consulting is customized. Whether you are in retail, services, education, healthcare, or startups — strategies are tailored to your industry, location, and customers. This ensures you get results that actually matter for your field.",
+      "Yes! We provide easy-to-read reports showing reach, engagement, leads, and conversions, so you always know how your ads are performing.",
   },
   {
-    question: " Is there any course available if I want to learn Digital Marketing?",
+    question: "Can I run both brand awareness and sales campaigns on Meta Ads?",
     answer:
-      " Yes, along with consulting, we also provide training and courses for students, entrepreneurs, and business owners. These cover SEO, Google Ads, Meta Ads, and Local SEO. With this, you not only grow your business but also gain the knowledge to manage marketing on your own.",
+      "Yes! Meta Ads allow us to run campaigns for awareness, engagement, leads, or direct sales—depending on your business goals.",
   },
 ];
+
    const workingSteps = [
     {
       icon: '/assets/images/icon.png',

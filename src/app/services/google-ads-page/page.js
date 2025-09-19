@@ -5,33 +5,34 @@ import GlassFooter2 from "@/components/Footer2";
 import WorkingProcess from "@/components/props/WorkingProcess";
 import DigitalMarketingFAQs from "@/components/props/Faqs";
 const MetaPage = () => {
-  const faqsData = [
+ const faqsData = [
   {
-    question: "Why should I use Google Ads for my business?",
+    question: "How quickly can I see results with Google Ads?",
     answer:
-      "Google Ads provides instant visibility and helps reach customers actively searching for your products or services.",
+      "Unlike SEO, Google Ads can generate traffic and leads almost instantly. Once your campaign goes live, ads can start showing within a few hours.",
   },
   {
-    question: "How much budget do I need to run ads?",
+    question: "How much budget do I need for Google Ads?",
     answer:
-      "We create strategies that fit any budget. Spend is flexible and depends on your goals.",
-     },
+      "The budget depends on your industry, competition, and goals. We help you set a budget that balances affordability with maximum ROI, ensuring no wasted spend.",
+  },
   {
-    question: "Do you provide reports?",
+    question: "Can Google Ads help a small business grow?",
     answer:
-      "Yes, we share detailed performance reports so you can track ROI clearly.",
-     },
+      "Yes! Google Ads levels the playing field. Even small businesses can compete with bigger brands by targeting the right keywords and local audiences effectively.",
+  },
   {
-   question: "Can I run both search and display ads together?",
+    question: "Do you provide reports to track ad performance?",
     answer:
-      "Absolutely! Combining ad types gives wider reach and better conversions.",
-      },
+      "Absolutely. We share clear, easy-to-understand reports showing clicks, conversions, and ROI so you always know where your money is going.",
+  },
   {
-   question: "How soon will I see results?",
+    question: "Can I control where my Google Ads appear?",
     answer:
-      "Google Ads starts driving traffic almost instantly, but consistent results improve with optimization.",
-      },
+      "Absolutely. We set up precise targeting options—location, keywords, devices, and audience preferences—so your ads reach only the right customers.",
+  },
 ];
+
    const workingSteps = [
     {
       icon: '/assets/images/icon.png',

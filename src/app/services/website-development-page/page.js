@@ -6,33 +6,34 @@ import WorkingProcess from "@/components/props/WorkingProcess";
 import DigitalMarketingFAQs from "@/components/props/Faqs";
 
 const SMMPage = () => {
-  const faqsData = [
+ const faqsData = [
   {
-    question: "Why should I hire a consultant instead of doing digital marketing myself?",
+    question: "Why does my business need a professional website?",
     answer:
-      "Doing it yourself can lead to mistakes, wasted money, and slow results. A consultant brings expertise, proven strategies, and a clear growth plan. You save time, reduce trial-and-error, and get faster, more reliable results.",
+      "A professional website builds trust, attracts new customers, and showcases your products or services 24/7—making it one of the best investments for growth.",
   },
   {
-    question: "How does Digital Marketing Consulting help me save budget and grow my business?",
+    question: "How long does it take to build a website?",
     answer:
-      " Consulting gives you a clear strategy so you don’t waste money on random ads or wrong targeting. With expert guidance, your budget is used only on proven methods like SEO, Google Ads, Meta Ads, and Local SEO. This way you save cost while achieving measurable growth.",
+      "The timeline depends on your requirements. A basic website may take 2–3 weeks, while advanced, customized websites can take 6–8 weeks.",
   },
   {
-    question: "How much should I spend on ads, and how will consulting help me?",
+    question: "Will my website be mobile-friendly and SEO-ready?",
     answer:
-      " Ad spend depends on your business type, target market, and goals. Some businesses grow with ₹5,000/month while others need more. As a consultant, I guide you on the right budget, design ad campaigns that reach the correct audience, and ensure you get maximum ROI from every rupee spent.",
+      "Yes! Every website we design is mobile-responsive, fast-loading, and SEO-optimized to ensure better rankings and a smooth user experience.",
   },
   {
-    question: "Can consulting work for different people in different fields?",
+    question: "Can I update my website after it’s built?",
     answer:
-      "Yes! Every business is unique, and consulting is customized. Whether you are in retail, services, education, healthcare, or startups — strategies are tailored to your industry, location, and customers. This ensures you get results that actually matter for your field.",
+      "Absolutely. We create websites with user-friendly dashboards (CMS), so you can easily update content, images, or products without technical skills.",
   },
   {
-    question: " Is there any course available if I want to learn Digital Marketing?",
+    question: "Do you also provide website maintenance after launch?",
     answer:
-      " Yes, along with consulting, we also provide training and courses for students, entrepreneurs, and business owners. These cover SEO, Google Ads, Meta Ads, and Local SEO. With this, you not only grow your business but also gain the knowledge to manage marketing on your own.",
+      "Yes, we offer ongoing maintenance and support to keep your website secure, updated, and performing at its best even after it goes live.",
   },
 ];
+
    const workingSteps = [
     {
       icon: '/assets/images/icon.png',
