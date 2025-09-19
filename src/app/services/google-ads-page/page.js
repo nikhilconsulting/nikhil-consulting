@@ -4,7 +4,7 @@ import GlassNavbar2 from "@/components/Navbar2";
 import GlassFooter2 from "@/components/Footer2";
 import WorkingProcess from "@/components/props/WorkingProcess";
 import DigitalMarketingFAQs from "@/components/props/Faqs";
-const MetaPage = () => {
+const GooglePage = () => {
  const faqsData = [
   {
     question: "How quickly can I see results with Google Ads?",
@@ -102,4 +102,4 @@ const MetaPage = () => {
   );
 };
 
-export default MetaPage;
+export default GooglePage;
