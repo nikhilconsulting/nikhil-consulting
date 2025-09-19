@@ -9,7 +9,7 @@ const services = [
     title: "SEO Services",
     description:
       "Drive organic traffic with our comprehensive SEO solutions tailored for your niche and location. SEO-friendly, responsive websites built to convert visitors into loyal customers. SEO-friendly, responsive websites built to convert visitors into loyal customers. SEO-friendly, responsive websites built to convert visitors into loyal customers.SEO-friendly, responsive websites built to convert visitors into loyal customers.SEO-friendly, responsive websites built to convert visitors into loyal customers.SEO-friendly, responsive websites built to convert visitors into loyal customers.",
-    image: "/assets/images/service_thumb_1.jpg",
+    image: "/assets/images/service-detail-page-images/SEO Service.png",
     hashtags: [
       "ModelingIndustry",
       "BrandEstablishment",
