@@ -83,7 +83,7 @@ className="mx-auto mt-6 h-[1px] w-32 sm:w-40 md:w-56 lg:w-64"
  {steps.map((step, index) => (
  <div
   key={step.id}
-  className="relative rounded-2xl pt-4 pb-6 px-6 flex flex-col gap-3 
+  className="relative rounded-2xl pt-0 pb-4 px-6 flex flex-col gap-3 
              hover:bg-[#382933] transition min-h-[240px]"
 >
 
