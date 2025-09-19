@@ -62,8 +62,7 @@ const SMMPage = () => {
     <ServiceSection
       imageSrc="/assets/images/service-detail-page-images/Website.png"
       imageAlt="SEO project"
-      heading="Website Design & Development "
-      headingsmall="Add Small Heading Here"
+      heading="Website Design & Development"
       subheading="Overview"
       description={`Your website is the digital face of your business. In this section, we explain how our web development and design services help build a strong online presence. From layout to loading speed, we focus on every detail to ensure your website looks great, works smoothly, and loads quickly on all devices. A professional, mobile-friendly site not only builds trust but also improves user experience—turning visitors into loyal customers and helping your brand grow in a competitive digital environment.`}
       seoTitle="Custom Website Design & Development"

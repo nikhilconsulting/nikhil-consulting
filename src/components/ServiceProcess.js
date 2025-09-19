@@ -54,7 +54,7 @@ const [showForm, setShowForm] = useState(false);
     >
      {/* Heading */}
 <div className="text-center max-w-3xl mx-auto mb-12">
-  <p className="text-xs sm:text-sm text-[#89C3FB] font-medium mb-2">
+  <p className="text-base md:text-lg text-[#8FCDFF] font-medium mb-2">
     4 SIMPLE STEPS
   </p>
 <h2
@@ -76,37 +76,93 @@ className="mx-auto mt-6 h-[1px] w-32 sm:w-40 md:w-56 lg:w-64"
 </div>
 
       {/* Steps Grid */}
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto items-stretch">
+     <div className="grid gap-12 md:gap-14 lg:gap-16 
+                md:grid-cols-2 lg:grid-cols-4 
+                max-w-[1600px] mx-auto items-stretch px-8 relative">
 
-        {steps.map((step) => (
-      <div
+ {steps.map((step, index) => (
+ <div
   key={step.id}
-  className="relative rounded-2xl p-6 flex flex-col gap-4 hover:bg-[#382933] transition min-h-[220px]"
-  
+  className="relative rounded-2xl pt-4 pb-6 px-6 flex flex-col gap-3 
+             hover:bg-[#382933] transition min-h-[240px]"
 >
-  {/* Gradient Border */}
-  <div
-    className="absolute inset-0 rounded-2xl pointer-events-none"
-    style={{
-      padding: "2px",
-      background:
-        "linear-gradient(to top, rgba(211,233,253,0.8), rgba(211,233,253,0) 70%)",
-      WebkitMask:
-        "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-      WebkitMaskComposite: "xor",
-      maskComposite: "exclude",
-    }}
-  ></div>
 
-  <h3 className="text-lg font-semibold">
-    {step.id}. {step.title}
-  </h3>
-  <p className="text-sm text-gray-300">{step.desc}</p>
+    {/* Gradient Border */}
+    <div
+      className="absolute inset-0 rounded-2xl pointer-events-none"
+      style={borderStyle}
+    ></div>
+
+    {/* Step Number */}
+    {/* Step Number */}
+<div className="flex justify-center items-center mt-0 mb-2">
+  <span
+    className="flex justify-center items-center 
+      bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] 
+      rounded-full 
+      w-10 h-10 
+      font-bold text-xl text-gray-100"
+  >
+    {step.id}
+  </span>
 </div>
 
 
-        ))}
-      </div>
+     {/* Step Content */}
+<div className="flex flex-col gap-2 text-center">
+ 
+  {/* Step Title */}
+  <span className="text-2xl font-semibold">{step.title}</span>
+
+  {/* Step Description */}
+  <p className="text-base text-gray-300 leading-relaxed">
+    {step.desc}
+  </p>
+</div>
+
+    {/* Gradient Arrow (except last step) */}
+    {index !== steps.length - 1 && (
+      <>
+        {/* Large Screens */}
+        <div className="absolute right-[-78px] top-1/3 hidden lg:block">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-24 h-24">
+            <defs>
+              <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#5F69A8" />
+                <stop offset="20%" stopColor="#616FB4" />
+                <stop offset="40%" stopColor="#657AC9" />
+                <stop offset="60%" stopColor="#6E8EEE" />
+                <stop offset="80%" stopColor="#80B3F6" />
+                <stop offset="100%" stopColor="#8FCDFF" />
+              </linearGradient>
+            </defs>
+            <path fill="url(#arrowGradient)" d="M10 6l6 6-6 6" />
+          </svg>
+        </div>
+
+        {/* Small Screens */}
+        <div className="absolute bottom-[-58px] left-1/2 -translate-x-1/2 block lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-24 h-24 rotate-90">
+            <defs>
+              <linearGradient id="arrowGradientMobile" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#5F69A8" />
+                <stop offset="20%" stopColor="#616FB4" />
+                <stop offset="40%" stopColor="#657AC9" />
+                <stop offset="60%" stopColor="#6E8EEE" />
+                <stop offset="80%" stopColor="#80B3F6" />
+                <stop offset="100%" stopColor="#8FCDFF" />
+              </linearGradient>
+            </defs>
+            <path fill="url(#arrowGradientMobile)" d="M10 6l6 6-6 6" />
+          </svg>
+        </div>
+      </>
+    )}
+  </div>
+))}
+
+</div>
+
 
       {/* Bottom Section */}
       <div className="relative rounded-2xl mt-12 max-w-6xl mx-auto">
@@ -118,8 +174,8 @@ className="mx-auto mt-6 h-[1px] w-32 sm:w-40 md:w-56 lg:w-64"
 
         {/* Inner Content */}
         <div
-          className="relative flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 rounded-2xl p-5 sm:p-6"
-          style={{ background: cardBg }}
+          className="relative bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 rounded-2xl p-5 sm:p-6"
+          
         >
           {/* Avatars */}
           <div className="flex items-center gap-3">
@@ -141,17 +197,13 @@ className="mx-auto mt-6 h-[1px] w-32 sm:w-40 md:w-56 lg:w-64"
               />
               
             </div>
-            <p className="ml-6 md:ml-0 text-sm sm:text-base text-gray-200 font-semibold">
-             Still Thinking?  Take the First Step Towards Online Growth
+            <p className="ml-6 md:ml-0 text-sm sm:text-lg text-white font-semibold">
+             Only 5 Free Consultations left this month
             </p>
           </div>
 
           {/* Button */}
-          <Link href={"tel:+918527665635"} className="w-full hover:scale-105 sm:w-auto flex items-center justify-center gap-2 bg-white text-[#fff] font-medium px-5 py-2 hover:bg-gray-200 transition cursor-pointer"
-              style={{
-                    background:
-                      "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
-                  }}>
+          <Link href={"tel:+918527665635"} className="w-full hover:scale-105 sm:w-auto flex items-center justify-center gap-2 text-white font-medium px-5 py-2 bg-[linear-gradient(to_bottom,_#382933,_#372935,_#372831)] transition cursor-pointer">
             Book My Free Call <FaArrowRight className="text-sm" />
           </Link>
         </div>

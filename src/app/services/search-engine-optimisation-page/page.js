@@ -60,7 +60,7 @@ const SEOPage = () => {
       imageSrc="/assets/images/service-detail-page-images/SEO Service.png"
       imageAlt="SEO project"
       heading="Planning & Growth"
-      headingsmall="SEO Strategy,"
+      
       subheading="Overview"
       description={`Running a successful SEO campaign takes a clear process and strong teamwork. In this section, we explain our step-by-step approach to planning and executing effective strategies. Our main goal is to boost your website’s visibility, improve search rankings, and attract quality traffic that converts. We start by understanding your goals, audience, and competition. With ongoing collaboration and regular performance checks, we adjust our SEO tactics to match your changing needs and deliver consistent, measurable results that support your growth.`}
       seoTitle="Search Engine Optimization (SEO)"

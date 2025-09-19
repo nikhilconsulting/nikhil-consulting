@@ -63,7 +63,6 @@ const SMMPage = () => {
       imageSrc="/assets/images/service-detail-page-images/Meta Ads.png"
       imageAlt="Meta project"
       heading="Meta Ads"
-      headingsmall="Add Small Heading Here"
       subheading="Overview"
       description={`We help businesses grow with powerful ad campaigns on Facebook and Instagram. In this section, we explain how our Meta Ads services connect your brand with the right audience and deliver measurable results. Whether your goal is to generate leads, boost sales, or increase engagement, we create campaigns that focus on real conversions. From strategy and creative planning to daily management and performance tracking, we handle everything—so your budget drives maximum growth.`}
       seoTitle="Meta Ad Campaigns"

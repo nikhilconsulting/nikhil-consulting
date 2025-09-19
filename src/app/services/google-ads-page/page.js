@@ -62,7 +62,6 @@ const GooglePage = () => {
       imageSrc="/assets/images/service-detail-page-images/Google ads.png"
       imageAlt="SMM project"
       heading="Introduction of Projects"
-      headingsmall="Add Small Heading Here"
       subheading="Overview"
       description={`Running a successful business online requires smart advertising strategies that connect you with the right audience. Google Ads is one of the most effective ways to grow visibility, drive traffic, and increase sales. With our Google Ads expertise, we create campaigns that deliver real results. From search and display ads to remarketing and shopping ads, our strategies ensure maximum ROI. By focusing on data-driven decisions and continuous optimization, we help your business stay ahead in a competitive market.`}
       seoTitle="Branding with Google Ads"

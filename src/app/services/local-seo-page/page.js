@@ -65,7 +65,6 @@ const faqsData = [
       imageSrc="/assets/images/service-detail-page-images/Local.png"
       imageAlt="Local SEO"
       heading="Local SEO Services"
-      headingsmall="Add Small Heading Here"
       subheading="Overview"
       description={`Local SEO helps your business appear in Google when nearby customers search for services like yours. In this section, we share how we manage Local SEO projects to boost your local reach. From optimizing your Google Business Profile to using location-based keywords, we build a solid presence in your area. Through regular updates, reporting, and collaboration, we help your business rank higher in local search results and attract more nearby customers who are ready to call, visit, or make a purchase.`}
       seoTitle="Local SEO Optimization"
