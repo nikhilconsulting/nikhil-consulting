@@ -57,7 +57,7 @@ const SEOPage = () => {
     <>
     <GlassNavbar2 />
     <ServiceSection
-      imageSrc="/assets/images/image.png"
+      imageSrc="/assets/images/service-detail-page-images/SEO Service.png"
       imageAlt="SEO project"
       heading="Planning & Growth"
       headingsmall="SEO Strategy,"

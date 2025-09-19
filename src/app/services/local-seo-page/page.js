@@ -62,7 +62,7 @@ const faqsData = [
     <GlassNavbar2 />
     
     <ServiceSection
-      imageSrc="/assets/images/image.png"
+      imageSrc="/assets/images/service-detail-page-images/Local.png"
       imageAlt="Local SEO"
       heading="Local SEO Services"
       headingsmall="Add Small Heading Here"

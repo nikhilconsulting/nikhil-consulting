@@ -59,7 +59,7 @@ const GooglePage = () => {
     <>
     <GlassNavbar2 />
     <ServiceSection
-      imageSrc="/assets/images/image.png"
+      imageSrc="/assets/images/service-detail-page-images/Google ads.png"
       imageAlt="SMM project"
       heading="Introduction of Projects"
       headingsmall="Add Small Heading Here"

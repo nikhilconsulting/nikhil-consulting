@@ -60,7 +60,7 @@ const SMMPage = () => {
     <>
     <GlassNavbar2 />
     <ServiceSection
-      imageSrc="/assets/images/image.png"
+      imageSrc="/assets/images/service-detail-page-images/Website.png"
       imageAlt="SEO project"
       heading="Website Design & Development "
       headingsmall="Add Small Heading Here"
