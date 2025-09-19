@@ -94,7 +94,6 @@ className="mx-auto mt-6 h-[1px] w-32 sm:w-40 md:w-56 lg:w-64"
     ></div>
 
     {/* Step Number */}
-    {/* Step Number */}
 <div className="flex justify-center items-center mt-0 mb-2">
   <span
     className="flex justify-center items-center 
