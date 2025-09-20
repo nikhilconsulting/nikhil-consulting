@@ -82,7 +82,7 @@ export default function ContactUsPage() {
   </h1>
   <p className="text-white/70 text-xl">Get In Touch with us</p>
 <Image
-  src="/assets/demon-slayer-mitsuri-cherry-blossom-desktop-wallpaper.jpg"
+  src="/assets/images/contact-page-image/Contact Us.png"
   alt="Contact Us"
   width={800}
   height={800}

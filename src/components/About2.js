@@ -33,7 +33,7 @@ export default function About2() {
             style={{ clipPath: 'url(#blobClip)' }}
           >
             <Image
-              src="/assets/images/WhyChooseUs.png"
+              src="/assets/images/about-us-page-image/About us 2.png"
               alt="Team discussion"
               fill
               className="object-cover"

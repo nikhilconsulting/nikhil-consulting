@@ -73,7 +73,7 @@ export default function InstructorSection() {
 
     {/* Actual Image */}
     <Image
-      src="/assets/images/service_thumb_3.jpg"
+      src="/assets/images/about-us-page-image/About us 1.png"
       alt="Instructor"
       width={500}
       height={500}

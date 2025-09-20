@@ -37,6 +37,7 @@ function Star() {
 
 export default function Testimonials() {
   return (
+    <>
     <section className="w-full relative min-h-screen bg-[linear-gradient(to_bottom,_#382933,_#372935,_#372831)] py-8 px-4 sm:px-6 md:px-10 lg:px-20 flex items-center">
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left Text */}
@@ -85,7 +86,18 @@ export default function Testimonials() {
           ))}
         </div>
       </div>
+   <div className="absolute bottom-0 left-0 w-full z-20">
+  <div
+    className="h-[2px] w-full max-w-[1000px] mx-auto"
+    style={{
+      background:
+        "linear-gradient(to right, rgba(211,233,253,0.3), rgba(211,233,253,0))",
+    }}
+  ></div>
+</div>
     </section>
+    
+    </>
   );
 }
   
