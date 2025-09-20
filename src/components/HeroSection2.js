@@ -1,101 +1,152 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useState, useEffect } from "react";
+import Link from "next/link";
 
 const slides = [
   {
-    title: 'Marrakech Merzouga',
-    subtitle: 'Sahara Desert - Morocco',
-    description: 'Explore the vast Sahara desert with camel rides and desert camping.',
-    background:
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80',
+    title: "Looking to boost your business online?",
+    description: (
+      <>
+        Welcome to <strong>Rankinventiv</strong>, we provide result-driven SEO Services in Varanasi and complete digital marketing solutions tailored to your local market. Whether a startup or growing business, our digital experts provide Local SEO in Varanasi and Google & Meta Ads to help you grow.
+      </>
+    ),
+    imageUrl: "/assets/images/home-page-image/WebsiteHomePage.png",
+    button: (
+      <Link
+        href="/services"
+        className="inline-flex items-center gap-3 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] text-white hover:scale-105 px-6 sm:px-8 py-2 sm:py-3 font-semibold transition-all rounded-md text-sm sm:text-base"
+      >
+        View Services <i className="fas fa-arrow-right"></i>
+      </Link>
+    ),
   },
   {
-    title: 'Yosemite National Park',
-    subtitle: 'California, United States',
-    description: 'Majestic cliffs and beautiful wilderness to explore.',
-    background:
-      'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1470&q=80',
-  },
-  {
-    title: 'Los Lances Beach',
-    subtitle: 'Tarifa - Spain',
-    description: 'A paradise for kite surfers and beach lovers.',
-    background:
-      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1470&q=80',
-  },
-  {
-    title: 'Göreme Valley',
-    subtitle: 'Cappadocia - Turkey',
-    description: 'Famous for its unique rock formations and hot air balloons.',
-    background:
-      'https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1470&q=80',
+    title: "Grow faster with targeted digital marketing",
+    description: (
+      <>
+        At <strong>Rankinventiv</strong>, we specialize in high-converting Google Ads and effective Meta campaigns. Our focus is on delivering leads and measurable ROI for local businesses in Varanasi and beyond.
+      </>
+    ),
+    imageUrl: "/assets/images/banner.jpg",
+    button: (
+      <Link
+        href="/solutions"
+        className="inline-flex items-center gap-3 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] text-white hover:scale-105 px-6 sm:px-8 py-2 sm:py-3 font-semibold transition-all rounded-md text-sm sm:text-base"
+      >
+        <i className="fas fa-arrow-left"></i> Explore Solutions
+      </Link>
+    ),
   },
 ];
 
-export default function HeroCarousel() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const timeoutRef = useRef(null);
+const HeroSection = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [animate, setAnimate] = useState(true);
 
   useEffect(() => {
-    timeoutRef.current = setTimeout(() => {
-      setActiveIndex((prev) => (prev + 1) % slides.length);
-    }, 4000);
+    const interval = setInterval(() => {
+      setAnimate(false);
+      setTimeout(() => {
+        setCurrentSlide((prev) => (prev + 1) % slides.length);
+        setAnimate(true);
+      }, 100);
+    }, 7000);
 
-    return () => clearTimeout(timeoutRef.current);
-  }, [activeIndex]);
+    return () => clearInterval(interval);
+  }, []);
 
-  const currentSlide = slides[activeIndex] || slides[0];
+  const slide = slides[currentSlide];
 
   return (
-    <section className="relative w-full h-screen select-none overflow-hidden">
-      {/* Fullscreen hero background */}
-      <div
-        className="w-full h-full bg-cover bg-center relative"
-        style={{
-          backgroundImage: `url(${currentSlide.background})`,
-          filter: 'brightness(0.6)',
-          transition: 'background-image 0.7s ease-in-out',
-        }}
-      >
-        {/* Left side text content */}
-        <div className="absolute top-1/4 left-16 max-w-lg text-white">
-          <p className="uppercase text-yellow-400 tracking-widest mb-3">{currentSlide.subtitle}</p>
-          <h1 className="text-6xl font-extrabold mb-5 leading-tight">{currentSlide.title}</h1>
-          <p className="opacity-90 mb-8">{currentSlide.description}</p>
-          <button className="bg-yellow-400 text-black px-8 py-3 rounded-full font-semibold w-max hover:bg-yellow-500 transition">
-            Discover Location
-          </button>
-        </div>
+    <section
+      className="relative bg-cover bg-center min-h-screen flex items-center transition-all duration-700 ease-in-out"
+      style={{ backgroundImage: `url('${slide.imageUrl}')` }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/60"></div>
 
-        {/* Bottom right cards container */}
-        <div className="absolute bottom-8 right-8 flex space-x-6 overflow-x-auto max-w-[80vw]">
-          {slides.map((slide, idx) => {
-            const isActive = idx === activeIndex;
-            return (
-              <div
-                key={idx}
-                onClick={() => setActiveIndex(idx)}
-                className={`relative flex-shrink-0 rounded-lg shadow-lg cursor-pointer overflow-hidden transition-transform duration-500
-                  ${isActive ? 'w-60 h-96 scale-100' : 'w-52 h-80 scale-90 opacity-70 hover:opacity-100'}
-                `}
-                style={{
-                  backgroundImage: `url(${slide.background})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  boxShadow: isActive ? '0 8px 20px rgba(0,0,0,0.6)' : '0 4px 10px rgba(0,0,0,0.3)',
-                }}
-                title={slide.title}
-              >
-                {/* Overlay */}
-                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-40 p-4 rounded-b-lg text-white">
-                  <p className="text-xs uppercase tracking-wide">{slide.subtitle}</p>
-                  <h3 className="font-semibold text-lg leading-tight">{slide.title}</h3>
-                </div>
-              </div>
-            );
-          })}
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-12 max-w-7xl">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10 py-16 sm:py-24 lg:py-0">
+          {/* Left Content */}
+          <div className="w-full lg:w-1/2 text-white text-center lg:text-left">
+            <h1
+              className={`text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 leading-tight opacity-0 ${
+                animate ? "animate-slide-in-left" : ""
+              }`}
+              style={{ animationDelay: "0.2s" }}
+            >
+              {slide.title}
+            </h1>
+
+            <p
+              className={`text-base sm:text-lg md:text-xl mb-8 max-w-xl mx-auto lg:mx-0 opacity-0 ${
+                animate ? "animate-slide-in-left" : ""
+              }`}
+              style={{ animationDelay: "0.5s" }}
+            >
+              {slide.description}
+            </p>
+
+            <div
+              className={`opacity-0 ${animate ? "animate-slide-in-left" : ""}`}
+              style={{ animationDelay: "0.8s" }}
+            >
+              {slide.button}
+            </div>
+          </div>
+
+          {/* Optional right-side image or content (empty for now) */}
+          <div className="hidden lg:block lg:w-1/2">{/* Optional visual */}</div>
         </div>
       </div>
+       {/* Floating Cards Overlay at Bottom */}
+{/* <div className="absolute bottom-[-70px] left-1/2 transform -translate-x-1/2 w-full px-6 z-20">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {[
+      {
+        title: "Explore Our Expert Digital Marketing Services",
+        imgSrc: "/assets/images/home-page-image/overlaycard1.png",
+        alt: "Local SEO Icon",
+      },
+      {
+        title: "Free Strategy Consultation for Your Business",
+        imgSrc: "/assets/images/home-page-image/overlaycard2.png",
+        alt: "Google & Meta Ads Icon",
+      },
+      {
+        title: "Accelerate Your Growth Through Learning",
+        imgSrc: "/assets/images/home-page-image/overlaycard3.png",
+        alt: "Digital Growth Icon",
+      },
+    ].map((card, idx) => (
+      <div
+        key={idx}
+        className="bg-white text-black p-6 rounded-xl shadow-lg flex items-center gap-6"
+      >
+        
+        <div className="flex-shrink-0 w-20 h-20">
+          <img
+            src={card.imgSrc}
+            alt={card.alt}
+            className="w-full h-full object-contain"
+          />
+        </div>
+
       
+        <div className="flex flex-col justify-center flex-grow">
+          <span className="text-xl font-semibold mb-4">{card.title}</span>
+          <a
+            href="#"
+            className="inline-block self-start bg-black text-white px-2 py-1 font-medium hover:bg-gray-800 transition"
+          >
+            Read More
+          </a>
+        </div>
+      </div>
+    ))}
+  </div>
+</div> */}
     </section>
   );
-}
+};
+
+export default HeroSection;
