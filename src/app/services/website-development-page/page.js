@@ -4,8 +4,53 @@ import GlassNavbar2 from "@/components/Navbar2";
 import GlassFooter2 from "@/components/Footer2";
 import WorkingProcess from "@/components/props/WorkingProcess";
 import DigitalMarketingFAQs from "@/components/props/Faqs";
+import PricingSection from "@/components/props/Pricing";
 
 const SMMPage = () => {
+    //  Define your pricing data separately
+const monthlyPricingData = [
+  {
+    name: "Base",
+    price: 80,
+    features: ["Feature A", "Feature B", "Feature C"],
+    buttonText: "Sign Up",
+  },
+  {
+    name: "Pro",
+    price: 120,
+    features: ["Feature D", "Feature E", "Feature F"],
+    popular: true,
+    buttonText: "Upgrade Now",
+  },
+  {
+    name: "Enterprise",
+    price: 260,
+    features: ["Feature G", "Feature H", "Feature I"],
+    buttonText: "Contact Sales",
+  },
+];
+
+const yearlyPricingData = [
+  {
+    name: "Base",
+    price: 800,
+    features: ["All monthly features", "Yearly discount"],
+    buttonText: "Sign Up Yearly",
+  },
+  {
+    name: "Pro",
+    price: 1200,
+    features: ["All Pro features", "Dedicated support", "Advanced Analytics"],
+    popular: true,
+    buttonText: "Upgrade Yearly",
+  },
+  {
+    name: "Enterprise",
+    price: 2600,
+    features: ["All Enterprise features", "Custom API integration"],
+    buttonText: "Contact Sales",
+  },
+];
  const faqsData = [
   {
     question: "Why does my business need a professional website?",
@@ -94,6 +139,13 @@ const SMMPage = () => {
         title="We Complete Our Work to Follow Some Easy Ways"
         steps={workingSteps}
         background="linear-gradient(to bottom, #382933, #372935, #372831)"
+      />
+        {/* Pricing Section */}
+      <PricingSection
+        title="Our Main Pricing"
+        monthlyPlans={monthlyPricingData}
+        yearlyPlans={yearlyPricingData}
+        backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"
       />
         <DigitalMarketingFAQs faqs={faqsData} />
     <GlassFooter2 />

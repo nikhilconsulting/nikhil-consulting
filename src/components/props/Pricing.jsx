@@ -1,104 +1,31 @@
+"use client"; 
 import React, { useState } from "react";
 
-const plans = {
-  monthly: [
-    {
-      name: "Base",
-      price: 80,
-      features: [
-        "All limited links",
-        "Own analytics platform",
-        "Chat support",
-        "Optimize hashtags",
-        "Unlimited users",
-      ],
-      buttonText: "Downgrade",
-    },
-    {
-      name: "Pro",
-      price: 120,
-      features: [
-        "All limited links",
-        "Own analytics platform",
-        "Chat support",
-        "Optimize hashtags",
-        "Unlimited users",
-      ],
-      popular: true,
-      buttonText: "Upgrade",
-    },
-    {
-      name: "Enterprise",
-      price: 260,
-      features: [
-        "All limited links",
-        "Own analytics platform",
-        "Chat support",
-        "Optimize hashtags",
-        "Unlimited users",
-      ],
-      buttonText: "Upgrade",
-    },
-  ],
-  yearly: [
-    {
-      name: "Base",
-      price: 800,
-      features: [
-        "All limited links",
-        "Own analytics platform (yearly)",
-        "24/7 Priority support",
-        "Advanced hashtag optimization",
-        "Dedicated account manager",
-      ],
-      buttonText: "Downgrade",
-    },
-    {
-      name: "Pro",
-      price: 1200,
-      features: [
-        "All limited links",
-        "Own analytics platform (yearly)",
-        "24/7 Priority support",
-        "Advanced hashtag optimization",
-        "Dedicated account manager",
-      ],
-      popular: true,
-      buttonText: "Upgrade",
-    },
-    {
-      name: "Enterprise",
-      price: 2600,
-      features: [
-        "All limited links",
-        "Own analytics platform (yearly)",
-        "24/7 Priority support",
-        "Advanced hashtag optimization",
-        "Dedicated account manager",
-      ],
-      buttonText: "Upgrade",
-    },
-  ],
-};
-
-export default function Pricing() {
+// The component now accepts props for data and customization
+export default function PricingSection({
+  title,
+  monthlyPlans,
+  yearlyPlans,
+  backgroundImage,
+}) {
   const [billing, setBilling] = useState("monthly");
 
-  const currentPlans = plans[billing];
+  const currentPlans = billing === "monthly" ? monthlyPlans : yearlyPlans;
 
   return (
     <div className="relative bg-black/10 min-h-screen py-12 px-4 font-sans flex flex-col items-center justify-center">
-
       {/* Background Image with Blur */}
-      <div
-        className="absolute inset-0 bg-cover bg-center filter blur-sm opacity-40"
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80')" }}
-      />
+      {backgroundImage && (
+        <div
+          className="absolute inset-0 bg-cover bg-center filter blur-sm opacity-40"
+          style={{ backgroundImage: `url('${backgroundImage}')` }}
+        />
+      )}
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto text-center w-full">
         <h2 className="text-3xl font-bold text-gradient-to-b from-[#382933] via-[#372935] to-[#372831] tracking-tight">
-          Simple, transparent pricing
+          {title || "Simple, transparent pricing"}
         </h2>
 
         {/* Billing Toggle */}
@@ -140,7 +67,7 @@ export default function Pricing() {
             )}
             <h3 className="text-xl text-gray-100 font-semibold mb-2">{plan.name}</h3>
             <p className="text-gray-100 mb-4 text-sm">
-              For most businesses that want to optimize web queries
+              {plan.description || "For most businesses that want to optimize web queries"}
             </p>
 
             <p className={`text-3xl font-extrabold mb-6 ${plan.popular ? "text-white" : "text-[#fff]"}`}>
