@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function About2() {
   return (
     <section
-      className="relative w-full min-h-screen overflow-x-hidden flex flex-col justify-center py-12 px-4 sm:px-8 md:px-12 lg:px-20"
+      className="relative w-full min-h-screen overflow-x-hidden flex flex-col justify-center  py-32 px-4 sm:px-8 md:px-12 lg:px-20"
       style={{
         background: 'linear-gradient(to bottom, #382933, #372935, #372831)',
       }}
@@ -50,32 +50,16 @@ export default function About2() {
 
         {/* Right Side - Text Content */}
         <div className="space-y-6 max-w-xl mx-auto lg:mx-0 px-2 mt-10 lg:mt-0">
-          <h4 className="text-xs sm:text-sm text-gray-100 font-semibold uppercase tracking-widest">
-            WHO WE ARE
-          </h4>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
-            Real people delivering real results.
-          </h2>
-          <p className="text-gray-100 text-sm sm:text-base leading-relaxed text-justify">
-            Phasellus arcu consequat at ligula facilisis habitasse pretium sollicitudin maecenas.
-            Orci purus hendrerit vulputate porttitor justo. Convallis eros amet quam tristique
-            malesuada.
-            Phasellus arcu consequat at ligula facilisis habitasse pretium sollicitudin maecenas.
-            Orci purus hendrerit vulputate porttitor justo. Convallis eros amet quam tristique
-            malesuada.
-            Phasellus arcu consequat at ligula facilisis habitasse pretium sollicitudin maecenas.
-            Orci purus hendrerit vulputate porttitor justo. Convallis eros amet quam tristique
-            malesuada.
+          <span className="text-4xl text-gray-100 font-semibold">
+            Who We Are ?
+          </span>
+      
+          <p className="text-gray-100 text-base leading-relaxed mt-6 text-justify">
+          At Rankinventiv, we help businesses transform their growth trajectory with tailored digital marketing solutions. Based in Noida and expanding in Varanasi, we merge local insights with proven strategies to deliver measurable results for startups, small enterprises, and established brands. Our team of specialists-seasoned in SEO, social media marketing, branding, paid advertising, and business consulting-crafts campaigns that align precisely with your audience, goals, and market landscape.
           </p>
-          <p className="text-gray-100 text-sm sm:text-base leading-relaxed text-justify">
-            Phasellus arcu consequat at ligula facilisis habitasse pretium sollicitudin maecenas.
-            Convallis eros amet quam tristique malesuada.
-            Phasellus arcu consequat at ligula facilisis habitasse pretium sollicitudin maecenas.
-            Orci purus hendrerit vulputate porttitor justo. Convallis eros amet quam tristique
-            malesuada.
-            Phasellus arcu consequat at ligula facilisis habitasse pretium sollicitudin maecenas.
-            Orci purus hendrerit vulputate porttitor justo. Convallis eros amet quam tristique
-            malesuada.
+          <p className="text-gray-100 text-base leading-relaxed text-justify">
+         We believe growth is built on understanding, not assumptions. That’s why every strategy we design focuses on attracting the right customers, fostering engagement, and converting interactions into lasting relationships. While our primary focus is delivering high-impact digital marketing services, we also offer consulting to help businesses strengthen visibility, streamline operations, and sustain momentum in competitive markets.
+
           </p>
         </div>
       </div>

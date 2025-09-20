@@ -5,25 +5,25 @@ const features = [
     number: '01',
     title: 'Market Research',
     description:
-      'Используем только лучшие растения, которые сохраняют свой внешний вид на протяжении долгих лет',
+      'Smart insights that shape strategies for stronger, lasting results.',
   },
   {
     number: '02',
     title: 'Fast Execution',
     description:
-      'Ценим ваше время и гарантируем быстрый результат, сохраняя при этом высокое качество',
+      'Quick, efficient delivery while maintaining top-quality standards. ',
   },
   {
     number: '03',
     title: 'Process and Analysis',
     description:
-      'Предлагаем широкий выбор оформления с учетом ваших пожеланий и бюджета',
+      'Data-driven approach ensuring measurable growth and clear progress.',
   },
   {
     number: '04',
     title: 'Successful Project',
     description:
-      'Готовы реализовать проект любой сложности в любом уголке страны',
+      'Proven record of delivering value across industries and businesses.',
   },
 ]
 
@@ -34,9 +34,9 @@ export default function AboutSection4() {
         
         {/* Image Section + Heading */}
         <div className="order-1 md:order-2 flex flex-col space-y-6">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-snug">
-            We Complete Our Work to Follow Some Easy Ways
-          </h2>
+          <span className="text-4xl font-bold text-white leading-snug">
+            Rankinventiv Team's Streamlined Workflow 
+          </span>
 
           <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[410px] max-h-[800px] rounded-md overflow-hidden">
             <Image
@@ -64,10 +64,10 @@ export default function AboutSection4() {
 
                 {/* Text Content */}
                 <div>
-                  <h3 className="text-base sm:text-lg font-semibold text-white">
+                  <span className="text-xl md:text-2xl font-semibold text-white">
                     {feature.title}
-                  </h3>
-                  <p className="text-sm sm:text-base text-gray-200 mt-1 leading-relaxed">
+                  </span>
+                  <p className="text-lg  text-gray-100 mt-2 leading-relaxed">
                     {feature.description}
                   </p>
                 </div>

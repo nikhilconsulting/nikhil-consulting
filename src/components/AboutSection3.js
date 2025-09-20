@@ -3,54 +3,38 @@ import Image from "next/image";
 export default function InstructorSection() {
   return (
     <>
-   <section className=" relative bg-[linear-gradient(to_bottom,_#382933,_#372935,_#372831)] lg:pt-40 py-16 px-6 overflow-visible">
+   <section className=" relative bg-[linear-gradient(to_bottom,_#382933,_#372935,_#372831)]  py-26 px-6 overflow-visible">
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_0.9fr] items-center gap-12 lg:gap-16">
 
         {/* Text Section */}
-        <div className="text-white order-2 lg:order-1 lg:mt-0 mt-8 ">
-          <h2 className="text-2xl sm:text-3xl font-bold leading-snug">
-            If You Are A Certified Teacher <br />
-            <span className="text-[#87C0FB] font-normal">
-              Then Become An Instructor
-            </span>
-          </h2>
+        <div className="text-white order-2 lg:order-1 lg:mt-0 mt-8  ">
+          <span className="text-4xl font-bold leading-snug">
+           What We Do ?
+          </span>
 
-          <p className="text-sm sm:text-base text-gray-200 mt-4">
-            Unlock the opportunity to experience classroom joy by joining
-            our rich, diverse platform. Share your expertise, become
-            someone's inspiration, and make a real difference.
+          <p className="text-lg md:text-base text-gray-200 mt-4 text-justify">
+            At Rankinventiv, we create bespoke digital marketing strategies that resonate with your business vision and industry demands. Moving beyond generic campaigns, we provide end-to-end execution and ongoing optimization to ensure your brand grows consistently and meaningfully.
           </p>
 
-          <p className="text-sm sm:text-base text-gray-200 mt-2">
-            Unlock the opportunity to experience classroom joy by joining
-            our rich, diverse platform. Share your expertise, become
-            someone's inspiration, and make a real difference.
+          <p className="text-lg md:text-base text-gray-200 mt-2 text-justify">
+           Our expertise covers SEO services in Varanasi and beyond, social media marketing, branding solutions, paid advertising campaigns, and business consulting. Serving sectors like retail, education, healthcare, real estate, and technology, we adapt our approach to each industry’s unique challenges. By combining data-driven insights with creative strategy, we help your brand reach the right audience, build credibility, and turn leads into loyal customers.
           </p>
 
-          <p className="text-sm sm:text-base text-gray-200 mt-2">
-            Unlock the opportunity to experience classroom joy by joining
-            our rich, diverse platform. Share your expertise, become
-            someone's inspiration, and make a real difference.
-          </p>
+         <br />
 
-          <h3 className="mt-6 font-semibold text-gray-100">
-            Enjoy Many Perks
-          </h3>
-          <ul className="mt-3 grid grid-cols-2 gap-2 text-sm text-gray-200 list-disc list-inside">
-            <li>Global Impact</li>
-            <li>Student Feedback</li>
-            <li>Flexible Schedules</li>
-            <li>Increase Your Expertise</li>
-            <li>Incredible Teaching Tools</li>
-            <li>Professional Development</li>
-            <li>Recognition & Compensation</li>
-            <li>Networking Opportunities</li>
+          <span className="mt-6 text-lg md:text-base text-gray-100 text-justify ">
+            By aligning your goals with the right digital tools and strategies, we ensure your brand attracts the right audience, builds trust, and converts leads into loyal customers.
+
+          </span>
+          <ul className="mt-3 grid md:grid-cols-2 gap-2 md:text-base text-lg  font-semibold text-gray-200 list-disc list-inside">
+            <li>Local & Global Presence</li>
+            <li>Expert-Led Team</li>
+            <li>Sector-Wide Consulting</li>
+            <li>Sustainable Growth</li>
           </ul>
 
-          <button className="mt-6 px-6 py-3 bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px] text-white text-base cursor-pointer transition hover:scale-105 hover:opacity-90">
-            Become an Instructor
-          </button>
+        
         </div>
 
         {/* Image Section */}

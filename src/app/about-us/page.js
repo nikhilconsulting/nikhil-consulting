@@ -10,9 +10,9 @@ export default function page() {
   return (
     <>
     <GlassNavbar2 />
- 
+ <About2 />
    <AboutSection3 />
-     <About2 />
+     
      <AboutSection4 />
     <GlassFooter2 />
     </>
