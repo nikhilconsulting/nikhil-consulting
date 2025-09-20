@@ -65,11 +65,11 @@ export default function Home() {
 <GlassNavbar2 />
 
 <HeroSection2 />
-
-     
+<HomeAboutSection />
+     <WorkingProcess2 />
        <ServicesScrollSticky />
-        <HomeAboutSection />
-<WorkingProcess2 />
+        
+
 
       {/* <HomeBlogSection /> */}
 
