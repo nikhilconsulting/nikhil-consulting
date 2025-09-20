@@ -14,6 +14,7 @@ import Slide from "@/components/Slide";
 import Slider from "@/components/Slider";
 import HomeBlogSection from "@/components/HomeBlogSection";
 import HomeAboutSection from "@/components/HomeAboutSection";
+import PricingHomeSection from "@/components/PricingHomeSection";
 
 
 export default function Home() {
@@ -43,7 +44,7 @@ export default function Home() {
 {/* <ServicesSection2 /> */}
 
 
-
+<PricingHomeSection />
 
  <Testimonials2 />
 
