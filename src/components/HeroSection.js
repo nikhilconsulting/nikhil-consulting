@@ -8,7 +8,9 @@ export default function HeroSection() {
   const [form, setForm] = useState({ name: "", email: "" });
   const [status, setStatus] = useState("");
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [showForm, setShowForm] = useState(false); // for modal
+  const [showForm, setShowForm] = useState(false); 
+  const [isPaused, setIsPaused] = useState(false);
+
 
   const slides = [
     {
@@ -59,12 +61,16 @@ export default function HeroSection() {
   };
 
   // Auto change slides every 6s
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length); 
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [slides.length]);
+ useEffect(() => {
+  if (isPaused) return; // skip if paused
+
+  const interval = setInterval(() => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  }, 5000);
+
+  return () => clearInterval(interval);
+}, [slides.length, isPaused]);
+
 
   return (
     <section className="relative min-h-screen w-full md:pb-0 pb-15 overflow-hidden">
@@ -119,39 +125,28 @@ export default function HeroSection() {
                 onSubmit={handleSubmit}
                 className="flex flex-col gap-3 w-full md:mt-0 mt-8 max-w-md mx-auto md:mx-0"
               >
-                <input
-                  type="text"
-                  required
-                  placeholder="Enter Your Name"
-                  value={form.name}
-                  onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  className="w-full p-3 text-white placeholder-white/40 bg-black/15 backdrop-blur-sm focus:outline-none"
-                  style={{
-                    borderBottom: "2px solid transparent",
-                    backgroundImage:
-                      "linear-gradient(to right, rgba(255,255,255,0.3), rgba(255,255,255,0))",
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "100% 2px",
-                    backgroundPosition: "left bottom",
-                  }}
-                />
+               <input
+  type="text"
+  required
+  placeholder="Enter Your Name"
+  value={form.name}
+  onFocus={() => setIsPaused(true)}
+  onBlur={() => setIsPaused(false)}
+  onChange={(e) => setForm({ ...form, name: e.target.value })}
+  className="w-full p-3 text-white placeholder-white/40 bg-black/15 backdrop-blur-sm focus:outline-none"
+/>
 
-                <input
-                  type="email"
-                  required
-                  placeholder="Enter Your E-mail"
-                  value={form.email}
-                  onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  className="w-full p-3 text-white placeholder-white/40 bg-black/15 backdrop-blur-sm focus:outline-none"
-                  style={{
-                    borderBottom: "2px solid transparent",
-                    backgroundImage:
-                      "linear-gradient(to right, rgba(255,255,255,0.3), rgba(255,255,255,0))",
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "100% 2px",
-                    backgroundPosition: "left bottom",
-                  }}
-                />
+<input
+  type="email"
+  required
+  placeholder="Enter Your E-mail"
+  value={form.email}
+  onFocus={() => setIsPaused(true)}
+  onBlur={() => setIsPaused(false)}
+  onChange={(e) => setForm({ ...form, email: e.target.value })}
+  className="w-full p-3 text-white placeholder-white/40 bg-black/15 backdrop-blur-sm focus:outline-none"
+/>
+
 
                 <button
                   type="submit"
@@ -176,7 +171,13 @@ export default function HeroSection() {
       </div>
 
       {/* Consulting Modal */}
-      <ConsultingFormModal showForm={showForm} setShowForm={setShowForm} />
+     <ConsultingFormModal
+  showForm={showForm}
+  setShowForm={setShowForm}
+  onOpen={() => setIsPaused(true)}
+  onClose={() => setIsPaused(false)}
+/>
+
 
       {/* Divider */}
       <div className="absolute bottom-0 left-0 w-full z-20">

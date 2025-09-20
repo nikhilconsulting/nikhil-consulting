@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 
 const testimonials = [
   { name: "RAHUL", text: "Consulting gave me a detailed understanding of digital marketing services and helped me save costs.", image: "https://i.pravatar.cc/150?img=1" },
