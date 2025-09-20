@@ -155,7 +155,7 @@ if (pos === 0) {
 
     >
     <div className="flex flex-col justify-center items-center text-center h-full px-7">
-      <span className="text-2xl bg-gradient-to-b from-[#382933] via-[#372935] to-[#372831] rounded-full p-2 font-bold   mb-2 " >{card.id}</span>
+      <span className="text-3xl font-bold   mb-2 " >{card.id}</span>
   <h3 className="text-xl font-bold mb-2">{card.title}</h3>
   <p className="text-lg text-gray-200 ">{card.description}</p>
 </div>
