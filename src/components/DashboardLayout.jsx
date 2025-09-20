@@ -1,11 +1,11 @@
 'use client';
-import Sidebar from "./Sidebar";
+// import Sidebar from "./Sidebar";
 import TopBar from "./TopBar";
 
 export default function DashboardLayout({ children }) {
   return (
     <div className="flex">
-      <Sidebar />
+      {/* <Sidebar /> */}
       <div className="ml-64 w-full min-h-screen bg-gray-50">
         {/* Add TopBar here */}
         <TopBar />
