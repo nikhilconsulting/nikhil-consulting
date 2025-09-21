@@ -45,8 +45,8 @@ export default function NFTShowcaseSection() {
       {/* Left content */}
       <div className="max-w-3xl z-10 relative md:mt-10">
         <span className="text-4xl md:text-5xl font-bold leading-tight">
-          Collect Extra <br />
-          <span className="text-blue-400">Ordinary</span>
+          About Our <br />
+          <span className="text-blue-400">Work</span>
         </span>
         <p className="mt-4 text-lg md:text-base text-gray-100 max-w-2xl text-justify">
           You can quickly mint NFTs and create your own collections directly on
