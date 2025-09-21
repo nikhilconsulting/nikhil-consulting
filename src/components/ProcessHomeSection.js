@@ -32,16 +32,37 @@ const DownArrow = () => (
   <div className="flex justify-center">
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="h-10 w-10 text-[#80B3F6] opacity-80 animate-bounce"
-      fill="none"
       viewBox="0 0 24 24"
-      stroke="currentColor"
+      className="w-16 h-16"
+      style={{
+        animation: 'smoothBounce 1.5s ease-in-out infinite',
+        transformOrigin: 'center',
+      }}
+      fill="none"
+      stroke="url(#arrowGradientMobile)"
       strokeWidth={3}
     >
+      <defs>
+        <linearGradient id="arrowGradientMobile" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#5F69A8" />
+          <stop offset="20%" stopColor="#616FB4" />
+          <stop offset="40%" stopColor="#657AC9" />
+          <stop offset="60%" stopColor="#6E8EEE" />
+          <stop offset="80%" stopColor="#80B3F6" />
+          <stop offset="100%" stopColor="#8FCDFF" />
+        </linearGradient>
+      </defs>
       <path strokeLinecap="round" strokeLinejoin="round" d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+      <style>{`
+        @keyframes smoothBounce {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-15%); }
+        }
+      `}</style>
     </svg>
   </div>
 );
+
 
 
 
