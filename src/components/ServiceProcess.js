@@ -141,7 +141,7 @@ className="mx-auto mt-6 h-[1px] w-32 sm:w-40 md:w-56 lg:w-64"
 
         {/* Small Screens */}
         <div className="absolute bottom-[-58px] left-1/2 -translate-x-1/2 block lg:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-24 h-24 rotate-90">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-24 h-24 rotate-90 animate-bounce">
             <defs>
               <linearGradient id="arrowGradientMobile" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%" stopColor="#5F69A8" />
