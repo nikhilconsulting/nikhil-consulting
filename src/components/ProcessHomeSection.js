@@ -160,7 +160,9 @@ const DownArrow = () => (
               <span className="text-2xl font-bold">{step.title.slice(5)}</span>
               <p className="text-lg text-gray-100 mt-2">{step.description}</p>
             </div>
+            <div className="mt-[-30px] mb-[-30px]">
             {idx < workingSteps.length - 1 && <DownArrow />}
+            </div>
           </React.Fragment>
         ))}
       </div>
