@@ -84,7 +84,7 @@ className="mx-auto mt-6 h-[1px] w-32 sm:w-40 md:w-56 lg:w-64"
  <div
   key={step.id}
   className="relative rounded-2xl pt-0 pb-4 px-6 flex flex-col gap-3 
-             hover:bg-[#382933] transition min-h-[240px]"
+             transition min-h-[240px]"
 >
 
     {/* Gradient Border */}
@@ -94,7 +94,7 @@ className="mx-auto mt-6 h-[1px] w-32 sm:w-40 md:w-56 lg:w-64"
     ></div>
 
     {/* Step Number */}
-<div className="flex justify-center items-center mt-0 mb-2">
+<div className="flex justify-center items-center mt-8 md:mt-0 mb-2">
   <span
     className="flex justify-center items-center 
       bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] 
@@ -123,38 +123,95 @@ className="mx-auto mt-6 h-[1px] w-32 sm:w-40 md:w-56 lg:w-64"
     {index !== steps.length - 1 && (
       <>
         {/* Large Screens */}
-        <div className="absolute right-[-78px] top-1/3 hidden lg:block">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-24 h-24">
-            <defs>
-              <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#5F69A8" />
-                <stop offset="20%" stopColor="#616FB4" />
-                <stop offset="40%" stopColor="#657AC9" />
-                <stop offset="60%" stopColor="#6E8EEE" />
-                <stop offset="80%" stopColor="#80B3F6" />
-                <stop offset="100%" stopColor="#8FCDFF" />
-              </linearGradient>
-            </defs>
-            <path fill="url(#arrowGradient)" d="M10 6l6 6-6 6" />
-          </svg>
-        </div>
+       <div className="absolute right-[-98px] top-1/3 hidden lg:block">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 48 24"
+    className="w-24 h-24 bounce-horizontal"
+    fill="none"
+    stroke="url(#arrowGradientRight)"
+    strokeWidth={2.5}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <defs>
+      <linearGradient id="arrowGradientRight" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="#5F69A8" />
+        <stop offset="20%" stopColor="#616FB4" />
+        <stop offset="40%" stopColor="#657AC9" />
+        <stop offset="60%" stopColor="#6E8EEE" />
+        <stop offset="80%" stopColor="#80B3F6" />
+        <stop offset="100%" stopColor="#8FCDFF" />
+      </linearGradient>
+    </defs>
+
+    {/* Double right chevrons */}
+    <path d="M6 5l5 7-5 7" />
+    <path d="M14 5l5 7-5 7" />
+
+    <style>{`
+      .bounce-horizontal {
+        animation: bounceX 1.4s ease-in-out infinite;
+        transform-origin: center;
+      }
+
+      @keyframes bounceX {
+        0%, 100% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(8px);
+        }
+      }
+    `}</style>
+  </svg>
+</div>
+
+
 
         {/* Small Screens */}
-        <div className="absolute bottom-[-58px] left-1/2 -translate-x-1/2 block lg:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-24 h-24 rotate-90 animate-bounce">
-            <defs>
-              <linearGradient id="arrowGradientMobile" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#5F69A8" />
-                <stop offset="20%" stopColor="#616FB4" />
-                <stop offset="40%" stopColor="#657AC9" />
-                <stop offset="60%" stopColor="#6E8EEE" />
-                <stop offset="80%" stopColor="#80B3F6" />
-                <stop offset="100%" stopColor="#8FCDFF" />
-              </linearGradient>
-            </defs>
-            <path fill="url(#arrowGradientMobile)" d="M10 6l6 6-6 6" />
-          </svg>
-        </div>
+     <div className="absolute bottom-[-68px] left-1/2  -translate-x-1/2 block lg:hidden">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="w-14 h-14"
+    fill="none"
+    stroke="url(#arrowGradientMobile)"
+    strokeWidth={3}
+    style={{
+      animation: 'smoothBounce 1.5s ease-in-out infinite',
+      transformOrigin: 'center',
+    }}
+  >
+    <defs>
+      <linearGradient id="arrowGradientMobile" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="#5F69A8" />
+        <stop offset="20%" stopColor="#616FB4" />
+        <stop offset="40%" stopColor="#657AC9" />
+        <stop offset="60%" stopColor="#6E8EEE" />
+        <stop offset="80%" stopColor="#80B3F6" />
+        <stop offset="100%" stopColor="#8FCDFF" />
+      </linearGradient>
+    </defs>
+
+    {/* Double Chevron Arrow */}
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M7 13l5 5 5-5M7 6l5 5 5-5"
+    />
+
+    {/* Inline Bounce Animation */}
+    <style>{`
+      @keyframes smoothBounce {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+    `}</style>
+  </svg>
+</div>
+
+
       </>
     )}
   </div>
