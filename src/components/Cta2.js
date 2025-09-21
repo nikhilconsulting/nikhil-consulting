@@ -1,3 +1,4 @@
+"use client";
 export default function Cta2() {
   return (
     <section className="relative z-10 w-[90%] max-w-6xl mx-auto -mt-20 bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px] rounded-xl p-6 sm:p-10 shadow-2xl">

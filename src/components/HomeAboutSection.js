@@ -6,13 +6,13 @@ const nftCards = [
     name: "Image 1",
     price: "Any short description can be added",
     image: "/assets/cropped-1920-1080-1343746.png",
-    style: "top-[20px] left-[50%] rotate-[-6deg]",
+    style: "top-[20px] left-[48%] rotate-[-10deg]",
   },
   {
     name: "Image 2",
     price: "Any short description can be added",
     image: "/assets/cropped-1920-1080-1343746.png",
-    style: "top-[160px] left-[65%] rotate-[24deg]",
+    style: "top-[170px] left-[65%] rotate-[24deg]",
   },
   {
     name: "Image 3",
