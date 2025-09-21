@@ -1,3 +1,4 @@
+"use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
@@ -49,7 +50,7 @@ const HeroSection = () => {
         setCurrentSlide((prev) => (prev + 1) % slides.length);
         setAnimate(true);
       }, 100);
-    }, 7000);
+    }, 12000);
 
     return () => clearInterval(interval);
   }, []);
@@ -98,53 +99,7 @@ const HeroSection = () => {
           <div className="hidden lg:block lg:w-1/2">{/* Optional visual */}</div>
         </div>
       </div>
-       {/* Floating Cards Overlay at Bottom */}
-{/* <div className="absolute bottom-[-70px] left-1/2 transform -translate-x-1/2 w-full px-6 z-20">
-  <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    {[
-      {
-        title: "Explore Our Expert Digital Marketing Services",
-        imgSrc: "/assets/images/home-page-image/overlaycard1.png",
-        alt: "Local SEO Icon",
-      },
-      {
-        title: "Free Strategy Consultation for Your Business",
-        imgSrc: "/assets/images/home-page-image/overlaycard2.png",
-        alt: "Google & Meta Ads Icon",
-      },
-      {
-        title: "Accelerate Your Growth Through Learning",
-        imgSrc: "/assets/images/home-page-image/overlaycard3.png",
-        alt: "Digital Growth Icon",
-      },
-    ].map((card, idx) => (
-      <div
-        key={idx}
-        className="bg-white text-black p-6 rounded-xl shadow-lg flex items-center gap-6"
-      >
-        
-        <div className="flex-shrink-0 w-20 h-20">
-          <img
-            src={card.imgSrc}
-            alt={card.alt}
-            className="w-full h-full object-contain"
-          />
-        </div>
-
-      
-        <div className="flex flex-col justify-center flex-grow">
-          <span className="text-xl font-semibold mb-4">{card.title}</span>
-          <a
-            href="#"
-            className="inline-block self-start bg-black text-white px-2 py-1 font-medium hover:bg-gray-800 transition"
-          >
-            Read More
-          </a>
-        </div>
-      </div>
-    ))}
-  </div>
-</div> */}
+     
     </section>
   );
 };

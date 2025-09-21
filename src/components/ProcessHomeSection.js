@@ -25,7 +25,7 @@ const workingSteps = [
   },
 ];
 
-export default function WorkingProcess2() {
+export default function ProcessHomeSection() {
   return (
    <section className="relative bg-[linear-gradient(to_bottom,_#382933,_#372935,_#372831)] backdrop-blur-[15px] text-white px-4 overflow-hidden h-screen flex flex-col justify-center">
    <div className="max-w-7xl mx-auto text-center mb-16">

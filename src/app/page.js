@@ -6,7 +6,7 @@ import GlassNavbar2 from "@/components/Navbar2";
 import Testimonials2 from "@/components/Testimonials2";
 import ServicesScrollSticky from "@/components/ServicesScrollSticky";
 import ServicesSection2 from "@/components/ServicesSection2";
-import WorkingProcess2 from "@/components/WorkingProcess2";
+import WorkingProcess2 from "@/components/ProcessHomeSection";
 import HeroSection2 from "@/components/HeroSection2";
 
 import HomeBlogSection from "@/components/HomeBlogSection";

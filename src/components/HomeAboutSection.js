@@ -1,53 +1,115 @@
+"use client";
+import React from "react";
 
-import Image from 'next/image';
-import Link from 'next/link';
+const nftCards = [
+  {
+    name: "Image 1",
+    price: "Any short description can be added",
+    image: "/assets/cropped-1920-1080-1343746.png",
+    style: "top-[20px] left-[50%] rotate-[-6deg]",
+  },
+  {
+    name: "Image 2",
+    price: "Any short description can be added",
+    image: "/assets/cropped-1920-1080-1343746.png",
+    style: "top-[160px] left-[65%] rotate-[24deg]",
+  },
+  {
+    name: "Image 3",
+    price: "Any short description can be added",
+    image: "/assets/cropped-1920-1080-1343746.png",
+    style: "top-[370px] left-[48%] rotate-[-28deg]",
+  },
+];
 
-export default function HomeAboutSection() {
+export default function NFTShowcaseSection() {
   return (
-    <section className="w-full min-h-screen flex flex-col lg:flex-row">
-      {/* Left Image */}
-      <div className="w-full lg:w-1/2 h-64 sm:h-80 md:h-96 lg:h-auto relative">
-        <Image
-          src="/assets/images/WhyChooseUs.png"
-          alt="Visual"
-          fill
-          className="object-cover"
-          priority
-        />
-      </div>
-
-      {/* Right Text */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center bg-gradient-to-b from-[#382933] via-[#372935] to-[#372831] backdrop-blur-[15px] px-6 py-10 sm:px-10 md:px-16 lg:px-20 xl:px-24">
-        <div className="max-w-2xl text-white">
-          {/* Know More Badge */}
-          <Link href={"/about-us"} className="hidden md:block absolute top-18 right-18 text-base font-semibold tracking-wide border border-white rounded-full p-2 hover:bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] hover:border-none">
-            Know More
-          </Link>
-
-          {/* Heading */}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-6 leading-tight">
-            About us.
-          </h2>
-
-          {/* Intro Paragraph */}
-          <p className="text-base sm:text-lg md:text-xl text-white/80 font-medium mb-6 leading-relaxed">
-            Focused on excellence for our clients, we are well established, with a reputation for great service and a high-quality finish.
-          </p>
-
-          {/* Detailed Paragraphs */}
-          <div className="text-sm sm:text-base md:text-lg text-white/80 leading-relaxed space-y-4">
-            <p>
-              With our roots in high-end production, TRUE works on a wide spectrum of projects, with top international event organisers and designers.
-              We delight in diversity, from luxury brand experiences to ambitious, large-scale live events.
-            </p>
-            <p>
-              The magic happens at TRUE HQ – a 3,000m² manufacturing facility in Billericay, Essex. A large, flexible space that’s reconfigured for every new challenge.
-            </p>
-            <p>
-              The optimum work environment with plenty of room to test build your project prior to installation.
-            </p>
+    <section className="relative min-h-screen bg-[linear-gradient(to_bottom,_#382933,_#372935,_#372831)] text-white px-6 py-20 md:px-20 overflow-hidden">
+      {/* Mobile: First Card on Top */}
+      <div className="block md:hidden mb-10 z-10 relative">
+        <div className="w-full max-w-xs mx-auto bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px] overflow-hidden shadow-xl">
+          <div className="p-2">
+            <img
+              src={nftCards[0].image}
+              alt={nftCards[0].name}
+              className="w-full h-60 object-cover"
+            />
+          </div>
+          <div className="p-3 bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px]">
+            <span className="text-2xl font-semibold">{nftCards[0].name}</span>
+            <p className="text-lg text-gray-100">{nftCards[0].price}</p>
           </div>
         </div>
+      </div>
+
+      {/* Left content */}
+      <div className="max-w-3xl z-10 relative md:mt-10">
+        <span className="text-4xl md:text-5xl font-bold leading-tight">
+          Collect Extra <br />
+          <span className="text-blue-400">Ordinary</span>
+        </span>
+        <p className="mt-4 text-lg md:text-base text-gray-100 max-w-2xl text-justify">
+          You can quickly mint NFTs and create your own collections directly on
+          BNB Chain (former BSC) and Ethereum (ETH).
+          You can quickly mint NFTs and create your own collections directly on
+          BNB Chain (former BSC) and Ethereum (ETH).
+          You can quickly mint NFTs and create your own collections directly on
+          BNB Chain (former BSC) and Ethereum (ETH).
+          You can quickly mint NFTs and create your own collections directly on
+          BNB Chain (former BSC) and Ethereum (ETH).
+        </p>
+        <p className="mt-4 text-lg md:text-base text-gray-100 max-w-2xl text-justify">
+          You can quickly mint NFTs and create your own collections directly on
+          BNB Chain (former BSC) and Ethereum (ETH).
+          You can quickly mint NFTs and create your own collections directly on
+          BNB Chain (former BSC) and Ethereum (ETH).
+           You can quickly mint NFTs and create your own collections directly on
+          BNB Chain (former BSC) and Ethereum (ETH).
+          You can quickly mint NFTs and create your own collections directly on
+          BNB Chain (former BSC) and Ethereum (ETH).
+        </p>
+
+        {/* Buttons */}
+        <div className="mt-6 flex gap-4 flex-wrap">
+          <button className=" text-white px-6 py-2 bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px]  shadow">
+            Explore More
+          </button>
+         
+        </div>
+      </div>
+
+      {/* Desktop Cards (Original Positioning) */}
+      <div className="absolute top-0 left-40 w-full h-full pointer-events-none hidden md:block">
+        {nftCards.map((card, index) => (
+          <div
+            key={index}
+            className={`absolute ${card.style} w-66 bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px] overflow-hidden shadow-2xl transform`}
+            style={{ zIndex: 5 - index }}
+          >
+            <div className="p-2 bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px]">
+              <img
+                src={card.image}
+                alt={card.name}
+                className="w-full h-54 object-cover"
+              />
+            </div>
+            <div className="p-3 bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px]">
+              <span className="text-xl font-semibold">{card.name}</span>
+              <p className="text-sm text-gray-100">{card.price}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Divider */}
+      <div className="absolute bottom-0 left-0 w-full z-20">
+        <div
+          className="h-[2px] w-full max-w-[1000px] mx-auto"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(211,233,253,0.3), rgba(211,233,253,0))",
+          }}
+        ></div>
       </div>
     </section>
   );
