@@ -1,42 +1,33 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import ContactFormModal from "./ContactFormModal";
 import { usePathname } from "next/navigation";
 
 export default function GlassNavbar2() {
-  const [open, setOpen] = useState(false); // Mobile nav
-  const [showForm, setShowForm] = useState(false); // Modal
-  const [showContactForm, setShowContactForm] = useState(false); // 👈 New state
+    const [open, setOpen] = useState(false); 
+  const [openSubmenu, setOpenSubmenu] = useState(null);
+
+  const [showForm, setShowForm] = useState(false); 
+  const [showContactForm, setShowContactForm] = useState(false); 
   const pathname = usePathname();
-//   const [showScrollTop, setShowScrollTop] = useState(false);
 
-// useEffect(() => {
-//   const handleScroll = () => {
-//     setShowScrollTop(window.scrollY > 200); // Show button after scrolling 200px
-//   };
 
-//   window.addEventListener("scroll", handleScroll);
-//   return () => window.removeEventListener("scroll", handleScroll);
-// }, []);
 
-// const scrollToTop = () => {
-//   window.scrollTo({ top: 0, behavior: "smooth" });
-// };
-
-  // ✅ Define handler function FIRST
   const handleContactClick = () => {
     setShowContactForm(true);
-    setOpen(false); // Close mobile nav if open
+    setOpen(false); 
   };
 
-  // ✅ Now define navItems
+  const [scrolled, setScrolled] = useState(false);
+
+
  const navItems = [
   { href: "/", label: "Home" },
   { href: "/about-us", label: "About Us" },
-  //  { href: "/blogs", label: "Blogs" },
+ 
   {
     href: "/services",
     label: "Services",
@@ -57,29 +48,75 @@ export default function GlassNavbar2() {
   { href: "/contact-us", label: "Contact Us" },
 ];
 
+ // Submenu toggle handler
+  const toggleSubmenu = (label) => {
+    if (openSubmenu === label) {
+      setOpenSubmenu(null);
+    } else {
+      setOpenSubmenu(label);
+    }
+  };
 
-  // 👇 Auto-open form after 3 seconds on first visit
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowForm(true);
-    }, 3000); // 3 sec delay
+useEffect(() => {
+  // Show the contact form after 3 seconds
+  const timer = setTimeout(() => {
+    setShowForm(true);
+  }, 3000);
 
-    return () => clearTimeout(timer);
-  }, []);
- useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [pathname]);
+  // Scroll handling (only on home page)
+  if (pathname !== "/") {
+    setScrolled(true); // Always solid navbar on non-home pages
+  } else {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    handleScroll(); // Run once on mount
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up scroll listener
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }
+
+  // Cleanup timer on unmount (non-home pages)
+  return () => {
+    clearTimeout(timer);
+  };
+}, [pathname]);
+
 
   return (
     <>
     
       <header className="fixed top-0 left-0 right-0 z-50 w-full">
-        <nav
-          className="relative flex items-center text-[16px] w-full gap-4 text-white bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px] shadow-lg px-8 py-4"
-          aria-label="Main navigation"
-        >
+    <nav
+        className={`fixed  top-0 left-0 right-0 flex items-center gap-4 text-white px-8 py-4 transition-all duration-500 ease-in-out z-50 ${
+          scrolled
+            ? "bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] slide-in-from-top"
+            : "bg-transparent shadow-none"
+        }`}
+        aria-label="Main navigation"
+      >
+{/* below the may be required code of navbar without animation */}
+{/* <nav
+  className={`fixed top-0 left-0 right-0 flex items-center gap-4 text-white px-8 py-4 transition-all duration-500 ease-in-out z-50 ${
+    pathname === "/"
+      ? scrolled
+        ? "bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] slide-in-from-top"
+        : "bg-transparent shadow-none"
+      : "bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)]"
+  }`}
+  aria-label="Main navigation"
+> */}
+
+
+
+
           {/* Left side (can be logo later) */}
-          {/* <div className="flex-1"></div> */}
+          <div className="flex-1"></div>
 
           <ul className="hidden lg:flex flex-1 justify-end xl:mr-20 gap-10 list-none text-base p-[10px] tracking-[1.0px]">
             {navItems.map((item) => (
@@ -96,7 +133,7 @@ export default function GlassNavbar2() {
                     <Link href={item.href}  className="flex items-center gap-1 py-2 text-white transition-colors duration-200 cursor-pointer">
                       {item.label}
                       <ChevronDown
-                        size={16}
+                        size={23}
                         className="transition-transform duration-300 group-hover:rotate-180 "
                       />
                     </Link>
@@ -126,50 +163,90 @@ export default function GlassNavbar2() {
               className="text-white transition hover:scale-105"
               onClick={() => setOpen(!open)}
             >
-              {open ? <X size={28} /> : <Menu size={28} />}
+              {open ? <X size={34} /> : <Menu size={38} />}
             </button>
           </div>
         </nav>
 
         {/* Mobile Dropdown (only < md) */}
-        {open && (
-          <div className="lg:hidden w-full bg-white/5 backdrop-blur-[20px] shadow-lg border-b border-white/20 px-8 py-4">
-            <ul className="list-none m-0 p-0 flex flex-col gap-4">
-              {navItems.map((item) => (
-                <li key={item.label}>
-                  {!item.children ? (
-                    <Link
-                      href={item.href}
-                      className="text-white hover:text-gray-300"
-                      onClick={() => setOpen(false)}
-                    >
-                      {item.label}
-                    </Link>
-                  ) : (
-                    <div>
-                      <span className="text-white font-medium">
-                        {item.label}
-                      </span>
-                      <ul className="ml-4 mt-2 flex flex-col gap-2">
-                        {item.children.map((child) => (
-                          <li key={child.href}>
-                            <Link
-                              href={child.href}
-                              className="text-white hover:text-gray-300 text-sm"
-                              onClick={() => setOpen(false)}
-                            >
-                              {child.label}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
+      {open && (
+  <div className="lg:hidden w-full bg-white/5 backdrop-blur-[70px] shadow-lg border-b border-white/20 px-8 py-4">
+    {/* Top Row: Home and Close Icon (mobile) */}
+     {/* Logo or Brand Name */}
+ <Link href="/" onClick={() => setOpen(false)}>
+  <img
+    src="/assets/images/logo/logomobile.png"
+    alt="Logo"
+    className="h-auto max-h-16 w-auto object-contain"
+  />
+</Link>
+
+
+    {/* Nav Items */}
+    <ul className="list-none mt-10 p-0 flex flex-col gap-2">
+      {navItems.map((item) => (
+        <li key={item.label} className="border-b border-white/20 pb-3">
+          {!item.children ? (
+            // ✅ Make full row clickable by wrapping it all in <Link>
+            <Link
+              href={item.href}
+              onClick={() => setOpen(false)}
+              className="block w-full text-white text-lg font-medium px-2 py-2 rounded hover:bg-white/10 transition"
+            >
+              {item.label}
+            </Link>
+          ) : (
+            <div>
+              {/* Parent with submenu toggle */}
+           <div className="flex justify-between items-center w-full px-2 py-2 rounded hover:bg-white/10 transition">
+  {/* Label as Link */}
+  <Link
+    href={item.href}
+    onClick={() => setOpen(false)}
+    className="text-white text-lg font-medium"
+  >
+    {item.label}
+  </Link>
+
+  {/* Chevron for submenu toggle */}
+  <button
+    onClick={() => toggleSubmenu(item.label)}
+    className="text-white"
+  >
+    <ChevronDown
+      size={30}
+      className={`transition-transform duration-300 ${
+        openSubmenu === item.label ? "rotate-180" : ""
+      }`}
+    />
+  </button>
+</div>
+
+
+              {/* Submenu */}
+              {openSubmenu === item.label && (
+                <ul className="ml-4 mt-2 flex flex-col gap-2">
+                  {item.children.map((child) => (
+                    <li key={child.href} className="border-b border-white/20 pb-2">
+                      <Link
+                        href={child.href}
+                        onClick={() => setOpen(false)}
+                        className="block text-white font-medium text-lg px-2 py-2 rounded hover:bg-white/10 transition"
+                      >
+                        {child.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          )}
+        </li>
+      ))}
+    </ul>
+  </div>
+)}
+
       </header>
 
       {/* Popup Form Component */}
@@ -178,16 +255,22 @@ export default function GlassNavbar2() {
         showForm={showContactForm}
         setShowForm={setShowContactForm}
       />
-    {/* {showScrollTop && (
-  <button
-    onClick={scrollToTop}
-    className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-[9999] bg-indigo-600 hover:bg-indigo-700 text-white p-3 shadow-lg transition-all rounded-full"
-    aria-label="Scroll to top"
-  >
-    ↑
-  </button>
-)} */}
-
+  
+ <style>{`
+        .slide-in-from-top {
+          animation: slideInFromTop 0.5s ease forwards;
+        }
+        @keyframes slideInFromTop {
+          0% {
+            transform: translateY(-100%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+      `}</style>
 
     </>
   );

@@ -1,19 +1,21 @@
-import AboutSection3 from '@/components/AboutSection3';
-import About2 from '@/components/About2';
+"use client";
+import AboutPageSection3 from '@/components/AboutPageSection3';
+import AboutPageSection2 from '@/components/AboutPageSection2';
 import GlassFooter2 from '@/components/Footer2';
 import GlassNavbar2 from '@/components/Navbar2';
-import Image from 'next/image';
-import AboutSection4 from '@/components/AboutSection4';
+import AboutPageSection4 from '@/components/AboutPageSection4';
+import Banner from '@/components/Banner';
 
 
 export default function page() {
   return (
     <>
     <GlassNavbar2 />
- <About2 />
-   <AboutSection3 />
+    <Banner />
+ <AboutPageSection2 />
+   <AboutPageSection3 />
      
-     <AboutSection4 />
+     <AboutPageSection4 />
     <GlassFooter2 />
     </>
   );

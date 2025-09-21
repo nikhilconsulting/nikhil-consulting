@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 
-export default function InstructorSection() {
+export default function AboutPageSection3() {
   return (
     <>
    <section className=" relative bg-[linear-gradient(to_bottom,_#382933,_#372935,_#372831)]  py-26 px-6 overflow-visible">

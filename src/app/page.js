@@ -10,7 +10,7 @@ import WorkingProcess2 from "@/components/ProcessHomeSection";
 import HeroSection2 from "@/components/HeroSection2";
 
 import HomeBlogSection from "@/components/HomeBlogSection";
-import HomeAboutSection from "@/components/HomeAboutSection";
+import HomeAboutSection from "@/components/AboutHomeSection";
 import PricingHomeSection from "@/components/PricingHomeSection";
 import PricingSection from "@/components/props/Pricing";
 

@@ -28,7 +28,7 @@ const features = [
   },
 ]
 
-export default function AboutSection4() {
+export default function AboutPageSection4() {
   return (
     <section className="bg-gradient-to-b from-[#382933] via-[#372935] to-[#372831] py-12 px-4 sm:px-6 lg:px-16 min-h-screen lg:pt-20 lg:pb-0 pb-30">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">

@@ -81,11 +81,11 @@ const [selectedExpert, setSelectedExpert] = useState('');
               <li><Link href="/" className="hover:underline">Home</Link></li>
 
               <li><Link href="/about-us" className="hover:underline">About Us</Link></li>
-              <li><Link href="/blogs" className="hover:underline">Blogs</Link></li>
+              {/* <li><Link href="/blogs" className="hover:underline">Blogs</Link></li> */}
 
-                            <li><Link href="/services" className="hover:underline">Services</Link></li>
+                            {/* <li><Link href="/services" className="hover:underline">Services</Link></li> */}
               <li><Link href="/digital-marketing-consultant" className="hover:underline">Consultancy</Link></li>
-              <li><Link href="/career" className="hover:underline">Career</Link></li>
+              {/* <li><Link href="/career" className="hover:underline">Career</Link></li> */}
               <li><Link href="/contact-us" className="hover:underline">Contact Us</Link>
               </li>
             </ul>
