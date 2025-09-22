@@ -41,7 +41,7 @@ export default function AboutPageSection4() {
 
           <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[410px] max-h-[800px] rounded-md overflow-hidden">
             <Image
-              src="/assets/cropped-1920-1080-1343746.png"
+              src="/assets/images/about-us-page-image/rankinventiv-team-streamlined-workflow.png"
               alt="About Image"
               fill
               className="object-cover"

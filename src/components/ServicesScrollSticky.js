@@ -9,7 +9,7 @@ const services = [
     title: "SEO Services",
     description:
       "Drive organic traffic with our comprehensive SEO solutions tailored for your niche and location. SEO-friendly, responsive websites built to convert visitors into loyal customers. SEO-friendly, responsive websites built to convert visitors into loyal customers. SEO-friendly, responsive websites built to convert visitors into loyal customers.SEO-friendly, responsive websites built to convert visitors into loyal customers.SEO-friendly, responsive websites built to convert visitors into loyal customers.SEO-friendly, responsive websites built to convert visitors into loyal customers.",
-    image: "/assets/images/service-detail-page-images/SEO Service.png",
+    image: "/assets/images/home-page-image/service-section-image/SEO 2.png",
     hashtags: [
       "ModelingIndustry",
       "BrandEstablishment",
@@ -23,7 +23,7 @@ const services = [
     title: "Social Media Marketing",
     description:
       "Engage and grow your loyal community through our strategic content and paid campaign expertise.Engage and grow your loyal community through our strategic content and paid campaign expertise.Engage and grow your loyal community through our strategic content and paid campaign expertise.Engage and grow your loyal community through our strategic content and paid campaign expertise.Engage and grow your loyal community through our strategic content and paid campaign expertise.",
-    image: "/assets/images/service_thumb_2.jpg",
+    image: "/assets/images/home-page-image/service-section-image/Social Media.png",
     hashtags: [
       "ModelingIndustry",
       "BrandEstablishment",
@@ -34,10 +34,10 @@ const services = [
   },
   {
     id: "3.",
-    title: "Pay Per Click (PPC)",
+    title: "Meta Ads",
     description:
       "From search ads to display and Facebook promotions, we are a certified Google Ads service provider in Varanasi. Engage and grow your loyal community through our strategic content and paid campaign expertise. Engage and grow your loyal community through our strategic content and paid campaign expertise.Engage and grow your loyal community through our strategic content and paid campaign expertise.Engage and grow your loyal community through our strategic content and paid campaign expertise.",
-    image: "/assets/images/service_thumb_3.jpg",
+    image: "/assets/images/home-page-image/service-section-image/Meta ads.png",
     hashtags: [
       "ModelingIndustry",
       "BrandEstablishment",
@@ -51,7 +51,7 @@ const services = [
     title: "Local SEO",
     description:
       "Rank your business on Google Maps and local search with our GMB listing service in Varanasi. Engage and grow your loyal community through our strategic content and paid campaign expertise.Engage and grow your loyal community through our strategic content and paid campaign expertise.Engage and grow your loyal community through our strategic content and paid campaign expertise.Engage and grow your loyal community through our strategic content and paid campaign expertise.",
-    image: "/assets/images/service_thumb_4.jpg",
+    image: "/assets/images/home-page-image/service-section-image/Local SEO.png",
     hashtags: [
       "ModelingIndustry",
       "BrandEstablishment",
@@ -65,7 +65,7 @@ const services = [
     title: "Website Development",
     description:
       "SEO-friendly, responsive websites built to convert visitors into loyal customers. Engage and grow your loyal community through our strategic content and paid campaign expertise. Engage and grow your loyal community through our strategic content and paid campaign expertise.Engage and grow your loyal community through our strategic content and paid campaign expertise.Engage and grow your loyal community through our strategic content and paid campaign expertise.",
-    image: "/assets/images/service_thumb_5.jpg",
+    image: "/assets/images/home-page-image/service-section-image/Website Development.png",
     hashtags: [
       "ModelingIndustry",
       "BrandEstablishment",
@@ -76,10 +76,10 @@ const services = [
   },
   {
     id: "6.",
-    title: "Pay Per Click (PPC)",
+    title: "Google Ads",
     description:
       "SEO-friendly, responsive websites built to convert visitors into loyal customers. Engage and grow your loyal community through our strategic content and paid campaign expertise. Engage and grow your loyal community through our strategic content and paid campaign expertise.Engage and grow your loyal community through our strategic content and paid campaign expertise.Engage and grow your loyal community through our strategic content and paid campaign expertise.",
-    image: "/assets/images/image.png",
+    image: "/assets/images/home-page-image/service-section-image/Google ads.png",
     hashtags: [
       "ModelingIndustry",
       "BrandEstablishment",

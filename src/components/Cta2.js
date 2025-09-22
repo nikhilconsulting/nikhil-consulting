@@ -22,7 +22,7 @@ export default function Cta2() {
   {/* BACK Image - now lower z-index */}
   <div className="absolute -top-6 -right-0 w-40 h-28 sm:w-64 sm:h-44 rounded-md overflow-hidden border-4 border-white shadow-lg z-0">
     <img
-      src="/assets/images/WhyChooseUs.png"
+      src="/assets/images/cta-section-image/cta-2.png"
       alt="Team Hands"
       className="object-cover w-full h-full"
     />
@@ -31,7 +31,7 @@ export default function Cta2() {
   {/* FRONT Image - now higher z-index */}
   <div className="relative w-52 h-36 sm:w-54 sm:h-40 rounded-md overflow-hidden shadow-xl ml-12 mt-12 border-4 border-white z-10">
     <img
-      src="/assets/images/WhyChooseUs.png"
+      src="/assets/images/cta-section-image/cta-1.png"
       alt="Team Meeting"
       className="object-cover w-full h-full"
     />
