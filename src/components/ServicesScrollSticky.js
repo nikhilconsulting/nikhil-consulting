@@ -206,7 +206,7 @@ export default function ServicesScrollSticky() {
       src={services[activeIndex].image}
       alt={services[activeIndex].title}
       key={services[activeIndex].id}
-      className="w-full h-full object-cover rounded-xl relative"
+      className="w-full h-full object-contain rounded-xl relative"
     />
   </div>
 </div>
