@@ -49,11 +49,10 @@ export default function TextImageSection() {
               <div className="relative w-full h-full rounded-lg p-[3px] sm:p-[5px] bg-black/35 backdrop-blur">
                 <div className="relative w-full h-full rounded-md overflow-hidden">
                   <img
-                    src="/assets/images/consulting-page-images/major-problems-businesses-face-image-2.png"
+                    src="/assets/images/consulting-page-images/team-collaboration-conference.png"
                     alt="Overlay Image"
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-black/20"></div>
                 </div>
               </div>
             </div>
