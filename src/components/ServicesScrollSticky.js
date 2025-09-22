@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
+import Image from "next/image";
 
 const services = [
   {
@@ -192,22 +193,19 @@ export default function ServicesScrollSticky() {
   {/* 2. Image Container with Aura */}
   <div className="relative z-10 w-full max-w-[600px] h-full">
     
-    {/* 2a. Aura Behind Image */}
-    <div
-      className="absolute inset-0 rounded-xl blur-xl opacity-50"
-      style={{
-        background:
-          "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
-      }}
-    ></div>
 
     {/* 2b. Actual Image */}
-    <img
-      src={services[activeIndex].image}
-      alt={services[activeIndex].title}
-      key={services[activeIndex].id}
-      className="w-full h-full object-contain rounded-xl relative"
-    />
+   <Image
+  src={services[activeIndex].image}
+  alt={services[activeIndex].title}
+  key={services[activeIndex].id}
+  fill
+  sizes="(max-width: 768px) 100vw, 600px"
+  className="object-contain rounded-xl"
+  quality={100} // increase clarity
+  priority // preload all (see note below)
+/>
+
   </div>
 </div>
 
