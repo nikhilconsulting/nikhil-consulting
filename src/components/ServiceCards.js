@@ -1,5 +1,8 @@
+"use client";
 import React from "react";
 import Link from "next/link";
+import { FiArrowRight } from "react-icons/fi";
+
 
 const services = [
   {
@@ -96,14 +99,16 @@ const ServiceCards = () => {
               </p>
 </Link>
               {/* Learn More Button */}
-              <div className="mt-auto relative -m-2 p-2">
-                <Link
-                  href={service.link}
-                  className="w-fit mx-auto bg-white/10 hover:scale-105 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] text-white font-medium py-2 px-5 hover:bg-white/20 transition text-sm sm:text-base flex items-center gap-2 cursor-pointer justify-center"
-                >
-                  Learn More <span>→</span>
-                </Link>
-              </div>
+             <div className="mt-auto relative -m-2 p-2">
+  <Link
+    href={service.link}
+    className="w-fit mx-auto lg:hover:scale-105 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] text-white font-medium py-2 px-5 hover:bg-white/20 transition text-xl lg:text-base flex items-center gap-2 cursor-pointer justify-center"
+  >
+    Learn More 
+    <FiArrowRight className="text-2xl lg:text-lg" />
+  </Link>
+</div>
+
             </div>
           </div>
         ))}
