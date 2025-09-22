@@ -76,7 +76,7 @@ export default function HeroSection() {
     <section className="relative min-h-screen w-full md:pb-0 pb-15 overflow-hidden">
       {/* Background Image */}
       <Image
-        src="/assets/images/Speaker1.png"
+        src="/assets/images/consulting-page-images/digital-marketing-consultant-og-speaker-1.png"
         alt="Background"
         fill
         className="object-cover z-0"

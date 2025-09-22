@@ -237,17 +237,17 @@ className="mx-auto mt-6 h-[1px] w-32 sm:w-40 md:w-56 lg:w-64"
           <div className="flex items-center gap-3">
             <div className="flex -space-x-3">
               <img
-                src="https://randomuser.me/api/portraits/men/1.jpg"
+                src="/assets/images/consulting-page-images/small-images-of-clients-1.png"
                 alt="user1"
                 className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white"
               />
               <img
-                src="https://randomuser.me/api/portraits/women/2.jpg"
+                src="/assets/images/consulting-page-images/small-images-of-clients-5.png"
                 alt="user2"
                 className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white"
               />
               <img
-                src="https://randomuser.me/api/portraits/men/3.jpg"
+                src="/assets/images/consulting-page-images/small-images-of-clients-8.png"
                 alt="user3"
                 className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white"
               />

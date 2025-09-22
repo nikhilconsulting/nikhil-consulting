@@ -2,10 +2,10 @@
 import React, { useState, useEffect } from "react";
 
 const testimonials = [
-  { name: "RAHUL", text: "Consulting gave me a detailed understanding of digital marketing services and helped me save costs.", image: "https://i.pravatar.cc/150?img=1" },
-  { name: "SOUMYA", text: "I gained complete knowledge about Google My Business, which became a powerful tool to reach local customers and reduce website expenses.", image: "https://i.pravatar.cc/150?img=2" },
-  { name: "VISHAL", text: "Earlier, I spent too much on SEO, but with proper consulting I learned to target the right audience and use my budget wisely.", image: "https://i.pravatar.cc/150?img=3" },
-  { name: "SARANSH", text: "The guidance also saved me from wasting money on ads without knowing the right strategies.", image: "https://i.pravatar.cc/150?img=4" },
+  { name: "RAHUL", text: "Consulting gave me a detailed understanding of digital marketing services and helped me save costs.", image: "/assets/images/consulting-page-images/small-images-of-clients-4.png" },
+  { name: "SOUMYA", text: "I gained complete knowledge about Google My Business, which became a powerful tool to reach local customers and reduce website expenses.", image: "/assets/images/consulting-page-images/small-images-of-clients-7.png" },
+  { name: "VISHAL", text: "Earlier, I spent too much on SEO, but with proper consulting I learned to target the right audience and use my budget wisely.", image: "/assets/images/consulting-page-images/small-images-of-clients-6.png" },
+  { name: "SARANSH", text: "The guidance also saved me from wasting money on ads without knowing the right strategies.", image: "/assets/images/consulting-page-images/small-images-of-clients-3.png" },
 ];
 
 function Star() {

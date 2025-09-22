@@ -8,30 +8,34 @@ const testimonials = [
     text: "Firm provided a cost-effective IT solution that transformed our lending business.",
     name: "Steve Mark",
     role: "Digital Operations",
-    
+    image: "/assets/images/consulting-page-images/small-images-of-clients-9.png", // ← Add image path
   },
   {
     id: 2,
     text: "Firm's expertise in finance and data management helped us improve our backend operations.",
     name: "Kashish Sachdeva",
     role: "Founder & Leader",
-    rotate: "rotate-5"
+    rotate: "rotate-5",
+    image: "/assets/images/consulting-page-images/small-images-of-clients-2.png",
   },
   {
     id: 3,
     text: "Thanks to Firm's Build to Assist Digital Information Platforms, we've gained invaluable insights.",
     name: "Kenn Gallagher",
     role: "Founder & Leader",
-    rotate: "-rotate-4"
+    rotate: "-rotate-4",
+    image: "/assets/images/consulting-page-images/small-images-of-clients-10.png",
   },
-    {
+  {
     id: 4,
     text: "Thanks to Firm's Build to Assist Digital Information Platforms, we've gained invaluable insights.",
     name: "Kenn Gallagher",
     role: "Founder & Leader",
-    rotate: "rotate-3"
-  }
+    rotate: "rotate-3",
+    image: "/assets/images/consulting-page-images/small-images-of-clients-5.png",
+  },
 ];
+
 
 export default function TestimonialSection() {
   return (
@@ -40,8 +44,8 @@ export default function TestimonialSection() {
         
         {/* Left Section - Title */}
         <div className="sticky top-0 py-16">
-          <div className="font-bold lg:leading-tight text-3xl md:text-6xl sticky top-1/4">
-            What People are <br /> saying about us
+          <div className="font-bold lg:leading-tight text-center text-4xl md:text-5xl sticky top-1/4">
+            What ? <br /> People are <br /> Saying About Us... !
           </div>
           
         </div>
@@ -58,17 +62,30 @@ export default function TestimonialSection() {
                 transition: 'transform 0.3s, z-index 0.3s',
               }}
             >
-              <p className="text-white text-base">{item.text}</p>
-              <div className="flex gap-14 mt-6">
-                <div className="relative">
-                  <p className="text-base">Rankinventiv</p>
-                  <span className="absolute inset-y-0 left-26 w-0.5 bg-gray-100" aria-hidden="true"></span>
-                </div>
-                <div>
-                  <p className="text-base">{item.name}</p>
-                  <p className="text-base">{item.role}</p>
-                </div>
-              </div>
+              <p className="text-white text-lg ">{item.text}</p>
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-6 items-start sm:items-center">
+  
+  {/* Client Image + Info */}
+  <div className="flex items-center gap-2 order-1 sm:order-2">
+    <img
+      src={item.image}
+      alt={item.name}
+      className="w-12 h-12 rounded-full object-cover border border-white"
+    />
+    <div>
+      <p className="text-lg font-semibold">{item.name}</p>
+      <p className="text-base text-gray-100">{item.role}</p>
+    </div>
+  </div>
+
+  {/* Company Name - Rankinventiv */}
+  <div className="flex items-center gap-2 relative order-2 sm:order-1">
+    <p className="text-xl">Rankinventiv</p>
+    <div className=" w-px  h-7 bg-gray-100" />
+  </div>
+</div>
+
+
             </div>
           ))}
         </div>

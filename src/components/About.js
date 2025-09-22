@@ -13,7 +13,7 @@ export default function AboutSection() {
       {/* Responsive Background Image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/assets/images/About us (2).png"
+          src="/assets/images/consulting-page-images/speaker-2.png"
           alt="Background"
           fill
           sizes="100vw"
