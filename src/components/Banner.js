@@ -5,9 +5,10 @@ import Image from 'next/image';
 export default function Banner() {
   return (
     <section className="relative  w-full h-[190px] lg:h-[230px] flex items-center justify-center overflow-hidden"
-      style={{
-    background: 'linear-gradient(to bottom, #372935, #5F69A8, #000)',
-  }}>
+    style={{
+                background:
+                  "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9)",
+              }}>
       {/* Background Image */}
       <Image
         src="/images/service-detail-page-images/local-seo-banner.png"

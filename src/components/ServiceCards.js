@@ -52,17 +52,17 @@ const borderStyle = {
   padding: "2px",
   background:
     "linear-gradient(to top, rgba(211,233,253,0.8), rgba(211,233,253,0) 70%)",
-  borderRadius: "1rem",
+  
   borderTop: "none",
 };
 
 const ServiceCards = () => {
   return (
-    <section className="bg-gradient-to-b from-[#382933] via-[#372935] to-[#372831] pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+    <section className=" lg:bg-[linear-gradient(125deg,#fff,#000000,#5F69A8)]  bg-[linear-gradient(125deg,#5F69A8,#000000,#372935)] pt-32 pb-16 px-4 sm:px-6 lg:px-8">
       {/* 🌟 Section Heading */}
       <div className="max-w-3xl mx-auto text-center mb-6">
-        <h2 className="text-3xl sm:text-4xl font-bold text-white">Our Services</h2>
-        <p className="mt-4 text-gray-300 text-base sm:text-lg">
+        <span className="text-5xl lg:text-4xl font-bold text-white">Our Services</span>
+        <p className="mt-4 text-gray-100 text-lg lg:text-base">
           Explore what we can do to boost your business online. Explore what we can do to boost your business online.  Explore what we can do to boost your business business online.
         </p>
       </div>
@@ -71,10 +71,10 @@ const ServiceCards = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service, index) => (
           <div key={index} style={borderStyle} >
-            <div className="bg-gradient-to-b from-[#382933] via-[#372935] to-[#372831] hover:scale-105 transition text-white rounded-2xl shadow-md p-6 flex flex-col hover:shadow-xl h-full">
+            <div className="bg-gradient-to-b from-[#382933] via-[#372935] to-[#372831] lg:hover:scale-105 transition text-white  shadow-md p-6 flex flex-col hover:shadow-xl h-full">
               {/* Image */}
                 <Link href={service.link}>
-              <div className="w-full h-44 sm:h-52 rounded-xl mb-5 overflow-hidden">
+              <div className="w-full h-44 sm:h-52 mb-5 overflow-hidden">
                 <img
                   src={service.image}
                   alt={service.title}
@@ -85,13 +85,13 @@ const ServiceCards = () => {
 
               {/* Title */}
               <Link href={service.link}>
-              <h3 className="text-xl sm:text-2xl font-semibold mb-2 leading-tight">
+              <span className="text-2xl font-semibold mb-2 leading-tight">
                 {service.title}
-              </h3>
+              </span>
 </Link>
               {/* Description */}
                 <Link href={service.link}>
-              <p className="text-sm sm:text-base text-gray-300 line-clamp-3 mb-5">
+              <p className="text-lg lg:text-base text-gray-300 line-clamp-3 mt-2 mb-5">
                 {service.description}
               </p>
 </Link>

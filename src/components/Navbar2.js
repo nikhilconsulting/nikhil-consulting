@@ -91,11 +91,14 @@ useEffect(() => {
   return (
     <>
     
+
+
+    
       <header className="fixed top-0 left-0 right-0 z-50 w-full">
     <nav
-        className={`fixed  top-0 left-0 right-0 flex items-center gap-4 text-white px-8 py-4 transition-all duration-500 ease-in-out z-50 ${
+        className={`fixed  top-0 left-0 right-0 flex items-center gap-4 text-white  px-8 py-4 transition-all duration-500 ease-in-out z-50 ${
           scrolled
-            ? "bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] slide-in-from-top"
+            ? "bg-gradient-to-r from-[#5F69A8] via-[#000000] to-[#372935]  slide-in-from-top "
             : "bg-transparent shadow-none"
         }`}
         aria-label="Main navigation"
@@ -124,20 +127,20 @@ useEffect(() => {
                 {!item.children ? (
                   <Link
                     href={item.href}
-                    className="relative block py-2 text-white no-underline transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-white after:to-transparent after:transition-all after:duration-300 hover:after:w-full"
+                    className="relative block py-2 text-white font-bold no-underline transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-white after:to-transparent after:transition-all after:duration-300 hover:after:w-full"
                   >
                     {item.label}
                   </Link>
                 ) : (
                   <>
-                    <Link href={item.href}  className="flex items-center gap-1 py-2 text-white transition-colors duration-200 cursor-pointer">
+                    <Link href={item.href}  className="flex items-center gap-1 py-2 text-white transition-colors font-bold  duration-200 cursor-pointer">
                       {item.label}
                       <ChevronDown
                         size={23}
                         className="transition-transform duration-300 group-hover:rotate-180 "
                       />
                     </Link>
-                    <ul className="absolute -left-25 opacity-0 cursor-pointer invisible group-hover:visible group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 flex-col gap-2 text-white bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px] rounded-sm mt-7 p-2 shadow-lg z-50 min-w-[330px]">
+                    <ul className="absolute -left-25 opacity-0 cursor-pointer invisible group-hover:visible font-bold group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 flex-col gap-2 text-white bg-gradient-to-r from-[#5F69A8] via-[#000000] to-[#372935] backdrop-blur-[15px] rounded-sm mt-7 p-2 shadow-lg z-50 min-w-[330px]">
                       {item.children.map((child) => (
                         <li key={child.href}>
                           <Link
@@ -160,7 +163,7 @@ useEffect(() => {
           {/* Hamburger Icon (only < md ~ below 768px) */}
           <div className="flex lg:hidden ml-auto">
             <button
-              className="text-white transition hover:scale-105"
+              className="text-white font-bold transition hover:scale-105"
               onClick={() => setOpen(!open)}
             >
               {open ? <X size={34} /> : <Menu size={38} />}
@@ -191,7 +194,7 @@ useEffect(() => {
             <Link
               href={item.href}
               onClick={() => setOpen(false)}
-              className="block w-full text-white text-lg font-medium px-2 py-2 rounded hover:bg-white/10 transition"
+              className="block w-full text-white text-lg font-bold px-2 py-2 rounded hover:bg-white/10 transition"
             >
               {item.label}
             </Link>
