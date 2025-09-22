@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+// import Image from 'next/image';
 
 export default function Banner() {
   return (
@@ -10,13 +10,13 @@ export default function Banner() {
                   "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9)",
               }}>
       {/* Background Image */}
-      <Image
+      {/* <Image
         src="/images/service-detail-page-images/local-seo-banner.png"
         alt="Social Media Marketing Banner"
         fill
         className="object-cover absolute inset-0 -z-10"
         priority
-      />
+      /> */}
 
       {/* Overlay text */}
       <h1 className="relative text-gray-100 text-4xl sm:text-5xl md:text-6xl mt-20 font-bold z-10 text-center">

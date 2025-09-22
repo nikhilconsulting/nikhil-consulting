@@ -5,19 +5,19 @@ const nftCards = [
   {
     name: "Image 1",
     price: "Any short description can be added",
-    image: "/assets/images/WhyChooseUs.png",
+    image: "/assets/images/home-page-image/about-section-image/1.png",
     style: "top-[20px] left-[48%] rotate-[-10deg]",
   },
   {
     name: "Image 2",
     price: "Any short description can be added",
-    image: "/assets/images/WhyChooseUs.png",
+    image: "/assets/images/home-page-image/about-section-image/2.png",
     style: "top-[170px] left-[65%] rotate-[24deg]",
   },
   {
     name: "Image 3",
     price: "Any short description can be added",
-    image: "/assets/images/WhyChooseUs.png",
+    image: "/assets/images/home-page-image/about-section-image/3.png",
     style: "top-[370px] left-[48%] rotate-[-28deg]",
   },
 ];
