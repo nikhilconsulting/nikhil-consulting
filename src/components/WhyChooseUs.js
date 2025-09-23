@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import Image from "next/image";
 
 export default function WhyChooseUs() {
@@ -70,7 +69,7 @@ export default function WhyChooseUs() {
   {/* Desktop View - Overlapping Animated Images */}
   <div className="relative hidden xl:block w-full h-[700px]">
     {/* Image 1 */}
-    <div className="absolute top-[8%] left-[0%] w-[320px] h-[200px] bg-gradient-to-r from-[#5F69A8] via-[#000000] to-[#372935] rounded-lg shadow-xl animate-pulse transition-transform duration-300 hover:scale-105 -rotate-3" style={{ padding: "10px" }}>
+    <div className="absolute top-[8%] left-[0%] w-[320px] h-[200px] bg-gradient-to-r from-[#372935] via-[#616FB4] to-[#372935] rounded-lg shadow-xl animate-pulse transition-transform duration-300 hover:scale-105 -rotate-3" style={{ padding: "10px" }}>
       <Image
         src="/assets/cropped-1920-1080-1343746.png"
         alt="Screenshot 1"
@@ -82,7 +81,7 @@ export default function WhyChooseUs() {
     </div>
 
     {/* Image 2 */}
-    <div className="absolute top-[22%] left-[45%] w-[320px] h-[200px] bg-gradient-to-r from-[#5F69A8] via-[#000000] to-[#372935] rounded-lg shadow-xl animate-pulse transition-transform duration-300 hover:scale-105 -rotate-5" style={{ padding: "10px" }}>
+    <div className="absolute top-[22%] left-[45%] w-[320px] h-[200px] bg-gradient-to-r from-[#372935] via-[#616FB4] to-[#372935] rounded-lg shadow-xl animate-pulse transition-transform duration-300 hover:scale-105 -rotate-5" style={{ padding: "10px" }}>
       <Image
         src="/assets/images/demon-slayer-giyu-tomioka-cool-desktop-wallpaper-4k.jpg"
         alt="Screenshot 2"
@@ -94,7 +93,7 @@ export default function WhyChooseUs() {
     </div>
 
     {/* Image 3 */}
-    <div className="absolute top-[46%] left-[0%] w-[320px] h-[200px] bg-gradient-to-r from-[#5F69A8] via-[#000000] to-[#372935] rounded-lg shadow-xl animate-pulse transition-transform duration-300 hover:scale-105 rotate-3" style={{ padding: "10px" }}>
+    <div className="absolute top-[46%] left-[0%] w-[320px] h-[200px] bg-gradient-to-r from-[#372935] via-[#616FB4] to-[#372935] rounded-lg shadow-xl animate-pulse transition-transform duration-300 hover:scale-105 rotate-3" style={{ padding: "10px" }}>
       <Image
         src="/assets/demon-slayer-mitsuri-cherry-blossom-desktop-wallpaper.jpg"
         alt="Screenshot 3"
@@ -106,7 +105,7 @@ export default function WhyChooseUs() {
     </div>
 
     {/* Image 4 */}
-    <div className="absolute top-[62%] left-[45%] w-[320px] h-[200px] bg-gradient-to-r from-[#5F69A8] via-[#000000] to-[#372935] rounded-lg shadow-xl animate-pulse transition-transform duration-300 hover:scale-105 -rotate-3" style={{ padding: "10px" }}>
+    <div className="absolute top-[62%] left-[45%] w-[320px] h-[200px] bg-gradient-to-r from-[#372935] via-[#616FB4] to-[#372935] rounded-lg shadow-xl animate-pulse transition-transform duration-300 hover:scale-105 -rotate-3" style={{ padding: "10px" }}>
       <Image
         src="/assets/cropped-1920-1080-1343746.png"
         alt="Screenshot 4"

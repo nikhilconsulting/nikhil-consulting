@@ -31,3 +31,8 @@ export default function Banner() {
 // background: 'linear-gradient(to bottom, #5F69A8, #372935, #5F69A8)',
 // bg-[linear-gradient(to_bottom,_#372935,_#5F69A8,_#000)]
   //  background: 'linear-gradient(to bottom, #372935, #5F69A8, #000)',
+
+
+
+
+  
