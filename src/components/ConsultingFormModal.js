@@ -10,8 +10,6 @@ export default function ConsultingFormModal({ showForm, setShowForm }) {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
-  const [hasWebsite, setHasWebsite] = useState("No");
-  const [websiteName, setWebsiteName] = useState("");
   const [error, setError] = useState("");
   const [showThankYou, setShowThankYou] = useState(false);
       const [selected, setSelected] = useState("");
@@ -102,9 +100,57 @@ const handleSubmit = async (e) => {
         {/* Close Button */}
        <button
   onClick={() => setShowForm(false)}
-  className="absolute top-2 right-3 bg-red-600 text-white px-3 py-1 transition hover:scale-105 cursor-pointer border border-red-600 hover:bg-red-700 hover:border-red-700 transition"
+  className="    absolute top-2 right-3 
+    rounded-3xl
+    transition-transform transform
+    hover:scale-115
+    cursor-pointer
+    flex items-center justify-center"
 >
-  ✕
+  <svg
+    width="30"
+    height="30"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    {/* Circle background with improved red radial gradient */}
+    <circle cx="12" cy="12" r="11" fill="url(#bgGradient)" />
+
+    {/* Main X shape with deeper red gradient */}
+    <g stroke="url(#xGradient)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+      <line x1="7" y1="7" x2="17" y2="17" />
+      <line x1="17" y1="7" x2="7" y2="17" />
+    </g>
+    
+    {/* Inner shadow lines, slightly more transparent for subtle depth */}
+    <g stroke="url(#shadowGradient)" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" opacity="0.25">
+      <line x1="8" y1="8" x2="16" y2="16" />
+      <line x1="16" y1="8" x2="8" y2="16" />
+    </g>
+
+    <defs>
+      {/* Background radial gradient for rich reds */}
+      <radialGradient id="bgGradient" cx="0.4" cy="0.3" r="1">
+        <stop offset="0%" stopColor="#ff4d4d" />  {/* bright red */}
+        <stop offset="70%" stopColor="#b22222" />  {/* firebrick red */}
+        <stop offset="100%" stopColor="#7a1a1a" /> {/* deep dark red */}
+      </radialGradient>
+
+      {/* Gradient on X shape for 3D red shading */}
+      <linearGradient id="xGradient" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stopColor="#fff0f0" />
+        <stop offset="50%" stopColor="#ff7a7a" />
+        <stop offset="100%" stopColor="#7a1a1a" />
+      </linearGradient>
+
+      {/* Shadow gradient for inner lines */}
+      <linearGradient id="shadowGradient" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stopColor="#7a1a1a" />
+        <stop offset="100%" stopColor="#ff7a7a" />
+      </linearGradient>
+    </defs>
+  </svg>
 </button>
 
 

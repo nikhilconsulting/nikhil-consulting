@@ -6,14 +6,14 @@ export default function Cta2() {
         {/* Left Side */}
         <div className="flex-1 text-center md:text-left">
           <h2 className="text-3xl font-bold text-white mb-2">
-            Ready to Grow <br className="sm:hidden" />
-            Your Business?
+            Ready to Dominate  <br className="sm:hidden" />
+            Your Market?
           </h2>
           <p className="text-white mb-4">
-            Let’s work together to create a digital strategy that delivers results. Contact us today!
+            Don't just compete-lead. Build powerful digital strategies that deliver a clear competitive advantage
           </p>
           <button className="bg-[linear-gradient(to_bottom,_#382933,_#372935,_#372831)] backdrop-blur-[15px] cursor-pointer transition hover:scale-105 text-white font-semibold py-2 px-5 rounded-md transition duration-300">
-            Get Started →
+            Claim Your Advantage →
           </button>
         </div>
 

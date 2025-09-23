@@ -1,24 +1,26 @@
 "use client";
+import Link from "next/link";
 import React from "react";
+import { FaArrowRight } from 'react-icons/fa';
 
 const nftCards = [
   {
-    name: "Image 1",
-    price: "Any short description can be added",
+    name: "Strategic Planning in Action",
+    price: "Brainstorming sessions to create impactful digital solutions",
     image: "/assets/images/home-page-image/about-section-image/1.png",
     style: "top-[20px] left-[48%] rotate-[-10deg]",
   },
   {
-    name: "Image 2",
-    price: "Any short description can be added",
+    name: "Delivering Results",
+    price: " Focused discussions that turn ideas into measurable outcomes",
     image: "/assets/images/home-page-image/about-section-image/2.png",
     style: "top-[170px] left-[65%] rotate-[24deg]",
   },
   {
-    name: "Image 3",
-    price: "Any short description can be added",
+        name: "Collaborating for Success",
+    price: "Our team works closely with clients to understand their goals",
     image: "/assets/images/home-page-image/about-section-image/3.png",
-    style: "top-[370px] left-[48%] rotate-[-28deg]",
+    style: "top-[340px] left-[45%] rotate-[-20deg]",
   },
 ];
 
@@ -49,31 +51,20 @@ export default function NFTShowcaseSection() {
           <span className="text-blue-400">Work</span>
         </span>
         <p className="mt-4 text-lg md:text-base text-gray-100 max-w-2xl text-justify">
-          You can quickly mint NFTs and create your own collections directly on
-          BNB Chain (former BSC) and Ethereum (ETH).
-          You can quickly mint NFTs and create your own collections directly on
-          BNB Chain (former BSC) and Ethereum (ETH).
-          You can quickly mint NFTs and create your own collections directly on
-          BNB Chain (former BSC) and Ethereum (ETH).
-          You can quickly mint NFTs and create your own collections directly on
-          BNB Chain (former BSC) and Ethereum (ETH).
+         At Rankinventiv, we believe in a simple truth effective marketing is a partnership, We're a team of passionate digital strategists and creative experts dedicated to helping ambitious businesses like yours find their voice and connect with their audience. Our mission is to move beyond generic campaigns and craft tailored, data-driven strategies that don't just generate clicks-they build lasting brand value and a clear return on your investment. We pride ourselves on transparent communication and a commitment to your long-term success.
         </p>
         <p className="mt-4 text-lg md:text-base text-gray-100 max-w-2xl text-justify">
-          You can quickly mint NFTs and create your own collections directly on
-          BNB Chain (former BSC) and Ethereum (ETH).
-          You can quickly mint NFTs and create your own collections directly on
-          BNB Chain (former BSC) and Ethereum (ETH).
-           You can quickly mint NFTs and create your own collections directly on
-          BNB Chain (former BSC) and Ethereum (ETH).
-          You can quickly mint NFTs and create your own collections directly on
-          BNB Chain (former BSC) and Ethereum (ETH).
+         We understand the digital landscape can feel overwhelming. That’s why we’re here to be your guide. From SEO and content creation to paid advertising and social media management, our full-service approach is designed to handle every aspect of your online presence. We focus on delivering measurable, impactful results that help your business not just compete, but lead. Partner with us, and let’s turn your marketing goals into a reality.
         </p>
 
         {/* Buttons */}
         <div className="mt-6 flex gap-4 flex-wrap">
-          <button className=" text-white px-6 py-2 bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px]  shadow">
-            Explore More
-          </button>
+         <Link
+  href="/services"
+  className="flex text-xl  lg:text-base items-center text-white hover:scale-105 px-6 py-2 bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px] shadow"
+>
+  Explore More <FaArrowRight className="ml-2" />
+</Link>
          
         </div>
       </div>
@@ -94,8 +85,8 @@ export default function NFTShowcaseSection() {
               />
             </div>
             <div className="p-3 bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px]">
-              <span className="text-xl font-semibold">{card.name}</span>
-              <p className="text-sm text-gray-100">{card.price}</p>
+              <span className="text-lg font-semibold">{card.name}</span>
+              <p className="text-base text-gray-100">{card.price}</p>
             </div>
           </div>
         ))}

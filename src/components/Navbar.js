@@ -42,6 +42,23 @@ useEffect(() => {
 }, []);
 
 
+// useEffect(() => {
+//   const timer = setTimeout(() => {
+//     setShowForm(true);
+
+//     // Scroll after form is shown
+//     const footer = document.getElementById("book-consulting");
+//     if (footer) {
+//       footer.scrollIntoView({ behavior: "smooth" });
+//     }
+
+//   }, 3000); // Wait 3 seconds before showing form and scrolling
+
+//   return () => clearTimeout(timer); // Clean up
+// }, []);
+
+
+
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 w-full">

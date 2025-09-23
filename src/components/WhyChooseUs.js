@@ -23,7 +23,7 @@ export default function WhyChooseUs() {
         {/* Img 1 - Top Left */}
         <div className="absolute top-0 left-0 w-[180px] h-[130px] z-[8] rotate-[-10deg] shadow-xl">
           <Image
-            src="/assets/cropped-1920-1080-1343746.png"
+            src="/assets/images/consulting-page-images/why-choose-us-section-images/why-choose-us-1.png"
             alt="Screenshot 1"
             fill
             className="object-cover "
@@ -33,7 +33,7 @@ export default function WhyChooseUs() {
         {/* Img 2 - Top Right */}
         <div className="absolute top-[5px] right-0 w-[200px] h-[120px] z-[9] rotate-[5deg] shadow-xl">
           <Image
-            src="/assets/images/demon-slayer-giyu-tomioka-cool-desktop-wallpaper-4k.jpg"
+            src="/assets/images/consulting-page-images/why-choose-us-section-images/why-choose-us-2.png"
             alt="Screenshot 2"
             fill
             className="object-cover "
@@ -43,7 +43,7 @@ export default function WhyChooseUs() {
         {/* Img 3 - Middle Big (center focus) */}
        <div className="absolute top-[120px] left-[60%] -translate-x-1/2 w-[260px] h-[160px] z-[12] rotate-[-3deg] shadow-2xl">
   <Image
-    src="/assets/demon-slayer-mitsuri-cherry-blossom-desktop-wallpaper.jpg"
+    src="/assets/images/consulting-page-images/why-choose-us-section-images/why-choose-us-3.png"
     alt="Screenshot 3"
     fill
     className="object-cover "
@@ -54,7 +54,7 @@ export default function WhyChooseUs() {
         {/* Img 4 - Bottom Left */}
         <div className="absolute bottom-[10px] left-[20px] w-[250px] h-[140px] z-[10] rotate-[10deg] shadow-xl">
           <Image
-            src="/assets/cropped-1920-1080-1343746.png"
+            src="/assets/images/consulting-page-images/why-choose-us-section-images/why-choose-us-4.png"
             alt="Screenshot 4"
             fill
             className="object-cover "
@@ -71,7 +71,7 @@ export default function WhyChooseUs() {
     {/* Image 1 */}
     <div className="absolute top-[8%] left-[0%] w-[320px] h-[200px] bg-gradient-to-r from-[#372935] via-[#616FB4] to-[#372935] rounded-lg shadow-xl animate-pulse transition-transform duration-300 hover:scale-105 -rotate-3" style={{ padding: "10px" }}>
       <Image
-        src="/assets/cropped-1920-1080-1343746.png"
+        src="/assets/images/consulting-page-images/why-choose-us-section-images/why-choose-us-1.png"
         alt="Screenshot 1"
         width={300}
         height={180}
@@ -83,7 +83,7 @@ export default function WhyChooseUs() {
     {/* Image 2 */}
     <div className="absolute top-[22%] left-[45%] w-[320px] h-[200px] bg-gradient-to-r from-[#372935] via-[#616FB4] to-[#372935] rounded-lg shadow-xl animate-pulse transition-transform duration-300 hover:scale-105 -rotate-5" style={{ padding: "10px" }}>
       <Image
-        src="/assets/images/demon-slayer-giyu-tomioka-cool-desktop-wallpaper-4k.jpg"
+        src="/assets/images/consulting-page-images/why-choose-us-section-images/why-choose-us-2.png"
         alt="Screenshot 2"
         width={300}
         height={180}
@@ -95,7 +95,7 @@ export default function WhyChooseUs() {
     {/* Image 3 */}
     <div className="absolute top-[46%] left-[0%] w-[320px] h-[200px] bg-gradient-to-r from-[#372935] via-[#616FB4] to-[#372935] rounded-lg shadow-xl animate-pulse transition-transform duration-300 hover:scale-105 rotate-3" style={{ padding: "10px" }}>
       <Image
-        src="/assets/demon-slayer-mitsuri-cherry-blossom-desktop-wallpaper.jpg"
+        src="/assets/images/consulting-page-images/why-choose-us-section-images/why-choose-us-3.png"
         alt="Screenshot 3"
         width={300}
         height={180}
@@ -107,7 +107,7 @@ export default function WhyChooseUs() {
     {/* Image 4 */}
     <div className="absolute top-[62%] left-[45%] w-[320px] h-[200px] bg-gradient-to-r from-[#372935] via-[#616FB4] to-[#372935] rounded-lg shadow-xl animate-pulse transition-transform duration-300 hover:scale-105 -rotate-3" style={{ padding: "10px" }}>
       <Image
-        src="/assets/cropped-1920-1080-1343746.png"
+        src="/assets/images/consulting-page-images/why-choose-us-section-images/why-choose-us-4.png"
         alt="Screenshot 4"
         width={300}
         height={180}

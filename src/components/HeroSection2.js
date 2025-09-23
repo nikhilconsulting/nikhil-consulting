@@ -1,40 +1,75 @@
 "use client";
 import { useState, useEffect } from "react";
+import { FaArrowRight } from 'react-icons/fa';
+
 import Link from "next/link";
+import SocialTicker from "./Ticker";
 
 const slides = [
   {
-    title: "Looking to boost your business online?",
+    title: "Scaling Brands with a Smarter Approach",
     description: (
       <>
-        Welcome to <strong>Rankinventiv</strong>, we provide result-driven SEO Services in Varanasi and complete digital marketing solutions tailored to your local market. Whether a startup or growing business, our digital experts provide Local SEO in Varanasi and Google & Meta Ads to help you grow.
+        Welcome to <strong>Rankinventiv</strong>, We're not just an agency, we're your dedicated team for sustainable growth. We use AI-powered precision and an ROI-based approach to scale your brand and outperform the competition
       </>
     ),
     imageUrl: "/assets/images/home-page-image/WebsiteHomePage.png",
     button: (
-      <Link
-        href="/services"
-        className="inline-flex items-center gap-3 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] text-white hover:scale-105 px-6 sm:px-8 py-2 sm:py-3 font-semibold transition-all rounded-md text-sm sm:text-base"
-      >
-        View Services <i className="fas fa-arrow-right"></i>
+    <Link
+      href="/solutions"
+      className="relative inline-flex items-center overflow-hidden group px-6 sm:px-8 py-2 sm:py-3 font-semibold text-white text-xl lg:text-base z-0"
+    >
+         {/* Button Content */}
+      <span className="relative z-10 flex items-center gap-2">
+        Get a Free Strategy Call
+        <FaArrowRight className="text-lg" />
+      </span>
+
+          {/* Hover background (animated) */}
+      <span
+        className="absolute inset-0 bg-gradient-to-r from-[#372935] via-black to-[#372935] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-0"
+        aria-hidden="true"
+      ></span>
+
+      {/* Default background */}
+      <span
+        className="absolute inset-0 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] z-[-1]"
+        aria-hidden="true"
+      ></span>
       </Link>
     ),
   },
   {
-    title: "Grow faster with targeted digital marketing",
+    title: "The Future of Marketing is Here",
     description: (
       <>
-        At <strong>Rankinventiv</strong>, we specialize in high-converting Google Ads and effective Meta campaigns. Our focus is on delivering leads and measurable ROI for local businesses in Varanasi and beyond.
+        Harness the power of AI to transform your business. As a recognized industry leader by Deloitte and Clutch, we craft intelligent strategies that anticipate your needs and deliver unmatched market leadership
       </>
     ),
     imageUrl: "/assets/images/banner.jpg",
     button: (
-      <Link
-        href="/solutions"
-        className="inline-flex items-center gap-3 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] text-white hover:scale-105 px-6 sm:px-8 py-2 sm:py-3 font-semibold transition-all rounded-md text-sm sm:text-base"
-      >
-        <i className="fas fa-arrow-left"></i> Explore Solutions
-      </Link>
+       <Link
+      href="/solutions"
+      className="relative inline-flex items-center overflow-hidden group px-6 sm:px-8 py-2 sm:py-3 font-semibold text-white text-xl lg:text-base z-0"
+    >
+      {/* Button Content */}
+      <span className="relative z-10 flex items-center gap-2">
+        Schedule Meeting
+        <FaArrowRight className="text-lg" />
+      </span>
+
+      {/* Hover background (animated) */}
+      <span
+        className="absolute inset-0 bg-gradient-to-r from-[#372935] via-black to-[#372935] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-0"
+        aria-hidden="true"
+      ></span>
+
+      {/* Default background */}
+      <span
+        className="absolute inset-0 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] z-[-1]"
+        aria-hidden="true"
+      ></span>
+    </Link>
     ),
   },
 ];
@@ -66,11 +101,11 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black/60"></div>
 
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-12 max-w-7xl">
-        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10 py-16 sm:py-24 lg:py-0">
-          {/* Left Content */}
-          <div className="w-full lg:w-1/2 text-white text-center lg:text-left">
+       <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10 pt-0 pb-8">
+  {/* Left Content */}
+          <div className="w-full lg:w-1/2 text-white text-center lg:text-left pb-40 lg:pb-16">
             <h1
-              className={`text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 leading-tight opacity-0 ${
+              className={`text-3xl lg:text-4xl md:text-5xl font-extrabold mb-6 leading-tight opacity-0 ${
                 animate ? "animate-slide-in-left" : ""
               }`}
               style={{ animationDelay: "0.2s" }}
@@ -79,7 +114,7 @@ const HeroSection = () => {
             </h1>
 
             <p
-              className={`text-base sm:text-lg md:text-xl mb-8 max-w-xl mx-auto lg:mx-0 opacity-0 ${
+              className={`text-xl lg:text-lg mb-8 max-w-xl mx-auto lg:mx-0 opacity-0 ${
                 animate ? "animate-slide-in-left" : ""
               }`}
               style={{ animationDelay: "0.5s" }}
@@ -95,11 +130,12 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Optional right-side image or content (empty for now) */}
-          <div className="hidden lg:block lg:w-1/2">{/* Optional visual */}</div>
+
         </div>
       </div>
-     
+       <div className="absolute bottom-20 lg:bottom-0 left-1/2 -translate-x-1/2 w-full max-w-8xl px-4 z-20">
+        <SocialTicker />
+      </div>
     </section>
   );
 };

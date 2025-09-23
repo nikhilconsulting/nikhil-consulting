@@ -67,7 +67,7 @@ return (
       "linear-gradient( rgba(255,255,255,0.2), rgba(255,255,255,0))",
     backgroundRepeat: "no-repeat",
 
-  }}>
+  }} >
    {/* ❌ REMOVE THE SELF-CALLING LINE HERE */}
 
         {/* Close Button */}

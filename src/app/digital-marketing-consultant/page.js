@@ -1,7 +1,7 @@
 "use client";
 import GlassFooter from "@/components/Footer";
 import GlassNavbar from "@/components/Navbar";
-import Faqs from "@/components/props/Faqs";
+// import Faqs from "@/components/props/Faqs";
 import AboutSection from "@/components/About";
 import Testimonials from "@/components/Testimonials";
 import CTASection from "@/components/Cta";
