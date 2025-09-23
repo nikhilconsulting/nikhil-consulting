@@ -1,38 +1,131 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function WhyChooseUs() {
   return (
     <>
       <section
-        className="relative w-full min-h-screen flex flex-col justify-center py-16 px-4 sm:px-8 md:px-16 lg:px-20 text-white"
+        className="relative w-full min-h-screen flex flex-col justify-center pt-10 lg:pt-0 px-4 sm:px-8 md:px-16 lg:px-20 text-white"
         style={{
           background: "linear-gradient(to bottom, #382933, #372935, #372831)",
         }}
       >
-        {/* Heading + Description */}
-        <div className="text-center max-w-6xl mx-auto mb-6">
-          <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-white">
-            Why Choose Us?
-          </h2>
-        </div>
+      
 
         {/* Content Row */}
-        <div className="grid grid-cols-1 xl:grid-cols-2 items-center ">
-          {/* Right - Image */}
-          <div className="flex justify-center md:justify-center lg:mb-4 ">
-            <div className="w-full max-w-sm md:max-w-md lg:max-w-lg overflow-hidden shadow-lg h-[300px] lg:h-[480px]">
-              <img
-                src="/assets/images/consulting-page-images/why-choose-us.png"
-                alt="Our Team"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
+        <div className="grid grid-cols-1 xl:grid-cols-2 items-center">
+          {/* Responsive Image Section */}
+<div className="w-full">
+    <div className="relative flex justify-center items-center w-full mt-6 xl:hidden">
+      {/* Collage wrapper */}
+      <div className="relative w-[420px] h-[400px]">
+        
+        {/* Img 1 - Top Left */}
+        <div className="absolute top-0 left-0 w-[180px] h-[130px] z-[8] rotate-[-10deg] shadow-xl">
+          <Image
+            src="/assets/cropped-1920-1080-1343746.png"
+            alt="Screenshot 1"
+            fill
+            className="object-cover "
+          />
+        </div>
+
+        {/* Img 2 - Top Right */}
+        <div className="absolute top-[5px] right-0 w-[200px] h-[120px] z-[9] rotate-[5deg] shadow-xl">
+          <Image
+            src="/assets/images/demon-slayer-giyu-tomioka-cool-desktop-wallpaper-4k.jpg"
+            alt="Screenshot 2"
+            fill
+            className="object-cover "
+          />
+        </div>
+
+        {/* Img 3 - Middle Big (center focus) */}
+       <div className="absolute top-[120px] left-[60%] -translate-x-1/2 w-[260px] h-[160px] z-[12] rotate-[-3deg] shadow-2xl">
+  <Image
+    src="/assets/demon-slayer-mitsuri-cherry-blossom-desktop-wallpaper.jpg"
+    alt="Screenshot 3"
+    fill
+    className="object-cover "
+  />
+</div>
+
+
+        {/* Img 4 - Bottom Left */}
+        <div className="absolute bottom-[10px] left-[20px] w-[250px] h-[140px] z-[10] rotate-[10deg] shadow-xl">
+          <Image
+            src="/assets/cropped-1920-1080-1343746.png"
+            alt="Screenshot 4"
+            fill
+            className="object-cover "
+          />
+        </div>
+      </div>
+    </div>
+
+
+
+
+  {/* Desktop View - Overlapping Animated Images */}
+  <div className="relative hidden xl:block w-full h-[700px]">
+    {/* Image 1 */}
+    <div className="absolute top-[8%] left-[0%] w-[320px] h-[200px] bg-gradient-to-r from-[#5F69A8] via-[#000000] to-[#372935] rounded-lg shadow-xl animate-pulse transition-transform duration-300 hover:scale-105 -rotate-3" style={{ padding: "10px" }}>
+      <Image
+        src="/assets/cropped-1920-1080-1343746.png"
+        alt="Screenshot 1"
+        width={300}
+        height={180}
+        className="rounded-md object-cover"
+        priority
+      />
+    </div>
+
+    {/* Image 2 */}
+    <div className="absolute top-[22%] left-[45%] w-[320px] h-[200px] bg-gradient-to-r from-[#5F69A8] via-[#000000] to-[#372935] rounded-lg shadow-xl animate-pulse transition-transform duration-300 hover:scale-105 -rotate-5" style={{ padding: "10px" }}>
+      <Image
+        src="/assets/images/demon-slayer-giyu-tomioka-cool-desktop-wallpaper-4k.jpg"
+        alt="Screenshot 2"
+        width={300}
+        height={180}
+        className="rounded-md object-cover"
+        priority
+      />
+    </div>
+
+    {/* Image 3 */}
+    <div className="absolute top-[46%] left-[0%] w-[320px] h-[200px] bg-gradient-to-r from-[#5F69A8] via-[#000000] to-[#372935] rounded-lg shadow-xl animate-pulse transition-transform duration-300 hover:scale-105 rotate-3" style={{ padding: "10px" }}>
+      <Image
+        src="/assets/demon-slayer-mitsuri-cherry-blossom-desktop-wallpaper.jpg"
+        alt="Screenshot 3"
+        width={300}
+        height={180}
+        className="rounded-md object-cover"
+        priority
+      />
+    </div>
+
+    {/* Image 4 */}
+    <div className="absolute top-[62%] left-[45%] w-[320px] h-[200px] bg-gradient-to-r from-[#5F69A8] via-[#000000] to-[#372935] rounded-lg shadow-xl animate-pulse transition-transform duration-300 hover:scale-105 -rotate-3" style={{ padding: "10px" }}>
+      <Image
+        src="/assets/cropped-1920-1080-1343746.png"
+        alt="Screenshot 4"
+        width={300}
+        height={180}
+        className="rounded-md object-cover"
+        priority
+      />
+    </div>
+  </div>
+</div>
+
 
           {/* Left - Text Paragraph */}
-          <div className="text-gray-300 text-justify leading-relaxed text-base mb-8 mt-2 xl:mr-16">
-            <p className="mb-2">
+          <div className="text-gray-100 text-justify leading-relaxed text-base mb-8 lg:mt-0 mt-10 xl:mr-16">
+             <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-white mb-3">
+            Why Choose Us?
+          </h2> 
+            <p className="mb-4">
               Digital marketing consulting should deliver measurable growth, not
               wasted expenses. Our consulting helps businesses invest their
               budget wisely by focusing only on strategies that truly work. From
@@ -41,7 +134,7 @@ export default function WhyChooseUs() {
               to be data-driven, targeted, and result-oriented. With expert
               guidance, you reduce costs, improve online visibility, and attract
               the customers who matter most, ensuring maximum ROI.
-            </p>
+            </p> 
             <p className="mb-6">
               Over the years, we have supported startups, business owners, and
               entrepreneurs in achieving consistent online growth. Our
