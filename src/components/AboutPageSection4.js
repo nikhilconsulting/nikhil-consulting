@@ -44,6 +44,7 @@ export default function AboutPageSection4() {
               src="/assets/images/about-us-page-image/rankinventiv-team-streamlined-workflow.png"
               alt="About Image"
               fill
+               quality={100}
               className="object-cover"
               priority
             />

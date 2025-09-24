@@ -11,59 +11,31 @@ import HeroSection2 from "@/components/HeroSection2";
 
 // import HomeBlogSection from "@/components/HomeBlogSection";
 import HomeAboutSection from "@/components/AboutHomeSection";
-// import PricingHomeSection from "@/components/PricingHomeSection";
-import PricingSection from "@/components/props/Pricing";
+import PricingHomeSection from "@/components/PricingHomeSection";
+// import Navbar from "@/components/DemoNav";
 
-const monthlyPricingData = [
-  {
-    name: "Base",
-    price: 80,
-    features: ["Feature A", "Feature B", "Feature C"],
-    buttonText: "Sign Up",
-  },
-  {
-    name: "Pro",
-    price: 120,
-    features: ["Feature D", "Feature E", "Feature F"],
-    popular: true,
-    buttonText: "Upgrade Now",
-  },
-  {
-    name: "Enterprise",
-    price: 260,
-    features: ["Feature G", "Feature H", "Feature I"],
-    buttonText: "Contact Sales",
-  },
-];
 
-const yearlyPricingData = [
-  {
-    name: "Base",
-    price: 800,
-    features: ["All monthly features", "Yearly discount"],
-    buttonText: "Sign Up Yearly",
-  },
-  {
-    name: "Pro",
-    price: 1200,
-    features: ["All Pro features", "Dedicated support", "Advanced Analytics"],
-    popular: true,
-    buttonText: "Upgrade Yearly",
-  },
-  {
-    name: "Enterprise",
-    price: 2600,
-    features: ["All Enterprise features", "Custom API integration"],
-    buttonText: "Contact Sales",
-  },
-];
+
 export default function Home() {
   
  
   return (
 <>
-<GlassNavbar2 />
+{/* <title>Digital Marketing Company in Varanasi | Rankinventiv</title>
+<meta name="description" content="RankInventiv is a digital marketing company in Varanasi that helps local businesses grow online with simple SEO, ads, and smart marketing solutions." />
+<meta name="keywords" content="Digital Marketing Agency in Varanasi, Best Digital marketing services in Varanasi, Varanasi digital marketing company, Online marketing services in Varanasi" />
+<link rel="canonical" href="https://www.rankinventiv.com/" />
+<meta property="og:title" content="Digital Marketing Company in Varanasi | Rankinventiv" />
+<meta property="og:description" content="RankInventiv is a digital marketing company in Varanasi that helps local businesses grow online with simple SEO, ads, and smart marketing solutions." />
+<meta property="og:url" content="https://www.rankinventiv.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://www.rankinventiv.com/assets/images/home-og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="RankInventiv - Digital Marketing Agency in Varanasi" /> */}
 
+<GlassNavbar2 />
+{/* <Navbar /> */}
 <HeroSection2 />
 <HomeAboutSection />
      <WorkingProcess2 />
@@ -76,14 +48,9 @@ export default function Home() {
 {/* <ServicesSection2 /> */}
 
 
-{/* <PricingHomeSection /> */}
+<PricingHomeSection />
 
-      <PricingSection
-        title="Our Main Pricing"
-        monthlyPlans={monthlyPricingData}
-        yearlyPlans={yearlyPricingData}
-        backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"
-      />
+
  <Testimonials2 />
 
 <GlassFooter2 />

@@ -10,25 +10,46 @@ const GooglePage = () => {
   //  Define your pricing data separately
 const monthlyPricingData = [
   {
-    name: "Base",
+    name: "Basic Plan (Starter)",
     price: 80,
-    features: ["Feature A", "Feature B", "Feature C"],
-    buttonText: "Sign Up",
+    features: [
+      "Account & campaign setup",
+      "1–2 simple campaigns (Search/Display)",
+      "Basic keyword research",
+      "Ad copywriting + extensions",
+      "Monthly performance report"
+    ],
+    buttonText: "Sign Up"
   },
   {
-    name: "Pro",
+    name: "Advanced Plan (Growth)",
     price: 120,
-    features: ["Feature D", "Feature E", "Feature F"],
+    features: [
+      "Multiple campaigns (Search, Display, Remarketing)",
+      "Advanced keyword research + negative keywords",
+      "Conversion tracking setup",
+      "Weekly optimization (CPC, CTR, Quality Score)",
+      "Competitor analysis",
+      "Detailed monthly report"
+    ],
     popular: true,
-    buttonText: "Upgrade Now",
+    buttonText: "Upgrade Now"
   },
   {
-    name: "Enterprise",
+    name: "Premium Plan (Full Scale)",
     price: 260,
-    features: ["Feature G", "Feature H", "Feature I"],
-    buttonText: "Contact Sales",
-  },
+    features: [
+      "Full-funnel campaigns (Search, Display, Shopping, Video, Remarketing)",
+      "Landing page optimization for conversions",
+      "Smart bidding & automation",
+      "A/B testing (ads & landing pages)",
+      "ROI-focused tracking (calls, forms, sales)",
+      "Weekly strategy calls + 24/7 monitoring"
+    ],
+    buttonText: "Contact Sales"
+  }
 ];
+
 
 const yearlyPricingData = [
   {
@@ -104,6 +125,19 @@ const yearlyPricingData = [
   ];
   return (
     <>
+    {/* <title>Google Ads Agency in Varanasi</title>
+<meta name="description" content="Expert Google Ads services in Varanasi. Boost website traffic, leads, and sales with targeted PPC campaigns tailored for your business." />
+<meta name="keywords" content="Google Ads Services Varanasi, PPC Management Varanasi, Google Ads Expert Varanasi, Pay-Per-Click Services Varanasi, Google Ads Campaign Varanasi, Online Advertising Varanasi, Best Google Ads company in Varanasi, Affordable Google Ads services for small businesses in Varanasi, Hire Google Ads expert near me in Varanasi" />
+<link rel="canonical" href="https://www.rankinventiv.com/google-ads" />
+<meta property="og:title" content="Google Ads Agency in Varanasi" />
+<meta property="og:description" content="Run high-performance Google Ads campaigns with RankInventiv. Get more leads and sales today." />
+<meta property="og:url" content="https://www.rankinventiv.com/google-ads" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://www.rankinventiv.com/assets/images/google-ads-og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Google Ads Company in Varanasi - RankInventiv" /> */}
+
     <GlassNavbar2 />
     <ServiceSection
       imageSrc="/assets/images/service-detail-page-images/Google ads.png"
@@ -127,8 +161,8 @@ const yearlyPricingData = [
         "Visual Branding",
       ]}
       cardTwoIconClass="fas fa-desktop"
-      cardTwoTitle="Elevating Businesses Through Edge"
-      cardTwoContent="Web designing in a powerful way of just not an only professions, however, in a passion for our Company. We have to a tendency to believe the idea that smart looking of any website"
+      cardTwoTitle="Google Ads Role in Buisness"
+      cardTwoContent="Get your business in front of people who are ready to buy. We build smart campaigns that turn clicks into customers, delivering quick, powerful results."
       finalTitle="User Experience (UX) Design in Ads"
       finalContent="Every campaign is monitored closely to ensure users get the best experience while your business achieves consistent growth. A good ad is more than just visibility—it’s about experience. We design ad journeys that lead users smoothly from a click to conversion. This includes:"
       finalPoints={[
@@ -142,7 +176,7 @@ const yearlyPricingData = [
         steps={workingSteps}
         background="linear-gradient(to bottom, #382933, #372935, #372831)"
       />
-
+ <DigitalMarketingFAQs faqs={faqsData} />
        {/* Pricing Section */}
       <PricingSection
         title="Our Main Pricing"
@@ -150,7 +184,7 @@ const yearlyPricingData = [
         yearlyPlans={yearlyPricingData}
         backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"
       />
-        <DigitalMarketingFAQs faqs={faqsData} />
+       
     <GlassFooter2 />
     </>
   );

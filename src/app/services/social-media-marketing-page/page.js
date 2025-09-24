@@ -10,25 +10,49 @@ const SMMPage = () => {
     //  Define your pricing data separately
 const monthlyPricingData = [
   {
-    name: "Base",
+    name: "Basic Plan (Starter Presence)",
     price: 80,
-    features: ["Feature A", "Feature B", "Feature C"],
-    buttonText: "Sign Up",
+    features: [
+      "Profile setup & optimization",
+      "8–10 posts + 2–3 stories weekly",
+      "Basic captions & hashtags",
+      "Monthly content calendar",
+      "Simple engagement + monthly report"
+    ],
+    buttonText: "Sign Up"
   },
   {
-    name: "Pro",
+    name: "Advanced Plan (Growth & Engagement)",
     price: 120,
-    features: ["Feature D", "Feature E", "Feature F"],
+    features: [
+      "Branded profiles & templates",
+      "15–20 posts + 8–10 stories monthly",
+      "Mix of static, carousel & reels",
+      "Paid ads setup (small budget)",
+      "Community management (DMs, comments)",
+      "Influencer outreach (micro)",
+      "Monthly content calendar & growth report"
+    ],
     popular: true,
-    buttonText: "Upgrade Now",
+    buttonText: "Upgrade Now"
   },
   {
-    name: "Enterprise",
+    name: "Premium Plan (Full Branding & Leads)",
     price: 260,
-    features: ["Feature G", "Feature H", "Feature I"],
-    buttonText: "Contact Sales",
-  },
+    features: [
+      "Full branding kit + strategy",
+      "Daily posts (images, reels, videos, polls, stories)",
+      "Professional graphics & video editing",
+      "Paid ads campaigns (awareness to leads)",
+      "Influencer & collaboration marketing",
+      "24/7 community management",
+      "Multi-platform (FB, Insta, LinkedIn, YouTube)",
+      "Weekly calls + detailed monthly report"
+    ],
+    buttonText: "Contact Sales"
+  }
 ];
+
 
 const yearlyPricingData = [
   {
@@ -103,6 +127,19 @@ const yearlyPricingData = [
   ];
   return (
     <>
+    {/* <title>Social Media Marketing Management Company</title>
+<meta name="description" content="We provide expert Social Media Marketing (SMM) services in Varanasi. Grow your brand, increase engagement, and boost leads with strategic social campaigns." />
+<meta name="keywords" content="Social Media Marketing Varanasi, SMM Services Varanasi, Social Media Expert Varanasi, Facebook Marketing Varanasi, Instagram Marketing Varanasi, LinkedIn Marketing Varanasi, Best SMM agency in Varanasi, Affordable social media marketing for small businesses, Hire social media marketing expert near me in Varanasi" />
+<link rel="canonical" href="https://www.rankinventiv.com/social-media-marketing" />
+<meta property="og:title" content="Social Media Marketing Management Company" />
+<meta property="og:description" content="Grow your social presence with expert SMM services in Varanasi from RankInventiv. Facebook, Instagram, LinkedIn & more." />
+<meta property="og:url" content="https://www.rankinventiv.com/social-media-marketing" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://www.rankinventiv.com/assets/images/smm-og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="SMM Company in Varanasi - RankInventiv" /> */}
+
     <GlassNavbar2 />
     <ServiceSection
       imageSrc="/assets/images/service-detail-page-images/Social Media.png"
@@ -126,8 +163,8 @@ const yearlyPricingData = [
         "Visual Branding",
       ]}
       cardTwoIconClass="fas fa-desktop"
-      cardTwoTitle="Helping Brands Stand Out On Social Media"
-      cardTwoContent="Web designing in a powerful way of just not an only professions, however, in a passion for our Company. We have to a tendency to believe the idea that smart looking of any website"
+      cardTwoTitle="Social Media Marketing Role in Buisness"
+      cardTwoContent="We help you tell your story and build a loyal following. Our approach is about creating real connections, not just posting content."
       finalTitle="User-Friendly SEO Implementation"
       finalContent="A good social media profile is both attractive and strategic. We design eye-catching posts, write engaging captions, and use relevant hashtags to boost your reach. Every piece of content aligns with your brand voice and goals. We also optimize your bio, story highlights, and call-to-action buttons to drive more engagement. Whether it’s festive campaigns, product promotions, or daily updates, we make sure your brand stays active and appealing. A strong, well-managed profile helps build trust, attract followers, and turn them into loyal customers over time."
       finalPoints={[
@@ -141,6 +178,7 @@ const yearlyPricingData = [
         steps={workingSteps}
         background="linear-gradient(to bottom, #382933, #372935, #372831)"
       />
+      <DigitalMarketingFAQs faqs={faqsData} />
         {/* Pricing Section */}
       <PricingSection
         title="Our Main Pricing"
@@ -149,7 +187,7 @@ const yearlyPricingData = [
         backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"
       />
 
-        <DigitalMarketingFAQs faqs={faqsData} />
+        
     <GlassFooter2 />
     </>
   );

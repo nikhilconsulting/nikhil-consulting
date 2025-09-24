@@ -10,25 +10,49 @@ const SMMPage = () => {
     //  Define your pricing data separately
 const monthlyPricingData = [
   {
-    name: "Base",
+    name: "Basic Plan (Starter)",
     price: 80,
-    features: ["Feature A", "Feature B", "Feature C"],
-    buttonText: "Sign Up",
+    features: [
+      "Business Manager & Ad Account setup",
+      "1–2 simple campaigns (Awareness / Engagement / Traffic)",
+      "Basic audience targeting",
+      "Ad creatives (images + copywriting)",
+      "Monthly performance report"
+    ],
+    buttonText: "Sign Up"
   },
   {
-    name: "Pro",
+    name: "Advanced Plan (Growth)",
     price: 120,
-    features: ["Feature D", "Feature E", "Feature F"],
+    features: [
+      "Multiple campaigns (Traffic, Leads, Engagement, Remarketing)",
+      "Custom audience & lookalike audience setup",
+      "A/B testing (ads, audiences, creatives)",
+      "Pixel & conversion tracking setup",
+      "Weekly optimization (CPC, CTR, CPA)",
+      "Competitor ad analysis",
+      "Detailed monthly report"
+    ],
     popular: true,
-    buttonText: "Upgrade Now",
+    buttonText: "Upgrade Now"
   },
   {
-    name: "Enterprise",
+    name: "Premium Plan (Full Funnel)",
     price: 260,
-    features: ["Feature G", "Feature H", "Feature I"],
-    buttonText: "Contact Sales",
-  },
+    features: [
+      "Full funnel campaigns (Awareness → Consideration → Conversion)",
+      "Advanced audience strategy (interest + behavior + retargeting + lookalikes)",
+      "Video ads, carousel ads & dynamic product ads",
+      "Landing page optimization for conversions",
+      "Smart budget allocation & scaling",
+      "A/B testing for creatives, placements & audiences",
+      "ROI-focused analytics & custom dashboard",
+      "Weekly calls + 24/7 monitoring & support"
+    ],
+    buttonText: "Contact Sales"
+  }
 ];
+
 
 const yearlyPricingData = [
   {
@@ -103,6 +127,19 @@ const yearlyPricingData = [
   ];
   return (
     <>
+    {/* <title>Social media Meta Ads Agency in Varanasi</title>
+<meta name="description" content="Trusted digital marketing agency in Varanasi for Meta Ads, and SMM. Maximize ROI and grow your business online today." />
+<meta name="keywords" content="Meta Ads Services Varanasi, Social Media Marketing Varanasi, Paid Advertising Varanasi, Digital Marketing Agency Varanasi, Facebook Ads Varanasi, Instagram Ads Varanasi, PPC Management Varanasi, Online Advertising Varanasi, Affordable Facebook & Instagram ads services Varanasi, Hire social media marketing expert near me in Varanasi, Local digital marketing agency for paid campaigns, Meta Ads strategies for small businesses in Varanasi" />
+<link rel="canonical" href="https://www.rankinventiv.com/meta-ads" />
+<meta property="og:title" content="Social media Meta Ads Agency in Varanasi" />
+<meta property="og:description" content="Grow your business with Facebook and Instagram ads by RankInventiv. Local, affordable, result-driven." />
+<meta property="og:url" content="https://www.rankinventiv.com/meta-ads" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://www.rankinventiv.com/assets/images/meta-ads-og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Meta Ads Services in Varanasi - RankInventiv" /> */}
+
     <GlassNavbar2 />
     <ServiceSection
       imageSrc="/assets/images/service-detail-page-images/Meta Ads.png"
@@ -125,8 +162,8 @@ const yearlyPricingData = [
         "Real-Time Campaign Optimization",
       ]}
       cardTwoIconClass="fas fa-desktop"
-      cardTwoTitle="Smart Ads That Deliver Results"
-      cardTwoContent="Web designing in a powerful way of just not an only professions, however, in a passion for our Company. We have to a tendency to believe the idea that smart looking of any website"
+      cardTwoTitle="Meta Ads Role in Buisness"
+      cardTwoContent="We help you reach your audience where they spend their time. Our ads build a community around your brand, driving both engagement and sales."
       finalTitle=" High-Performance Ads With Creative Design"
       finalContent="On Facebook and Instagram, design is everything. We create eye-catching visuals and videos that reflect your brand’s style and grab instant attention. From story ads to reels and carousel campaigns, our creatives are designed to stop the scroll. The ad copy is simple, powerful, and built to drive clicks and conversions. We also design lead forms and landing pages that align perfectly with your ads. This consistency ensures a smooth user experience and maximizes results from every campaign."
       finalPoints={[
@@ -140,6 +177,7 @@ const yearlyPricingData = [
         steps={workingSteps}
         background="linear-gradient(to bottom, #382933, #372935, #372831)"
       />
+       <DigitalMarketingFAQs faqs={faqsData} />
         {/* Pricing Section */}
             <PricingSection
               title="Our Main Pricing"
@@ -147,7 +185,7 @@ const yearlyPricingData = [
               yearlyPlans={yearlyPricingData}
               backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"
             />
-        <DigitalMarketingFAQs faqs={faqsData} />
+       
     <GlassFooter2 />
     </>
   );

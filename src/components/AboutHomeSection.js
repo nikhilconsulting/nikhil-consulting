@@ -61,10 +61,29 @@ export default function NFTShowcaseSection() {
         <div className="mt-6 flex gap-4 flex-wrap">
          <Link
   href="/services"
-  className="flex text-xl  lg:text-base items-center text-white hover:scale-105 px-6 py-2 bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px] shadow"
+  className="relative inline-flex items-center overflow-hidden group text-xl  lg:text-base items-center text-white  px-6 py-2  shadow"
 >
-  Explore More <FaArrowRight className="ml-2" />
+
+
+          {/* Hover background (animated) */}
+      <span
+        className="absolute inset-0 bg-gradient-to-r from-[#372935] via-black to-[#372935] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-0"
+        aria-hidden="true"
+      ></span>
+
+      {/* Default background */}
+      <span
+        className="absolute inset-0 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] z-[-1]"
+        aria-hidden="true"
+      ></span>
+     
+
+
+ <span className="relative z-10 flex items-center gap-2">Explore More <FaArrowRight className="ml-2 text-lg" />
+</span> 
 </Link>
+
+
          
         </div>
       </div>

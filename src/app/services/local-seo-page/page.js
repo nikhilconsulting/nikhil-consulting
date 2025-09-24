@@ -103,6 +103,19 @@ const faqsData = [
   ];
   return (
     <>
+    {/* <title>Local SEO Agency GMB Agency in Varanasi</title>
+<meta name="description" content="Top Local SEO and GMB agency in Varanasi. Boost your business visibility, attract more customers, and improve Google rankings locally." />
+<meta name="keywords" content="Local SEO Varanasi, GMB Optimization Varanasi, Local SEO Agency Varanasi, Google My Business Agency Varanasi, Local Business SEO Varanasi, Google Maps SEO Varanasi, Local Search Optimization Varanasi, GMB Management Varanasi, Local Ranking Services Varanasi, Local Marketing Agency Varanasi, Best local SEO and GMB agency in Varanasi, Affordable local SEO services for small businesses in Varanasi, Hire GMB expert near me in Varanasi, Improve Google Maps ranking for Varanasi business, Local SEO strategies to attract more customers in Varanasi" />
+<link rel="canonical" href="https://www.rankinventiv.com/local-seo-page" />
+<meta property="og:title" content="Local SEO Agency GMB Agency in Varanasi" />
+<meta property="og:description" content="Top Local SEO and GMB agency in Varanasi. Boost your business visibility, attract more customers, and improve Google rankings locally." />
+<meta property="og:url" content="https://www.rankinventiv.com/local-seo-page" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://www.rankinventiv.com/assets/images/local-seo-og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Local SEO and GMB Services in Varanasi - RankInventiv" /> */}
+
     <GlassNavbar2 />
     
     <ServiceSection
@@ -126,8 +139,8 @@ const faqsData = [
         "Map Pack Ranking",
       ]}
       cardTwoIconClass="fas fa-desktop"
-      cardTwoTitle="Helping Local Businesses Grow With SEO"
-      cardTwoContent="Web designing in a powerful way of just not an only professions, however, in a passion for our Company. We have to a tendency to believe the idea that smart looking of any website"
+      cardTwoTitle="Local SEO Role in Buisness"
+      cardTwoContent="Get customers in your area. We make sure your business shows up on local searches and maps so people nearby can find you easily."
       finalTitle="Website + GMB Optimization For Local Reach"
       finalContent="To rank locally, your website and Google Business listing must be user-friendly and optimized. We design mobile-ready pages, add schema markup for local relevance, and ensure fast load speeds. Key features like click-to-call buttons, embedded maps, and accurate location info guide local visitors easily. We also ensure your NAP (Name, Address, Phone) is consistent across your website and all online listings. These small but critical elements help search engines trust your business and improve your chances of ranking higher in local search results."
       finalPoints={[
@@ -141,6 +154,7 @@ const faqsData = [
         steps={workingSteps}
         background="linear-gradient(to bottom, #382933, #372935, #372831)"
       />
+       <DigitalMarketingFAQs faqs={faqsData} />
         {/* Pricing Section */}
             <PricingSection
               title="Our Main Pricing"
@@ -148,7 +162,7 @@ const faqsData = [
               yearlyPlans={yearlyPricingData}
               backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"
             />
-        <DigitalMarketingFAQs faqs={faqsData} />
+       
     <GlassFooter2 />
     </>
   );

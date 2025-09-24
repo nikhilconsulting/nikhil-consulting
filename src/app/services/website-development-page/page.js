@@ -10,25 +10,50 @@ const SMMPage = () => {
     //  Define your pricing data separately
 const monthlyPricingData = [
   {
-    name: "Base",
+    name: "Basic Plan (Starter Website)",
     price: 80,
-    features: ["Feature A", "Feature B", "Feature C"],
-    buttonText: "Sign Up",
+    features: [
+      "3–5 page website (Home, About, Services, Contact)",
+      "Mobile responsive design",
+      "Basic on-page SEO setup",
+      "Contact form integration",
+      "Social media links",
+      "1 round of revisions"
+    ],
+    buttonText: "Sign Up"
   },
   {
-    name: "Pro",
+    name: "Advanced Plan (Business Website)",
     price: 120,
-    features: ["Feature D", "Feature E", "Feature F"],
+    features: [
+      "8–12 page website (with Blog, Portfolio, Gallery, etc.)",
+      "Custom design with branding",
+      "Advanced on-page SEO (meta, schema, sitemap)",
+      "Speed & security optimization",
+      "Integration (Chatbot, WhatsApp, Email forms)",
+      "Blog setup & training for updates",
+      "2–3 rounds of revisions"
+    ],
     popular: true,
-    buttonText: "Upgrade Now",
+    buttonText: "Upgrade Now"
   },
   {
-    name: "Enterprise",
+    name: "Premium Plan (Custom/Enterprise Website)",
     price: 260,
-    features: ["Feature G", "Feature H", "Feature I"],
-    buttonText: "Contact Sales",
-  },
+    features: [
+      "Fully custom website (Unlimited pages / E-commerce / Booking system)",
+      "Advanced UX/UI design + animations",
+      "Full SEO optimization (on-page + technical)",
+      "Payment gateway / CRM / API integrations",
+      "Multi-language & advanced features (if required)",
+      "Conversion-focused landing pages",
+      "Ongoing maintenance & priority support",
+      "Unlimited revisions (within project scope)"
+    ],
+    buttonText: "Contact Sales"
+  }
 ];
+
 
 const yearlyPricingData = [
   {
@@ -103,6 +128,19 @@ const yearlyPricingData = [
   ];
   return (
     <>
+    {/* <title>Best website Making Company in Varanasi</title>
+<meta name="description" content="RankInventiv – Trusted website development company in Varanasi. Create custom websites that attract visitors and boost your online presence." />
+<meta name="keywords" content="Website Development Varanasi, Website Development Company Varanasi, Website Design and Development Varanasi, Custom Website Developer Varanasi, Web Development Services Varanasi, Professional Website Developer Varanasi, Business Website Development Varanasi, Ecommerce Website Development Varanasi, Website Redesign Services Varanasi" />
+<link rel="canonical" href="https://www.rankinventiv.com/website-development" />
+<meta property="og:title" content="Best website Making Company in Varanasi" />
+<meta property="og:description" content="Custom website design and development services in Varanasi by RankInventiv. Build your brand online today." />
+<meta property="og:url" content="https://www.rankinventiv.com/website-development" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://www.rankinventiv.com/assets/images/web-dev-og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Website Development Company in Varanasi - RankInventiv" /> */}
+
     <GlassNavbar2 />
     <ServiceSection
       imageSrc="/assets/images/service-detail-page-images/Website.png"
@@ -125,8 +163,8 @@ const yearlyPricingData = [
         "E-Commerce & booking-ready sites",
       ]}
       cardTwoIconClass="fas fa-desktop"
-      cardTwoTitle="Grow Your Brand With A Professional Website"
-      cardTwoContent="Web designing in a powerful way of just not an only professions, however, in a passion for our Company. We have to a tendency to believe the idea that smart looking of any website"
+      cardTwoTitle="Website Development Role in Buisness"
+      cardTwoContent="We build more than just a website, we create a powerful online tool. Your site will be fast, beautiful, and designed to attract and convert visitors into loyal customers."
       finalTitle="User-Friendly Websites That Convert"
       finalContent="We focus on creating a website that is simple to use, fast to load, and easy to update. Your customers should enjoy browsing and find what they need within seconds. From layout to navigation, every part is designed with the user in mind. We also take care of the technical essentials — hosting, SSL security, domain setup, and regular backups — so your site runs smoothly. Whether you're launching a new business or looking to redesign an old site, we provide complete support and handle everything from start to finish."
       finalPoints={[
@@ -140,6 +178,7 @@ const yearlyPricingData = [
         steps={workingSteps}
         background="linear-gradient(to bottom, #382933, #372935, #372831)"
       />
+      <DigitalMarketingFAQs faqs={faqsData} />
         {/* Pricing Section */}
       <PricingSection
         title="Our Main Pricing"
@@ -147,7 +186,7 @@ const yearlyPricingData = [
         yearlyPlans={yearlyPricingData}
         backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"
       />
-        <DigitalMarketingFAQs faqs={faqsData} />
+        
     <GlassFooter2 />
     </>
   );

@@ -27,19 +27,19 @@ const navItems = [
 
    // 👇 Auto-open form after 3 seconds on first visit
   useEffect(() => {
+      const footer = document.getElementById("book-consulting");
+  if (footer) {
+    footer.scrollIntoView({ behavior: "smooth" });
+  }
     const timer = setTimeout(() => {
       setShowForm(true);
 
     }, 3000); // 3 sec delay
 
     return () => clearTimeout(timer);
+    
   }, []);
-useEffect(() => {
-  const footer = document.getElementById("book-consulting");
-  if (footer) {
-    footer.scrollIntoView({ behavior: "smooth" });
-  }
-}, []);
+
 
 
 // useEffect(() => {

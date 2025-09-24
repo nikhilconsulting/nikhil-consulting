@@ -9,25 +9,61 @@ const SEOPage = () => {
     //  Define your pricing data separately
 const monthlyPricingData = [
   {
-    name: "Base",
+    name: "Basic SEO Plan (Foundation SEO)",
     price: 80,
-    features: ["Feature A", "Feature B", "Feature C"],
-    buttonText: "Sign Up",
+    features: [
+      "Website Audit (Basic Technical Check)",
+      "Keyword Research (5–10 keywords)",
+      "On-Page SEO: Title, Meta Description, URL Optimization",
+      "Header Tags (H1, H2)",
+      "Image Alt Tags",
+      "Internal Linking",
+      "Sitemap & Robots.txt Setup",
+      "Google Analytics & Search Console Setup",
+      "Basic Local SEO: Google Business Profile Optimization",
+      "NAP (Name/Address/Phone) Consistency",
+      "Monthly Report (Basic Traffic & Ranking Overview)"
+    ],
+    buttonText: "Sign Up"
   },
   {
-    name: "Pro",
+    name: "Advanced SEO Plan (Growth SEO)",
     price: 120,
-    features: ["Feature D", "Feature E", "Feature F"],
+    features: [
+      "Detailed Website Audit (Technical + Content)",
+      "Keyword Research (20–30 keywords, mix of short & long-tail)",
+      "Advanced On-Page SEO: Schema Markup, Page Speed Optimization",
+      "Content Optimization (Existing Pages)",
+      "Off-Page SEO: 10–20 Backlinks per month",
+      "Social Bookmarking",
+      "Local SEO: GBP Weekly Updates, Review Generation Strategy",
+      "Blog Writing (2 Blogs / month) with SEO Optimization",
+      "Competitor Analysis & Keyword Gap Report",
+      "Monthly Report (Traffic, Rankings, Conversions)"
+    ],
     popular: true,
-    buttonText: "Upgrade Now",
+    buttonText: "Upgrade Now"
   },
   {
-    name: "Enterprise",
+    name: "Premium SEO Plan (Full SEO Domination)",
     price: 260,
-    features: ["Feature G", "Feature H", "Feature I"],
-    buttonText: "Contact Sales",
-  },
+    features: [
+      "Complete Website Audit (Technical, UX, CRO, Mobile-first)",
+      "Keyword Research (50+ keywords across multiple clusters)",
+      "Full On-Page SEO: Advanced Schema, Internal Linking Strategy",
+      "Content Silos (Pillar + Cluster Content)",
+      "Landing Page Optimization (for conversions)",
+      "High-Quality Backlinks & Authority Link Building",
+      "Local Citations (International + Regional)",
+      "Content Marketing: 4–8 Blogs / month, PR Articles, Video SEO",
+      "Advanced Google Business Management & Voice Search Optimization",
+      "Technical SEO: Core Web Vitals, Mobile Optimization, Indexing Control",
+      "Analytics: Custom Dashboard, Heatmaps, Detailed Monthly Report + Strategy Call"
+    ],
+    buttonText: "Contact Sales"
+  }
 ];
+
 
 const yearlyPricingData = [
   {
@@ -50,6 +86,8 @@ const yearlyPricingData = [
     buttonText: "Contact Sales",
   },
 ];
+
+
   const faqsData = [
   {
     question: "How long does SEO take to show results?",
@@ -100,6 +138,19 @@ const yearlyPricingData = [
   ];
   return (
     <>
+    {/* <title>Best SEO Company | Rankinventiv</title>
+<meta name="description" content="Looking for the best SEO company? RankInventiv provides top-notch SEO and digital marketing services to grow your business online." />
+<meta name="keywords" content="SEO Services Varanasi, SEO Company Varanasi, Best SEO Consultant Varanasi, Local SEO Varanasi, SEO Expert Varanasi, SEO Agency Varanasi, Affordable SEO Varanasi, Best SEO company for small business in Varanasi, Local SEO expert near me in Varanasi, Affordable SEO services in Varanasi, Hire SEO consultant in Varanasi, Improve Google rankings Varanasi business" />
+<link rel="canonical" href="https://www.rankinventiv.com/seo-services" />
+<meta property="og:title" content="Best SEO Company | Rankinventiv" />
+<meta property="og:description" content="Get expert SEO services from RankInventiv. Improve your Google rankings and grow your business online." />
+<meta property="og:url" content="https://www.rankinventiv.com/seo-services" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://www.rankinventiv.com/assets/images/seo-services-og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Best SEO Company in Varanasi - RankInventiv" /> */}
+
     <GlassNavbar2 />
     <ServiceSection
       imageSrc="/assets/images/service-detail-page-images/SEO Service.png"
@@ -123,8 +174,8 @@ const yearlyPricingData = [
         "Link Building",
       ]}
       cardTwoIconClass="fas fa-desktop"
-      cardTwoTitle="Groww Businesses Through SEO"
-      cardTwoContent="Web designing in a powerful way of just not an only professions, however, in a passion for our Company. We have to a tendency to believe the idea that smart looking of any website"
+      cardTwoTitle="SEO Role in Buisness"
+      cardTwoContent="We make sure your business is easy to find online. We help you connect with your customers by creating content that answers their questions and solves their problems."
       finalTitle="User-Friendly SEO Implementation"
       finalContent="A smooth website experience supports better SEO. We ensure that your site is mobile-friendly, easy to navigate, and loads quickly. Clear layouts and structured content help both users and search engines understand your pages better. Our SEO team works closely with web developers to make the site technically sound and fully SEO-ready. From optimizing code to improving internal linking, we take care of all the essentials. Consistent testing, monitoring, and timely updates help maintain website performance, ensuring long-term visibility and a better user experience for your visitors."
       finalPoints={[
@@ -139,6 +190,7 @@ const yearlyPricingData = [
         steps={workingSteps}
         background="linear-gradient(to bottom, #382933, #372935, #372831)"
       />
+       <DigitalMarketingFAQs faqs={faqsData} />
         {/* Pricing Section */}
       <PricingSection
         title="Our Main Pricing"
@@ -146,7 +198,7 @@ const yearlyPricingData = [
         yearlyPlans={yearlyPricingData}
         backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"
       />
-      <DigitalMarketingFAQs faqs={faqsData} />
+     
     <GlassFooter2 />
     </>
 

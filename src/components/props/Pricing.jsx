@@ -17,14 +17,14 @@ export default function PricingSection({
       {/* Background Image with Blur */}
       {backgroundImage && (
         <div
-          className="absolute inset-0 bg-cover bg-center filter blur-sm opacity-40"
-          style={{ backgroundImage: `url('${backgroundImage}')` }}
+          className="absolute inset-0 bg-cover bg-center filter blur-sm "
+          style={{ backgroundImage: `url('${"/assets/images/pricing-section-image/pricing-background-image.png"}')` }}
         />
       )}
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto text-center w-full">
-        <h2 className="text-3xl font-bold text-gradient-to-b from-[#382933] via-[#372935] to-[#372831] tracking-tight">
+        <h2 className="text-3xl font-bold text-white tracking-tight">
           {title || "Simple, transparent pricing"}
         </h2>
 

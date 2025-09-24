@@ -1,12 +1,16 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import ContactFormModal from "./ContactFormModal";
 import { usePathname } from "next/navigation";
+import SidebarToggle from "./Sidebar";
 
 export default function GlassNavbar2() {
+  const [sidebarOpen, setSidebarOpen] = useState(false); // for large screen sidebar
+
     const [open, setOpen] = useState(false); 
   const [openSubmenu, setOpenSubmenu] = useState(null);
 
@@ -98,30 +102,28 @@ useEffect(() => {
     <nav
         className={`fixed  top-0 left-0 right-0 flex items-center gap-4 text-white  px-8 py-4 transition-all duration-500 ease-in-out z-50 ${
           scrolled
-            ? "bg-gradient-to-r from-[#5F69A8] via-[#000000] to-[#372935]  slide-in-from-top "
-            : "bg-transparent shadow-none"
+            ? "bg-gradient-to-r from-[#5F69A8] via-[#000000] to-[#372935]  slide-in-from-top  "
+            : "bg-transparent shadow-none "
         }`}
         aria-label="Main navigation"
       >
-{/* below the may be required code of navbar without animation */}
-{/* <nav
-  className={`fixed top-0 left-0 right-0 flex items-center gap-4 text-white px-8 py-4 transition-all duration-500 ease-in-out z-50 ${
-    pathname === "/"
-      ? scrolled
-        ? "bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] slide-in-from-top"
-        : "bg-transparent shadow-none"
-      : "bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)]"
-  }`}
-  aria-label="Main navigation"
-> */}
 
 
 
-
+<div className="  flex justify-between h-16 items-center">
           {/* Left side (can be logo later) */}
-          <div className="flex-1"></div>
+        <Link href={"/"} className="hidden lg:block  relative w-100 h-100 lg:mt-20 ml-10">
+          
+         <Image
+           src="/assets/images/logo/logo-large-screen.png"
+           alt="My Logo"
+           layout="fill"
+           objectFit="contain"
+         />
+       </Link>
 
-          <ul className="hidden lg:flex flex-1 justify-end xl:mr-20 gap-10 list-none text-base p-[10px] tracking-[1.0px]">
+
+          <ul className="hidden lg:flex flex-1 justify-end xl:ml-40 gap-10 list-none text-base p-[10px] tracking-[1.0px]">
             {navItems.map((item) => (
               <li key={item.label} className="relative group">
                 {!item.children ? (
@@ -157,30 +159,45 @@ useEffect(() => {
               </li>
             ))}
           </ul>
+</div>
 
-          {/* Book Consulting Us Button (only desktop >= md) */}
+ 
+{/* Hamburger Button for both screen sizes */}
+<div className="flex ml-auto">
+  {/* Small screen (< lg): toggle mobile menu */}
+  <button
+    className="text-white font-bold transition hover:scale-105 lg:hidden cursor-pointer"
+    onClick={() => setOpen(!open)}
+  >
+    {open ? <X size={34} /> : <Menu size={38} />}
+  </button>
 
-          {/* Hamburger Icon (only < md ~ below 768px) */}
-          <div className="flex lg:hidden ml-auto">
-            <button
-              className="text-white font-bold transition hover:scale-105"
-              onClick={() => setOpen(!open)}
-            >
-              {open ? <X size={34} /> : <Menu size={38} />}
-            </button>
-          </div>
+  {/* Large screen (>= lg): toggle sidebar */}
+  <button
+    className="text-white font-bold transition hover:scale-105 hidden lg:block cursor-pointer lg:mr-20"
+    onClick={() => setSidebarOpen(true)}
+  >
+    <Menu size={38} />
+  </button>
+</div>
+
+
+          <SidebarToggle isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+
+
         </nav>
 
         {/* Mobile Dropdown (only < md) */}
       {open && (
-  <div className="lg:hidden w-full bg-white/5 backdrop-blur-[70px] shadow-lg border-b border-white/20 px-8 py-4">
-    {/* Top Row: Home and Close Icon (mobile) */}
+  <div className="block lg:hidden  w-full bg-white/5 backdrop-blur-[70px] shadow-lg border-b border-white/20 px-8 py-4">
+  
      {/* Logo or Brand Name */}
- <Link href="/" onClick={() => setOpen(false)}>
-  <img
-    src="/assets/images/logo/logomobile.png"
+ <Link href="/" onClick={() => setOpen(false)} className="w-30 h-30">
+  <Image
+    src="/assets/images/logo/favicon.png"
     alt="Logo"
-    className="h-auto max-h-16 w-auto object-contain"
+           layout="fill"
+           objectFit="contain"
   />
 </Link>
 
