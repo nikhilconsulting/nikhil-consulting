@@ -2,13 +2,13 @@ import Image from 'next/image';
 
 const WorkingProcess = ({
   title = "We Complete Our Work to Follow Some Easy Ways",
-  steps = [],
-  background = "linear-gradient(to bottom, #382933, #372935, #372831)",
+  steps = []
 }) => {
   return (
     <section
-      className="relative py-12 lg:py-18 "
-      style={{ background }}
+      className="relative py-12 lg:py-18  "
+      style={{ background: "linear-gradient(125deg, #372831, #000000, #5F69A8)" }}
+      
     >
       <div className="container mx-auto min-h-screen">
         <div className="section-title text-center mb-12">
@@ -61,7 +61,7 @@ const WorkingProcess = ({
                     <div className="content flex-1 text-left ml-6">
                       <span
                         className="sub-title inline-block shadow-md text-white font-medium text-sm px-5 py-2 mb-4 rounded-full"
-                        style={{ background }}
+                      
                       >
                         Step {`0${index + 1}`}
                       </span>

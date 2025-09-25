@@ -5,6 +5,7 @@ import GlassFooter2 from "@/components/Footer2";
 import WorkingProcess from "@/components/props/WorkingProcess";
 import DigitalMarketingFAQs from "@/components/props/Faqs";
 import PricingSection from "@/components/props/Pricing";
+import Banner from "@/components/Banner";
 const GooglePage = () => {
 
 const plans = [
@@ -116,6 +117,7 @@ const plans = [
 <meta property="og:image:alt" content="Google Ads Company in Varanasi - RankInventiv" /> */}
 
     <GlassNavbar2 />
+    <Banner title="Google Ads" />
     <ServiceSection
       imageSrc="/assets/images/service-detail-page-images/Google ads.png"
       imageAlt="SMM project"

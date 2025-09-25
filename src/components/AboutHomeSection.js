@@ -26,7 +26,7 @@ const nftCards = [
 
 export default function NFTShowcaseSection() {
   return (
-    <section className="relative min-h-screen bg-[linear-gradient(to_bottom,_#382933,_#372935,_#372831)] text-white px-6 py-20 md:px-20 overflow-hidden">
+    <section className="relative min-h-screen bg-[linear-gradient(125deg,_#5F69A8,_#000000,_#fff)] text-white px-6 py-20 md:px-20 overflow-hidden">
       {/* Mobile: First Card on Top */}
       <div className="block md:hidden mb-10 z-10 relative">
         <div className="w-full max-w-xs mx-auto bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px] overflow-hidden shadow-xl">
@@ -48,7 +48,7 @@ export default function NFTShowcaseSection() {
       <div className="max-w-3xl z-10 relative md:mt-10">
         <span className="text-4xl md:text-5xl font-bold leading-tight">
           About Our <br />
-          <span className="text-blue-400">Work</span>
+          <span className="text-[#8FCDFF]">Work</span>
         </span>
         <p className="mt-4 text-lg md:text-base text-gray-100 max-w-2xl text-justify">
          At Rankinventiv, we believe in a simple truth effective marketing is a partnership, We're a team of passionate digital strategists and creative experts dedicated to helping ambitious businesses like yours find their voice and connect with their audience. Our mission is to move beyond generic campaigns and craft tailored, data-driven strategies that don't just generate clicks-they build lasting brand value and a clear return on your investment. We pride ourselves on transparent communication and a commitment to your long-term success.

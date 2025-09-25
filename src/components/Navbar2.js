@@ -163,8 +163,18 @@ useEffect(() => {
 
  
 {/* Hamburger Button for both screen sizes */}
-<div className="flex ml-auto">
-  {/* Small screen (< lg): toggle mobile menu */}
+<div className="flex items-center ml-auto gap-4">
+  {/* Mobile Logo */}
+  <Link href="/" onClick={() => setOpen(false)} className="relative w-12 h-12 block lg:hidden">
+    <Image
+      src="/assets/images/logo/logo-large-screen.png"
+      alt="Logo"
+      layout="fill"
+      objectFit="contain"
+    />
+  </Link>
+
+  {/* Hamburger Button for mobile */}
   <button
     className="text-white font-bold transition hover:scale-105 lg:hidden cursor-pointer"
     onClick={() => setOpen(!open)}
@@ -182,24 +192,28 @@ useEffect(() => {
 </div>
 
 
+
           <SidebarToggle isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
 
         </nav>
 
         {/* Mobile Dropdown (only < md) */}
-      {open && (
-  <div className="block lg:hidden  w-full bg-white/5 backdrop-blur-[70px] shadow-lg border-b border-white/20 px-8 py-4">
-  
-     {/* Logo or Brand Name */}
- <Link href="/" onClick={() => setOpen(false)} className="w-30 h-30">
-  <Image
-    src="/assets/images/logo/favicon.png"
-    alt="Logo"
-           layout="fill"
-           objectFit="contain"
-  />
-</Link>
+{/* Mobile menu container */}
+{open && (
+  <div className="block lg:hidden fixed top-22 left-0 w-full bg-white/5 backdrop-blur-[70px] shadow-lg border-b border-white/20 px-8 py-4 z-50">
+    {/* Logo with relative + fixed size for Image fill */}
+    {/* <Link href="/" onClick={() => setOpen(false)} className="relative w-12 h-12">
+      <Image
+        src="/assets/images/logo/favicon.png"
+        alt="Logo"
+        layout="fill"
+        objectFit="contain"
+      />
+    </Link> */}
+
+
+
 
 
     {/* Nav Items */}

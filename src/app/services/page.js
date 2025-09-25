@@ -20,6 +20,7 @@ export default function page() {
 <meta property="og:image:alt" content="RankInventiv Services Page - SEO, PPC, Social Media" /> */}
 
     <GlassNavbar2 />
+    
       <ServiceCards />
       <GlassFooter2 />
     </>

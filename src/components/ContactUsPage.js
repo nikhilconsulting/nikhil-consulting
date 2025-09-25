@@ -73,28 +73,37 @@ export default function ContactUsPage() {
     };
   return (
     <>
-       <section className="min-h-screen bg-gradient-to-b from-[#382933] via-[#372935] to-[#372831] text-white flex items-center justify-center px-6 py-16 pt-30">
-      <div className="max-w-7xl w-full grid md:grid-cols-2 gap-12 items-center">
+   <section className="relative min-h-screen bg-[linear-gradient(125deg,_#5F69A8,_#000000,_#372831)] text-white flex items-center justify-center px-6 py-16 pt-30">
+  
+  {/* 🔷 Diagonal Background Element - Further Right */}
+  {/* <div className="absolute inset-0 flex items-end justify-end z-[1] pointer-events-none translate-x-[12vw] sm:translate-x-[14vw] md:translate-x-[18vw] lg:translate-x-[22vw]">
+    <div className="w-[60vw] h-[60vw] mt-[120px] bg-[linear-gradient(15deg,_#5F69A8,_#000000,_#5F69A8)] rotate-45 origin-center"></div>
+  </div> */}
+
+      <div className="max-w-7xl w-full grid md:grid-cols-2 gap-12 items-start z-2">
         {/* LEFT COLUMN (heading + text) */}
-       <div className="space-y-6 text-center md:text-left">
+        <div className="space-y-6 text-center md:text-left max-w-full md:max-w-[600px] flex-shrink-0">
+
           <h1 className="text-4xl font-bold leading-snug mt-6">
-    Let's Get Connected!
+    Let's Get Connected !
   </h1>
-  <p className="text-white/70 text-xl">Get In Touch with us</p>
+  <p className="text-gray-100 text-xl">Get In Touch with us</p>
 <Image
   src="/assets/images/contact-page-image/Contact Us.png"
   alt="Contact Us"
   width={800}
   height={800}
-  className="w-full h-auto rounded-xl shadow-xl object-cover"
+  priority
+  quality={100}
+  className="w-full h-auto shadow-xl object-cover"
 />
 </div>
 
 
         {/* RIGHT COLUMN (the form) */}
-        <div className="w-full">
+        <div className="w-full max-w-full md:max-w-[600px]">
           <div className="space-y-6">
-             <div className="space-y-6 p-6 rounded-lg bg-gradient-to-b from-[#8FCDFF]/40 via-[#5F69A8]/25 to-transparent">
+             <div className="space-y-6 p-6 rounded-lg bg-[#5F69A8]">
  
             {showThankYou ? (
               <div className="text-center space-y-4 ">
@@ -200,16 +209,25 @@ export default function ContactUsPage() {
 
                 
 
-                <button
-                  type="submit"
-                  className="w-full py-3 text-white font-medium rounded-md transition hover:scale-105 cursor-pointer"
-                  style={{
-                    background:
-                      "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
-                  }}
-                >
-                  Send Message
-                </button>
+               <div className="relative w-full  flex items-center justify-center">
+  <button
+    type="submit"
+    className="relative z-10 py-3 px-10 text-white group font-medium transition-all duration-500 ease-out overflow-hidden border-3 border-[#372935] cursor-pointer"
+    style={{
+      background:
+        "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
+    }}
+  >
+    <span className="relative z-10">Send Message</span>
+    {/* Gradient background on hover */}
+    <span
+      className="absolute inset-0 bg-gradient-to-r from-[#372935] via-black to-[#372935] scale-x-0 group-hover:scale-x-100  origin-center transition-transform duration-500 ease-out z-0 cursor-pointer"
+      aria-hidden="true"
+    ></span>
+  </button>
+</div>
+
+
               </form>
             )}
           </div>

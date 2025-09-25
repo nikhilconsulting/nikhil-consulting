@@ -67,7 +67,7 @@ const DownArrow = () => (
 
 
   return (
-    <section className="relative bg-[linear-gradient(to_bottom,_#382933,_#372935,_#372831)] text-white px-4 py-20 overflow-hidden">
+    <section className="relative lg:bg-[linear-gradient(165deg,_#372935,_#000000,_#5F69A8)] bg-[linear-gradient(105deg,_#372935,_#000000,_#5F69A8)] text-white px-4 py-20 overflow-hidden">
       {/* Heading */}
       <div className="max-w-7xl mx-auto text-center mb-16 px-4">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">

@@ -23,10 +23,8 @@
   }) => {
     return (
       <>      <section
-    className="relative pt-32 pb-16 lg:pt-36 lg:pb-20"
-    style={{
-      background: "linear-gradient(to bottom, #382933, #372935, #372831)",
-    }}
+    className="relative pt-32 pb-16 lg:pt-36 lg:pb-20 bg-[linear-gradient(125deg,_#5F69A8,_#000000,_#5F69A8)]"
+
   >
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -85,7 +83,7 @@
   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
     {/* Card 1 */}
     <div
-      className="p-6 sm:p-8 rounded-xl h-full bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] border border-gray-400 text-white shadow-[0_0_10px_rgba(255,255,255,0.1)]"
+      className="p-6 sm:p-8 rounded-xl h-full bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] border border-gray-400 text-white shadow-[0_0_10px_rgba(255,255,255,0.1)]"
     
     >
       <h5 className="text-lg font-bold mb-3">{cardOneTitle}</h5>
@@ -104,7 +102,7 @@
 
     {/* Card 2 */}
     <div
-      className="p-6 sm:p-8 rounded-xl h-full border border-gray-400 bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] text-white shadow-[0_0_10px_rgba(255,255,255,0.1)] text-center"
+      className="p-6 sm:p-8 rounded-xl h-full border border-gray-400 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] text-white shadow-[0_0_10px_rgba(255,255,255,0.1)] text-center"
       // style={{
       //   background: "linear-gradient(to bottom, #382933, #372935, #372831)",
       // }}

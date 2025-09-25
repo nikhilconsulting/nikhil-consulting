@@ -22,10 +22,10 @@ export default function PricingSection({
 
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto text-center w-full">
-        <h2 className="text-3xl font-bold text-white tracking-tight mb-4">
+      <div className="relative z-10 max-w-7xl mx-auto text-center w-full pb-6">
+        <span className="text-5xl font-bold text-white tracking-tight ">
           {title || "Simple, transparent pricing"}
-        </h2>
+        </span>
       </div>
 
       {/* Pricing Cards */}
@@ -36,7 +36,7 @@ export default function PricingSection({
             className={`rounded-3xl p-10 flex flex-col transform transition-transform duration-500 origin-center w-full max-w-[620px] mx-auto ${
               plan.popular
                 ? "bg-[#5F69A8] backdrop-blur-[15px] text-white scale-[1.05] shadow-lg"
-                : "bg-gradient-to-r from-[#5F69A8] via-[#000000] to-[#372935] text-gray-900 shadow-md"
+                : "bg-[linear-gradient(125deg,_#5F69A8,_#000000,_#372935)] text-gray-900 shadow-md"
             } ${index === 1 ? "mt-8 md:mt-0" : ""}`}
           >
             {plan.popular && (

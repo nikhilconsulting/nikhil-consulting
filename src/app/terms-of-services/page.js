@@ -1,4 +1,5 @@
 "use client";
+import Banner from '@/components/Banner';
 import GlassFooter2 from '@/components/Footer2';
 import GlassNavbar2 from '@/components/Navbar2';
 import React from 'react';
@@ -26,6 +27,8 @@ const page = () => {
       }}
     >
       <GlassNavbar2 />
+      <Banner title="Terms Of Services" />
+
       <main className="px-6 sm:px-10 py-30 max-w-4xl mx-auto text-white space-y-6 text-justify">
         <div className="text-2xl font-semibold mb-2 text-center">
           Terms & Conditions – RankInventiv

@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
 
 const plans = {
   monthly: [
@@ -80,7 +82,7 @@ export default function Pricing() {
         {currentPlans.map((plan, index) => (
           <div
             key={plan.name}
-            className={`rounded-3xl p-10 flex flex-col transform transition-transform duration-500 hover:scale-[1.02] origin-center w-[340px] mx-auto bg-gradient-to-r from-[#5F69A8] via-[#000000] to-[#372935] text-gray-900 shadow-md ${index === 1 ? 'mt-8 md:mt-0' : ''}`}
+            className={`rounded-3xl p-10 flex flex-col transform transition-transform duration-500 hover:scale-[1.02] origin-center w-[340px] mx-auto bg-[linear-gradient(125deg,_#5F69A8,_#000000,_#372935)] text-gray-900 shadow-md ${index === 1 ? 'mt-8 md:mt-0' : ''}`}
           >
             <span className="text-2xl text-gray-100 font-semibold mb-2">{plan.name}</span>
             <p className="text-gray-100 mb-4 text-base font-semibold">{plan.goal}</p>
@@ -106,11 +108,20 @@ export default function Pricing() {
               ))}
             </ul>
 
-            <button
-              className="mt-auto px-5 py-2 font-semibold bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] text-white cursor-pointer transition hover:scale-105"
-            >
-              {plan.buttonText}
-            </button>
+         <Link
+  href="/services"
+  className="relative bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] text-white inline-flex items-center justify-center overflow-hidden group px-6 py-2 text-lg font-semibold cursor-pointer transition hover:scale-105"
+>
+  <span className="relative z-10 flex items-center gap-2">
+    {plan.buttonText}
+    <FaArrowRight className="text-white text-base" />
+  </span>
+  <span
+    className="absolute inset-0 bg-gradient-to-r from-[#372935] via-black to-[#372935] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-0"
+    aria-hidden="true"
+  ></span>
+</Link>
+
           </div>
         ))}
       </div>

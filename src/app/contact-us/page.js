@@ -5,6 +5,7 @@ import GlassNavbar2 from "@/components/Navbar2";
 import GlassFooter2 from "@/components/Footer2";
 import Connect from "@/components/Connect";
 import ContactUsPage from "@/components/ContactUsPage";
+import Banner from "@/components/Banner";
 
 export default function ContactPage() {
 
@@ -24,6 +25,8 @@ export default function ContactPage() {
 <meta property="og:image:alt" content="Contact RankInventiv - Digital Marketing Experts" /> */}
 
 <GlassNavbar2 />
+<Banner title="Contact Us" />
+
   <ContactUsPage />
     <Connect />
     <GlassFooter2 />

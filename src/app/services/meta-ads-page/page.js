@@ -5,6 +5,7 @@ import GlassFooter2 from "@/components/Footer2";
 import WorkingProcess from "@/components/props/WorkingProcess";
 import DigitalMarketingFAQs from "@/components/props/Faqs";
 import PricingSection from "@/components/props/Pricing";
+import Banner from "@/components/Banner";
 
 const SMMPage = () => {
 const plans = [
@@ -119,6 +120,9 @@ const plans = [
 <meta property="og:image:alt" content="Meta Ads Services in Varanasi - RankInventiv" /> */}
 
     <GlassNavbar2 />
+    <Banner
+  title="Meta Ads"
+/>
     <ServiceSection
       imageSrc="/assets/images/service-detail-page-images/Meta Ads.png"
       imageAlt="Meta project"

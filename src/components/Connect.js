@@ -11,62 +11,65 @@ import {
 
 export default function Connect() {
   return (
-    <section className="bg-gradient-to-b from-[#382933] via-[#372935] to-[#372831] text-white px-8 pb-40">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+    <section className="bg-[linear-gradient(125deg,_#fff,_#000000,_#5F69A8)] text-white px-8 pb-30">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 pt-20">
 
         {/* Contacts */}
-        <div className="bg-gradient-to-t from-[#8FCDFF]/40 via-[#5F69A8]/25 to-transparent p-6 rounded border border-white/20 shadow-md ">
+        <div className="bg-[linear-gradient(125deg,_#5F69A8,_#000000,_#5F69A8)] p-6 text-lg border border-white/20 shadow-md ">
           <h3 className="font-semibold mb-4">Address 1</h3>
-          <p>+44-7871234567</p>
-          <p>plantsstore@gmail.com</p>
+          <p>2nd Floor, Lahurabir Rd, Jagatganj,</p>
+          <p>Near Sanskrit University,</p>
+          <p>Varanasi, Uttar Pradesh - 221002</p>
           <p className="mt-4">Our social networks:</p>
-          <div className="flex flex-wrap gap-4 mt-3 text-white text-2xl">
-            <Link href="#" aria-label="LinkedIn" className="hover:text-gray-400">
+          <div className="flex flex-wrap gap-4 mt-3 text-white text-3xl">
+            <Link href="#" aria-label="LinkedIn" className="hover:text-[#8FCDFF]">
               <FaLinkedin />
             </Link>
-            <Link href="#" aria-label="YouTube" className="hover:text-gray-400">
+            <Link href="#" aria-label="YouTube" className="hover:text-[#8FCDFF]">
               <FaYoutube />
             </Link>
-            <Link href="#" aria-label="Instagram" className="hover:text-gray-400">
+            <Link href="#" aria-label="Instagram" className="hover:text-[#8FCDFF]">
               <FaInstagram />
             </Link>
-            <Link href="#" aria-label="Twitter" className="hover:text-gray-400">
+            <Link href="#" aria-label="Twitter" className="hover:text-[#8FCDFF]">
               <FaTwitter />
             </Link>
-            <Link href="#" aria-label="Facebook" className="hover:text-gray-400">
+            <Link href="#" aria-label="Facebook" className="hover:text-[#8FCDFF]">
               <FaFacebook />
             </Link>
-            <Link href="#" aria-label="Google Plus" className="hover:text-gray-400">
-              <FaGooglePlusG />
-            </Link>
+<Link href="#" aria-label="Google Plus" className="hover:text-[#8FCDFF]">
+  <FaGooglePlusG style={{ width: "40px", height: "40px" , paddingBottom: "6px" }}  />
+</Link>
           </div>
         </div>
 
         {/* Catalog */}
-        <div className="bg-gradient-to-t from-[#8FCDFF]/40 via-[#5F69A8]/25 to-transparent p-6 rounded border border-white/20 shadow-md">
+        <div className="bg-[linear-gradient(125deg,_#5F69A8,_#000000,_#5F69A8)] p-6 text-lg border border-white/20 shadow-md">
           <h3 className="font-semibold mb-4">Address 2</h3>
           <p>+44-7871234567</p>
           <p>plantsstore@gmail.com</p>
+          <p>address</p>
           <p className="mt-4">Our social networks:</p>
-          <div className="flex flex-wrap gap-4 mt-3 text-white text-2xl">
-            <Link href="#" aria-label="LinkedIn" className="hover:text-gray-400">
+          <div className="flex flex-wrap gap-4 mt-3 text-white text-3xl">
+            <Link href="#" aria-label="LinkedIn" className="hover:text-[#8FCDFF]">
               <FaLinkedin />
             </Link>
-            <Link href="#" aria-label="YouTube" className="hover:text-gray-400">
+            <Link href="#" aria-label="YouTube" className="hover:text-[#8FCDFF]">
               <FaYoutube />
             </Link>
-            <Link href="#" aria-label="Instagram" className="hover:text-gray-400">
+            <Link href="#" aria-label="Instagram" className="hover:text-[#8FCDFF]">
               <FaInstagram />
             </Link>
-            <Link href="#" aria-label="Twitter" className="hover:text-gray-400">
+            <Link href="#" aria-label="Twitter" className="hover:text-[#8FCDFF]">
               <FaTwitter />
             </Link>
-            <Link href="#" aria-label="Facebook" className="hover:text-gray-400">
+            <Link href="#" aria-label="Facebook" className="hover:text-[#8FCDFF]">
               <FaFacebook />
             </Link>
-            <Link href="#" aria-label="Google Plus" className="hover:text-gray-400">
-              <FaGooglePlusG />
-            </Link>
+<Link href="#" aria-label="Google Plus" className="hover:text-[#8FCDFF]">
+  <FaGooglePlusG style={{ width: "40px", height: "40px" , paddingBottom: "6px" }}  />
+</Link>
+
           </div>
         </div>
 

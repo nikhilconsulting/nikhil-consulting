@@ -23,7 +23,7 @@ export default function page() {
 <meta property="og:image:alt" content="About RankInventiv - Digital Growth Experts" /> */}
 
     <GlassNavbar2 />
-    <Banner />
+    <Banner title="About Us" />
  <AboutPageSection2 />
    <AboutPageSection3 />
      

@@ -5,6 +5,7 @@ import GlassFooter2 from "@/components/Footer2";
 import WorkingProcess from "@/components/props/WorkingProcess";
 import DigitalMarketingFAQs from "@/components/props/Faqs";
 import PricingSection from "@/components/props/Pricing";
+import Banner from "@/components/Banner";
 const SEOPage = () => {
 const plans = [
   {
@@ -139,6 +140,7 @@ const plans = [
 <meta property="og:image:alt" content="Best SEO Company in Varanasi - RankInventiv" /> */}
 
     <GlassNavbar2 />
+    <Banner title="Search Engine Optimisation (SEO)" />
     <ServiceSection
       imageSrc="/assets/images/service-detail-page-images/SEO Service.png"
       imageAlt="SEO project"
@@ -175,7 +177,6 @@ const plans = [
      <WorkingProcess
         title="We Complete Our Work to Follow Some Easy Ways"
         steps={workingSteps}
-        background="linear-gradient(to bottom, #382933, #372935, #372831)"
       />
        <DigitalMarketingFAQs faqs={faqsData} />
         {/* Pricing Section */}

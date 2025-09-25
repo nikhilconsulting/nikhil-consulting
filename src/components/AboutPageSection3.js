@@ -4,12 +4,12 @@ import Image from "next/image";
 export default function AboutPageSection3() {
   return (
     <>
-   <section className=" relative bg-[linear-gradient(to_bottom,_#382933,_#372935,_#372831)]  py-26 px-6 overflow-visible">
+   <section className=" relative lg:bg-[linear-gradient(125deg,_#5F69A8,_#000000,_#fff)] bg-[linear-gradient(125deg,_#fff,_#000000,_#5F69A8)]  py-26 px-6 overflow-visible">
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_0.9fr] items-center gap-12 lg:gap-16">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-0">
 
         {/* Text Section */}
-        <div className="text-white order-2 lg:order-1 lg:mt-0 mt-8  ">
+        <div className="text-white order-2 lg:order-1 lg:mt-0 mt-8 border-2 border-[#5F69A8]  lg:p-8 p-4  ">
           <span className="text-4xl font-bold leading-snug">
            What We Do ?
           </span>
@@ -39,30 +39,28 @@ export default function AboutPageSection3() {
         </div>
 
         {/* Image Section */}
-      <div className="relative flex justify-center items-stretch h-full order-1 lg:order-2 lg:mt-0 mt-20">
+   <div className="relative flex justify-end items-center h-auto order-1 lg:order-2 lg:mt-0 mt-20">
   {/* Spotlight Glow Behind Image */}
   <div className="absolute inset-0 flex items-center justify-center z-0">
     <div className="w-[250px] sm:w-[350px] md:w-[450px] lg:w-[500px] h-[250px] sm:h-[350px] md:h-[450px] lg:h-[500px] bg-gradient-radial from-[#8FCDFF]/40 via-[#5F69A8]/25 to-transparent rounded-full blur-3xl"></div>
   </div>
 
-  {/* Image Container with Aura */}
-  <div className="relative z-10 w-full max-w-[500px] h-full">
-    {/* Aura Behind Image */}
-    <div
-      className="absolute inset-0 rounded-lg blur-xl opacity-50"
-      style={{
-        background:
-          "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
-      }}
-    ></div>
+  <div className="relative z-10 w-full max-w-[500px] h-auto max-h-[500px]">
+    {/* 🔹 3D Tilted Gradient Frame Behind Image */}
+    <div className="absolute -inset-4 rotate-[4deg] bg-gradient-to-b from-[#000000] via-[#5F69A8] to-[#000000] z-0 shadow-2xl"></div>
 
-    {/* Actual Image */}
+    {/* 🔹 Outer Static Border Frame (counter-clockwise) */}
+    <div className="absolute -inset-2 border-2 border-[#6E8EEE]/50 rotate-[-1deg] z-10"></div>
+
+    {/* 🖼️ Actual Image */}
     <Image
       src="/assets/images/about-us-page-image/About us 1.png"
       alt="Instructor"
+      quality={100}
       width={500}
       height={500}
-      className="w-full h-full object-cover rounded-lg relative"
+      priority
+      className="w-full h-auto object-cover rounded-lg relative z-20"
     />
   </div>
 </div>

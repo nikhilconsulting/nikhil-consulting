@@ -54,7 +54,7 @@ const services = [
 const borderStyle = {
   padding: "2px",
   background:
-    "linear-gradient(to top, rgba(211,233,253,0.8), rgba(211,233,253,0) 70%)",
+    "linear-gradient(to top, #5F69A8, rgba(211,233,253,0) 70%)",
   
   borderTop: "none",
 };
@@ -64,8 +64,8 @@ const ServiceCards = () => {
     <section className=" lg:bg-[linear-gradient(125deg,#fff,#000000,#5F69A8)]  bg-[linear-gradient(125deg,#5F69A8,#000000,#372935)] pt-32 pb-16 px-4 sm:px-6 lg:px-8">
       {/* 🌟 Section Heading */}
       <div className="max-w-3xl mx-auto text-center mb-6">
-        <span className="text-5xl lg:text-4xl font-bold text-white">Our Services</span>
-        <p className="mt-4 text-gray-100 text-lg lg:text-base">
+        <span className="text-5xl lg:text-5xl font-bold text-white">Our Services</span>
+        <p className="mt-4 text-gray-100 text-lg ">
           Explore what we can do to boost your business online. Explore what we can do to boost your business online.  Explore what we can do to boost your business business online.
         </p>
       </div>
@@ -74,7 +74,7 @@ const ServiceCards = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service, index) => (
           <div key={index} style={borderStyle} >
-            <div className="bg-gradient-to-b from-[#382933] via-[#372935] to-[#372831] lg:hover:scale-105 transition text-white  shadow-md p-6 flex flex-col hover:shadow-xl h-full">
+            <div className="bg-[linear-gradient(125deg,_#5F69A8,_#000000,_#372935)] lg:hover:scale-105 transition text-white  shadow-md p-6 flex flex-col hover:shadow-xl h-full">
               {/* Image */}
                 <Link href={service.link}>
               <div className="w-full h-44 sm:h-52 mb-5 overflow-hidden">
@@ -101,12 +101,22 @@ const ServiceCards = () => {
               {/* Learn More Button */}
              <div className="mt-auto relative -m-2 p-2">
   <Link
-    href={service.link}
-    className="w-fit mx-auto lg:hover:scale-105 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] text-white font-medium py-2 px-5 hover:bg-white/20 transition text-xl lg:text-base flex items-center gap-2 cursor-pointer justify-center"
-  >
-    Learn More 
+  href={service.link}
+  className="relative w-fit mx-auto group bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] text-white font-medium py-2 px-5 transition text-xl lg:text-base flex items-center gap-2 cursor-pointer justify-center overflow-hidden"
+>
+  {/* Text + Icon */}
+  <span className="relative z-10 flex items-center gap-2">
+    Learn More
     <FiArrowRight className="text-2xl lg:text-lg" />
-  </Link>
+  </span>
+
+  {/* Hover overlay animation */}
+  <span
+    className="absolute inset-0 bg-gradient-to-r from-[#372935] via-black to-[#372935] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-0"
+    aria-hidden="true"
+  ></span>
+</Link>
+
 </div>
 
             </div>

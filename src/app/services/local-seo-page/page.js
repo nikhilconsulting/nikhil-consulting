@@ -5,6 +5,7 @@ import GlassFooter2 from "@/components/Footer2";
 import WorkingProcess from "@/components/props/WorkingProcess";
 import DigitalMarketingFAQs from "@/components/props/Faqs";
 import PricingSection from "@/components/props/Pricing";
+import Banner from "@/components/Banner";
 
 const SMMPage = () => {
 const plans = [
@@ -125,7 +126,9 @@ const faqsData = [
 <meta property="og:image:alt" content="Local SEO and GMB Services in Varanasi - RankInventiv" /> */}
 
     <GlassNavbar2 />
-    
+    <Banner
+  title="Local SEO"
+/>
     <ServiceSection
       imageSrc="/assets/images/service-detail-page-images/Local.png"
       imageAlt="Local SEO"

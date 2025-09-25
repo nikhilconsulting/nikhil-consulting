@@ -1,4 +1,5 @@
 "use client";
+import Banner from "@/components/Banner";
 import GlassFooter2 from "@/components/Footer2";
 import GlassNavbar2 from "@/components/Navbar2";
 import React from "react";
@@ -22,6 +23,8 @@ const PrivacyPolicy = () => {
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="Google Ads Company in Varanasi - RankInventiv" /> */}
     <GlassNavbar2 /> 
+    <Banner title="Privacy Policy" />
+
     <div
       className="min-h-screen w-full text-gray-200"
       style={{
