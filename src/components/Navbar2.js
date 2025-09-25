@@ -129,25 +129,25 @@ useEffect(() => {
                 {!item.children ? (
                   <Link
                     href={item.href}
-                    className="relative block py-2 text-white font-bold no-underline transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-white after:to-transparent after:transition-all after:duration-300 hover:after:w-full"
+                    className="relative block py-2 text-white hover:text-[#8FCDFF] font-bold no-underline transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-white after:to-transparent hover:after:bg-gradient-to-r hover:after:from-[#8FCDFF] hover:after:to-transparent after:transition-all after:duration-300 hover:after:w-full"
                   >
                     {item.label}
                   </Link>
                 ) : (
                   <>
-                    <Link href={item.href}  className="flex items-center gap-1 py-2 text-white transition-colors font-bold  duration-200 cursor-pointer">
+                    <Link href={item.href}  className="flex items-center gap-1 py-2 text-white hover:text-[#8FCDFF] transition-colors font-bold  duration-200 cursor-pointer">
                       {item.label}
                       <ChevronDown
                         size={23}
                         className="transition-transform duration-300 group-hover:rotate-180 "
                       />
                     </Link>
-                    <ul className="absolute -left-25 opacity-0 cursor-pointer invisible group-hover:visible font-bold group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 flex-col gap-2 text-white bg-gradient-to-r from-[#5F69A8] via-[#000000] to-[#372935] backdrop-blur-[15px] rounded-sm mt-7 p-2 shadow-lg z-50 min-w-[330px]">
+                    <ul className="absolute -left-25 opacity-0 cursor-pointer invisible group-hover:visible  font-bold group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 flex-col gap-2 text-white bg-gradient-to-r from-[#5F69A8] via-[#000000] to-[#372935] backdrop-blur-[15px] rounded-sm mt-7 p-2 shadow-lg z-50 min-w-[330px]">
                       {item.children.map((child) => (
                         <li key={child.href}>
                           <Link
                             href={child.href}
-                            className="block px-4 py-2 hover:bg-white/30 hover:text-white rounded transition"
+                            className="block px-4 py-2 hover:bg-white/30 hover:text-[#8FCDFF] rounded transition"
                           >
                             {child.label}
                           </Link>
@@ -174,7 +174,7 @@ useEffect(() => {
 
   {/* Large screen (>= lg): toggle sidebar */}
   <button
-    className="text-white font-bold transition hover:scale-105 hidden lg:block cursor-pointer lg:mr-20"
+    className="text-white font-bold transition hover:scale-105 hidden hover:text-[#8FCDFF] lg:block cursor-pointer lg:mr-20"
     onClick={() => setSidebarOpen(true)}
   >
     <Menu size={38} />

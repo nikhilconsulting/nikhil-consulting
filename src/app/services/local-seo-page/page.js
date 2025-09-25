@@ -7,50 +7,58 @@ import DigitalMarketingFAQs from "@/components/props/Faqs";
 import PricingSection from "@/components/props/Pricing";
 
 const SMMPage = () => {
-    //  Define your pricing data separately
-const monthlyPricingData = [
+const plans = [
   {
-    name: "Base",
-    price: 80,
-    features: ["Feature A", "Feature B", "Feature C"],
-    buttonText: "Sign Up",
-  },
-  {
-    name: "Pro",
-    price: 120,
-    features: ["Feature D", "Feature E", "Feature F"],
-    popular: true,
+    name: "Basic Local SEO Plan (Starter Visibility)",
+    description: "For small businesses wanting to establish local presence.",
+    features: [
+      "Google Business Profile Setup & Optimization",
+      "NAP (Name/Address/Phone) Consistency across directories",
+      "5–10 Local Keyword Research",
+      "Basic On-Page Optimization (Title, Meta, Header Tags, Alt Tags)",
+      "Local Citations (5–10 listings)",
+      "Google Analytics & Search Console Setup",
+      "Monthly Report (Basic Traffic & Local Ranking Overview)",
+    ],
     buttonText: "Upgrade Now",
   },
   {
-    name: "Enterprise",
-    price: 260,
-    features: ["Feature G", "Feature H", "Feature I"],
-    buttonText: "Contact Sales",
+    name: "Advanced Local SEO Plan (Growth & Engagement)",
+    description: "For businesses wanting traffic growth & strong local visibility.",
+    features: [
+      "Complete Google Business Profile Optimization",
+      "Weekly GBP Updates (Posts, Photos, Offers)",
+      "Keyword Research (15–25 local keywords)",
+      "On-Page SEO for Local Landing Pages",
+      "Local Citations (15–25 listings)",
+      "10–15 Backlinks (Local Directories, Guest Posts, Citations)",
+      "Review Generation Strategy (Templates + Guidance)",
+      "Competitor Analysis & Keyword Gap Report",
+      "Monthly Report (Traffic, Rankings, Leads)",
+    ],
+    buttonText: "Upgrade Now",
+    popular: true,
+  },
+  {
+    name: "Premium Local SEO Plan (Local Domination)",
+    description: "For businesses aiming for top local rankings, branding & lead generation.",
+    features: [
+      "Advanced Google Business Profile Management (Daily/Weekly Updates, Events, Q&A)",
+      "Local Keyword Research (30–50 keywords across service areas)",
+      "Advanced On-Page SEO (Schema Markup: Local Business, FAQ, Reviews)",
+      "Local Citations (50+ listings including high DA sites)",
+      "Authority Backlinks (DA 40+ Guest Posts, PR Submissions, Niche Edits)",
+      "Content Marketing (2–4 Local Blogs / month with SEO)",
+      "Video SEO for Local Visibility (YouTube Optimization if applicable)",
+      "Voice Search Optimization for Local Queries",
+      "Custom Local SEO Dashboard (GBP Insights, GA4, GSC, Keyword Rankings, Leads)",
+      "Detailed Monthly Report + Strategy Call",
+    ],
+    buttonText: "Upgrade Now",
   },
 ];
 
-const yearlyPricingData = [
-  {
-    name: "Base",
-    price: 800,
-    features: ["All monthly features", "Yearly discount"],
-    buttonText: "Sign Up Yearly",
-  },
-  {
-    name: "Pro",
-    price: 1200,
-    features: ["All Pro features", "Dedicated support", "Advanced Analytics"],
-    popular: true,
-    buttonText: "Upgrade Yearly",
-  },
-  {
-    name: "Enterprise",
-    price: 2600,
-    features: ["All Enterprise features", "Custom API integration"],
-    buttonText: "Contact Sales",
-  },
-];
+
 const faqsData = [
   {
     question: "What is Local SEO and why is it important?",
@@ -157,11 +165,11 @@ const faqsData = [
        <DigitalMarketingFAQs faqs={faqsData} />
         {/* Pricing Section */}
             <PricingSection
-              title="Our Main Pricing"
-              monthlyPlans={monthlyPricingData}
-              yearlyPlans={yearlyPricingData}
-              backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"
-            />
+  title="Our Plans"
+  plans={plans}
+  backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"
+/>
+
        
     <GlassFooter2 />
     </>

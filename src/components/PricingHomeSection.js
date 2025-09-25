@@ -71,8 +71,8 @@ export default function Pricing() {
         style={{ backgroundImage: "url('/assets/images/pricing-section-image/pricing-background-image.png')" }}
       />
 
-      <span className="text-5xl lg:text-4xl font-bold text-white tracking-tight z-1">
-          Simple, transparent pricing
+      <span className="text-4xl lg:text-5xl font-bold text-white tracking-tight z-1">
+         Our Plans
         </span>
 
       {/* Pricing Cards */}
@@ -80,32 +80,34 @@ export default function Pricing() {
         {currentPlans.map((plan, index) => (
           <div
             key={plan.name}
-            className={`rounded-3xl p-10 flex flex-col transform transition-transform duration-500 hover:scale-[1.02] origin-center w-[340px] mx-auto bg-gradient-to-b from-[#382933] via-[#372935] to-[#372831] text-gray-900 shadow-md ${index === 1 ? 'mt-8 md:mt-0' : ''}`}
+            className={`rounded-3xl p-10 flex flex-col transform transition-transform duration-500 hover:scale-[1.02] origin-center w-[340px] mx-auto bg-gradient-to-r from-[#5F69A8] via-[#000000] to-[#372935] text-gray-900 shadow-md ${index === 1 ? 'mt-8 md:mt-0' : ''}`}
           >
             <span className="text-2xl text-gray-100 font-semibold mb-2">{plan.name}</span>
             <p className="text-gray-100 mb-4 text-base font-semibold">{plan.goal}</p>
 
             <ul className="space-y-3 mb-8 text-left text-base text-[#fff]">
               {plan.features.map((feature) => (
-                <li key={feature} className="flex items-center">
-                  <svg
-                    className="w-4 h-4 mr-2 flex-shrink-0 text-[#8a8a9a]"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-3-3a1 1 0 111.414-1.414L9 11.586l6.293-6.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
+                <li key={feature} className="flex items-start">
+                 <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-5 h-5 mr-2 mt-1 flex-shrink-0 text-green-500"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={3}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+
                   {feature}
                 </li>
               ))}
             </ul>
 
             <button
-              className="mt-auto px-5 py-2 rounded-full font-semibold bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] text-white cursor-pointer transition hover:scale-105"
+              className="mt-auto px-5 py-2 font-semibold bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] text-white cursor-pointer transition hover:scale-105"
             >
               {plan.buttonText}
             </button>

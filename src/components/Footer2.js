@@ -35,10 +35,10 @@ const [selectedExpert, setSelectedExpert] = useState('');
 
   return (
     <>
-           <footer id="book-consulting" className="py-12 text-white bg-[linear-gradient(to_bottom,_#382933,_#372935,_#372831)] backdrop-blur-[15px]">
+           <footer id="book-consulting" className="py-12 text-white  bg-gradient-to-r from-[#5F69A8] via-[#000000] to-[#372935] backdrop-blur-[15px]">
       <Cta2 />
         {/* Top Section */}
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2  xl:grid-cols-5 gap-y-10 gap-x-6 px-4 sm:px-6 lg:px-6 xl:ml-30 md:ml-20 lg:mr-25 pt-10 ">
+        <div className="max-w-8xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2  xl:grid-cols-6 gap-y-10 gap-x-6 lg:gap-x-0 px-4 sm:px-6 lg:px-15 xl:ml-6 md:ml-20 lg:mr-10 pt-10 ">
           {/* Brand Section */}
           <div className="xl:col-span-2 xl:mr-4">
             <p className="text-base leading-relaxed text-gray-100">
@@ -61,32 +61,47 @@ const [selectedExpert, setSelectedExpert] = useState('');
           </div>
 
           {/* For Businesses */}
-          <div className="xl:ml-1">
+          <div className="xl:ml-3">
             <h3 className="font-semibold mb-4 text-lg">For Businesses</h3>
          <ul className="space-y-2 text-base">
-  <li onClick={() => handleClick('SEO Expert')} className="hover:underline cursor-pointer">Talk With SEO Expert</li>
-  <li onClick={() => handleClick('Ads Specialist')} className="hover:underline cursor-pointer">Talk With Ads Specialist</li>
-  <li onClick={() => handleClick('Branding Expert')} className="hover:underline cursor-pointer">Talk With Branding Expert</li>
-  <li onClick={() => handleClick('Social Media Expert')} className="hover:underline cursor-pointer">Talk With Social Media Expert</li>
-  <li onClick={() => handleClick('Tech Expert')} className="hover:underline cursor-pointer">Talk With Tech Expert</li>
+  <li onClick={() => handleClick('SEO Expert')} className="hover:underline hover:text-[#8FCDFF] cursor-pointer">Talk With SEO Expert</li>
+  <li onClick={() => handleClick('Ads Specialist')} className="hover:underline hover:text-[#8FCDFF] cursor-pointer">Talk With Ads Specialist</li>
+  <li onClick={() => handleClick('Branding Expert')} className="hover:underline hover:text-[#8FCDFF] cursor-pointer">Talk With Branding Expert</li>
+  <li onClick={() => handleClick('Social Media Expert')} className="hover:underline hover:text-[#8FCDFF] cursor-pointer">Talk With Social Media Expert</li>
+  <li onClick={() => handleClick('Tech Expert')} className="hover:underline hover:text-[#8FCDFF] cursor-pointer">Talk With Tech Expert</li>
 </ul>
 
 
           </div>
+          <div className="xl:ml-12">
+            <h3 className="font-semibold mb-4 text-lg"> Services</h3>
+            <ul className="space-y-2 text-base cursor-pointer">
+              <li><Link href="/services/search-engine-optimisation-page" className="hover:underline hover:text-[#8FCDFF]">SEO</Link></li>
+
+              <li><Link href="/services/local-seo-page" className="hover:underline hover:text-[#8FCDFF]">Local SEO</Link></li>
+              <li><Link href="/services/google-ads-page" className="hover:underline hover:text-[#8FCDFF]">Google Ads</Link></li>
+
+                            <li><Link href="/services/meta-ads-page" className="hover:underline hover:text-[#8FCDFF]">Meta Ads</Link></li>
+              <li><Link href="/services/website-development-page" className="hover:underline hover:text-[#8FCDFF]">Website Development</Link></li>
+              
+              <li><Link href="/services/social-media-marketing-page" className="hover:underline hover:text-[#8FCDFF]">Social Media Marketing</Link>
+              </li>
+            </ul>
+          </div>
 
           {/* Quick Links */}
-          <div className="xl:ml-10">
+          <div className="xl:ml-8">
             <h3 className="font-semibold mb-4 text-lg">Quick Links</h3>
             <ul className="space-y-2 text-base cursor-pointer">
-              <li><Link href="/" className="hover:underline">Home</Link></li>
+              <li><Link href="/" className="hover:underline hover:text-[#8FCDFF]">Home</Link></li>
 
-              <li><Link href="/about-us" className="hover:underline">About Us</Link></li>
+              <li><Link href="/about-us" className="hover:underline hover:text-[#8FCDFF]">About Us</Link></li>
               {/* <li><Link href="/blogs" className="hover:underline">Blogs</Link></li> */}
 
                             {/* <li><Link href="/services" className="hover:underline">Services</Link></li> */}
-              <li><Link href="/digital-marketing-consultant" className="hover:underline">Consultancy</Link></li>
+              <li><Link href="/digital-marketing-consultant" className="hover:underline hover:text-[#8FCDFF]">Consultancy</Link></li>
               {/* <li><Link href="/career" className="hover:underline">Career</Link></li> */}
-              <li><Link href="/contact-us" className="hover:underline">Contact Us</Link>
+              <li><Link href="/contact-us" className="hover:underline hover:text-[#8FCDFF]">Contact Us</Link>
               </li>
             </ul>
           </div>
@@ -99,30 +114,30 @@ const [selectedExpert, setSelectedExpert] = useState('');
               Near Sanskrit University, <br />
               Varanasi, Uttar Pradesh 221002
             </p>
-            <a href="mailto:rankinventiv@gmail.com" className="flex items-center gap-2 mb-2 text-base hover:underline">
+            <a href="mailto:rankinventiv@gmail.com" className="flex items-center gap-2 mb-2 text-base hover:underline hover:text-[#8FCDFF]">
               <FaEnvelope /> rankinventiv@gmail.com
             </a>
-            <a href="tel:+919310962725" className="flex items-center gap-2 mb-4 text-base hover:underline">
+            <a href="tel:+919310962725" className="flex items-center gap-2 mb-4 text-base hover:underline hover:text-[#8FCDFF]">
               <FaPhone /> +91- 93109 62725
             </a>
             <div className="flex gap-4 text-2xl sm:text-3xl">
               <Link href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
-                <FaLinkedin className="cursor-pointer hover:scale-110 transition" />
+                <FaLinkedin className="cursor-pointer hover:scale-110 transition hover:text-[#8FCDFF]" />
               </Link>
               <Link href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer">
-                <FaInstagram className="cursor-pointer hover:scale-110 transition" />
+                <FaInstagram className="cursor-pointer hover:scale-110 transition hover:text-[#8FCDFF]" />
               </Link>
               <Link href="https://www.facebook.com/rankinventiv/" target="_blank" rel="noopener noreferrer">
-                <FaFacebook className="cursor-pointer hover:scale-110 transition" />
+                <FaFacebook className="cursor-pointer hover:scale-110 transition hover:text-[#8FCDFF]" />
               </Link>
               <Link href="https://www.twitter.com/your-profile" target="_blank" rel="noopener noreferrer">
-                <FaTwitter className="cursor-pointer hover:scale-110 transition" />
+                <FaTwitter className="cursor-pointer hover:scale-110 transition hover:text-[#8FCDFF]" />
               </Link>
                <Link href="https://www.youtube.com/@Rankinventiv" target="_blank" rel="noopener noreferrer">
-                <FaYoutube className="cursor-pointer hover:scale-110 transition" />
+                <FaYoutube className="cursor-pointer hover:scale-110 transition hover:text-[#8FCDFF]" />
               </Link>
               <Link href="https://maps.app.goo.gl/MNbdJh3Mn9J7joEn6" target="_blank" rel="noopener noreferrer">
-                <FaGooglePlusG className="cursor-pointer hover:scale-150 transition scale-[1.4]" />
+                <FaGooglePlusG className="cursor-pointer hover:scale-150 transition scale-[1.4] hover:text-[#8FCDFF]" />
               </Link>
             </div>
           </div>
@@ -131,9 +146,9 @@ const [selectedExpert, setSelectedExpert] = useState('');
         {/* Footer Bottom */}
         <div className="max-w-7xl mx-auto mt-12 border-t border-white/30 pt-6 flex flex-col sm:flex-row items-center justify-between text-sm px-4 sm:px-6 lg:px-8">
           <div className="flex gap-6 mb-4 sm:mb-0 text-xs">
-            <Link href="/privacy-policy" className="hover:underline">Privacy Policy</Link>
+            <Link href="/privacy-policy" className="hover:underline hover:text-[#8FCDFF]">Privacy Policy</Link>
             <span>|</span>
-            <Link href="/terms-&-conditions" className="hover:underline">Terms of Service</Link>
+            <Link href="/terms-&-conditions" className="hover:underline hover:text-[#8FCDFF]">Terms of Service</Link>
           </div>
           <p className="text-sm sm:text-base">
             © {new Date().getFullYear()} All Rights Reserved

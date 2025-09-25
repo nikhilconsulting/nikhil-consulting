@@ -7,23 +7,22 @@ import DigitalMarketingFAQs from "@/components/props/Faqs";
 import PricingSection from "@/components/props/Pricing";
 
 const SMMPage = () => {
-    //  Define your pricing data separately
-const monthlyPricingData = [
+const plans = [
   {
     name: "Basic Plan (Starter Presence)",
-    price: 80,
+    description: "Profile setup & optimization with basic engagement.",
     features: [
       "Profile setup & optimization",
       "8–10 posts + 2–3 stories weekly",
       "Basic captions & hashtags",
       "Monthly content calendar",
-      "Simple engagement + monthly report"
+      "Simple engagement + monthly report",
     ],
-    buttonText: "Sign Up"
+    buttonText: "Upgrade Now",
   },
   {
     name: "Advanced Plan (Growth & Engagement)",
-    price: 120,
+    description: "Branded profiles & templates for higher engagement.",
     features: [
       "Branded profiles & templates",
       "15–20 posts + 8–10 stories monthly",
@@ -31,14 +30,14 @@ const monthlyPricingData = [
       "Paid ads setup (small budget)",
       "Community management (DMs, comments)",
       "Influencer outreach (micro)",
-      "Monthly content calendar & growth report"
+      "Monthly content calendar & growth report",
     ],
+    buttonText: "Upgrade Now",
     popular: true,
-    buttonText: "Upgrade Now"
   },
   {
     name: "Premium Plan (Full Branding & Leads)",
-    price: 260,
+    description: "Full branding kit and strategy with 24/7 community management.",
     features: [
       "Full branding kit + strategy",
       "Daily posts (images, reels, videos, polls, stories)",
@@ -47,34 +46,13 @@ const monthlyPricingData = [
       "Influencer & collaboration marketing",
       "24/7 community management",
       "Multi-platform (FB, Insta, LinkedIn, YouTube)",
-      "Weekly calls + detailed monthly report"
+      "Weekly calls + detailed monthly report",
     ],
-    buttonText: "Contact Sales"
-  }
+    buttonText: "Upgrade Now",
+  },
 ];
 
 
-const yearlyPricingData = [
-  {
-    name: "Base",
-    price: 800,
-    features: ["All monthly features", "Yearly discount"],
-    buttonText: "Sign Up Yearly",
-  },
-  {
-    name: "Pro",
-    price: 1200,
-    features: ["All Pro features", "Dedicated support", "Advanced Analytics"],
-    popular: true,
-    buttonText: "Upgrade Yearly",
-  },
-  {
-    name: "Enterprise",
-    price: 2600,
-    features: ["All Enterprise features", "Custom API integration"],
-    buttonText: "Contact Sales",
-  },
-];
  const faqsData = [
   {
     question: "Why is social media marketing important for my business?",
@@ -180,12 +158,11 @@ const yearlyPricingData = [
       />
       <DigitalMarketingFAQs faqs={faqsData} />
         {/* Pricing Section */}
-      <PricingSection
-        title="Our Main Pricing"
-        monthlyPlans={monthlyPricingData}
-        yearlyPlans={yearlyPricingData}
-        backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"
-      />
+            <PricingSection
+  title="Our Plans"
+  plans={plans}
+  backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"
+/>
 
         
     <GlassFooter2 />

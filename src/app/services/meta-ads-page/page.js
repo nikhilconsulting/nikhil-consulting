@@ -7,23 +7,22 @@ import DigitalMarketingFAQs from "@/components/props/Faqs";
 import PricingSection from "@/components/props/Pricing";
 
 const SMMPage = () => {
-    //  Define your pricing data separately
-const monthlyPricingData = [
+const plans = [
   {
     name: "Basic Plan (Starter)",
-    price: 80,
+    description: "Setup Business Manager & run 1–2 simple campaigns.",
     features: [
       "Business Manager & Ad Account setup",
       "1–2 simple campaigns (Awareness / Engagement / Traffic)",
       "Basic audience targeting",
       "Ad creatives (images + copywriting)",
-      "Monthly performance report"
+      "Monthly performance report",
     ],
-    buttonText: "Sign Up"
+    buttonText: "Upgrade Now",
   },
   {
     name: "Advanced Plan (Growth)",
-    price: 120,
+    description: "Multiple campaigns with A/B testing and weekly optimization.",
     features: [
       "Multiple campaigns (Traffic, Leads, Engagement, Remarketing)",
       "Custom audience & lookalike audience setup",
@@ -31,14 +30,14 @@ const monthlyPricingData = [
       "Pixel & conversion tracking setup",
       "Weekly optimization (CPC, CTR, CPA)",
       "Competitor ad analysis",
-      "Detailed monthly report"
+      "Detailed monthly report",
     ],
+    buttonText: "Upgrade Now",
     popular: true,
-    buttonText: "Upgrade Now"
   },
   {
     name: "Premium Plan (Full Funnel)",
-    price: 260,
+    description: "Full funnel campaigns with ROI-focused analytics and 24/7 support.",
     features: [
       "Full funnel campaigns (Awareness → Consideration → Conversion)",
       "Advanced audience strategy (interest + behavior + retargeting + lookalikes)",
@@ -47,34 +46,13 @@ const monthlyPricingData = [
       "Smart budget allocation & scaling",
       "A/B testing for creatives, placements & audiences",
       "ROI-focused analytics & custom dashboard",
-      "Weekly calls + 24/7 monitoring & support"
+      "Weekly calls + 24/7 monitoring & support",
     ],
-    buttonText: "Contact Sales"
-  }
+    buttonText: "Upgrade Now",
+  },
 ];
 
 
-const yearlyPricingData = [
-  {
-    name: "Base",
-    price: 800,
-    features: ["All monthly features", "Yearly discount"],
-    buttonText: "Sign Up Yearly",
-  },
-  {
-    name: "Pro",
-    price: 1200,
-    features: ["All Pro features", "Dedicated support", "Advanced Analytics"],
-    popular: true,
-    buttonText: "Upgrade Yearly",
-  },
-  {
-    name: "Enterprise",
-    price: 2600,
-    features: ["All Enterprise features", "Custom API integration"],
-    buttonText: "Contact Sales",
-  },
-];
   const faqsData = [
   {
     question: "How do Meta Ads help my business grow?",
@@ -180,11 +158,10 @@ const yearlyPricingData = [
        <DigitalMarketingFAQs faqs={faqsData} />
         {/* Pricing Section */}
             <PricingSection
-              title="Our Main Pricing"
-              monthlyPlans={monthlyPricingData}
-              yearlyPlans={yearlyPricingData}
-              backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"
-            />
+  title="Our Plans"
+  plans={plans}
+  backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"
+/>
        
     <GlassFooter2 />
     </>

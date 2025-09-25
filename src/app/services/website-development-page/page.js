@@ -7,24 +7,23 @@ import DigitalMarketingFAQs from "@/components/props/Faqs";
 import PricingSection from "@/components/props/Pricing";
 
 const SMMPage = () => {
-    //  Define your pricing data separately
-const monthlyPricingData = [
+const plans = [
   {
     name: "Basic Plan (Starter Website)",
-    price: 80,
+    description: "Simple 3–5 page responsive website with basic SEO.",
     features: [
-      "3–5 page website (Home, About, Services, Contact)",
+      "3–5 page website  (Home, About, Services, Contact)",
       "Mobile responsive design",
       "Basic on-page SEO setup",
       "Contact form integration",
       "Social media links",
-      "1 round of revisions"
+      "1 round of revisions",
     ],
-    buttonText: "Sign Up"
+    buttonText: "Upgrade Now",
   },
   {
     name: "Advanced Plan (Business Website)",
-    price: 120,
+    description: "Custom design with branding, blog setup & SEO.",
     features: [
       "8–12 page website (with Blog, Portfolio, Gallery, etc.)",
       "Custom design with branding",
@@ -32,14 +31,14 @@ const monthlyPricingData = [
       "Speed & security optimization",
       "Integration (Chatbot, WhatsApp, Email forms)",
       "Blog setup & training for updates",
-      "2–3 rounds of revisions"
+      "2–3 rounds of revisions",
     ],
+    buttonText: "Upgrade Now",
     popular: true,
-    buttonText: "Upgrade Now"
   },
   {
     name: "Premium Plan (Custom/Enterprise Website)",
-    price: 260,
+    description: "Fully custom, advanced SEO, payment & API integrations.",
     features: [
       "Fully custom website (Unlimited pages / E-commerce / Booking system)",
       "Advanced UX/UI design + animations",
@@ -48,34 +47,13 @@ const monthlyPricingData = [
       "Multi-language & advanced features (if required)",
       "Conversion-focused landing pages",
       "Ongoing maintenance & priority support",
-      "Unlimited revisions (within project scope)"
+      "Unlimited revisions (within project scope)",
     ],
-    buttonText: "Contact Sales"
-  }
+    buttonText: "Upgrade Now",
+  },
 ];
 
 
-const yearlyPricingData = [
-  {
-    name: "Base",
-    price: 800,
-    features: ["All monthly features", "Yearly discount"],
-    buttonText: "Sign Up Yearly",
-  },
-  {
-    name: "Pro",
-    price: 1200,
-    features: ["All Pro features", "Dedicated support", "Advanced Analytics"],
-    popular: true,
-    buttonText: "Upgrade Yearly",
-  },
-  {
-    name: "Enterprise",
-    price: 2600,
-    features: ["All Enterprise features", "Custom API integration"],
-    buttonText: "Contact Sales",
-  },
-];
  const faqsData = [
   {
     question: "Why does my business need a professional website?",
@@ -180,12 +158,11 @@ const yearlyPricingData = [
       />
       <DigitalMarketingFAQs faqs={faqsData} />
         {/* Pricing Section */}
-      <PricingSection
-        title="Our Main Pricing"
-        monthlyPlans={monthlyPricingData}
-        yearlyPlans={yearlyPricingData}
-        backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"
-      />
+            <PricingSection
+  title="Our Plans"
+  plans={plans}
+  backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"
+/>
         
     <GlassFooter2 />
     </>

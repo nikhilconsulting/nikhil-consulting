@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 export default function Cta2() {
   return (
     <section className="relative z-10 w-[90%] max-w-6xl mx-auto -mt-20 bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px] rounded-xl p-6 sm:p-10 shadow-2xl">
@@ -12,9 +13,9 @@ export default function Cta2() {
           <p className="text-white mb-4">
             Don't just compete-lead. Build powerful digital strategies that deliver a clear competitive advantage
           </p>
-          <button className="bg-[linear-gradient(to_bottom,_#382933,_#372935,_#372831)] backdrop-blur-[15px] cursor-pointer transition hover:scale-105 text-white font-semibold py-2 px-5 rounded-md transition duration-300">
+          <Link href="/services" className="bg-gradient-to-r from-[#372935] via-black to-[#372935]  cursor-pointer transition hover:scale-105 text-white font-semibold py-3 px-5 transition duration-300">
             Claim Your Advantage →
-          </button>
+          </Link>
         </div>
 
         {/* Right Side - Images */}

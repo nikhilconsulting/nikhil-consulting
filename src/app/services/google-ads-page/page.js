@@ -7,71 +7,48 @@ import DigitalMarketingFAQs from "@/components/props/Faqs";
 import PricingSection from "@/components/props/Pricing";
 const GooglePage = () => {
 
-  //  Define your pricing data separately
-const monthlyPricingData = [
+const plans = [
   {
     name: "Basic Plan (Starter)",
-    price: 80,
+    description: "Account setup with 1–2 simple campaigns and monthly report.",
     features: [
       "Account & campaign setup",
       "1–2 simple campaigns (Search/Display)",
       "Basic keyword research",
       "Ad copywriting + extensions",
-      "Monthly performance report"
+      "Monthly performance report",
     ],
-    buttonText: "Sign Up"
+    buttonText: "Upgrade Now",
   },
   {
     name: "Advanced Plan (Growth)",
-    price: 120,
+    description: "Multiple campaigns with conversion tracking and weekly optimization.",
     features: [
       "Multiple campaigns (Search, Display, Remarketing)",
       "Advanced keyword research + negative keywords",
       "Conversion tracking setup",
       "Weekly optimization (CPC, CTR, Quality Score)",
       "Competitor analysis",
-      "Detailed monthly report"
+      "Detailed monthly report",
     ],
+    buttonText: "Upgrade Now",
     popular: true,
-    buttonText: "Upgrade Now"
   },
   {
     name: "Premium Plan (Full Scale)",
-    price: 260,
+    description: "Full funnel campaigns with smart bidding and 24/7 strategy calls.",
     features: [
       "Full-funnel campaigns (Search, Display, Shopping, Video, Remarketing)",
       "Landing page optimization for conversions",
       "Smart bidding & automation",
       "A/B testing (ads & landing pages)",
       "ROI-focused tracking (calls, forms, sales)",
-      "Weekly strategy calls + 24/7 monitoring"
+      "Weekly strategy calls + 24/7 monitoring",
     ],
-    buttonText: "Contact Sales"
-  }
-];
-
-
-const yearlyPricingData = [
-  {
-    name: "Base",
-    price: 800,
-    features: ["All monthly features", "Yearly discount"],
-    buttonText: "Sign Up Yearly",
-  },
-  {
-    name: "Pro",
-    price: 1200,
-    features: ["All Pro features", "Dedicated support", "Advanced Analytics"],
-    popular: true,
-    buttonText: "Upgrade Yearly",
-  },
-  {
-    name: "Enterprise",
-    price: 2600,
-    features: ["All Enterprise features", "Custom API integration"],
-    buttonText: "Contact Sales",
+    buttonText: "Upgrade Now",
   },
 ];
+
 
  const faqsData = [
   {
@@ -178,12 +155,11 @@ const yearlyPricingData = [
       />
  <DigitalMarketingFAQs faqs={faqsData} />
        {/* Pricing Section */}
-      <PricingSection
-        title="Our Main Pricing"
-        monthlyPlans={monthlyPricingData}
-        yearlyPlans={yearlyPricingData}
-        backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"
-      />
+            <PricingSection
+  title="Our Plans"
+  plans={plans}
+  backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"
+/>
        
     <GlassFooter2 />
     </>
