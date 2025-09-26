@@ -121,7 +121,8 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-0 lg:bottom-0 left-1/2 -translate-x-1/2 w-full max-w-8xl px-4 z-20 ">
+      <div className="absolute bottom-0 left-0 w-full z-20">
+
         <SocialTicker />
       </div>
     </section>

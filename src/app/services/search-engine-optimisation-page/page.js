@@ -4,75 +4,75 @@ import GlassNavbar2 from "@/components/Navbar2";
 import GlassFooter2 from "@/components/Footer2";
 import WorkingProcess from "@/components/props/WorkingProcess";
 import DigitalMarketingFAQs from "@/components/props/Faqs";
-import PricingSection from "@/components/props/Pricing";
+// import PricingSection from "@/components/props/Pricing";
 import Banner from "@/components/Banner";
 const SEOPage = () => {
-const plans = [
-  {
-    name: "Basic SEO Plan (Foundation SEO)",
-    description: "We plan the pages, content flow, and create design samples for your approval.",
-    features: [
-      "Website Audit (Basic Technical Check)",
-      "Keyword Research (5–10 keywords)",
-      "On-Page SEO: Title, Meta Description, URL Optimization",
-      "Header Tags (H1, H2)",
-      "Image Alt Tags",
-      "Internal Linking",
-      "Sitemap & Robots.txt Setup",
-      "Google Analytics & Search Console Setup",
-      "Basic Local SEO: Google Business Profile Optimization",
-      "NAP (Name/Address/Phone) Consistency",
-      "Monthly Report (Basic Traffic & Ranking Overview)",
-    ],
-    buttonText: "Upgrade Now",
-  },
-  {
-    name: "Advanced SEO Plan (Growth SEO)",
-    description: "For businesses that want traffic growth & local visibility.",
-    features: [
-      "Detailed Website Audit (Technical + Content)",
-      "Keyword Research (20–30 keywords, mix of short & long-tail)",
-      "Advanced On-Page SEO: Schema Markup (Local/Business/FAQ)",
-      "Page Speed Optimization",
-      "Content Optimization (Existing Pages)",
-      "Off-Page SEO: 10–20 Backlinks per month (Guest Posts, Directories, Local Citations)",
-      "Social Bookmarking",
-      "Local SEO: Google Business Profile Weekly Updates (Posts, Photos, Offers)",
-      "Review Generation Strategy",
-      "Blog Writing (2 Blogs / month) with SEO Optimization",
-      "Competitor Analysis & Keyword Gap Report",
-      "Monthly Report (Traffic, Rankings, Conversions)",
-    ],
-    buttonText: "Upgrade Now",
-    popular: true,
-  },
-  {
-    name: "Premium SEO Plan (Full SEO Domination)",
-    description: "For businesses aiming for top rankings, branding & lead generation.",
-    features: [
-      "Complete Website Audit (Technical, UX, CRO, Mobile-first)",
-      "Keyword Research (50+ keywords across multiple clusters)",
-      "Full On-Page SEO: Advanced Schema (FAQ, Product, Review, HowTo, Local)",
-      "Internal Linking Strategy for Topical Authority",
-      "Content Silos (Pillar + Cluster Content)",
-      "Landing Page Optimization (for conversions)",
-      "Off-Page SEO: High-Quality Backlinks (Guest Posting, Niche Edits, PR Submissions)",
-      "Authority Link Building (DA 40+ sites)",
-      "Local Citations (International + Regional)",
-      "Content Marketing: 4–8 Blogs / month with SEO optimization",
-      "PR Articles / Guest Contributions",
-      "Video SEO (YouTube Optimization if applicable)",
-      "Local SEO: Advanced Google Business Management (Daily/Weekly Updates, Offers, Events, Q&A)",
-      "Voice Search Optimization",
-      "Technical SEO: Site Speed, Core Web Vitals, Mobile Optimization",
-      "Crawl Budget Optimization & Indexing Control",
-      "Analytics & Tracking: Custom Dashboard (GA4, GSC, Keyword Ranking, Conversions)",
-      "Heatmaps & User Behavior Analysis (Hotjar/Clarity)",
-      "Detailed Monthly Report + Strategy Call",
-    ],
-    buttonText: "Upgrade Now",
-  },
-];
+// const plans = [
+//   {
+//     name: "Basic SEO Plan (Foundation SEO)",
+//     description: "We plan the pages, content flow, and create design samples for your approval.",
+//     features: [
+//       "Website Audit (Basic Technical Check)",
+//       "Keyword Research (5–10 keywords)",
+//       "On-Page SEO: Title, Meta Description, URL Optimization",
+//       "Header Tags (H1, H2)",
+//       "Image Alt Tags",
+//       "Internal Linking",
+//       "Sitemap & Robots.txt Setup",
+//       "Google Analytics & Search Console Setup",
+//       "Basic Local SEO: Google Business Profile Optimization",
+//       "NAP (Name/Address/Phone) Consistency",
+//       "Monthly Report (Basic Traffic & Ranking Overview)",
+//     ],
+//     buttonText: "Upgrade Now",
+//   },
+//   {
+//     name: "Advanced SEO Plan (Growth SEO)",
+//     description: "For businesses that want traffic growth & local visibility.",
+//     features: [
+//       "Detailed Website Audit (Technical + Content)",
+//       "Keyword Research (20–30 keywords, mix of short & long-tail)",
+//       "Advanced On-Page SEO: Schema Markup (Local/Business/FAQ)",
+//       "Page Speed Optimization",
+//       "Content Optimization (Existing Pages)",
+//       "Off-Page SEO: 10–20 Backlinks per month (Guest Posts, Directories, Local Citations)",
+//       "Social Bookmarking",
+//       "Local SEO: Google Business Profile Weekly Updates (Posts, Photos, Offers)",
+//       "Review Generation Strategy",
+//       "Blog Writing (2 Blogs / month) with SEO Optimization",
+//       "Competitor Analysis & Keyword Gap Report",
+//       "Monthly Report (Traffic, Rankings, Conversions)",
+//     ],
+//     buttonText: "Upgrade Now",
+//     popular: true,
+//   },
+//   {
+//     name: "Premium SEO Plan (Full SEO Domination)",
+//     description: "For businesses aiming for top rankings, branding & lead generation.",
+//     features: [
+//       "Complete Website Audit (Technical, UX, CRO, Mobile-first)",
+//       "Keyword Research (50+ keywords across multiple clusters)",
+//       "Full On-Page SEO: Advanced Schema (FAQ, Product, Review, HowTo, Local)",
+//       "Internal Linking Strategy for Topical Authority",
+//       "Content Silos (Pillar + Cluster Content)",
+//       "Landing Page Optimization (for conversions)",
+//       "Off-Page SEO: High-Quality Backlinks (Guest Posting, Niche Edits, PR Submissions)",
+//       "Authority Link Building (DA 40+ sites)",
+//       "Local Citations (International + Regional)",
+//       "Content Marketing: 4–8 Blogs / month with SEO optimization",
+//       "PR Articles / Guest Contributions",
+//       "Video SEO (YouTube Optimization if applicable)",
+//       "Local SEO: Advanced Google Business Management (Daily/Weekly Updates, Offers, Events, Q&A)",
+//       "Voice Search Optimization",
+//       "Technical SEO: Site Speed, Core Web Vitals, Mobile Optimization",
+//       "Crawl Budget Optimization & Indexing Control",
+//       "Analytics & Tracking: Custom Dashboard (GA4, GSC, Keyword Ranking, Conversions)",
+//       "Heatmaps & User Behavior Analysis (Hotjar/Clarity)",
+//       "Detailed Monthly Report + Strategy Call",
+//     ],
+//     buttonText: "Upgrade Now",
+//   },
+// ];
 
 
 
@@ -179,12 +179,12 @@ const plans = [
         steps={workingSteps}
       />
        <DigitalMarketingFAQs faqs={faqsData} />
-        {/* Pricing Section */}
-            <PricingSection
+       
+            {/* <PricingSection
   title="Our Plans"
   plans={plans}
   backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"
-/>
+/> */}
      
     <GlassFooter2 />
     </>

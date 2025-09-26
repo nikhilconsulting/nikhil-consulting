@@ -9,53 +9,59 @@ const plans = {
       name: "Landing Page Website",
       goal: "Simple & effective online presence",
       features: [
-        "1-page responsive landing page",
-        "Basic branding & design",
-        "Contact/Lead form integration",
-        "Social media links",
-        "Basic on-page SEO",
-        "Ideal for: Startups, product launches, small services",
+        "1 - Page Responsive Landing Page",
+        "Contact / Lead Form Integration",
+        "Affordable Hosting",
+        "Full On-Page SEO",
+        "Technical Setup",
+        "6 month Support",
+        
       ],
+      ideal:"Startups, product launches, small services",
       buttonText: "Get Started",
     },
     {
       name: "Google Ads",
-      goal: "Targeted traffic & leads",
+      goal: "Targeted traffic & leads from Ads",
       features: [
-        "1–2 search/display campaigns",
-        "Keyword research & ad copy",
-        "Conversion tracking setup",
-        "Weekly optimization",
-        "Monthly performance report",
-        "Ideal for: Businesses needing instant leads & traffic",
+        "1 – 2 Search / Display Campaigns",
+        "In - Depth Website Audit",
+        "Keyword Research & Ad Copy",
+        "Conversion Tracking Setup",
+        "Weekly Optimization",
+        "Monthly Performance Report",
+       
       ],
+      ideal: " Businesses needing instant leads & traffic", 
       buttonText: "Get Started",
     },
     {
       name: "Meta Ads",
       goal: "Brand awareness & engagement",
       features: [
-        "1–2 campaigns (Awareness / Traffic / Leads)",
-        "Audience targeting & ad creation",
-        "A/B testing & optimization",
-        "Pixel & conversion tracking setup",
-        "Monthly report & insights",
-        "Ideal for: Local businesses, e-commerce, service providers",
+        "1 – 2 Campaigns ( Awareness / Traffic / Leads )",
+        "Audience Targeting & Ad creation",
+        "A / B Testing & Optimization",
+        "Pixel & Conversion Tracking Setup",
+        "Monthly Report & Insights",
+        
       ],
+      ideal: "Local businesses, e-commerce, service providers",
       buttonText: "Get Started",
     },
     {
       name: "Local SEO",
       goal: "Improve local visibility & get leads from search",
       features: [
-        "Google Business Profile setup & optimization",
-        "Local keyword research",
-        "On-page SEO for local pages",
-        "Citation building & review management",
-        "Monthly reporting & insights",
-        "Ideal for: Shops, clinics, service providers, restaurants",
+        "Google Business Profile Setup & Optimization",
+        "In - Depth Site Analysis",
+        "Content Marketing",
+        "Local Keyword Research",
+        "Complete SEO for Local Pages",
+        "Monthly Reporting & Insights",
       ],
       buttonText: "Get Started",
+      ideal: " Shops, clinics, service providers, restaurants",
     },
   ],
 };
@@ -82,12 +88,12 @@ export default function Pricing() {
         {currentPlans.map((plan, index) => (
           <div
             key={plan.name}
-            className={`rounded-3xl p-10 flex flex-col transform transition-transform duration-500 hover:scale-[1.02] origin-center w-[340px] mx-auto bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)] text-gray-900 shadow-md ${index === 1 ? 'mt-8 md:mt-0' : ''}`}
-          >
+       className={`rounded-3xl p-10 flex flex-col justify-between min-h-[540px] transform transition-transform duration-500 hover:scale-[1.02] origin-center w-[340px] mx-auto bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)] text-gray-900 shadow-md`}
+  >
             <span className="text-2xl text-gray-100 font-semibold mb-2">{plan.name}</span>
-            <p className="text-gray-100 mb-4 text-base font-semibold">{plan.goal}</p>
+            <p className="text-[#8FCDFF] mb-2 text-base font-semibold">Goal : {plan.goal}</p>
 
-            <ul className="space-y-3 mb-8 text-left text-base text-[#fff]">
+            <ul className="space-y-3 mb-2 text-left text-base text-[#fff]">
               {plan.features.map((feature) => (
                 <li key={feature} className="flex items-start">
                  <svg
@@ -107,7 +113,7 @@ export default function Pricing() {
                 </li>
               ))}
             </ul>
-
+<p className="text-[#8FCDFF] mb-4 text-base font-semibold">Ideal for : {plan.ideal}</p>
          <Link
   href="/services"
   className="relative bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] text-white inline-flex items-center justify-center overflow-hidden group px-6 py-2 text-lg font-semibold cursor-pointer transition hover:scale-105"

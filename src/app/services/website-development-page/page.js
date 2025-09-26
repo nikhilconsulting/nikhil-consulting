@@ -4,55 +4,55 @@ import GlassNavbar2 from "@/components/Navbar2";
 import GlassFooter2 from "@/components/Footer2";
 import WorkingProcess from "@/components/props/WorkingProcess";
 import DigitalMarketingFAQs from "@/components/props/Faqs";
-import PricingSection from "@/components/props/Pricing";
+// import PricingSection from "@/components/props/Pricing";
 import Banner from "@/components/Banner";
 
 const SMMPage = () => {
-const plans = [
-  {
-    name: "Basic Plan (Starter Website)",
-    description: "Simple 3–5 page responsive website with basic SEO.",
-    features: [
-      "3–5 page website  (Home, About, Services, Contact)",
-      "Mobile responsive design",
-      "Basic on-page SEO setup",
-      "Contact form integration",
-      "Social media links",
-      "1 round of revisions",
-    ],
-    buttonText: "Upgrade Now",
-  },
-  {
-    name: "Advanced Plan (Business Website)",
-    description: "Custom design with branding, blog setup & SEO.",
-    features: [
-      "8–12 page website (with Blog, Portfolio, Gallery, etc.)",
-      "Custom design with branding",
-      "Advanced on-page SEO (meta, schema, sitemap)",
-      "Speed & security optimization",
-      "Integration (Chatbot, WhatsApp, Email forms)",
-      "Blog setup & training for updates",
-      "2–3 rounds of revisions",
-    ],
-    buttonText: "Upgrade Now",
-    popular: true,
-  },
-  {
-    name: "Premium Plan (Custom/Enterprise Website)",
-    description: "Fully custom, advanced SEO, payment & API integrations.",
-    features: [
-      "Fully custom website (Unlimited pages / E-commerce / Booking system)",
-      "Advanced UX/UI design + animations",
-      "Full SEO optimization (on-page + technical)",
-      "Payment gateway / CRM / API integrations",
-      "Multi-language & advanced features (if required)",
-      "Conversion-focused landing pages",
-      "Ongoing maintenance & priority support",
-      "Unlimited revisions (within project scope)",
-    ],
-    buttonText: "Upgrade Now",
-  },
-];
+// const plans = [
+//   {
+//     name: "Basic Plan (Starter Website)",
+//     description: "Simple 3–5 page responsive website with basic SEO.",
+//     features: [
+//       "3–5 page website  (Home, About, Services, Contact)",
+//       "Mobile responsive design",
+//       "Basic on-page SEO setup",
+//       "Contact form integration",
+//       "Social media links",
+//       "1 round of revisions",
+//     ],
+//     buttonText: "Upgrade Now",
+//   },
+//   {
+//     name: "Advanced Plan (Business Website)",
+//     description: "Custom design with branding, blog setup & SEO.",
+//     features: [
+//       "8–12 page website (with Blog, Portfolio, Gallery, etc.)",
+//       "Custom design with branding",
+//       "Advanced on-page SEO (meta, schema, sitemap)",
+//       "Speed & security optimization",
+//       "Integration (Chatbot, WhatsApp, Email forms)",
+//       "Blog setup & training for updates",
+//       "2–3 rounds of revisions",
+//     ],
+//     buttonText: "Upgrade Now",
+//     popular: true,
+//   },
+//   {
+//     name: "Premium Plan (Custom/Enterprise Website)",
+//     description: "Fully custom, advanced SEO, payment & API integrations.",
+//     features: [
+//       "Fully custom website (Unlimited pages / E-commerce / Booking system)",
+//       "Advanced UX/UI design + animations",
+//       "Full SEO optimization (on-page + technical)",
+//       "Payment gateway / CRM / API integrations",
+//       "Multi-language & advanced features (if required)",
+//       "Conversion-focused landing pages",
+//       "Ongoing maintenance & priority support",
+//       "Unlimited revisions (within project scope)",
+//     ],
+//     buttonText: "Upgrade Now",
+//   },
+// ];
 
 
  const faqsData = [
@@ -159,12 +159,12 @@ const plans = [
         background="linear-gradient(to bottom, #382933, #372935, #372831)"
       />
       <DigitalMarketingFAQs faqs={faqsData} />
-        {/* Pricing Section */}
-            <PricingSection
+        
+            {/* <PricingSection
   title="Our Plans"
   plans={plans}
   backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"
-/>
+/> */}
         
     <GlassFooter2 />
     </>

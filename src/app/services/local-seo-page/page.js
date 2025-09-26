@@ -4,60 +4,60 @@ import GlassNavbar2 from "@/components/Navbar2";
 import GlassFooter2 from "@/components/Footer2";
 import WorkingProcess from "@/components/props/WorkingProcess";
 import DigitalMarketingFAQs from "@/components/props/Faqs";
-import PricingSection from "@/components/props/Pricing";
+// import PricingSection from "@/components/props/Pricing";
 import Banner from "@/components/Banner";
 
 const SMMPage = () => {
-const plans = [
-  {
-    name: "Basic Local SEO Plan (Starter Visibility)",
-    description: "For small businesses wanting to establish local presence.",
-    features: [
-      "Google Business Profile Setup & Optimization",
-      "NAP (Name/Address/Phone) Consistency across directories",
-      "5–10 Local Keyword Research",
-      "Basic On-Page Optimization (Title, Meta, Header Tags, Alt Tags)",
-      "Local Citations (5–10 listings)",
-      "Google Analytics & Search Console Setup",
-      "Monthly Report (Basic Traffic & Local Ranking Overview)",
-    ],
-    buttonText: "Upgrade Now",
-  },
-  {
-    name: "Advanced Local SEO Plan (Growth & Engagement)",
-    description: "For businesses wanting traffic growth & strong local visibility.",
-    features: [
-      "Complete Google Business Profile Optimization",
-      "Weekly GBP Updates (Posts, Photos, Offers)",
-      "Keyword Research (15–25 local keywords)",
-      "On-Page SEO for Local Landing Pages",
-      "Local Citations (15–25 listings)",
-      "10–15 Backlinks (Local Directories, Guest Posts, Citations)",
-      "Review Generation Strategy (Templates + Guidance)",
-      "Competitor Analysis & Keyword Gap Report",
-      "Monthly Report (Traffic, Rankings, Leads)",
-    ],
-    buttonText: "Upgrade Now",
-    popular: true,
-  },
-  {
-    name: "Premium Local SEO Plan (Local Domination)",
-    description: "For businesses aiming for top local rankings, branding & lead generation.",
-    features: [
-      "Advanced Google Business Profile Management (Daily/Weekly Updates, Events, Q&A)",
-      "Local Keyword Research (30–50 keywords across service areas)",
-      "Advanced On-Page SEO (Schema Markup: Local Business, FAQ, Reviews)",
-      "Local Citations (50+ listings including high DA sites)",
-      "Authority Backlinks (DA 40+ Guest Posts, PR Submissions, Niche Edits)",
-      "Content Marketing (2–4 Local Blogs / month with SEO)",
-      "Video SEO for Local Visibility (YouTube Optimization if applicable)",
-      "Voice Search Optimization for Local Queries",
-      "Custom Local SEO Dashboard (GBP Insights, GA4, GSC, Keyword Rankings, Leads)",
-      "Detailed Monthly Report + Strategy Call",
-    ],
-    buttonText: "Upgrade Now",
-  },
-];
+// const plans = [
+//   {
+//     name: "Basic Local SEO Plan (Starter Visibility)",
+//     description: "For small businesses wanting to establish local presence.",
+//     features: [
+//       "Google Business Profile Setup & Optimization",
+//       "NAP (Name/Address/Phone) Consistency across directories",
+//       "5–10 Local Keyword Research",
+//       "Basic On-Page Optimization (Title, Meta, Header Tags, Alt Tags)",
+//       "Local Citations (5–10 listings)",
+//       "Google Analytics & Search Console Setup",
+//       "Monthly Report (Basic Traffic & Local Ranking Overview)",
+//     ],
+//     buttonText: "Upgrade Now",
+//   },
+//   {
+//     name: "Advanced Local SEO Plan (Growth & Engagement)",
+//     description: "For businesses wanting traffic growth & strong local visibility.",
+//     features: [
+//       "Complete Google Business Profile Optimization",
+//       "Weekly GBP Updates (Posts, Photos, Offers)",
+//       "Keyword Research (15–25 local keywords)",
+//       "On-Page SEO for Local Landing Pages",
+//       "Local Citations (15–25 listings)",
+//       "10–15 Backlinks (Local Directories, Guest Posts, Citations)",
+//       "Review Generation Strategy (Templates + Guidance)",
+//       "Competitor Analysis & Keyword Gap Report",
+//       "Monthly Report (Traffic, Rankings, Leads)",
+//     ],
+//     buttonText: "Upgrade Now",
+//     popular: true,
+//   },
+//   {
+//     name: "Premium Local SEO Plan (Local Domination)",
+//     description: "For businesses aiming for top local rankings, branding & lead generation.",
+//     features: [
+//       "Advanced Google Business Profile Management (Daily/Weekly Updates, Events, Q&A)",
+//       "Local Keyword Research (30–50 keywords across service areas)",
+//       "Advanced On-Page SEO (Schema Markup: Local Business, FAQ, Reviews)",
+//       "Local Citations (50+ listings including high DA sites)",
+//       "Authority Backlinks (DA 40+ Guest Posts, PR Submissions, Niche Edits)",
+//       "Content Marketing (2–4 Local Blogs / month with SEO)",
+//       "Video SEO for Local Visibility (YouTube Optimization if applicable)",
+//       "Voice Search Optimization for Local Queries",
+//       "Custom Local SEO Dashboard (GBP Insights, GA4, GSC, Keyword Rankings, Leads)",
+//       "Detailed Monthly Report + Strategy Call",
+//     ],
+//     buttonText: "Upgrade Now",
+//   },
+// ];
 
 
 const faqsData = [
@@ -166,12 +166,12 @@ const faqsData = [
         background="linear-gradient(to bottom, #382933, #372935, #372831)"
       />
        <DigitalMarketingFAQs faqs={faqsData} />
-        {/* Pricing Section */}
-            <PricingSection
+      
+            {/* <PricingSection
   title="Our Plans"
   plans={plans}
   backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"
-/>
+/> */}
 
        
     <GlassFooter2 />

@@ -4,51 +4,51 @@ import GlassNavbar2 from "@/components/Navbar2";
 import GlassFooter2 from "@/components/Footer2";
 import WorkingProcess from "@/components/props/WorkingProcess";
 import DigitalMarketingFAQs from "@/components/props/Faqs";
-import PricingSection from "@/components/props/Pricing";
+// import PricingSection from "@/components/props/Pricing";
 import Banner from "@/components/Banner";
 const GooglePage = () => {
 
-const plans = [
-  {
-    name: "Basic Plan (Starter)",
-    description: "Account setup with 1–2 simple campaigns and monthly report.",
-    features: [
-      "Account & campaign setup",
-      "1–2 simple campaigns (Search/Display)",
-      "Basic keyword research",
-      "Ad copywriting + extensions",
-      "Monthly performance report",
-    ],
-    buttonText: "Upgrade Now",
-  },
-  {
-    name: "Advanced Plan (Growth)",
-    description: "Multiple campaigns with conversion tracking and weekly optimization.",
-    features: [
-      "Multiple campaigns (Search, Display, Remarketing)",
-      "Advanced keyword research + negative keywords",
-      "Conversion tracking setup",
-      "Weekly optimization (CPC, CTR, Quality Score)",
-      "Competitor analysis",
-      "Detailed monthly report",
-    ],
-    buttonText: "Upgrade Now",
-    popular: true,
-  },
-  {
-    name: "Premium Plan (Full Scale)",
-    description: "Full funnel campaigns with smart bidding and 24/7 strategy calls.",
-    features: [
-      "Full-funnel campaigns (Search, Display, Shopping, Video, Remarketing)",
-      "Landing page optimization for conversions",
-      "Smart bidding & automation",
-      "A/B testing (ads & landing pages)",
-      "ROI-focused tracking (calls, forms, sales)",
-      "Weekly strategy calls + 24/7 monitoring",
-    ],
-    buttonText: "Upgrade Now",
-  },
-];
+// const plans = [
+//   {
+//     name: "Basic Plan (Starter)",
+//     description: "Account setup with 1–2 simple campaigns and monthly report.",
+//     features: [
+//       "Account & campaign setup",
+//       "1–2 simple campaigns (Search/Display)",
+//       "Basic keyword research",
+//       "Ad copywriting + extensions",
+//       "Monthly performance report",
+//     ],
+//     buttonText: "Upgrade Now",
+//   },
+//   {
+//     name: "Advanced Plan (Growth)",
+//     description: "Multiple campaigns with conversion tracking and weekly optimization.",
+//     features: [
+//       "Multiple campaigns (Search, Display, Remarketing)",
+//       "Advanced keyword research + negative keywords",
+//       "Conversion tracking setup",
+//       "Weekly optimization (CPC, CTR, Quality Score)",
+//       "Competitor analysis",
+//       "Detailed monthly report",
+//     ],
+//     buttonText: "Upgrade Now",
+//     popular: true,
+//   },
+//   {
+//     name: "Premium Plan (Full Scale)",
+//     description: "Full funnel campaigns with smart bidding and 24/7 strategy calls.",
+//     features: [
+//       "Full-funnel campaigns (Search, Display, Shopping, Video, Remarketing)",
+//       "Landing page optimization for conversions",
+//       "Smart bidding & automation",
+//       "A/B testing (ads & landing pages)",
+//       "ROI-focused tracking (calls, forms, sales)",
+//       "Weekly strategy calls + 24/7 monitoring",
+//     ],
+//     buttonText: "Upgrade Now",
+//   },
+// ];
 
 
  const faqsData = [
@@ -156,12 +156,12 @@ const plans = [
         background="linear-gradient(to bottom, #382933, #372935, #372831)"
       />
  <DigitalMarketingFAQs faqs={faqsData} />
-       {/* Pricing Section */}
-            <PricingSection
+    
+            {/* <PricingSection
   title="Our Plans"
   plans={plans}
   backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"
-/>
+/> */}
        
     <GlassFooter2 />
     </>

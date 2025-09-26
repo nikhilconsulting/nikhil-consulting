@@ -4,54 +4,54 @@ import GlassNavbar2 from "@/components/Navbar2";
 import GlassFooter2 from "@/components/Footer2";
 import WorkingProcess from "@/components/props/WorkingProcess";
 import DigitalMarketingFAQs from "@/components/props/Faqs";
-import PricingSection from "@/components/props/Pricing";
+// import PricingSection from "@/components/props/Pricing";
 import Banner from "@/components/Banner";
 
 const SMMPage = () => {
-const plans = [
-  {
-    name: "Basic Plan (Starter Presence)",
-    description: "Profile setup & optimization with basic engagement.",
-    features: [
-      "Profile setup & optimization",
-      "8–10 posts + 2–3 stories weekly",
-      "Basic captions & hashtags",
-      "Monthly content calendar",
-      "Simple engagement + monthly report",
-    ],
-    buttonText: "Upgrade Now",
-  },
-  {
-    name: "Advanced Plan (Growth & Engagement)",
-    description: "Branded profiles & templates for higher engagement.",
-    features: [
-      "Branded profiles & templates",
-      "15–20 posts + 8–10 stories monthly",
-      "Mix of static, carousel & reels",
-      "Paid ads setup (small budget)",
-      "Community management (DMs, comments)",
-      "Influencer outreach (micro)",
-      "Monthly content calendar & growth report",
-    ],
-    buttonText: "Upgrade Now",
-    popular: true,
-  },
-  {
-    name: "Premium Plan (Full Branding & Leads)",
-    description: "Full branding kit and strategy with 24/7 community management.",
-    features: [
-      "Full branding kit + strategy",
-      "Daily posts (images, reels, videos, polls, stories)",
-      "Professional graphics & video editing",
-      "Paid ads campaigns (awareness to leads)",
-      "Influencer & collaboration marketing",
-      "24/7 community management",
-      "Multi-platform (FB, Insta, LinkedIn, YouTube)",
-      "Weekly calls + detailed monthly report",
-    ],
-    buttonText: "Upgrade Now",
-  },
-];
+// const plans = [
+//   {
+//     name: "Basic Plan (Starter Presence)",
+//     description: "Profile setup & optimization with basic engagement.",
+//     features: [
+//       "Profile setup & optimization",
+//       "8–10 posts + 2–3 stories weekly",
+//       "Basic captions & hashtags",
+//       "Monthly content calendar",
+//       "Simple engagement + monthly report",
+//     ],
+//     buttonText: "Upgrade Now",
+//   },
+//   {
+//     name: "Advanced Plan (Growth & Engagement)",
+//     description: "Branded profiles & templates for higher engagement.",
+//     features: [
+//       "Branded profiles & templates",
+//       "15–20 posts + 8–10 stories monthly",
+//       "Mix of static, carousel & reels",
+//       "Paid ads setup (small budget)",
+//       "Community management (DMs, comments)",
+//       "Influencer outreach (micro)",
+//       "Monthly content calendar & growth report",
+//     ],
+//     buttonText: "Upgrade Now",
+//     popular: true,
+//   },
+//   {
+//     name: "Premium Plan (Full Branding & Leads)",
+//     description: "Full branding kit and strategy with 24/7 community management.",
+//     features: [
+//       "Full branding kit + strategy",
+//       "Daily posts (images, reels, videos, polls, stories)",
+//       "Professional graphics & video editing",
+//       "Paid ads campaigns (awareness to leads)",
+//       "Influencer & collaboration marketing",
+//       "24/7 community management",
+//       "Multi-platform (FB, Insta, LinkedIn, YouTube)",
+//       "Weekly calls + detailed monthly report",
+//     ],
+//     buttonText: "Upgrade Now",
+//   },
+// ];
 
 
  const faqsData = [
@@ -159,12 +159,12 @@ const plans = [
         background="linear-gradient(to bottom, #382933, #372935, #372831)"
       />
       <DigitalMarketingFAQs faqs={faqsData} />
-        {/* Pricing Section */}
-            <PricingSection
+     
+            {/* <PricingSection
   title="Our Plans"
   plans={plans}
   backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"
-/>
+/> */}
 
         
     <GlassFooter2 />

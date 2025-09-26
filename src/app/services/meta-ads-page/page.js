@@ -4,54 +4,54 @@ import GlassNavbar2 from "@/components/Navbar2";
 import GlassFooter2 from "@/components/Footer2";
 import WorkingProcess from "@/components/props/WorkingProcess";
 import DigitalMarketingFAQs from "@/components/props/Faqs";
-import PricingSection from "@/components/props/Pricing";
+// import PricingSection from "@/components/props/Pricing";
 import Banner from "@/components/Banner";
 
 const SMMPage = () => {
-const plans = [
-  {
-    name: "Basic Plan (Starter)",
-    description: "Setup Business Manager & run 1–2 simple campaigns.",
-    features: [
-      "Business Manager & Ad Account setup",
-      "1–2 simple campaigns (Awareness / Engagement / Traffic)",
-      "Basic audience targeting",
-      "Ad creatives (images + copywriting)",
-      "Monthly performance report",
-    ],
-    buttonText: "Upgrade Now",
-  },
-  {
-    name: "Advanced Plan (Growth)",
-    description: "Multiple campaigns with A/B testing and weekly optimization.",
-    features: [
-      "Multiple campaigns (Traffic, Leads, Engagement, Remarketing)",
-      "Custom audience & lookalike audience setup",
-      "A/B testing (ads, audiences, creatives)",
-      "Pixel & conversion tracking setup",
-      "Weekly optimization (CPC, CTR, CPA)",
-      "Competitor ad analysis",
-      "Detailed monthly report",
-    ],
-    buttonText: "Upgrade Now",
-    popular: true,
-  },
-  {
-    name: "Premium Plan (Full Funnel)",
-    description: "Full funnel campaigns with ROI-focused analytics and 24/7 support.",
-    features: [
-      "Full funnel campaigns (Awareness → Consideration → Conversion)",
-      "Advanced audience strategy (interest + behavior + retargeting + lookalikes)",
-      "Video ads, carousel ads & dynamic product ads",
-      "Landing page optimization for conversions",
-      "Smart budget allocation & scaling",
-      "A/B testing for creatives, placements & audiences",
-      "ROI-focused analytics & custom dashboard",
-      "Weekly calls + 24/7 monitoring & support",
-    ],
-    buttonText: "Upgrade Now",
-  },
-];
+// const plans = [
+//   {
+//     name: "Basic Plan (Starter)",
+//     description: "Setup Business Manager & run 1–2 simple campaigns.",
+//     features: [
+//       "Business Manager & Ad Account setup",
+//       "1–2 simple campaigns (Awareness / Engagement / Traffic)",
+//       "Basic audience targeting",
+//       "Ad creatives (images + copywriting)",
+//       "Monthly performance report",
+//     ],
+//     buttonText: "Upgrade Now",
+//   },
+//   {
+//     name: "Advanced Plan (Growth)",
+//     description: "Multiple campaigns with A/B testing and weekly optimization.",
+//     features: [
+//       "Multiple campaigns (Traffic, Leads, Engagement, Remarketing)",
+//       "Custom audience & lookalike audience setup",
+//       "A/B testing (ads, audiences, creatives)",
+//       "Pixel & conversion tracking setup",
+//       "Weekly optimization (CPC, CTR, CPA)",
+//       "Competitor ad analysis",
+//       "Detailed monthly report",
+//     ],
+//     buttonText: "Upgrade Now",
+//     popular: true,
+//   },
+//   {
+//     name: "Premium Plan (Full Funnel)",
+//     description: "Full funnel campaigns with ROI-focused analytics and 24/7 support.",
+//     features: [
+//       "Full funnel campaigns (Awareness → Consideration → Conversion)",
+//       "Advanced audience strategy (interest + behavior + retargeting + lookalikes)",
+//       "Video ads, carousel ads & dynamic product ads",
+//       "Landing page optimization for conversions",
+//       "Smart budget allocation & scaling",
+//       "A/B testing for creatives, placements & audiences",
+//       "ROI-focused analytics & custom dashboard",
+//       "Weekly calls + 24/7 monitoring & support",
+//     ],
+//     buttonText: "Upgrade Now",
+//   },
+// ];
 
 
   const faqsData = [
@@ -160,12 +160,12 @@ const plans = [
         background="linear-gradient(to bottom, #382933, #372935, #372831)"
       />
        <DigitalMarketingFAQs faqs={faqsData} />
-        {/* Pricing Section */}
-            <PricingSection
+        
+            {/* <PricingSection
   title="Our Plans"
   plans={plans}
   backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"
-/>
+/> */}
        
     <GlassFooter2 />
     </>
