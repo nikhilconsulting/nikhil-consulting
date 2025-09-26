@@ -82,7 +82,7 @@ export default function Pricing() {
         {currentPlans.map((plan, index) => (
           <div
             key={plan.name}
-            className={`rounded-3xl p-10 flex flex-col transform transition-transform duration-500 hover:scale-[1.02] origin-center w-[340px] mx-auto bg-[linear-gradient(125deg,_#5F69A8,_#000000,_#372935)] text-gray-900 shadow-md ${index === 1 ? 'mt-8 md:mt-0' : ''}`}
+            className={`rounded-3xl p-10 flex flex-col transform transition-transform duration-500 hover:scale-[1.02] origin-center w-[340px] mx-auto bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)] text-gray-900 shadow-md ${index === 1 ? 'mt-8 md:mt-0' : ''}`}
           >
             <span className="text-2xl text-gray-100 font-semibold mb-2">{plan.name}</span>
             <p className="text-gray-100 mb-4 text-base font-semibold">{plan.goal}</p>

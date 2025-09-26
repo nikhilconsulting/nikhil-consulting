@@ -23,7 +23,7 @@
   }) => {
     return (
       <>      <section
-    className="relative pt-32 pb-16 lg:pt-36 lg:pb-20 bg-[linear-gradient(125deg,_#5F69A8,_#000000,_#5F69A8)]"
+    className="relative pt-32 pb-16 lg:pt-16 lg:pb-20 bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)]"
 
   >
 

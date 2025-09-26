@@ -39,7 +39,7 @@ const testimonials = [
 
 export default function TestimonialSection() {
   return (
-    <div className="bg-[linear-gradient(125deg,_#5F69A8,_#000000,_#fff)] backdrop-blur-[15px] px-2 pb-32 lg:px-16 lg:mt-32 xl:mt-0 testimonial-section h-auto">
+    <div className="bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)] backdrop-blur-[15px] px-2 pb-32 lg:px-16 lg:mt-32 xl:mt-0 testimonial-section h-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 text-white">
         
         {/* Left Section - Title */}
@@ -55,7 +55,7 @@ export default function TestimonialSection() {
           {testimonials.map((item, index) => (
             <div
               key={item.id}
-              className={`testimonial-card w-80 sm:w-5/6 md:w-auto mx-auto lg:py-10 lg:mx-0 text-white md:p-6 p-3 rounded-lg shadow-md border lg:mt-12 border-white bg-[#5F69A8] backdrop-blur-[15px] sticky top-1/4 mt-10 ${
+              className={`testimonial-card w-80 sm:w-5/6 md:w-auto mx-auto lg:py-10 lg:mx-0 text-white md:p-6 p-3 rounded-lg shadow-md border lg:mt-12 border-white bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] backdrop-blur-[15px] sticky top-1/4 mt-10 ${
                 item.rotate ? item.rotate : ''
               }`}
               style={{

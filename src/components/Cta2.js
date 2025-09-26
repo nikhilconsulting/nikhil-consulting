@@ -10,12 +10,14 @@ export default function Cta2() {
             Ready to Dominate  <br className="sm:hidden" />
             Your Market?
           </h2>
-          <p className="text-white mb-4">
+          <p className="text-white mb-8">
             Don't just compete-lead. Build powerful digital strategies that deliver a clear competitive advantage
           </p>
-          <Link href="/services" className="bg-gradient-to-r from-[#372935] via-black to-[#372935]  cursor-pointer transition hover:scale-105 text-white font-semibold py-3 px-5 transition duration-300">
+          <div className='mb-8 lg:mb-0'>
+          <Link href="/services" className="bg-gradient-to-r from-[#372935] via-black to-[#372935]  cursor-pointer transition hover:scale-105 text-white font-semibold py-3 px-5 transition duration-300 ">
             Claim Your Advantage →
           </Link>
+          </div>
         </div>
 
         {/* Right Side - Images */}

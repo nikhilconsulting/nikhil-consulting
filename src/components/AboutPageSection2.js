@@ -5,10 +5,10 @@ import Link from 'next/link';
 export default function AboutPageSection2() {
   return (
    <section
-  className="relative w-full py-12 px-4 sm:px-6 md:px-12 lg:px-20 overflow-hidden flex flex-col justify-center bg-[linear-gradient(15deg,_#372831,_#000000,_#372831)]"
+  className="relative w-full py-12 px-4 sm:px-6 md:px-12 lg:px-20 overflow-hidden flex flex-col justify-center bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)]"
 >
 
-    <div className=" absolute bottom-0 right-0 w-[50vw] h-[50vw] bg-[linear-gradient(125deg,_#fff,_#000000,_#5F69A8)] rotate-45 origin-bottom-right z-0"></div>
+    <div className=" absolute bottom-0 right-0 w-[50vw] h-[50vw] bg-[#5F69A8] rotate-45 origin-bottom-right z-0"></div>
     <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-12 z-1">
         {/* Left Side - Blob Image */}
        <div className="relative w-full max-w-[500px] aspect-[4/3] mx-auto">
@@ -50,7 +50,7 @@ export default function AboutPageSection2() {
         </div>
 
         {/* Right Side - Text Content Wrapped in Black Card */}
-<div className="border border-[#5F69A8] p-4 lg:p-12 shadow-lg max-w-3xl mx-auto lg:mx-[-30] mt-10 lg:mt-0">
+<div className="border border-[#8DCBFD] bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)] p-4 lg:p-12 shadow-lg max-w-3xl mx-auto lg:mx-[-30] mt-10 lg:mt-0">
 
   <span className="text-4xl text-gray-100 font-semibold">
     Who We Are ?

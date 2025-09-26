@@ -102,8 +102,8 @@ useEffect(() => {
     <nav
         className={`fixed  top-0 left-0 right-0 flex items-center gap-4 text-white  px-8 py-4 transition-all duration-500 ease-in-out z-50 ${
           scrolled
-            ? "bg-gradient-to-r from-[#5F69A8] via-[#000000] to-[#372935]  slide-in-from-top  "
-            : "bg-transparent shadow-none "
+            ? "bg-[linear-gradient(15deg,_#000000,_#382933,_#000000)] border-b border-black  slide-in-from-top  "
+            : "bg-transparent border-none shadow-none "
         }`}
         aria-label="Main navigation"
       >
@@ -142,7 +142,7 @@ useEffect(() => {
                         className="transition-transform duration-300 group-hover:rotate-180 "
                       />
                     </Link>
-                    <ul className="absolute -left-25 opacity-0 cursor-pointer invisible group-hover:visible  font-bold group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 flex-col gap-2 text-white bg-gradient-to-r from-[#5F69A8] via-[#000000] to-[#372935] backdrop-blur-[15px] rounded-sm mt-7 p-2 shadow-lg z-50 min-w-[330px]">
+                    <ul className="absolute -left-25 opacity-0 cursor-pointer invisible group-hover:visible  font-bold group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 flex-col gap-2 text-white bg-[linear-gradient(15deg,_#000000,_#382933,_#000000)] backdrop-blur-[15px] rounded-sm mt-7 p-2 shadow-lg z-50 min-w-[330px]">
                       {item.children.map((child) => (
                         <li key={child.href}>
                           <Link

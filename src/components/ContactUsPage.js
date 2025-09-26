@@ -73,7 +73,7 @@ export default function ContactUsPage() {
     };
   return (
     <>
-   <section className="relative min-h-screen bg-[linear-gradient(125deg,_#5F69A8,_#000000,_#372831)] text-white flex items-center justify-center px-6 py-16 pt-30">
+   <section className="relative min-h-screen bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)] text-white flex items-center justify-center px-6 py-16 pt-30">
   
   {/* 🔷 Diagonal Background Element - Further Right */}
   {/* <div className="absolute inset-0 flex items-end justify-end z-[1] pointer-events-none translate-x-[12vw] sm:translate-x-[14vw] md:translate-x-[18vw] lg:translate-x-[22vw]">

@@ -21,10 +21,7 @@ const page = () => {
 <meta property="og:image:alt" content="Google Ads Company in Varanasi - RankInventiv" /> */}
 
      <div
-      className="min-h-screen w-full text-gray-200"
-      style={{
-        background: "linear-gradient(to bottom, #382933, #372935, #372831)",
-      }}
+      className="min-h-screen w-full text-gray-200 bg-gradient-to-r from-[#5F69A8] via-[#000000] to-[#372935] "
     >
       <GlassNavbar2 />
       <Banner title="Terms Of Services" />

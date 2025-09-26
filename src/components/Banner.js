@@ -5,7 +5,7 @@ import React from 'react';
 
 export default function Banner({ title, imageSrc }) {
   return (
-    <section className="relative w-full h-[190px] lg:h-[230px] flex items-center justify-center overflow-hidden bg-[linear-gradient(125deg,_#fff,_#000000,_#5F69A8)]">
+    <section className="relative w-full h-[220px] lg:h-[210px] flex items-center justify-center overflow-hidden bg-[#6E8EEE]">
       {/* Conditional background image */}
       {/* {imageSrc && (
         <Image
@@ -17,9 +17,9 @@ export default function Banner({ title, imageSrc }) {
         />
       )} */}
 
-      <h1 className="relative text-gray-100 text-4xl sm:text-5xl md:text-6xl mt-20 font-bold z-10 text-center">
+      <span className="relative text-gray-100 text-4xl md:text-5xl lg:text-5xl mt-24 lg:mt-22 font-bold z-10 text-center">
         {title}
-      </h1>
+      </span>
     </section>
   );
 }

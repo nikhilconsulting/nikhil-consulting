@@ -128,7 +128,7 @@ export default function ServicesScrollSticky() {
 
   return (
     <section
-      className="relative w-full min-h-screen text-gray-200 py-12 bg-gradient-to-r from-[#fff] via-[#000000] to-[#5F69A8]"
+      className="relative w-full min-h-screen text-gray-200 py-12 bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)]"
     >
       {/* Heading + Button */}
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 flex flex-col md:flex-row justify-between items-center">
@@ -220,14 +220,14 @@ export default function ServicesScrollSticky() {
 
 
         {/* ✅ Desktop Layout: Scrollable text + sticky image */}
-       <div className="hidden lg:grid lg:grid-cols-2 gap-12 lg:gap-14">
+       <div className="hidden lg:grid lg:grid-cols-2 gap-12 lg:gap-20 pb-10">
           {/* Left: Scrollable Content */}
-        <div className="flex flex-col gap-10 flex-1 ">
+        <div className="flex flex-col gap-26 flex-1  ">
   {services.map((service, index) => (
 <div
   key={service.id}
   ref={(el) => (itemRefs.current[index] = el)}
-  className="flex flex-col justify-center bg-gradient-to-r from-[#5F69A8] via-[#000000] to-[#5F69A8] border border-[#5F69A8] rounded-2xl p-4 shadow-lg min-h-[480px]"
+  className="flex flex-col justify-center border border-[#5F69A8] rounded-2xl p-4 shadow-lg min-h-[480px]"
 >
       <div className="flex items-center gap-4 mb-3">
         <span className="text-white text-4xl font-semibold">

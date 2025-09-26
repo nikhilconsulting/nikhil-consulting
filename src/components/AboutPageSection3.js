@@ -4,12 +4,12 @@ import Image from "next/image";
 export default function AboutPageSection3() {
   return (
     <>
-   <section className=" relative lg:bg-[linear-gradient(125deg,_#5F69A8,_#000000,_#fff)] bg-[linear-gradient(125deg,_#fff,_#000000,_#5F69A8)]  py-26 px-6 overflow-visible">
+   <section className=" relative bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)]  py-26 px-6 overflow-visible">
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-0">
 
         {/* Text Section */}
-        <div className="text-white order-2 lg:order-1 lg:mt-0 mt-8 border-2 border-[#5F69A8]  lg:p-8 p-4  ">
+        <div className="text-white order-2 lg:order-1 lg:mt-0 mt-8 border-2 border-[#8DCBFD]  lg:p-8 p-4  ">
           <span className="text-4xl font-bold leading-snug">
            What We Do ?
           </span>

@@ -36,7 +36,7 @@ export default function PricingSection({
             className={`rounded-3xl p-10 flex flex-col transform transition-transform duration-500 origin-center w-full max-w-[620px] mx-auto ${
               plan.popular
                 ? "bg-[#5F69A8] backdrop-blur-[15px] text-white scale-[1.05] shadow-lg"
-                : "bg-[linear-gradient(125deg,_#5F69A8,_#000000,_#372935)] text-gray-900 shadow-md"
+                : "bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)] text-gray-900 shadow-md"
             } ${index === 1 ? "mt-8 md:mt-0" : ""}`}
           >
             {plan.popular && (

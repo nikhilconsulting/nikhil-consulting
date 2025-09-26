@@ -35,7 +35,7 @@ const [selectedExpert, setSelectedExpert] = useState('');
 
   return (
     <>
-           <footer id="book-consulting" className="py-12 text-white  bg-gradient-to-r from-[#5F69A8] via-[#000000] to-[#372935] backdrop-blur-[15px]">
+           <footer id="book-consulting" className="py-12 text-white  bg-[linear-gradient(15deg,_#000000,_#382933,_#000000)] backdrop-blur-[15px]">
       <Cta2 />
         {/* Top Section */}
         <div className="max-w-8xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2  xl:grid-cols-6 gap-y-10 gap-x-6 lg:gap-x-0 px-4 sm:px-6 lg:px-15 xl:ml-6 md:ml-20 lg:mr-10 pt-10 ">
@@ -148,7 +148,7 @@ const [selectedExpert, setSelectedExpert] = useState('');
           <div className="flex gap-6 mb-4 sm:mb-0 text-xs">
             <Link href="/privacy-policy" className="hover:underline hover:text-[#8FCDFF]">Privacy Policy</Link>
             <span>|</span>
-            <Link href="/terms-&-conditions" className="hover:underline hover:text-[#8FCDFF]">Terms of Service</Link>
+            <Link href="/terms-of-services" className="hover:underline hover:text-[#8FCDFF]">Terms of Service</Link>
           </div>
           <p className="text-sm sm:text-base">
             © {new Date().getFullYear()} All Rights Reserved

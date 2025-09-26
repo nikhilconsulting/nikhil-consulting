@@ -61,9 +61,9 @@ const borderStyle = {
 
 const ServiceCards = () => {
   return (
-    <section className=" lg:bg-[linear-gradient(125deg,#fff,#000000,#5F69A8)]  bg-[linear-gradient(125deg,#5F69A8,#000000,#372935)] pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+    <section className=" bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)]   pt-32 pb-16 px-4 sm:px-6 lg:px-8">
       {/* 🌟 Section Heading */}
-      <div className="max-w-3xl mx-auto text-center mb-6">
+      <div className="max-w-3xl mx-auto text-center mb-6">                             
         <span className="text-5xl lg:text-5xl font-bold text-white">Our Services</span>
         <p className="mt-4 text-gray-100 text-lg ">
           Explore what we can do to boost your business online. Explore what we can do to boost your business online.  Explore what we can do to boost your business business online.
@@ -74,9 +74,9 @@ const ServiceCards = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service, index) => (
           <div key={index} style={borderStyle} >
-            <div className="bg-[linear-gradient(125deg,_#5F69A8,_#000000,_#372935)] lg:hover:scale-105 transition text-white  shadow-md p-6 flex flex-col hover:shadow-xl h-full">
+            <div className="bg-[linear-gradient(125deg,_#000000,_#372935,_#000000)] lg:hover:scale-105 transition text-white  shadow-md p-6 flex flex-col hover:shadow-xl h-full">
               {/* Image */}
-                <Link href={service.link}>
+                <Link href={service.link}>                 
               <div className="w-full h-44 sm:h-52 mb-5 overflow-hidden">
                 <img
                   src={service.image}

@@ -7,8 +7,8 @@ export default function DigitalMarketingFAQs({ faqs }) {
 
   return (
     <div
-      className="relative min-h-screen flex flex-col justify-start items-center px-4 sm:px-6 md:px-8 lg:px-20 py-10 lg:pt-17"
-style={{ background: "linear-gradient(125deg, #5F69A8, #000000, #fff)" }}
+      className="relative min-h-screen flex flex-col justify-start items-center px-4 sm:px-6 md:px-8 lg:px-20 py-10 lg:pt-17 bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)]"
+
     >
       <span className="flex justify-center text-2xl sm:text-2xl md:text-2xl lg:text-5xl font-bold mb-2 sm:mb-12 md:mb-4 bg-clip-text text-white">
         FAQs

@@ -61,7 +61,7 @@ useEffect(() => {
                 className="block"
               >
                 <div
-                  className={`bg-gradient-to-r from-[#5F69A8] via-[#000000] to-[#5F69A8] rounded-xl shadow-xl flex items-center justify-center w-[320px] h-[180px] transition-all duration-500 ${
+                  className={`bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] rounded-xl shadow-xl flex items-center justify-center w-[320px] h-[180px] transition-all duration-500 ${
                     isActive ? "md:scale-110 opacity-100 shadow-2xl" : "md:scale-90"
                   }`}
                 >

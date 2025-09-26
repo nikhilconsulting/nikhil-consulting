@@ -6,8 +6,8 @@ const WorkingProcess = ({
 }) => {
   return (
     <section
-      className="relative py-12 lg:py-18  "
-      style={{ background: "linear-gradient(125deg, #372831, #000000, #5F69A8)" }}
+      className="relative py-12 lg:py-18 bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)] "
+      
       
     >
       <div className="container mx-auto min-h-screen">

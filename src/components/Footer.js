@@ -137,7 +137,7 @@ const [selectedExpert, setSelectedExpert] = useState('');
           <div className="flex gap-6 mb-4 sm:mb-0 text-xs">
             <a href="/privacy-policy" className="hover:underline">Privacy Policy</a>
             <span>|</span>
-            <a href="/terms-&-conditions" className="hover:underline">Terms of Service</a>
+            <a href="/terms-of-services" className="hover:underline">Terms of Service</a>
           </div>
           <p className="text-sm sm:text-base">
             © {new Date().getFullYear()} All Rights Reserved

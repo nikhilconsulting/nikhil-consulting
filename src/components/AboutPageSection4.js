@@ -30,7 +30,7 @@ const features = [
 
 export default function AboutPageSection4() {
   return (
-    <section className="lg:bg-[linear-gradient(125deg,_#fff,_#000000,_#5F69A8)] bg-gradient-to-b from-[#000000] via-[#fff] to-[#000000]  py-12 px-4 sm:px-6 lg:px-16 min-h-screen lg:pt-20 lg:pb-26 pb-30">
+    <section className="bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)]  py-12 px-4 sm:px-6 lg:px-16 min-h-screen lg:pt-20 lg:pb-26 pb-30">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
         
         {/* Image Section + Heading */}
@@ -76,10 +76,10 @@ export default function AboutPageSection4() {
             {features.map((feature, idx) => (
               <div
                 key={idx}
-                className="bg-[linear-gradient(125deg,_#000000,_#5F69A8,_#000000)] backdrop-blur-md p-4 rounded-lg shadow-md flex items-start sm:items-center gap-4"
+                className="bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] backdrop-blur-md p-4 rounded-lg shadow-md flex items-start sm:items-center gap-4"
               >
                 {/* Number Circle */}
-                <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-[#5F69A8] text-white font-bold text-lg select-none">
+                <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)] text-white font-bold text-lg select-none">
                   {feature.number}
                 </div>
 
