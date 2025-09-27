@@ -17,7 +17,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="relative w-100 h-100 mt-20">
   <Image
-    src="/assets/images/logo/logomobile.png"
+    src="/assets/images/logo/logo.png"
     alt="My Logo"
     layout="fill"
     objectFit="contain"

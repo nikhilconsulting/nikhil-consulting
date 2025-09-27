@@ -94,7 +94,7 @@ const HeroSection = () => {
       className="relative bg-cover bg-center min-h-screen py-20 flex items-center transition-all duration-700 ease-in-out"
       style={{
         backgroundImage:
-          "url('/assets/images/home-page-image/WebsiteHomePage.png')", // FIXED IMAGE
+          "url('/assets/images/home-page-image/herosection-bg-image.png')", // FIXED IMAGE
       }}
     >
       {/* Overlay */}

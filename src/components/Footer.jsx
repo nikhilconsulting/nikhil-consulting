@@ -109,24 +109,23 @@ const [selectedExpert, setSelectedExpert] = useState('');
               <FaPhone /> +91-8527665635
             </a>
             <div className="flex gap-4 text-2xl sm:text-3xl">
-              <Link href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+              <Link href="https://www.linkedin.com/company/rankinventiv/" target="_blank" rel="noopener noreferrer">
                 <FaLinkedin className="cursor-pointer hover:scale-110 transition" />
               </Link>
-              <Link href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer">
+              <Link href="https://www.instagram.com/rankinventiv/" target="_blank" rel="noopener noreferrer">
                 <FaInstagram className="cursor-pointer hover:scale-110 transition" />
               </Link>
               <Link href="https://www.facebook.com/rankinventiv/" target="_blank" rel="noopener noreferrer">
                 <FaFacebook className="cursor-pointer hover:scale-110 transition" />
               </Link>
-              
-              <Link href="https://www.twitter.com/your-profile" target="_blank" rel="noopener noreferrer">
+              <Link href="https://x.com/rankinventiv" target="_blank" rel="noopener noreferrer">
                 <FaTwitter className="cursor-pointer hover:scale-110 transition" />
               </Link>
-              <Link href="https://www.youtube.com/@Rankinventiv" target="_blank" rel="noopener noreferrer">
+               <Link href="https://www.youtube.com/@Rankinventiv" target="_blank" rel="noopener noreferrer">
                 <FaYoutube className="cursor-pointer hover:scale-110 transition" />
               </Link>
               <Link href="https://maps.app.goo.gl/MNbdJh3Mn9J7joEn6" target="_blank" rel="noopener noreferrer">
-                <FaGooglePlusG className="cursor-pointer hover:scale-150 transition scale-[1.4]" />
+                <FaGooglePlusG className="cursor-pointer hover:scale-150 transition scale-[1.4] " />
               </Link>
             </div>
           </div>
@@ -137,7 +136,7 @@ const [selectedExpert, setSelectedExpert] = useState('');
           <div className="flex gap-6 mb-4 sm:mb-0 text-xs">
             <a href="/privacy-policy" className="hover:underline">Privacy Policy</a>
             <span>|</span>
-            <a href="/terms-of-services" className="hover:underline">Terms of Service</a>
+            <a href="/terms-of-services" className="hover:underline">Terms of Services</a>
           </div>
           <p className="text-sm sm:text-base">
             © {new Date().getFullYear()} All Rights Reserved

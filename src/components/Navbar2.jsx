@@ -3,10 +3,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, MoreVertical  } from "lucide-react";
 import ContactFormModal from "./ContactFormModal";
 import { usePathname } from "next/navigation";
-import SidebarToggle from "./Sidebar";
+import HomeSidebarSection from "./HomeSidebarSection";
 
 export default function GlassNavbar2() {
   const [sidebarOpen, setSidebarOpen] = useState(false); // for large screen sidebar
@@ -20,10 +20,7 @@ export default function GlassNavbar2() {
 
 
 
-  const handleContactClick = () => {
-    setShowContactForm(true);
-    setOpen(false); 
-  };
+
 
   const [scrolled, setScrolled] = useState(false);
 
@@ -100,7 +97,7 @@ useEffect(() => {
     
       <header className="fixed top-0 left-0 right-0 z-50 w-full">
     <nav
-        className={`fixed  top-0 left-0 right-0 flex items-center gap-4 text-white  px-8 py-4 transition-all duration-500 ease-in-out z-50 ${
+        className={`fixed  top-0 left-0 right-0 flex items-center gap-4 text-white  px-8 py-4 transition-all duration-500 ease-in-out z-40 ${
           scrolled
             ? "bg-[linear-gradient(15deg,_#000000,_#382933,_#000000)] border-b border-black  slide-in-from-top  "
             : "bg-transparent border-none shadow-none "
@@ -112,10 +109,10 @@ useEffect(() => {
 
 <div className="  flex justify-between h-16 items-center">
           {/* Left side (can be logo later) */}
-        <Link href={"/"} className="hidden lg:block  relative w-100 h-100 lg:mt-20 ml-10">
+        <Link href={"/"} className="hidden lg:block  relative w-100 h-30 lg:mt-2 ml-10">
           
          <Image
-           src="/assets/images/logo/logo-large-screen.png"
+           src="/assets/images/logo/logo-2.png"
            alt="My Logo"
            layout="fill"
            objectFit="contain"
@@ -123,7 +120,7 @@ useEffect(() => {
        </Link>
 
 
-          <ul className="hidden lg:flex flex-1 justify-end xl:ml-40 gap-10 list-none text-base p-[10px] tracking-[1.0px]">
+          <ul className="hidden lg:flex flex-1 justify-end xl:ml-40 gap-10 list-none text-lg p-[10px] mt-2 tracking-[1.0px]">
             {navItems.map((item) => (
               <li key={item.label} className="relative group">
                 {!item.children ? (
@@ -138,11 +135,11 @@ useEffect(() => {
                     <Link href={item.href}  className="flex items-center gap-1 py-2 text-white hover:text-[#8FCDFF] transition-colors font-bold  duration-200 cursor-pointer">
                       {item.label}
                       <ChevronDown
-                        size={23}
+                        size={28}
                         className="transition-transform duration-300 group-hover:rotate-180 "
                       />
                     </Link>
-                    <ul className="absolute -left-25 opacity-0 cursor-pointer invisible group-hover:visible  font-bold group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 flex-col gap-2 text-white bg-[linear-gradient(15deg,_#000000,_#382933,_#000000)] backdrop-blur-[15px] rounded-sm mt-7 p-2 shadow-lg z-50 min-w-[330px]">
+                    <ul className="absolute -left-25 opacity-0 cursor-pointer invisible group-hover:visible  font-bold group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 flex-col gap-2 text-white bg-[linear-gradient(15deg,_#000000,_#382933,_#000000)] backdrop-blur-[15px] rounded-sm mt-7 p-2 shadow-lg z-50 min-w-[340px]">
                       {item.children.map((child) => (
                         <li key={child.href}>
                           <Link
@@ -163,11 +160,11 @@ useEffect(() => {
 
  
 {/* Hamburger Button for both screen sizes */}
-<div className="flex items-center ml-auto gap-4">
+<div className="flex items-start ml-auto gap-4">
   {/* Mobile Logo */}
   <Link href="/" onClick={() => setOpen(false)} className="relative w-12 h-12 block lg:hidden">
     <Image
-      src="/assets/images/logo/logo-large-screen.png"
+      src="/assets/images/logo/logo-2.png"
       alt="Logo"
       layout="fill"
       objectFit="contain"
@@ -182,35 +179,39 @@ useEffect(() => {
     {open ? <X size={34} /> : <Menu size={38} />}
   </button>
 
-  {/* Large screen (>= lg): toggle sidebar */}
-  <button
-    className="text-white font-bold transition hover:scale-105 hidden hover:text-[#8FCDFF] lg:block cursor-pointer lg:mr-20"
-    onClick={() => setSidebarOpen(true)}
-  >
-    <Menu size={38} />
-  </button>
+
 </div>
 
 
 
-          <SidebarToggle isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-
+         
+{/* Large screen (>= lg): toggle sidebar */}
+<button
+  className={`transition hover:scale-105 hidden lg:block cursor-pointer lg:mr-20 z-[60] ${
+    scrolled
+      ? "text-white hover:text-[#8FCDFF]"
+      : "text-white hover:text-[#8FCDFF]" // Change to text-black if bg behind is light
+  }`}
+  onClick={() => setSidebarOpen(true)}
+>
+  <MoreVertical size={38} />
+</button>
 
         </nav>
-
-        {/* Mobile Dropdown (only < md) */}
+ 
+    
 {/* Mobile menu container */}
 {open && (
   <div className="block lg:hidden fixed top-22 left-0 w-full bg-white/5 backdrop-blur-[70px] shadow-lg border-b border-white/20 px-8 py-4 z-50">
     {/* Logo with relative + fixed size for Image fill */}
-    {/* <Link href="/" onClick={() => setOpen(false)} className="relative w-12 h-12">
+    <Link href="/" onClick={() => setOpen(false)} className="relative w-12 h-12">
       <Image
-        src="/assets/images/logo/favicon.png"
+        src="/assets/images/logo/logo.png"
         alt="Logo"
         layout="fill"
         objectFit="contain"
       />
-    </Link> */}
+    </Link>
 
 
 
@@ -280,6 +281,9 @@ useEffect(() => {
     </ul>
   </div>
 )}
+
+<HomeSidebarSection isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+
 
       </header>
 

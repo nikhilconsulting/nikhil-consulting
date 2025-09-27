@@ -12,6 +12,7 @@ import HeroSection2 from "@/components/HeroSection2";
 // import HomeBlogSection from "@/components/HomeBlogSection";
 import HomeAboutSection from "@/components/AboutHomeSection";
 import PricingHomeSection from "@/components/PricingHomeSection";
+import WhatsAppPopup from "@/components/WhatsappButton";
 // import Navbar from "@/components/DemoNav";
 
 
@@ -21,6 +22,7 @@ export default function Home() {
  
   return (
 <>
+
 {/* <title>Digital Marketing Company in Varanasi | Rankinventiv</title>
 <meta name="description" content="RankInventiv is a digital marketing company in Varanasi that helps local businesses grow online with simple SEO, ads, and smart marketing solutions." />
 <meta name="keywords" content="Digital Marketing Agency in Varanasi, Best Digital marketing services in Varanasi, Varanasi digital marketing company, Online marketing services in Varanasi" />
@@ -36,6 +38,12 @@ export default function Home() {
 
 <GlassNavbar2 />
 {/* <Navbar /> */}
+<WhatsAppPopup
+  phone="9199xxxxxxx"
+  message="Hi there!"
+  logo="/images/logo.png"
+/>
+
 <HeroSection2 />
 <HomeAboutSection />
      <ProcessHomeSection />

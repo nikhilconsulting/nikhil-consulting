@@ -62,7 +62,7 @@ const [selectedExpert, setSelectedExpert] = useState('');
 
           {/* For Businesses */}
           <div className="xl:ml-3">
-            <h3 className="font-semibold mb-4 text-lg">For Businesses</h3>
+            <h3 className="font-semibold mb-4 text-lg">For Consulting</h3>
          <ul className="space-y-2 text-base">
   <li onClick={() => handleClick('SEO Expert')} className="hover:underline hover:text-[#8FCDFF] cursor-pointer">Talk With SEO Expert</li>
   <li onClick={() => handleClick('Ads Specialist')} className="hover:underline hover:text-[#8FCDFF] cursor-pointer">Talk With Ads Specialist</li>
@@ -121,16 +121,16 @@ const [selectedExpert, setSelectedExpert] = useState('');
               <FaPhone /> +91- 93109 62725
             </a>
             <div className="flex gap-4 text-2xl sm:text-3xl">
-              <Link href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+               <Link href="https://www.linkedin.com/company/rankinventiv/" target="_blank" rel="noopener noreferrer">
                 <FaLinkedin className="cursor-pointer hover:scale-110 transition hover:text-[#8FCDFF]" />
               </Link>
-              <Link href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer">
+              <Link href="https://www.instagram.com/rankinventiv/" target="_blank" rel="noopener noreferrer">
                 <FaInstagram className="cursor-pointer hover:scale-110 transition hover:text-[#8FCDFF]" />
               </Link>
               <Link href="https://www.facebook.com/rankinventiv/" target="_blank" rel="noopener noreferrer">
                 <FaFacebook className="cursor-pointer hover:scale-110 transition hover:text-[#8FCDFF]" />
               </Link>
-              <Link href="https://www.twitter.com/your-profile" target="_blank" rel="noopener noreferrer">
+              <Link href="https://x.com/rankinventiv" target="_blank" rel="noopener noreferrer">
                 <FaTwitter className="cursor-pointer hover:scale-110 transition hover:text-[#8FCDFF]" />
               </Link>
                <Link href="https://www.youtube.com/@Rankinventiv" target="_blank" rel="noopener noreferrer">
@@ -148,7 +148,7 @@ const [selectedExpert, setSelectedExpert] = useState('');
           <div className="flex gap-6 mb-4 sm:mb-0 text-xs">
             <Link href="/privacy-policy" className="hover:underline hover:text-[#8FCDFF]">Privacy Policy</Link>
             <span>|</span>
-            <Link href="/terms-of-services" className="hover:underline hover:text-[#8FCDFF]">Terms of Service</Link>
+            <Link href="/terms-of-services" className="hover:underline hover:text-[#8FCDFF]">Terms of Services</Link>
           </div>
           <p className="text-sm sm:text-base">
             © {new Date().getFullYear()} All Rights Reserved

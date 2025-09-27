@@ -1,18 +1,15 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function SocialTicker() {
   const items = [
-    { src: "/assets/cropped-1920-1080-1343746.png", alt: "Image 1", link: "https://example.com/1" },
-    { src: "/assets/demon-slayer-mitsuri-cherry-blossom-desktop-wallpaper.jpg", alt: "Image 2", link: "https://example.com/2" },
-    { src: "/assets/demon-slayer-tanjiro-with-katana-epic-desktop-wallpaper.jpg", alt: "Image 3", link: "https://example.com/3" },
-    { src: "/assets/inosuke-demon-slayer-epic-anime-desktop-wallpaper-4k.jpg", alt: "Image 4", link: "https://example.com/4" },
-    { src: "/assets/kimetsu-no-yaiba-rengoku-with-katana-desktop-wallpaper.jpg", alt: "Image 5", link: "https://example.com/5" },
-    { src: "/assets/images/demon-slayer-giyu-tomioka-cool-desktop-wallpaper-4k.jpg", alt: "Image 6", link: "https://example.com/6" },
-    { src: "/assets/images/consulting-page-images/digital-marketing-consultant-og-speaker-1.png", alt: "Image 7", link: "https://example.com/7" },
-    { src: "/assets/images/banner2.png", alt: "Image 8", link: "https://example.com/8" },
+    { src: "/assets/images/herosection-ticker-images/1.png", alt: "Image 1" },
+    { src: "/assets/images/herosection-ticker-images/2.png", alt: "Image 2" },
+    { src: "/assets/images/herosection-ticker-images/3.png", alt: "Image 3" },
+    { src: "/assets/images/herosection-ticker-images/4.png", alt: "Image 4" },
+    { src: "/assets/images/herosection-ticker-images/5.png", alt: "Image 5" },
+    { src: "/assets/images/herosection-ticker-images/6.png", alt: "Image 6" },
   ];
 
   const CARD_WIDTH = 340;
@@ -57,10 +54,8 @@ useEffect(() => {
               key={i}
               className="w-[340px] h-[180px] flex-shrink-0 m-0 p-0"
             >
-              <Link
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
+              <div
+               
                 className="block w-full h-full"
               >
                 <div
@@ -71,12 +66,13 @@ useEffect(() => {
                   <Image
                     src={item.src}
                     alt={item.alt}
+                    quality={100}
                     width={340}
                     height={180}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
-              </Link>
+              </div>
             </div>
           );
         })}

@@ -227,7 +227,7 @@ export default function ServicesScrollSticky() {
 <div
   key={service.id}
   ref={(el) => (itemRefs.current[index] = el)}
-  className="flex flex-col justify-center border border-[#5F69A8] rounded-2xl p-4 shadow-lg min-h-[480px]"
+  className="flex flex-col justify-center border border-[#5F69A8] p-6 shadow-lg min-h-[480px]"
 >
       <div className="flex items-center gap-4 mb-3">
         <span className="text-white text-4xl font-semibold">
@@ -279,16 +279,14 @@ export default function ServicesScrollSticky() {
 
           {/* Right: Sticky Image */}
           <div className="lg:sticky top-38 lg:flex-1 w-full h-[300px] sm:h-[400px] lg:h-[70vh] flex items-center justify-center relative">
-            <div className="absolute inset-0 flex items-center justify-center z-0">
-              <div className="w-[250px] sm:w-[350px] md:w-[450px] lg:w-[500px] h-[250px] sm:h-[350px] md:h-[450px] lg:h-[500px] bg-gradient-radial from-[#8FCDFF]/40 via-[#5F69A8]/25 to-transparent rounded-full blur-3xl"></div>
-            </div>
+
   {/* --- Frame Layer: Top-Left (Layer 1) --- */}
-  <div className="absolute inset-0 border-4 border-[#6E8EEE] -translate-x-4 -translate-y-2 -rotate-2 z-0"></div>
+  <div className="absolute inset-0 border-4 border-[#6E8EEE] -translate-x-4 -translate-y-3 -rotate-2 z-0"></div>
   {/* --- Frame Layer: Top-Left (Layer 1) --- */}
-  <div className="absolute inset-0 border-8 border-[#5F69A8] -translate-x-1 translate-y-0 -rotate-0 z-0"></div>
+  <div className="absolute -inset-1 border-4 border-[#5F69A8] -translate-x-1 translate-y-0 -rotate-0 z-0"></div>
 
   {/* --- Frame Layer: Bottom-Right (Layer 2) --- */}
-  <div className="absolute inset-0 border-4 border-[#8DCBFD] translate-x-5 translate-y-5 rotate-2 z-0"></div>
+  <div className="absolute inset-0 border-4 border-[#8DCBFD] translate-x-5 translate-y-2 rotate-2 z-0"></div>
 
             <div className="relative  z-10 w-full max-w-[600px] h-full min-h-[250px] sm:min-h-[350px] lg:min-h-[70vh]">
               <Image

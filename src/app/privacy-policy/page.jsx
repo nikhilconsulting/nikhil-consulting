@@ -26,10 +26,8 @@ const PrivacyPolicy = () => {
     <Banner title="Privacy Policy" />
 
     <div
-      className="min-h-screen w-full text-gray-200"
-      style={{
-        background: "linear-gradient(to bottom, #382933, #372935, #372831)",
-      }}
+      className="min-h-screen w-full text-gray-200 bg-gradient-to-r from-[#382933] via-[#372935] to-[#372831]"
+
     >
       
 
@@ -39,7 +37,7 @@ const PrivacyPolicy = () => {
         </span>
 
         <p className="mb-6">
-          <span className="text-sm text-gray-400 text-start">Effective Date:</span> [Insert Date]
+          <span className="text-sm text-gray-400 text-start">Effective Date : [16-08-25]</span> 
         </p>
 
         <p className="mb-6">

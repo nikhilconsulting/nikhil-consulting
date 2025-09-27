@@ -163,24 +163,24 @@ Sunday: Closed
               <p>2nd Floor, Lahurabir Rd, Jagatganj, <br /> Near Sanskrit University, Varanasi, <br /> Uttar Pradesh 221002</p>
             </div>
              <div className="flex gap-4 text-3xl ">
-             <Link href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
-               <FaLinkedin className="cursor-pointer hover:scale-110 transition hover:text-[#8CC8FD]" />
-             </Link>
-             <Link href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer">
-               <FaInstagram className="cursor-pointer hover:scale-110 transition hover:text-[#8CC8FD]" />
-             </Link>
-             <Link href="" target="_blank" rel="noopener noreferrer">
-               <FaFacebook className="cursor-pointer hover:scale-110 transition hover:text-[#8CC8FD]" />
-             </Link>
-             <Link href="https://www.twitter.com/your-profile" target="_blank" rel="noopener noreferrer">
-               <FaTwitter className="cursor-pointer hover:scale-110 transition hover:text-[#8CC8FD]" />
-             </Link>
-              <Link href="https://www.youtube.com/@Rankinventiv" target="_blank" rel="noopener noreferrer">
-                <FaYoutube className="cursor-pointer hover:scale-110 transition hover:text-[#8CC8FD]" />
+             <Link href="https://www.linkedin.com/company/rankinventiv/" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin className="cursor-pointer hover:scale-110 transition hover:text-[#8FCDFF]" />
               </Link>
-             <Link href="https://maps.app.goo.gl/MNbdJh3Mn9J7joEn6" target="_blank" rel="noopener noreferrer">
-               <FaGooglePlusG className="cursor-pointer hover:scale-150 transition scale-[1.4] hover:text-[#8CC8FD]" />
-             </Link>
+              <Link href="https://www.instagram.com/rankinventiv/" target="_blank" rel="noopener noreferrer">
+                <FaInstagram className="cursor-pointer hover:scale-110 transition hover:text-[#8FCDFF]" />
+              </Link>
+              <Link href="https://www.facebook.com/rankinventiv/" target="_blank" rel="noopener noreferrer">
+                <FaFacebook className="cursor-pointer hover:scale-110 transition hover:text-[#8FCDFF]" />
+              </Link>
+              <Link href="https://x.com/rankinventiv" target="_blank" rel="noopener noreferrer">
+                <FaTwitter className="cursor-pointer hover:scale-110 transition hover:text-[#8FCDFF]" />
+              </Link>
+               <Link href="https://www.youtube.com/@Rankinventiv" target="_blank" rel="noopener noreferrer">
+                <FaYoutube className="cursor-pointer hover:scale-110 transition hover:text-[#8FCDFF]" />
+              </Link>
+              <Link href="https://maps.app.goo.gl/MNbdJh3Mn9J7joEn6" target="_blank" rel="noopener noreferrer">
+                <FaGooglePlusG className="cursor-pointer hover:scale-150 transition scale-[1.4] hover:text-[#8FCDFF]" />
+              </Link>
            </div>
           </div>
         </div>

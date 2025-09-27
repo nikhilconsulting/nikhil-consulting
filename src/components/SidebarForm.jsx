@@ -17,25 +17,37 @@ export default function SidebarForm({ onClose }) {
   const options = ["No", "Yes"];
   const [website, setWebsite] = useState("");
   const [lastCountry, setLastCountry] = useState("in");
+  const [loading, setLoading] = useState(false); // loading state
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
+    setLoading(true);
 
-    if (name.trim() === "") return setError("Please enter your name.");
+    if (name.trim() === "") {
+      setError("Please enter your name.");
+      setLoading(false);
+      return;
+    }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (email.trim() === "" || !emailRegex.test(email)) {
-      return setError("Please enter a valid email address.");
+      setError("Please enter a valid email address.");
+      setLoading(false);
+      return;
     }
 
     const phoneNumber = parsePhoneNumberFromString("+" + phone);
     if (!phoneNumber || !phoneNumber.isValid()) {
-      return setError("Please enter a valid phone number.");
+      setError("Please enter a valid phone number.");
+      setLoading(false);
+      return;
     }
 
     if (selected === "Yes" && website.trim() === "") {
-      return setError("Please enter your website name.");
+      setError("Please enter your website name.");
+      setLoading(false);
+      return;
     }
 
     try {
@@ -61,6 +73,7 @@ export default function SidebarForm({ onClose }) {
     } catch (err) {
       setError("Failed to send message. Please try again later.");
     }
+    setLoading(false);
   };
 
   if (showThankYou) {
@@ -83,13 +96,14 @@ export default function SidebarForm({ onClose }) {
   }
 
   return (
-    <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+    <form className="flex flex-col gap-3 w-[80%] max-w-md mx-auto" onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder="Your Name (e.g. John Doe)"
         value={name}
         onChange={(e) => setName(e.target.value)}
         className="p-2 bg-black/20 text-white placeholder-white/40"
+        disabled={loading}
       />
       <input
         type="email"
@@ -97,6 +111,7 @@ export default function SidebarForm({ onClose }) {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         className="p-2 bg-black/20 text-white placeholder-white/40"
+        disabled={loading}
       />
 
       <PhoneInput
@@ -115,6 +130,7 @@ export default function SidebarForm({ onClose }) {
           name: "phone",
           autoComplete: "tel",
           placeholder: "Your Phone Number",
+          disabled: loading,
         }}
         containerClass="w-full"
         inputClass="!w-full !bg-black/20 !text-white !pl-14 !h-11 placeholder-white/40"
@@ -125,12 +141,12 @@ export default function SidebarForm({ onClose }) {
         <label className="block mb-2 text-white">Do you have a website?</label>
         <div className="relative">
           <div
-            onClick={() => setOpen(!open)}
-            className="bg-black/20 text-white p-2 cursor-pointer"
+            onClick={() => !loading && setOpen(!open)}
+            className={`bg-black/20 text-white p-2 cursor-pointer ${loading ? "opacity-50 cursor-not-allowed" : ""}`}
           >
             {selected || "Select an option"}
           </div>
-          {open && (
+          {open && !loading && (
             <ul className="absolute left-0 right-0 bg-black/70 mt-1 rounded-md z-10">
               {options.map((option) => (
                 <li
@@ -156,6 +172,7 @@ export default function SidebarForm({ onClose }) {
           value={website}
           onChange={(e) => setWebsite(e.target.value)}
           className="p-2 bg-black/20 text-white placeholder-white/40"
+          disabled={loading}
         />
       )}
 
@@ -165,19 +182,29 @@ export default function SidebarForm({ onClose }) {
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         className="p-2 bg-black/20 text-white placeholder-white/40"
+        disabled={loading}
       ></textarea>
 
       {error && <p className="text-red-400 text-sm">{error}</p>}
 
       <button
         type="submit"
-        className="px-4 py-2 rounded text-white transition hover:scale-105"
-        style={{
-          background:
-            "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
-        }}
+        disabled={loading}
+        className="relative inline-flex items-center cursor-pointer mt-4 overflow-hidden group px-6 py-2 font-semibold text-white text-lg z-0 mx-auto disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        Send Message
+        <span className="relative z-10 flex items-center gap-2">
+          {loading ? "Loading..." : "Send Message"}
+        </span>
+
+        <span
+          className="absolute inset-0 bg-gradient-to-r from-[#372935] via-black to-[#372935] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-0"
+          aria-hidden="true"
+        ></span>
+
+        <span
+          className="absolute inset-0 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] z-[-1]"
+          aria-hidden="true"
+        ></span>
       </button>
     </form>
   );

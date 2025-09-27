@@ -21,7 +21,7 @@ const page = () => {
 <meta property="og:image:alt" content="Google Ads Company in Varanasi - RankInventiv" /> */}
 
      <div
-      className="min-h-screen w-full text-gray-200 bg-gradient-to-r from-[#5F69A8] via-[#000000] to-[#372935] "
+      className="min-h-screen w-full text-gray-200 bg-gradient-to-r from-[#382933] via-[#372935] to-[#372831] "
     >
       <GlassNavbar2 />
       <Banner title="Terms Of Services" />
@@ -32,7 +32,7 @@ const page = () => {
         </div>
 
         <p className="text-sm text-gray-400 text-start">
-          Effective Date: 16-08-25
+          Effective Date : [16-08-25]
         </p>
 
         <p>
