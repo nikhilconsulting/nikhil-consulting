@@ -62,7 +62,7 @@
 
 // app/api/blogs/route.js
 import { NextResponse } from "next/server";
-import db from "../../../../lib/db"; // Ensure your alias is setup correctly, else use relative path
+import db from "../../../../public/db"; // Ensure your alias is setup correctly, else use relative path
 
 function calculateReadingTime(text) {
   const wordsPerMinute = 200;
