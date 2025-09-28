@@ -60,7 +60,7 @@ const WorkingProcess = ({
                     </div>
                     <div className="content flex-1 text-left ml-6">
                       <span
-                        className="sub-title inline-block shadow-md text-white font-medium text-sm px-5 py-2 mb-4 rounded-full"
+                        className="sub-title bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)] inline-block shadow-md text-white font-medium text-sm px-5 py-2 mb-4 rounded-full"
                       
                       >
                         Step {`0${index + 1}`}
