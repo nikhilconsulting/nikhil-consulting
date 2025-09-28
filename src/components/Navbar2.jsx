@@ -59,10 +59,12 @@ export default function GlassNavbar2() {
   };
 
 useEffect(() => {
-  // Show the contact form after 3 seconds
-  const timer = setTimeout(() => {
-    setShowForm(true);
-  }, 3000);
+const timer = setTimeout(() => {
+
+         if (pathname === "/contact-us") {
+      setSidebarOpen(true);
+    }
+    }, 7000);
 
   // Scroll handling (only on home page)
   if (pathname !== "/") {
@@ -194,7 +196,7 @@ useEffect(() => {
   }`}
   onClick={() => setSidebarOpen(true)}
 >
-  <MoreVertical size={38} />
+  <Menu size={38} />
 </button>
 
         </nav>

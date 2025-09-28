@@ -121,7 +121,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 w-full z-20">
+      <div className="absolute bottom-6 left-0 w-full z-20">
 
         <SocialTicker />
       </div>

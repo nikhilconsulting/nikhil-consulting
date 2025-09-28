@@ -30,53 +30,62 @@ useEffect(() => {
 
 
   return (
+    <>
     <div
-      className="relative w-full overflow-hidden h-[180px] bg-[linear-gradient(125deg,_#000000,_#372935,_#000000)]"
+      className="relative w-full overflow-hidden h-[180px] "
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onTouchStart={() => setIsPaused(true)}
       onTouchEnd={() => setIsPaused(false)}
     >
-      <div
-        className="flex"
-        style={{
-          transform: `translateX(-${offset}px)`,
-          transition: "transform 0.03s linear",
-          width: `${items.length * CARD_WIDTH * 2}px`,
-        }}
-      >
+<div
+  className="flex gap-12" // <-- gap added here
+  style={{
+    transform: `translateX(-${offset}px)`,
+    transition: "transform 0.03s linear",
+    width: `${items.length * CARD_WIDTH * 2}px`,
+  }}
+>
+
+
         {[...items, ...items].map((item, i) => {
           const firstVisibleIndex = Math.floor(offset / CARD_WIDTH) % items.length;
           const isActive = i % items.length === firstVisibleIndex;
 
           return (
-            <div
-              key={i}
-              className="w-[340px] h-[180px] flex-shrink-0 m-0 p-0"
-            >
-              <div
-               
-                className="block w-full h-full"
-              >
-                <div
-                  className={`w-full h-full transition-transform duration-500 overflow-hidden ${
-                    isActive ? "md:scale-100 shadow-2xl" : "md:scale-100"
-                  }`}
-                >
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    quality={100}
-                    width={340}
-                    height={180}
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-              </div>
-            </div>
+          <div
+  key={i}
+  className="w-[340px] h-[180px] flex-shrink-0"
+>
+  <div className="w-full h-full p-2  ">
+<div
+  className={`w-full h-full transition-transform duration-500 overflow-hidden rounded-md ${
+    isActive ? "md:scale-100 aura-shadow" : "md:scale-100 aura-shadow"
+  }`}
+>
+
+      <Image
+        src={item.src}
+        alt={item.alt}
+        quality={100}
+        width={300}
+        height={200}
+        className="w-full h-full object-contain "
+      />
+    </div>
+  </div>
+</div>
+
           );
         })}
       </div>
     </div>
+    <style jsx>{`
+  .aura-shadow {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+  }
+`}</style>
+
+    </>
   );
 }

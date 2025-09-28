@@ -117,7 +117,7 @@ return (
       <linearGradient id="xGradient" x1="0" y1="0" x2="1" y2="1">
         <stop offset="0%" stopColor="#fff0f0" />
         <stop offset="50%" stopColor="#ff7a7a" />
-        <stop offset="100%" stopColor="#7a1a1a" />
+        <stop offset="100%" stopColor="#fff0f0" />
       </linearGradient>
 
       {/* Shadow gradient for inner lines */}

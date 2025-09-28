@@ -1,7 +1,7 @@
 // app/api/blogs/route.js
 
 import { NextResponse } from 'next/server';
-import pool from '../../../../../../lib/db'; // ✅ Your MySQL connection pool
+import pool from '../../../../../lib/db'; // ✅ Your MySQL connection pool
 
 export async function GET(request) {
   try {

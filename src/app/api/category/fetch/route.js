@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import db from "../../../../../lib/db"; // path adjust karo agar alag ho
+import db from "../../../../lib/db"; // path adjust karo agar alag ho
 
 // GET /api/blog_category
 export async function GET() {

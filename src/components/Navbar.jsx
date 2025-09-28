@@ -63,7 +63,7 @@ const navItems = [
     <>
       <header className="fixed top-0 left-0 right-0 z-50 w-full">
         <nav
-          className="relative flex items-center text-[16px] w-full gap-4 bg-white/5 backdrop-blur-[20px] shadow-lg px-8 py-4"
+          className="relative flex items-center  font-bold w-full gap-4 bg-white/5 backdrop-blur-[20px] shadow-lg px-8 py-4"
           aria-label="Main navigation"
         >
   {/* Left side (can be logo later) */}

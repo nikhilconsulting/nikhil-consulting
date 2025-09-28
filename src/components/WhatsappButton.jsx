@@ -8,7 +8,7 @@ export default function WhatsAppButton() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setOpen(true);
-    }, 3000);
+    }, 10000);
     return () => clearTimeout(timer);
   }, []);
 

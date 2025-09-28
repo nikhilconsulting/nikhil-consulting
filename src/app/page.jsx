@@ -39,9 +39,6 @@ export default function Home() {
 <GlassNavbar2 />
 {/* <Navbar /> */}
 <WhatsAppPopup
-  phone="9199xxxxxxx"
-  message="Hi there!"
-  logo="/images/logo.png"
 />
 
 <HeroSection2 />

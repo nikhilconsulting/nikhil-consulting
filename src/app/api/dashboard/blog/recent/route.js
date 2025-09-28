@@ -1,6 +1,6 @@
 // app/api/dashboard/blog/recent/route.js
 
-import pool from '../../../../../../lib/db'; // ✅ use the exported pool
+import pool from '../../../../../lib/db'; // ✅ use the exported pool
 
 export async function GET() {
   try {
