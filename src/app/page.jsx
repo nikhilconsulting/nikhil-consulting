@@ -37,7 +37,7 @@ export default function Home() {
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="RankInventiv - Digital Marketing Agency in Varanasi" /> */}
 
-{/* <GlassNavbar2 />
+<GlassNavbar2 />
 
 
 <WhatsAppPopup
@@ -46,7 +46,7 @@ export default function Home() {
 <HeroSection2 />
 <HomeAboutSection />
      <ProcessHomeSection />
-       <ServicesScrollSticky /> */}
+       <ServicesScrollSticky />
         
 
 
@@ -58,9 +58,9 @@ export default function Home() {
 <PricingHomeSection />
 
 
- {/* <Testimonials2 />
+ <Testimonials2 />
 
-<GlassFooter2 /> */}
+<GlassFooter2 />
 
 </>
   );
