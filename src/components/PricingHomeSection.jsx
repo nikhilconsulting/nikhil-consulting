@@ -71,7 +71,7 @@ export default function Pricing() {
   const currentPlans = plans.monthly;
 
   return (
-    <div className="relative bg-black/10 min-h-screen py-12 px-4 font-sans flex flex-col items-center justify-center">
+    <div className="relative bg-black/10 py-12 px-4 mx-auto font-sans flex flex-col items-center justify-center">
 
       {/* Background Image with Blur */}
       <div
@@ -84,8 +84,8 @@ export default function Pricing() {
         </span>
 
       {/* Pricing Cards */}
-      <div className="relative z-10 mt-12 grid gap-8 max-w-full mx-auto grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-start px-4 sm:px-6 lg:px-8">
-        {currentPlans.map((plan, index) => (
+     <div className="relative z-10 mt-12 grid lg:gap-12 gap-10 max-w-8xl mx-auto grid-cols-1 md:grid-cols-2 xl:grid-cols-4 items-center px-4 justify-center">
+{currentPlans.map((plan, index) => (
           <div
             key={plan.name}
        className={`rounded-3xl p-10 flex flex-col justify-between min-h-[540px] transform transition-transform duration-500 hover:scale-[1.02] origin-center w-[340px] mx-auto bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)] text-gray-900 shadow-md`}
