@@ -5,8 +5,8 @@
     imageSrc,
     imageAlt,
     heading,
-    headingsmall,
-    subheading,
+    // headingsmall,
+    // subheading,
     description,
     seoTitle,
     seoContent,
@@ -44,13 +44,13 @@
               {/* Text Content */}
               <div className="w-full lg:w-1/2 mt-6 lg:mt-0">
                 {/* 🆕 New Heading */}
-    <span className="text-3xl sm:text-xl font-bold text-left text-white mb-2">
+    {/* <span className="text-3xl sm:text-xl font-bold text-left text-white mb-2">
       {headingsmall}
-    </span>
+    </span> */}
                 <h2 className="text-2xl sm:text-3xl font-semibold leading-snug text-white">
                   {heading}
-                  <br className="hidden sm:block" />
-                  {subheading}
+                  {/* <br className="hidden sm:block" /> */}
+                  {/* {subheading} */}
                 </h2>
                 <p className="mt-4 text-gray-200 text-justify text-sm sm:text-base">
                   {description}
@@ -71,7 +71,7 @@
                 <ul className="mt-6 space-y-3 pl-0 list-none">
                   {seoPoints.map((point, idx) => (
                     <li className="flex items-start text-gray-200" key={idx}>
-                      <i className="fas fa-check text-blue-400 mr-2 mt-1" />
+                      <i className="fas fa-check text-[#8DCBFD] mr-2 mt-1" />
                       {point}
                     </li>
                   ))}
@@ -91,10 +91,18 @@
       <div className="grid grid-cols-2 gap-4 mt-4">
         {cardOneFeatures.map((feature, idx) => (
           <div key={idx}>
-            <div className="flex items-center mb-3">
-              <i className="far fa-dot-circle text-white-400 mr-2" />
-              <strong className="text-sm sm:text-base text-gray-100">{feature}</strong>
-            </div>
+           <div className="flex items-start gap-2 mb-3">
+  {/* Dot Icon */}
+  <div className="pt-0">
+    <i className="far fa-dot-circle text-white-400"></i>
+  </div>
+
+  {/* Text */}
+  <strong className="text-sm sm:text-base text-gray-100 leading-snug">
+    {feature}
+  </strong>
+</div>
+
           </div>
         ))}
       </div>
@@ -127,7 +135,7 @@
                 <ul className="mt-6 space-y-3 pl-0 list-none">
                   {finalPoints.map((point, idx) => (
                     <li className="flex items-start text-gray-200" key={idx}>
-                      <i className="fas fa-check text-blue-400 mr-2 mt-1" />
+                      <i className="fas fa-check text-[#8DCBFD] mr-2 mt-1" />
                       {point}
                     </li>
                   ))}

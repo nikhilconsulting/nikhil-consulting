@@ -6,6 +6,7 @@ import WorkingProcess from "@/components/props/WorkingProcess";
 import DigitalMarketingFAQs from "@/components/props/Faqs";
 // import PricingSection from "@/components/props/Pricing";
 import Banner from "@/components/Banner";
+import WhatsAppButton from "@/components/WhatsappButton";
 const GooglePage = () => {
 
 // const plans = [
@@ -78,25 +79,24 @@ const GooglePage = () => {
       "Absolutely. We set up precise targeting options—location, keywords, devices, and audience preferences—so your ads reach only the right customers.",
   },
 ];
-
    const workingSteps = [
     {
-      icon: '/assets/images/icon.png',
+      icon: '/assets/images/service-detail-page-images/google-ads-working-process-steps-icons/business-&-goal-analysis.png',
       title: 'Business & Goal Analysis',
       description: 'We understand your business, target audience, and set clear advertising goals that match your growth objectives.',
     },
     {
-      icon: '/assets/images/icon.png',
+      icon: '/assets/images/service-detail-page-images/google-ads-working-process-steps-icons/keyword-&-competitor-research.png',
       title: 'Keyword & Competitor Research',
       description: 'We find the right keywords, study your competitors, and build a solid foundation for high-performing ad campaigns.',
     },
     {
-      icon: '/assets/images/icon.png',
+      icon: '/assets/images/service-detail-page-images/google-ads-working-process-steps-icons/campaign-setup-&-optimization.png',
       title: 'Campaign Setup & Optimization',
       description: 'We design, launch, and optimize Google Ads campaigns—from Search & Display to Shopping & YouTube-to maximize reach and ROI.',
     },
     {
-      icon: '/assets/images/icon.png',
+      icon: '/assets/images/service-detail-page-images/google-ads-working-process-steps-icons/performance-tracking-&-growth.png',
       title: 'Performance Tracking & Growth',
       description: 'We monitor results, share transparent reports, and scale campaigns to bring more leads, sales, and long-term growth.',
     },
@@ -117,12 +117,13 @@ const GooglePage = () => {
 <meta property="og:image:alt" content="Google Ads Company in Varanasi - RankInventiv" /> */}
 
     <GlassNavbar2 />
+ 
     <Banner title="Google Ads" />
+       <WhatsAppButton />
     <ServiceSection
       imageSrc="/assets/images/service-detail-page-images/Google ads.png"
       imageAlt="SMM project"
-      heading="Introduction of Projects"
-      subheading="Overview"
+      heading="Introduction of Projects Overview"
       description={`Running a successful business online requires smart advertising strategies that connect you with the right audience. Google Ads is one of the most effective ways to grow visibility, drive traffic, and increase sales. With our Google Ads expertise, we create campaigns that deliver real results. From search and display ads to remarketing and shopping ads, our strategies ensure maximum ROI. By focusing on data-driven decisions and continuous optimization, we help your business stay ahead in a competitive market.`}
       seoTitle="Branding with Google Ads"
       seoContent="We believe in creating ad campaigns that not only generate clicks but also build trust and long-term value for your brand. Your brand deserves to stand out in the crowded digital space. Through tailored Google Ads campaigns, we help you:"

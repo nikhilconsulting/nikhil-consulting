@@ -1,6 +1,7 @@
 import GlassFooter2 from '@/components/Footer2'
 import GlassNavbar2 from '@/components/Navbar2'
 import ServiceCards from '@/components/ServiceCards'
+import WhatsAppButton from '@/components/WhatsappButton'
 import React from 'react'
 
 export default function page() {
@@ -20,7 +21,7 @@ export default function page() {
 <meta property="og:image:alt" content="RankInventiv Services Page - SEO, PPC, Social Media" /> */}
 
     <GlassNavbar2 />
-    
+    <WhatsAppButton />
       <ServiceCards />
       <GlassFooter2 />
     </>

@@ -6,6 +6,7 @@ import WorkingProcess from "@/components/props/WorkingProcess";
 import DigitalMarketingFAQs from "@/components/props/Faqs";
 // import PricingSection from "@/components/props/Pricing";
 import Banner from "@/components/Banner";
+import WhatsAppButton from "@/components/WhatsappButton";
 
 const SMMPage = () => {
 // const plans = [
@@ -84,22 +85,22 @@ const SMMPage = () => {
 
    const workingSteps = [
     {
-      icon: '/assets/images/icon.png',
+      icon: '/assets/images/service-detail-page-images/social-media-marketing-working-process-steps-icons/social-media-audit-&-goal-setup.png',
       title: 'Social Media Audit & Goal Setup',
       description: 'We review your profile, understand your brand, and set clear goals for growth and engagement',
     },
     {
-      icon: '/assets/images/icon.png',
+      icon: '/assets/images/service-detail-page-images/social-media-marketing-working-process-steps-icons/competitor-&-trend-analysis.png',
       title: 'Competitor & Trend Analysis',
       description: 'We explore what works in your industry, study top trends, and plan content that stands out',
     },
     {
-      icon: '/assets/images/icon.png',
+      icon: '/assets/images/service-detail-page-images/social-media-marketing-working-process-steps-icons/content-strategy-&-campaigns.png',
       title: 'Content Strategy & Campaigns',
       description: 'We create and post content, run ad campaigns, and handle your daily social activity',
     },
     {
-      icon: '/assets/images/icon.png',
+      icon: '/assets/images/service-detail-page-images/social-media-marketing-working-process-steps-icons/track-growth-&-get-more-leads.png',
       title: 'Track Growth & Get More Leads',
       description: 'You’ll see more likes, comments, followers - and most importantly - real leads and conversions',
     },
@@ -121,12 +122,13 @@ const SMMPage = () => {
 
     <GlassNavbar2 />
     <Banner title="Social Media Marketing" />
+    <WhatsAppButton />
     <ServiceSection
       imageSrc="/assets/images/service-detail-page-images/Social Media.png"
       imageAlt="SEO project"
-      heading="Social Media Marketing"
+      heading="Social Media Marketing Overview"
       
-      subheading="Overview"
+      // subheading="Overview"
       description={`Social media marketing helps your brand connect with the right audience. In this section, we show how we create strong strategies that drive engagement, followers, and leads. From creative content planning to ad campaign management, we make sure your business gets noticed. With regular updates, original ideas, and consistent performance tracking, we grow your online presence across platforms like Facebook, Instagram, and others—helping you build trust, stay relevant, and turn social media into a powerful tool for business growth.`}
       seoTitle="Creative Social Media Growth"
       seoContent="We manage your social media pages to attract, engage, and convert followers into customers. Our services include content creation, posting schedules, reels, videos, and ad campaign setup. We use trending hashtags, creative captions, and viral formats to make your brand stand out. Whether you run a shop, offer services, or run a startup, we keep your pages active and visible. Our team builds your online presence with daily posts, engaging visuals, and consistent branding. We also manage paid ads to drive traffic, generate inquiries, and boost sales. Using platform insights, we monitor performance, track growth, and adjust strategies weekly to improve results—ensuring your business stays ahead and gets noticed on Facebook, Instagram, and other platforms."

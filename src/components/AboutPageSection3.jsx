@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+  import '@fortawesome/fontawesome-free/css/all.min.css';
 
 export default function AboutPageSection3() {
   return (
@@ -28,18 +29,18 @@ export default function AboutPageSection3() {
             By aligning your goals with the right digital tools and strategies, we ensure your brand attracts the right audience, builds trust, and converts leads into loyal customers.
 
           </span>
-          <ul className="mt-3 grid md:grid-cols-2 gap-2 md:text-base text-lg  font-semibold text-gray-200 list-disc list-inside">
-            <li>Local & Global Presence</li>
-            <li>Expert-Led Team</li>
-            <li>Sector-Wide Consulting</li>
-            <li>Sustainable Growth</li>
+          <ul className="mt-3 grid md:grid-cols-2 gap-2 md:text-base text-lg  font-semibold text-gray-200  list-inside whitespace-nowrap">
+            <li><i className="fas fa-check text-[#8DCBFD] mr-2 mt-1" /> Local & Global Presence</li>
+            <li><i className="fas fa-check text-[#8DCBFD] mr-2 mt-1" /> Expert-Led Team</li>
+            <li><i className="fas fa-check text-[#8DCBFD] mr-2 mt-1" /> Sector-Wide Consulting</li>
+            <li><i className="fas fa-check text-[#8DCBFD] mr-2 mt-1" /> Sustainable Growth</li>
           </ul>
 
         
         </div>
 
         {/* Image Section */}
-   <div className="relative flex justify-end items-center h-auto order-1 lg:order-2 lg:mt-0 mt-20">
+   <div className="relative w-full max-w-[648px] aspect-square mx-auto flex justify-end items-center h-auto order-1 lg:order-2 lg:mt-0 mt-20   ">
   {/* Spotlight Glow Behind Image */}
   <div className="absolute inset-0 flex items-center justify-center z-0">
     <div className="w-[250px] sm:w-[350px] md:w-[450px] lg:w-[500px] h-[250px] sm:h-[350px] md:h-[450px] lg:h-[500px] bg-gradient-radial from-[#8FCDFF]/40 via-[#5F69A8]/25 to-transparent rounded-full blur-3xl"></div>
@@ -60,7 +61,7 @@ export default function AboutPageSection3() {
       width={500}
       height={500}
       priority
-      className="w-full h-auto object-cover rounded-lg relative z-20"
+      className="w-full h-auto object-contain rounded-lg relative z-20"
     />
   </div>
 </div>

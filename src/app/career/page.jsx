@@ -5,6 +5,7 @@ import GlassNavbar2 from '@/components/Navbar2';
 import CareerFormModal from '@/components/CareerFormModal';
 import Image from 'next/image';
 import React , { useState } from 'react';
+import WhatsAppButton from '@/components/WhatsappButton';
 
 
 
@@ -102,6 +103,7 @@ const jobs = [
   return (
     <>
       <GlassNavbar2 />
+      <WhatsAppButton />
       <section className="py-32 px-4 sm:px-10 bg-[#382933] text-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-4">

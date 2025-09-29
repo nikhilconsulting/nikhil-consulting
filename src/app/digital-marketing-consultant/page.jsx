@@ -11,6 +11,7 @@ import HeroSection from "@/components/HeroSection";
 import ServiceProcess from "@/components/ServiceProcess";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import DigitalMarketingFAQs from "@/components/props/Faqs";
+import WhatsAppButton from "@/components/WhatsappButton";
 export default function Page() {  
   const faqsData = [
   {
@@ -70,6 +71,7 @@ export default function Page() {
 
       {/* <meta name="robots" content="index, follow" /> */}
       <GlassNavbar />
+      <WhatsAppButton />
       <HeroSection />
       <TextImageSection />
       <Benefits />

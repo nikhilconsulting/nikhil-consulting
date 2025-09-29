@@ -7,6 +7,7 @@ import Connect from "@/components/Connect";
 import ContactUsPage from "@/components/ContactUsPage";
 import Banner from "@/components/Banner";
 import DigitalMarketingFAQs from "@/components/props/Faqs";
+import WhatsAppButton from "@/components/WhatsappButton";
 
 export default function ContactPage() {
 const faqsData = [
@@ -64,7 +65,7 @@ const faqsData = [
 
 <GlassNavbar2 />
 <Banner title="Contact Us" />
-
+<WhatsAppButton />
   <ContactUsPage />
     <Connect />
     <DigitalMarketingFAQs faqs={faqsData} />

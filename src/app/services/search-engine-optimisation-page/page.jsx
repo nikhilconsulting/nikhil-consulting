@@ -6,6 +6,7 @@ import WorkingProcess from "@/components/props/WorkingProcess";
 import DigitalMarketingFAQs from "@/components/props/Faqs";
 // import PricingSection from "@/components/props/Pricing";
 import Banner from "@/components/Banner";
+import WhatsAppButton from "@/components/WhatsappButton";
 const SEOPage = () => {
 // const plans = [
 //   {
@@ -75,7 +76,6 @@ const SEOPage = () => {
 // ];
 
 
-
   const faqsData = [
   {
     question: "How long does SEO take to show results?",
@@ -104,22 +104,22 @@ const SEOPage = () => {
 ];
     const workingSteps = [
     {
-      icon: '/assets/images/icon.png',
+      icon: '/assets/images/service-detail-page-images/search-engine-optimisation-working-process-steps-icons/website-audit-&-keyword-research.png',
       title: 'Website Audit & Keyword Research',
       description: 'We analyze your website and find the best keywords that your target audience is searching for',
     },
     {
-      icon: '/assets/images/icon.png',
+      icon: '/assets/images/service-detail-page-images/search-engine-optimisation-working-process-steps-icons/competitor-seo-analysis.png',
       title: 'Competitor SEO Analysis',
       description: 'We study your competitor s strategies to find content gaps, backlink opportunities, and ranking factors',
     },
     {
-      icon: '/assets/images/icon.png',
+      icon: '/assets/images/service-detail-page-images/search-engine-optimisation-working-process-steps-icons/seo-strategy-&-implementation.png',
       title: 'SEO Strategy & Implementation',
       description: 'Our team applies smart SEO practices, optimizes content, and builds links to improve your rankings',
     },
     {
-      icon: '/assets/images/icon.png',
+      icon: '/assets/images/service-detail-page-images/search-engine-optimisation-working-process-steps-icons/results-&-growth-tracking.png',
       title: 'Results & Growth Tracking',
       description: 'We deliver visible improvements - more traffic, better rankings, and real business leads',
     },
@@ -140,13 +140,15 @@ const SEOPage = () => {
 <meta property="og:image:alt" content="Best SEO Company in Varanasi - RankInventiv" /> */}
 
     <GlassNavbar2 />
+   
     <Banner title="Search Engine Optimisation (SEO)" />
+     <WhatsAppButton />
     <ServiceSection
       imageSrc="/assets/images/service-detail-page-images/SEO Service.png"
       imageAlt="SEO project"
-      heading="Planning & Growth"
+      heading="Planning & Growth Overview"
       
-      subheading="Overview"
+      // subheading="Overview"
       description={`Running a successful SEO campaign takes a clear process and strong teamwork. In this section, we explain our step-by-step approach to planning and executing effective strategies. Our main goal is to boost your website’s visibility, improve search rankings, and attract quality traffic that converts. We start by understanding your goals, audience, and competition. With ongoing collaboration and regular performance checks, we adjust our SEO tactics to match your changing needs and deliver consistent, measurable results that support your growth.`}
       seoTitle="Search Engine Optimization (SEO)"
       seoContent=" We help businesses improve their visibility on search engines like Google. Our SEO services cover keyword research, on-page optimization, content creation, and link building. We also focus on technical improvements such as site speed, mobile usability, and secure browsing. With a strong SEO foundation, your website can reach the right audience and generate consistent leads. From meta tags to structured data, we manage every SEO element with care. We regularly analyze your website’s health and fix issues that may affect rankings. Whether you’re targeting a local audience or aiming for national reach, we customize our SEO strategies to match your goals and business needs—ensuring long-term growth and better search performance."

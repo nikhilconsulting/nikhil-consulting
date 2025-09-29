@@ -6,6 +6,7 @@ import WorkingProcess from "@/components/props/WorkingProcess";
 import DigitalMarketingFAQs from "@/components/props/Faqs";
 // import PricingSection from "@/components/props/Pricing";
 import Banner from "@/components/Banner";
+import WhatsAppButton from "@/components/WhatsappButton";
 
 const SMMPage = () => {
 // const plans = [
@@ -85,22 +86,22 @@ const SMMPage = () => {
 
    const workingSteps = [
     {
-      icon: '/assets/images/icon.png',
+      icon: '/assets/images/service-detail-page-images/website-development-working-process-steps-icons/business-goal-&-design-brief.png',
       title: 'Business Goal & Design Brief',
       description: 'We understand what your business does and what your website should achieve',
     },
     {
-      icon: '/assets/images/icon.png',
+      icon: '/assets/images/service-detail-page-images/website-development-working-process-steps-icons/website-structure-&-mock-design.png',
       title: 'Website Structure & Mock Design',
       description: 'We plan the pages, content flow, and create design samples for your approval',
     },
     {
-      icon: '/assets/images/icon.png',
+      icon: '/assets/images/service-detail-page-images/website-development-working-process-steps-icons/development-&-responsive-setup.png',
       title: 'Development & Responsive Setup',
       description: 'We build the full website and test it across mobile, tablet, and desktop screens',
     },
     {
-      icon: '/assets/images/icon.png',
+      icon: '/assets/images/service-detail-page-images/website-development-working-process-steps-icons/launch-support-&-handover.png',
       title: 'Launch, Support & Handover',
       description: 'We launch your website, provide training if needed, and offer regular updates if you want',
     },
@@ -122,11 +123,12 @@ const SMMPage = () => {
 
     <GlassNavbar2 />
     <Banner title="Website Development" />
+    <WhatsAppButton />
     <ServiceSection
       imageSrc="/assets/images/service-detail-page-images/Website.png"
       imageAlt="SEO project"
-      heading="Website Design & Development"
-      subheading="Overview"
+      heading="Website Development Overview"
+      // subheading="Overview"
       description={`Your website is the digital face of your business. In this section, we explain how our web development and design services help build a strong online presence. From layout to loading speed, we focus on every detail to ensure your website looks great, works smoothly, and loads quickly on all devices. A professional, mobile-friendly site not only builds trust but also improves user experience—turning visitors into loyal customers and helping your brand grow in a competitive digital environment.`}
       seoTitle="Custom Website Design & Development"
       seoContent="We build websites that are fast, user-friendly, and look great on both mobile and desktop. Our team creates custom designs aligned with your business goals—whether you need a simple website, a service portfolio, an eCommerce store, or a high-converting landing page. We focus on user experience, mobile responsiveness, and SEO-friendly structure. From homepages to contact forms, every section is crafted to guide your visitors. We work with platforms like WordPress, HTML5, and Shopify to deliver secure, scalable, and modern websites. You get full control, beautiful design, and performance that lasts. With the right layout, speed, and features, we help you build trust, engage customers, and turn your website into a powerful business tool."

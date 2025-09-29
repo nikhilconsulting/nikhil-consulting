@@ -66,7 +66,7 @@ const [selectedExpert, setSelectedExpert] = useState('');
   </p>
 
             {/* Google Map */}
-            <div className="mt-4 lg:w-60 overflow-hidden">
+            <div className="mt-4 w-auto overflow-hidden">
               <iframe
                 title="RankInventiv Location"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115403.50094890468!2d82.84627219726565!3d25.325718100000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2ff84c34878d%3A0x219a2452dac85f3a!2sNikhil%20Consulting%20%7C%20Business%20Growth%20%26%20Digital%20Marketer!5e0!3m2!1sen!2sus!4v1756276502921!5m2!1sen!2sus"

@@ -12,7 +12,7 @@ import HeroSection2 from "@/components/HeroSection2";
 // import HomeBlogSection from "@/components/HomeBlogSection";
 import HomeAboutSection from "@/components/AboutHomeSection";
 import PricingHomeSection from "@/components/PricingHomeSection";
-import WhatsAppPopup from "@/components/WhatsappButton";
+import WhatsAppButton from "@/components/WhatsappButton";
 
 
 
@@ -40,8 +40,7 @@ export default function Home() {
 <GlassNavbar2 />
 
 
-<WhatsAppPopup
-/>
+<WhatsAppButton />
 
 <HeroSection2 />
 <HomeAboutSection />
@@ -55,10 +54,10 @@ export default function Home() {
 {/* <ServicesSection2 /> */}
 
 
-<PricingHomeSection />
+{/* <PricingHomeSection /> */}
 
 
- <Testimonials2 />
+ {/* <Testimonials2 /> */}
 
 <GlassFooter2 />
 

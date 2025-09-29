@@ -2,6 +2,7 @@
 import Banner from "@/components/Banner";
 import GlassFooter2 from "@/components/Footer2";
 import GlassNavbar2 from "@/components/Navbar2";
+import WhatsAppButton from "@/components/WhatsappButton";
 import React from "react";
 
 const PrivacyPolicy = () => {
@@ -24,7 +25,7 @@ const PrivacyPolicy = () => {
 <meta property="og:image:alt" content="Google Ads Company in Varanasi - RankInventiv" /> */}
     <GlassNavbar2 /> 
     <Banner title="Privacy Policy" />
-
+<WhatsAppButton />
     <div
       className="min-h-screen w-full text-gray-200 bg-gradient-to-r from-[#382933] via-[#372935] to-[#372831]"
 

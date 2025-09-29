@@ -6,6 +6,7 @@ import WorkingProcess from "@/components/props/WorkingProcess";
 import DigitalMarketingFAQs from "@/components/props/Faqs";
 // import PricingSection from "@/components/props/Pricing";
 import Banner from "@/components/Banner";
+import WhatsAppButton from "@/components/WhatsappButton";
 
 const SMMPage = () => {
 // const plans = [
@@ -90,22 +91,22 @@ const faqsData = [
 
    const workingSteps = [
     {
-      icon: '/assets/images/icon.png',
+      icon: '/assets/images/service-detail-page-images/local-seo-working-process-steps-icons/local-business-audit-&-keyword-research.png',
       title: 'Local Business Audit & Keyword Research',
       description: 'We check your website and GMB profile, then find keywords your local customers are using',
     },
     {
-      icon: '/assets/images/icon.png',
+      icon: '/assets/images/service-detail-page-images/local-seo-working-process-steps-icons/competitor-&-listing-analysis.png',
       title: 'Competitor & Listing Analysis',
       description: 'We review local competitors, top-ranking businesses, and listing sites that boost your visibility',
     },
     {
-      icon: '/assets/images/icon.png',
+      icon: '/assets/images/service-detail-page-images/local-seo-working-process-steps-icons/local-seo-strategy-&-execution.png',
       title: 'Local SEO Strategy & Execution',
       description: 'We update your listings, website, keywords, and reviews - all with a focus on local ranking',
     },
     {
-      icon: '/assets/images/icon.png',
+      icon: '/assets/images/service-detail-page-images/local-seo-working-process-steps-icons/3-x-more-local-leads-&-calls.png',
       title: '3× More Local Leads & Calls',
       description: 'You get higher map rankings, more calls, and better walk-in traffic from nearby customers',
     },
@@ -126,14 +127,16 @@ const faqsData = [
 <meta property="og:image:alt" content="Local SEO and GMB Services in Varanasi - RankInventiv" /> */}
 
     <GlassNavbar2 />
+   
     <Banner
   title="Local SEO"
 />
+ <WhatsAppButton />
     <ServiceSection
       imageSrc="/assets/images/service-detail-page-images/Local.png"
       imageAlt="Local SEO"
-      heading="Local SEO Services"
-      subheading="Overview"
+      heading="Local SEO Services Overview"
+      // subheading="Overview"
       description={`Local SEO helps your business appear in Google when nearby customers search for services like yours. In this section, we share how we manage Local SEO projects to boost your local reach. From optimizing your Google Business Profile to using location-based keywords, we build a solid presence in your area. Through regular updates, reporting, and collaboration, we help your business rank higher in local search results and attract more nearby customers who are ready to call, visit, or make a purchase.`}
       seoTitle="Local SEO Optimization"
       seoContent="Local SEO focuses on helping your business appear in search results for your city or local area. We optimize your Google Business Profile, use location-specific keywords, and build citations on trusted local directories. Our team also creates geo-targeted content, boosts visibility on Google Maps, and ensures your business is listed correctly across the web. We monitor reviews and encourage positive feedback to build trust and credibility. Whether you own a shop, salon, clinic, or provide local services, our Local SEO solutions help you attract nearby customers through search and maps. We make sure search engines understand your location, services, and updates—so your business reaches the right people in your area, at the right time."

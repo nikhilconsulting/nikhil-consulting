@@ -32,7 +32,7 @@ useEffect(() => {
   return (
     <>
     <div
-      className="relative w-full overflow-hidden h-[180px] "
+      className="relative w-full overflow-hidden h-[180px]  pt-10 lg:pt-0"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onTouchStart={() => setIsPaused(true)}
@@ -55,12 +55,12 @@ useEffect(() => {
           return (
           <div
   key={i}
-  className="w-[340px] h-[180px] flex-shrink-0"
+  className="w-[300px] h-[170px] flex-shrink-0"
 >
   <div className="w-full h-full p-2  ">
 <div
   className={`w-full h-full transition-transform duration-500 overflow-hidden rounded-md ${
-    isActive ? "md:scale-100 aura-shadow" : "md:scale-100 aura-shadow"
+    isActive ? "md:scale-90 aura-shadow" : "md:scale-90 aura-shadow"
   }`}
 >
 

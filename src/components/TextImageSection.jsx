@@ -125,7 +125,7 @@ export default function TextImageSection() {
                 </div>
               ))}
             </div>
-            <div className="flex justify-center mt-5">
+            <div className="flex justify-start mt-5">
               <button
                 onClick={() => setShowForm(true)}
                 className="px-6 transition hover:scale-105 py-3 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] text-white font-semibold text-base lg:mt-0 mt-4 cursor-pointer tracking-[2.5px] uppercase"

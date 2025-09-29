@@ -5,6 +5,7 @@ import GlassFooter2 from '@/components/Footer2';
 import GlassNavbar2 from '@/components/Navbar2';
 import AboutPageSection4 from '@/components/AboutPageSection4';
 import Banner from '@/components/Banner';
+import WhatsAppButton from '@/components/WhatsappButton';
 
 
 export default function page() {
@@ -24,6 +25,7 @@ export default function page() {
 
     <GlassNavbar2 />
     <Banner title="About Us" />
+    <WhatsAppButton />
  <AboutPageSection2 />
    <AboutPageSection3 />
      

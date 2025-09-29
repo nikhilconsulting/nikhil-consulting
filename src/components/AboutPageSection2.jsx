@@ -2,6 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+  import '@fortawesome/fontawesome-free/css/all.min.css';
 export default function AboutPageSection2() {
   return (
    <section
@@ -11,46 +12,32 @@ export default function AboutPageSection2() {
     <div className=" absolute bottom-0 right-0 w-[50vw] h-[50vw] bg-[#5F69A8] rotate-45 origin-bottom-right z-0"></div>
     <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-12 z-1">
         {/* Left Side - Blob Image */}
-       <div className="relative w-full max-w-[500px] aspect-[4/3] mx-auto">
+     <div className="relative w-full max-w-[500px] aspect-square mx-auto">
+  {/* Frame Shadow/Layer */}
+  <div className="absolute bottom-6 right-6 w-full h-full bg-[linear-gradient(90deg,_#000000,_#5F69A8)] z-0 shadow-2xl"></div>
 
-          {/* 💠 Blob Background */}
-          <div className="absolute inset-0 z-0 -rotate-[15deg] scale-110 sm:scale-100">
-            <div className="w-full h-full bg-[#5F69A8] rounded-[50%]"></div>
-          </div>
+  {/* Main Frame */}
+  <div className="relative w-full h-full  border-[6px] border-[#5F69A8]  z-10 ">
+    <div className="relative w-full h-full border-[3px] border-[#000000] overflow-hidden">
+      <Image
+        src="/assets/images/about-us-page-image/who-we-are.png"
+        alt="Who We Are"
+        fill
+        className="object-cover"
+        priority
+      />
+    </div>
+  </div>
 
-          {/* 🔷 SVG Blob ClipPath */}
-          <svg width="0" height="0">
-            <defs>
-              <clipPath id="blobClip" clipPathUnits="objectBoundingBox">
-                <path d="M0.3 0.05 C0.75 0 1 0.4 0.85 0.7 C0.75 0.9 0.4 1 0.15 0.85 C-0.05 0.7 0 0.25 0.3 0.05 Z" />
-              </clipPath>
-            </defs>
-          </svg>
+  {/* Optional Tag/Label */}
+  <div className="absolute top-0 right-3 bg-white text-black px-4 py-3 text-xl font-semibold shadow-md rounded-full z-20">
+    25+ Years
+  </div>
+</div>
 
-          {/* 🖼️ Image Inside Blob */}
-          <div
-            className="w-full h-full overflow-hidden relative z-10"
-            style={{ clipPath: 'url(#blobClip)' }}
-          >
-            <Image
-              src="/assets/images/about-us-page-image/About us 2.png"
-              alt="Team discussion"
-              fill
-              quality={100}
-              className="object-cover"
-              priority
-            />
-          </div>
-
-          {/* 🏷️ Label Box */}
-          <div className="absolute top-2 left-2 sm:top-4 sm:left-4 bg-gray-100 rounded-full px-4 py-2 sm:px-6 sm:py-3 shadow-lg text-center z-20">
-            <p className="text-black font-bold text-sm sm:text-lg">25+</p>
-            <p className="text-[10px] sm:text-xs text-black">Years of Experience</p>
-          </div>
-        </div>
 
         {/* Right Side - Text Content Wrapped in Black Card */}
-<div className="border border-[#8DCBFD] bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)] p-4 lg:p-12 shadow-lg max-w-3xl mx-auto lg:mx-[-30] mt-10 lg:mt-0">
+<div className="border border-[#8DCBFD] bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)] p-4 lg:p-6 shadow-lg max-w-3xl mx-auto lg:mx-[-30] mt-10 lg:mt-0">
 
   <span className="text-4xl text-gray-100 font-semibold">
     Who We Are ?
@@ -63,6 +50,12 @@ export default function AboutPageSection2() {
 <p className="text-white text-lg lg:text-base leading-relaxed mt-4 text-justify">
    We believe growth is built on understanding, not assumptions. That’s why every strategy we design focuses on attracting the right customers, fostering engagement, and converting interactions into lasting relationships. While our primary focus is delivering high-impact digital marketing services, we also offer consulting to help businesses strengthen visibility, streamline operations, and sustain momentum in competitive markets.
   </p>
+            <ul className="mt-4 mb-2 grid md:grid-cols-2 gap-2 md:text-base text-lg  font-semibold text-gray-200  list-inside whitespace-nowrap">
+            <li><i className="fas fa-check text-[#8DCBFD] mr-2 mt-1" /> Local & Global Presence</li>
+            <li><i className="fas fa-check text-[#8DCBFD] mr-2 mt-1" /> Expert-Led Team</li>
+            <li><i className="fas fa-check text-[#8DCBFD] mr-2 mt-1" /> Sector-Wide Consulting</li>
+            <li><i className="fas fa-check text-[#8DCBFD] mr-2 mt-1" /> Sustainable Growth</li>
+          </ul>
   {/* 🔘 View Services Button */}
  <div>
   <Link

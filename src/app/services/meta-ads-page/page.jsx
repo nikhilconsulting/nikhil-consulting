@@ -6,6 +6,7 @@ import WorkingProcess from "@/components/props/WorkingProcess";
 import DigitalMarketingFAQs from "@/components/props/Faqs";
 // import PricingSection from "@/components/props/Pricing";
 import Banner from "@/components/Banner";
+import WhatsAppButton from "@/components/WhatsappButton";
 
 const SMMPage = () => {
 // const plans = [
@@ -84,22 +85,22 @@ const SMMPage = () => {
 
    const workingSteps = [
     {
-      icon: '/assets/images/icon.png',
+      icon: '/assets/images/service-detail-page-images/meta-ads-working-process-steps-icons/goal-setting-&-ad-planning.png',
       title: 'Goal Setting & Ad Planning',
       description: 'We understand your objectives — sales, leads, awareness — and pick the right Meta campaign type.',
     },
     {
-      icon: '/assets/images/icon.png',
+      icon: '/assets/images/service-detail-page-images/meta-ads-working-process-steps-icons/audience-&-budget-targeting.png',
       title: 'Audience & Budget Targeting',
       description: 'We identify your ideal audience and manage your ad spend for maximum efficiency.',
     },
     {
-      icon: '/assets/images/icon.png',
+      icon: '/assets/images/service-detail-page-images/meta-ads-working-process-steps-icons/creative-design-&-ad-launch.png',
       title: ' Creative Design & Ad Launch',
       description: 'We design visuals, write ad copy, and launch ads on feeds, stories, and reels.',
     },
     {
-      icon: '/assets/images/icon.png',
+      icon: '/assets/images/service-detail-page-images/meta-ads-working-process-steps-icons/track-results-&-optimize-roi.png',
       title: 'Track Results & Optimize ROI',
       description: 'We monitor performance daily and refine campaigns for better conversions and growth.',
     },
@@ -120,14 +121,16 @@ const SMMPage = () => {
 <meta property="og:image:alt" content="Meta Ads Services in Varanasi - RankInventiv" /> */}
 
     <GlassNavbar2 />
+   
     <Banner
   title="Meta Ads"
 />
+ <WhatsAppButton />
     <ServiceSection
       imageSrc="/assets/images/service-detail-page-images/Meta Ads.png"
       imageAlt="Meta project"
-      heading="Meta Ads"
-      subheading="Overview"
+      heading="Meta Ads Overview"
+      // subheading="Overview"
       description={`We help businesses grow with powerful ad campaigns on Facebook and Instagram. In this section, we explain how our Meta Ads services connect your brand with the right audience and deliver measurable results. Whether your goal is to generate leads, boost sales, or increase engagement, we create campaigns that focus on real conversions. From strategy and creative planning to daily management and performance tracking, we handle everything—so your budget drives maximum growth.`}
       seoTitle="Meta Ad Campaigns"
       seoContent="Advertising on Facebook and Instagram is one of the fastest ways to grow your business online. We create customized campaigns based on your goals — whether it’s sales, sign-ups, app downloads, or event promotion. Our team researches your target audience and places ads where they spend most of their time. From engaging ad copy to scroll-stopping images and videos, we design every detail to attract attention and inspire action. We use advanced targeting like demographics, interests, and behaviors to ensure your ads reach the right people. With A/B testing, smart budget allocation, and daily performance monitoring, we keep improving results. Every campaign is designed to move customers from awareness to action, turning clicks into leads and leads into loyal customers."

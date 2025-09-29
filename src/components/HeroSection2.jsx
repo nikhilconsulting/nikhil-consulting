@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import Link from "next/link";
+import Image from "next/image";
+
 import SocialTicker from "./Ticker";
 
 const slides = [
@@ -46,7 +48,7 @@ const slides = [
       <>
         Harness the power of AI to transform your business. As a recognized
         industry leader by Deloitte and Clutch, we craft intelligent strategies
-        that anticipate your needs and deliver unmatched market leadership
+        that anticipate your needs and deliver unmatched market leadership 
       </>
     ),
     button: (
@@ -91,12 +93,15 @@ const HeroSection = () => {
 
   return (
     <section
-      className="relative bg-cover bg-center py-40 flex items-center transition-all duration-700 ease-in-out"
-      style={{
-        backgroundImage:
-          "url('/assets/images/home-page-image/herosection-bg-image.png')", // FIXED IMAGE
-      }}
+      className="relative  h-[700px] pt-16 lg:pt-0 flex items-center transition-all duration-700 ease-in-out"
     >
+        <Image
+    src="/assets/images/home-page-image/herosection-bg-image.png"
+    alt="Hero Background"
+    fill
+    className="object-cover object-center z-0"
+    priority
+  />
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60"></div>
 
@@ -123,7 +128,7 @@ const HeroSection = () => {
 
 
 
-      <div className="absolute bottom-6 left-0 w-full z-20">
+      <div className="absolute  bottom-0 left-0 w-full z-20">
 
         <SocialTicker />
       </div>
