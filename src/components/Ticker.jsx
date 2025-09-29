@@ -32,7 +32,7 @@ useEffect(() => {
   return (
     <>
     <div
-      className="relative w-full overflow-hidden h-[180px]  pt-10 lg:pt-0"
+      className="relative w-full overflow-hidden h-[200px]  pt-10 lg:pt-0"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onTouchStart={() => setIsPaused(true)}
