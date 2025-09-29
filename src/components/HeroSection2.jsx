@@ -39,7 +39,7 @@ const slides = [
     title:
     (
       <>
-         The Future of <br /> Marketing is Here
+         The Future of Marketing is Here
       </>
     ),
     description: (
@@ -91,7 +91,7 @@ const HeroSection = () => {
 
   return (
     <section
-      className="relative bg-cover bg-center min-h-screen py-20 flex items-center transition-all duration-700 ease-in-out"
+      className="relative bg-cover bg-center py-40 flex items-center transition-all duration-700 ease-in-out"
       style={{
         backgroundImage:
           "url('/assets/images/home-page-image/herosection-bg-image.png')", // FIXED IMAGE
@@ -100,26 +100,28 @@ const HeroSection = () => {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60"></div>
 
-      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-12 max-w-7xl">
-        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10 pt-0 pb-6">
-          {/* Left Content */}
-          <div
-            className={`w-full lg:w-1/2 text-white text-center lg:text-left pb-40 lg:pb-16 transform transition-all duration-500 ${
-              fade ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-            }`}
-          >
-            <h1 className="text-3xl lg:text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
-              {slide.title}
-            </h1>
+<div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-12 max-w-7xl">
+  <div className="flex flex-col lg:flex-row items-center justify-center gap-10 pt-4 lg:pb-14">
+    {/* Left Content */}
+    <div
+      className={`text-white text-center pb-40 lg:pb-16 transform transition-all duration-500 ${
+        fade ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+      }`}
+    >
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight whitespace-normal sm:whitespace-normal">
+        {slide.title}
+      </h1>
 
-            <p className="text-xl lg:text-lg mb-4 lg:max-w-lg max-w-xl mx-auto lg:mx-0">
-              {slide.description}
-            </p>
+      <p className="text-lg sm:text-xl lg:text-lg mb-4 max-w-full sm:max-w-2xl lg:max-w-xl mx-auto px-2 lg:px-0">
+        {slide.description}
+      </p>
 
-            <div className="mt-6" >{slide.button}</div>
-          </div>
-        </div>
-      </div>
+      <div className="mt-6">{slide.button}</div>
+    </div>
+  </div>
+</div>
+
+
 
       <div className="absolute bottom-6 left-0 w-full z-20">
 

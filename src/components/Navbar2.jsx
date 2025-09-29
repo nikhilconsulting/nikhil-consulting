@@ -100,102 +100,103 @@ const timer = setTimeout(() => {
     
 <header className="fixed top-0 left-0 right-0 z-50 w-full">
 <nav
-  className={`fixed top-0 left-0 right-0 flex items-center gap-3 text-white px-6 py-4 transition-all duration-500 ease-in-out z-40 ${
+  // 👇 px-6 को बदलकर px-4 sm:px-8 lg:px-16 किया गया 👇
+  className={`fixed top-0 left-0 right-0 flex items-center gap-3 text-white px-4 sm:px-8 lg:px-10 xl:px-28 py-4 transition-all duration-500 ease-in-out z-40 ${
     scrolled
       ? "bg-[linear-gradient(15deg,_#000000,_#382933,_#000000)] border-b border-black slide-in-from-top"
       : "bg-transparent border-none shadow-none"
   }`}
 >
-<div className="flex items-center flex-shrink-0 -ml-16 lg:-ml-8">  {/* -ml-8 means ~2rem left shift */}
-  <Link href="/">
-    <Image
-      src="/assets/images/logo/logo-3.png"
-      alt="Logo"
-      width={200}
-      height={100}
-      className="h-auto w-auto"
-      priority
-    />
-  </Link>
-</div>
+  <div className="flex items-center flex-shrink-0 -ml-14 lg:-ml-14">
+    {/* -ml-8 means ~2rem left shift */}
+    <Link href="/">
+      <Image
+        src="/assets/images/logo/logo-3.png"
+        alt="Logo"
+        width={200}
+        height={100}
+        className="h-auto w-auto"
+        priority
+      />
+    </Link>
+  </div>
 
-
-<ul className="hidden lg:flex flex-1 justify-end  gap-6 whitespace-nowrap  list-none text-base tracking-[1.0px] min-w-0 mr-8 mt-1">
-  
-      {navItems.map((item) => (
-        <li key={item.label} className="relative group">
-          {!item.children ? (
+  {/* इस ul को पहले ही center align किया जा चुका है (justify-center से) */}
+  <ul className="hidden lg:flex flex-1 justify-center gap-6 whitespace-nowrap list-none text-base tracking-[1.0px] min-w-0 mr-8 mt-1">
+    {navItems.map((item) => (
+      <li key={item.label} className="relative group">
+        {!item.children ? (
+          <Link
+            href={item.href}
+            className="relative block py-2 text-white hover:text-[#8FCDFF] no-underline transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-white after:to-transparent hover:after:bg-gradient-to-r hover:after:from-[#8FCDFF] hover:after:to-transparent after:transition-all after:duration-300 hover:after:w-full"
+          >
+            {item.label}
+          </Link>
+        ) : (
+          <>
             <Link
               href={item.href}
-              className="relative block py-2 text-white hover:text-[#8FCDFF]  no-underline transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-white after:to-transparent hover:after:bg-gradient-to-r hover:after:from-[#8FCDFF] hover:after:to-transparent after:transition-all after:duration-300 hover:after:w-full"
+              className="flex items-center gap-1 py-2 text-white hover:text-[#8FCDFF] transition-colors duration-200 cursor-pointer"
             >
               {item.label}
+              <ChevronDown
+                size={24}
+                className="transition-transform duration-300 group-hover:rotate-180"
+              />
             </Link>
-          ) : (
-            <>
-              <Link
-                href={item.href}
-                className="flex items-center gap-1 py-2 text-white hover:text-[#8FCDFF] transition-colors duration-200 cursor-pointer"
-              >
-                {item.label}
-                <ChevronDown
-                  size={24}
-                  className="transition-transform duration-300 group-hover:rotate-180"
-                />
-              </Link>
             <ul className="absolute left-[-80px] opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 flex-col gap-2 text-white bg-[linear-gradient(15deg,_#000000,_#382933,_#000000)] backdrop-blur-[15px] rounded-sm mt-7 p-2 shadow-lg z-50 min-w-[300px]">
-  {item.children.map((child) => (
-                  <li key={child.href}>
-                <Link
-  href={child.href}
-  className="block px-4 py-2 whitespace-nowrap hover:bg-white/30 hover:text-[#8FCDFF] rounded transition"
->
-  {child.label}
-</Link>
+              {item.children.map((child) => (
+                <li key={child.href}>
+                  <Link
+                    href={child.href}
+                    className="block px-4 py-2 whitespace-nowrap hover:bg-white/30 hover:text-[#8FCDFF] rounded transition"
+                  >
+                    {child.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+      </li>
+    ))}
+  </ul>
 
-                  </li>
-                ))}
-              </ul>
-            </>
-          )}
-        </li>
-      ))}
-    </ul>
+  {/* Controls container for Hamburger + Book Meeting button */}
+  <div className="flex items-center gap-4 ml-auto">
+    {/* Hamburger Button for mobile */}
+    <button
+      className="text-white font-bold transition hover:scale-105 lg:hidden cursor-pointer"
+      onClick={() => setOpen(!open)}
+      aria-label="Toggle menu"
+    >
+      {/* ... icons (Menu/X) ... */}
+      {open ? <X size={34} /> : <Menu size={38} />}
+    </button>
 
-    {/* Controls container for Hamburger + Book Meeting button */}
-    <div className="flex items-center gap-4 ml-auto">
-      {/* Hamburger Button for mobile */}
-      <button
-        className="text-white font-bold transition hover:scale-105 lg:hidden cursor-pointer"
-        onClick={() => setOpen(!open)}
-        aria-label="Toggle menu"
-      >
-        {open ? <X size={34} /> : <Menu size={38} />}
-      </button>
+    {/* Book Meeting button for desktop */}
+    <button
+      className={`group hidden lg:flex items-center cursor-pointer px-4 py-2 font-semibold text-white relative overflow-hidden text-lg z-[60] ${
+        scrolled ? "hover:text-[#8FCDFF]" : "hover:text-[#8FCDFF]"
+      }`}
+      onClick={() => setSidebarOpen(true)}
+    >
+      <span className="relative z-10 flex items-center gap-2">
+        Book Meeting <FaArrowRight />
+      </span>
 
-      {/* Book Meeting button for desktop */}
-      <button
-        className={`group hidden lg:flex items-center cursor-pointer px-4 py-2 font-semibold text-white relative overflow-hidden text-lg z-[60] ${
-          scrolled ? "hover:text-[#8FCDFF]" : "hover:text-[#8FCDFF]"
-        }`}
-        onClick={() => setSidebarOpen(true)}
-      >
-        <span className="relative z-10 flex items-center gap-2">
-          Book Meeting <FaArrowRight />
-        </span>
+      <span
+        className="absolute inset-0 bg-gradient-to-r from-[#372935] via-black to-[#372935] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out"
+        aria-hidden="true"
+      ></span>
 
-        <span
-          className="absolute inset-0 bg-gradient-to-r from-[#372935] via-black to-[#372935] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out"
-          aria-hidden="true"
-        ></span>
-
-        <span
-          className="absolute inset-0 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] z-[-1]"
-          aria-hidden="true"
-        ></span>
-      </button>
-    </div>
-  </nav>
+      <span
+        className="absolute inset-0 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] z-[-1]"
+        aria-hidden="true"
+      ></span>
+    </button>
+  </div>
+</nav>
 
   {/* Mobile dropdown menu */}
   {open && (
