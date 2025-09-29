@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
 
 const plans = {
@@ -74,10 +75,17 @@ export default function Pricing() {
     <div className="relative bg-black/10 py-12 px-4 mx-auto font-sans flex flex-col items-center justify-center">
 
       {/* Background Image with Blur */}
-      <div
-        className="absolute inset-0 bg-cover bg-center filter blur-sm "
-        style={{ backgroundImage: "url('/assets/images/pricing-section-image/pricing-background-image.png')" }}
-      />
+<div className="absolute inset-0 overflow-hidden">
+  <Image
+    src="/assets/images/pricing-section-image/pricing-background-image.png"
+    alt="Background"
+    layout="fill"
+    objectFit="contain"
+    objectPosition="center"
+    className="filter blur-sm"
+    priority={true} // agar chahte ho ki image jaldi load ho
+  />
+</div>
 
       <span className="text-4xl lg:text-5xl font-bold text-white tracking-tight z-1">
          Our Plans
