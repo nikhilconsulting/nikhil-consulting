@@ -24,7 +24,7 @@ export default function WhatsAppButton() {
       {/* Chat Box - appears above the button */}
       {open && (
      <div
-  className={`transition-all duration-500 ease-in-out transform w-[400px] mb-3 rounded-lg overflow-hidden shadow-lg border border-gray-200 bg-white
+  className={`transition-all duration-500 ease-in-out transform w-[360px] mb-3 rounded-lg overflow-hidden shadow-lg border border-gray-200 bg-white
     ${open ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-10 opacity-0 scale-95 pointer-events-none'}
   `}
 >
@@ -50,8 +50,8 @@ export default function WhatsAppButton() {
   </div>
 
   {/* Message */}
-  <div className="p-5 bg-[#e5ddd5]">
-    <div className="relative max-w-sm bg-white rounded-lg px-6 py-3 shadow text-base text-gray-900">
+  <div className="p-4 bg-[#e5ddd5]">
+    <div className="relative max-w-[200px] bg-white rounded-lg p-2 shadow text-base text-gray-900">
       <div className="font-semibold text-gray-600 text-[14px] mb-1">
         Rankinventiv
       </div>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Cta2 from "@/components/Cta2";
 import { SiX } from "react-icons/si";
+import { SiGooglemaps } from "react-icons/si";
 
 import { useState, useEffect } from "react";
 import {
@@ -78,9 +79,9 @@ const [selectedExpert, setSelectedExpert] = useState('');
 
 
           {/* For Businesses */}
-          <div className="xl:ml-3">
-            <h3 className="font-semibold mb-4 text-lg">For Consulting</h3>
-         <ul className="space-y-2 text-base">
+          <div className="xl:ml-3 min-w-[230px]">
+            <h3 className="font-semibold mb-4 text-lg ">For Consulting</h3>
+         <ul className="space-y-2 text-base whitespace-nowrap">
   <li onClick={() => handleClick('SEO Expert')} className="hover:underline hover:text-[#8FCDFF] cursor-pointer">Talk With SEO Expert</li>
   <li onClick={() => handleClick('Ads Specialist')} className="hover:underline hover:text-[#8FCDFF] cursor-pointer">Talk With Ads Specialist</li>
   <li onClick={() => handleClick('Branding Expert')} className="hover:underline hover:text-[#8FCDFF] cursor-pointer">Talk With Branding Expert</li>
@@ -90,9 +91,9 @@ const [selectedExpert, setSelectedExpert] = useState('');
 
 
           </div>
-          <div className="xl:ml-12">
-            <h3 className="font-semibold mb-4 text-lg"> Services</h3>
-            <ul className="space-y-2 text-base cursor-pointer">
+          <div className="xl:ml-12 min-w-[230px]">
+            <h3 className="font-semibold mb-4 text-lg "> Services</h3>
+            <ul className="space-y-2 text-base cursor-pointer whitespace-nowrap">
               <li><Link href="/services/search-engine-optimisation-page" className="hover:underline hover:text-[#8FCDFF]">SEO</Link></li>
 
               <li><Link href="/services/local-seo-page" className="hover:underline hover:text-[#8FCDFF]">Local SEO</Link></li>
@@ -153,9 +154,13 @@ const [selectedExpert, setSelectedExpert] = useState('');
                {/* <Link href="https://www.youtube.com/@Rankinventiv" target="_blank" rel="noopener noreferrer">
                 <FaYoutube className="cursor-pointer hover:scale-110 transition hover:text-[#8FCDFF]" />
               </Link> */}
-              <Link href="https://maps.app.goo.gl/MNbdJh3Mn9J7joEn6" target="_blank" rel="noopener noreferrer">
-                <FaGooglePlusG className="cursor-pointer hover:scale-150 transition scale-[1.4] hover:text-[#8FCDFF]" />
-              </Link>
+                    <Link
+  href="https://maps.app.goo.gl/MNbdJh3Mn9J7joEn6"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <SiGooglemaps className="cursor-pointer hover:scale-110 transition  text-[#fff]" />
+</Link>
             </div>
           </div>
         </div>

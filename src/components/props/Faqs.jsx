@@ -7,7 +7,7 @@ export default function DigitalMarketingFAQs({ faqs }) {
 
   return (
     <div
-      className="relative flex flex-col justify-start items-center px-4 sm:px-6 md:px-8 lg:px-20 py-10 lg:pt-15 bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)]"
+      className="relative flex flex-col justify-start items-center px-4 sm:px-6 md:px-8 lg:px-20 py-18 lg:pt-15 bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)]"
 
     >
       <span className="flex justify-center text-2xl sm:text-2xl md:text-2xl lg:text-5xl font-bold mb-2 sm:mb-12 md:mb-4 bg-clip-text text-white">

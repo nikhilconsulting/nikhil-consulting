@@ -11,7 +11,7 @@ import {
 
 export default function Connect() {
   return (
-    <section className="bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)] text-white px-8 pb-30">
+    <section className="relative bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)] text-white px-8 pb-24">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 pt-20">
 
         {/* Contacts */}
@@ -78,6 +78,16 @@ export default function Connect() {
        
 
       </div>
+      
+<div className="absolute bottom-0 left-0 w-full z-20">
+  <div
+    className="h-[2px] w-full max-w-[1000px] mx-auto"
+    style={{
+      background:
+        "linear-gradient(to right, rgba(211,233,253,0.3), rgba(211,233,253,0))",
+    }}
+  ></div>
+</div>
     </section>
   );
 }

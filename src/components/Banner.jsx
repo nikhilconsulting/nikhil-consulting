@@ -17,7 +17,7 @@ export default function Banner({ title, imageSrc }) {
         />
       )} */}
 
-      <span className="relative text-gray-100 text-4xl md:text-5xl lg:text-5xl mt-24 lg:mt-26 font-bold z-10 text-center">
+      <span className="relative text-gray-100 text-4xl md:text-5xl lg:text-5xl mt-24 lg:mt-20 font-bold z-10 text-center">
         {title}
       </span>
     </section>

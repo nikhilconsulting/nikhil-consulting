@@ -150,6 +150,18 @@ const [selectedExpert, setSelectedExpert] = useState('');
   <SiGooglemaps className="cursor-pointer hover:scale-110 transition  text-[#fff]" />
 </Link>
 
+         {/* <Link
+  href="https://maps.app.goo.gl/MNbdJh3Mn9J7joEn6"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <img
+    src="/public/assets/images/google-map-icon.png"
+    alt="Google Maps"
+    className="cursor-pointer hover:scale-110 transition w-6 h-6"
+  />
+</Link> */}
+
             </div>
           </div>
         </div>

@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { X } from "lucide-react";
+import { SiX } from "react-icons/si";
+
 import SidebarForm from "./SidebarForm";
 import {
   FaLinkedin,
@@ -143,14 +145,14 @@ export default function homeSidebarSection({ isOpen, onClose }) {
                 <FaFacebook className="cursor-pointer hover:scale-110 transition hover:text-[#8FCDFF]" />
               </Link>
               <Link href="https://x.com/rankinventiv" target="_blank" rel="noopener noreferrer">
-                <FaTwitter className="cursor-pointer hover:scale-110 transition hover:text-[#8FCDFF]" />
+                <SiX size={30} className="cursor-pointer mt-1 hover:scale-110 transition hover:text-[#8FCDFF]" />
               </Link>
-               <Link href="https://www.youtube.com/@Rankinventiv" target="_blank" rel="noopener noreferrer">
+               {/* <Link href="https://www.youtube.com/@Rankinventiv" target="_blank" rel="noopener noreferrer">
                 <FaYoutube className="cursor-pointer hover:scale-110 transition hover:text-[#8FCDFF]" />
-              </Link>
-              <Link href="https://maps.app.goo.gl/MNbdJh3Mn9J7joEn6" target="_blank" rel="noopener noreferrer">
+              </Link> */}
+              {/* <Link href="https://maps.app.goo.gl/MNbdJh3Mn9J7joEn6" target="_blank" rel="noopener noreferrer">
                 <FaGooglePlusG className="cursor-pointer hover:scale-150 transition scale-[1.4] hover:text-[#8FCDFF]" />
-              </Link>
+              </Link> */}
             
   </div>
 </div>

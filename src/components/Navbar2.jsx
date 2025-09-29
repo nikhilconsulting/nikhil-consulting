@@ -120,7 +120,7 @@ const timer = setTimeout(() => {
 </div>
 
 
-<ul className="hidden lg:flex flex-1 justify-end  gap-4  list-none text-base tracking-[1.0px] min-w-0">
+<ul className="hidden lg:flex flex-1 justify-end  gap-6 whitespace-nowrap  list-none text-base tracking-[1.0px] min-w-0 mr-8 mt-1">
   
       {navItems.map((item) => (
         <li key={item.label} className="relative group">
@@ -259,6 +259,29 @@ const timer = setTimeout(() => {
           </li>
         ))}
       </ul>
+        <div className="flex justify-center w-full my-6"> 
+        {/* Book Meeting button for desktop */}
+      <button
+        className={`group lg:hidden block items-center cursor-pointer mt-4 px-4 py-2 font-semibold text-white relative overflow-hidden text-lg z-[60] ${
+          scrolled ? "hover:text-[#8FCDFF]" : "hover:text-[#8FCDFF]"
+        }`}
+        onClick={() => setSidebarOpen(true)}
+      >
+        <span className="relative z-10 flex items-center gap-2">
+          Book Meeting <FaArrowRight />
+        </span>
+
+        <span
+          className="absolute inset-0 bg-gradient-to-r from-[#372935] via-black to-[#372935] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out"
+          aria-hidden="true"
+        ></span>
+
+        <span
+          className="absolute inset-0 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] z-[-1]"
+          aria-hidden="true"
+        ></span>
+      </button>
+      </div>
     </div>
   )}
 

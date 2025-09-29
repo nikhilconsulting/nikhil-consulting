@@ -1,6 +1,8 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { SiX } from "react-icons/si";
+import { SiGooglemaps } from "react-icons/si";
 import {
   FaLinkedin,
   FaInstagram,
@@ -143,14 +145,29 @@ return (
 
 
           <div className="mt-8 space-y-4 text-gray-200 text-base">
-            <div>
-              <p className="font-semibold text-[#8CC8FD]">Contact Support</p>
-              <Link href="tel:+918527665635" className="underline text-gray-300 hover:text-white">+91-8527665635</Link>
-            </div>
-            <div>
-              <p className="font-semibold text-[#8CC8FD]">General Inquiries</p>
-              <Link href="rankinventiv@gmail.com" className="underline text-gray-300 hover:text-white">rankinventiv@gmail.com</Link>
-            </div>
+           <div>
+  <p className="font-semibold text-[#8CC8FD]">Contact Support</p>
+  
+  <a 
+    href="tel:+918527665635" 
+    className="flex items-center gap-2 underline text-gray-300 hover:text-white"
+  >
+    <FaPhone />
+    +91-8527665635
+  </a>
+</div>
+
+         <div>
+  <p className="font-semibold text-[#8CC8FD]">General Inquiries</p>
+
+  <a
+    href="mailto:rankinventiv@gmail.com" 
+    className="flex items-center gap-2 underline text-gray-300 hover:text-white"
+  >
+    <FaEnvelope />
+    rankinventiv@gmail.com
+  </a>
+</div>
               <div>
               <p className="font-semibold text-[#8CC8FD]">Consulting Hours:</p>
               <span>Monday – Friday: 11:00 AM – 6:00 PM <br />
@@ -159,7 +176,7 @@ Sunday: Closed
 </span>
             </div>
             <div>
-              <p className="font-semibold text-[#8CC8FD]">Mailing Address</p>
+              <p className="font-semibold text-[#8CC8FD]">Office  Address</p>
               <p>2nd Floor, Lahurabir Rd, Jagatganj, <br /> Near Sanskrit University, Varanasi, <br /> Uttar Pradesh 221002</p>
             </div>
              <div className="flex gap-4 text-3xl ">
@@ -173,14 +190,18 @@ Sunday: Closed
                 <FaFacebook className="cursor-pointer hover:scale-110 transition hover:text-[#8FCDFF]" />
               </Link>
               <Link href="https://x.com/rankinventiv" target="_blank" rel="noopener noreferrer">
-                <FaTwitter className="cursor-pointer hover:scale-110 transition hover:text-[#8FCDFF]" />
+               <SiX size={26} className="cursor-pointer mt-1 hover:scale-110 transition hover:text-[#8FCDFF]" />
               </Link>
-               <Link href="https://www.youtube.com/@Rankinventiv" target="_blank" rel="noopener noreferrer">
+               {/* <Link href="https://www.youtube.com/@Rankinventiv" target="_blank" rel="noopener noreferrer">
                 <FaYoutube className="cursor-pointer hover:scale-110 transition hover:text-[#8FCDFF]" />
-              </Link>
-              <Link href="https://maps.app.goo.gl/MNbdJh3Mn9J7joEn6" target="_blank" rel="noopener noreferrer">
-                <FaGooglePlusG className="cursor-pointer hover:scale-150 transition scale-[1.4] hover:text-[#8FCDFF]" />
-              </Link>
+              </Link> */}
+                    <Link
+  href="https://maps.app.goo.gl/MNbdJh3Mn9J7joEn6"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <SiGooglemaps className="cursor-pointer hover:scale-110 transition  text-[#fff]" />
+</Link>
            </div>
           </div>
         </div>
