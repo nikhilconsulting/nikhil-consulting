@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState , useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -61,136 +62,148 @@ const navItems = [
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 w-full">
-        <nav
-          className="relative flex items-center  font-bold w-full gap-4 bg-white/5 backdrop-blur-[20px] shadow-lg px-8 py-4"
-          aria-label="Main navigation"
-        >
-  {/* Left side (can be logo later) */}
-  {/* <div className="flex-1"></div> */}
+<header className="fixed top-0 left-0 right-0 z-50 w-full">
+  <nav
+    className="relative flex items-center justify-between font-bold w-full gap-4 bg-white/5 backdrop-blur-[20px] shadow-lg px-6 sm:px-8 py-4"
+    aria-label="Main navigation"
+  >
+  
+   {/* Logo */}
+<div className="flex items-center flex-shrink-1">
+  <Link href="/" >
+    <Image
+      src="/assets/images/logo/logo-3.png" // <-- Replace with your actual image path if different
+      alt="Logo"
+      width={200}
+      height={100}
+      className="h-auto w-auto"
+      priority 
+    />
 
-          {/* Desktop Nav Items (visible >= md ~ 768px) */}
-          <ul className="hidden lg:flex flex-1 justify-end xl:mr-20 gap-16 list-none text-base  p-[10px] tracking-[1.0px]">
-          {navItems.map((item) => (
-  <li key={item.href || item.label}>
-    {item.onClick ? (
-      <button
-        onClick={() => {
-          item.onClick();
-          setOpen(false); // Close mobile menu if needed
-        }}
-        className="relative block py-2 text-white no-underline transition-colors duration-200 hover:text-gray-300
-     after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 
-     after:bg-gradient-to-r after:from-white after:to-transparent 
-     after:transition-all after:duration-300 hover:after:w-full cursor-pointer"
-      >
-        {item.label}
-      </button>
-    ) : (
-      <Link
-        href={item.href}
-        className="relative block py-2 text-white no-underline transition-colors duration-200 hover:text-gray-300
-     after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 
-     after:bg-gradient-to-r after:from-white after:to-transparent 
-     after:transition-all after:duration-300 hover:after:w-full"
-      >
-        {item.label}
-      </Link>
-    )}
-  </li>
-))}
+  </Link>
+</div>
 
-          </ul>
 
-          {/* Book Consulting Us Button (only desktop >= md) */}
-          <div className="hidden lg:block mr-20">
+    {/* Desktop Nav Items */}
+    <ul className="hidden lg:flex flex-1 justify-end xl:mr-20 gap-10 list-none text-base tracking-[1.0px]">
+      {navItems.map((item) => (
+        <li key={item.href || item.label}>
+          {item.onClick ? (
             <button
               onClick={() => {
-                const footer = document.getElementById("book-consulting");
-                if (footer) {
-                  footer.scrollIntoView({ behavior: "smooth" });
-                }
-                setTimeout(() => {
-                  setShowForm(true);
-                }, 100);
+                item.onClick();
+                setOpen(false);
               }}
-              className="px-6 py-2 text-white font-semibold text-base cursor-pointer shadow-lg tracking-[1.0px] hover:opacity-90 transition hover:scale-105"
-              style={{
-                background:
-                  "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
-              }}
+              className="relative block py-2 text-white no-underline transition-colors duration-200 hover:text-gray-300
+                after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 
+                after:bg-gradient-to-r after:from-white after:to-transparent 
+                after:transition-all after:duration-300 hover:after:w-full cursor-pointer"
             >
-              Book Consulting
+              {item.label}
             </button>
-          </div>
+          ) : (
+            <Link
+              href={item.href}
+              className="relative block py-2 text-white no-underline transition-colors duration-200 hover:text-gray-300
+                after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 
+                after:bg-gradient-to-r after:from-white after:to-transparent 
+                after:transition-all after:duration-300 hover:after:w-full"
+            >
+              {item.label}
+            </Link>
+          )}
+        </li>
+      ))}
+    </ul>
 
-          {/* Hamburger Icon (only < md ~ below 768px) */}
-         <div className="flex lg:hidden ml-auto">
-    <button
-      className="text-white transition hover:scale-105"
-      onClick={() => setOpen(!open)}
-    >
-      {open ? <X size={28} /> : <Menu size={28} />}
-    </button>
-  </div>
-        </nav>
-
-        {/* Mobile Dropdown (only < md) */}
-        {open && (
-          <div className="lg:hidden w-full bg-white/5 backdrop-blur-[20px] shadow-lg border-b border-white/20 px-8 py-4">
-            <ul className="list-none m-0 p-0 flex flex-col gap-4">
-     {navItems.map((item) => (
-  <li key={item.label}> {/* label is unique */}
-    {item.onClick ? (
+    {/* Book Consulting Button (Desktop only) */}
+    <div className="hidden lg:block mr-4 xl:mr-20">
       <button
         onClick={() => {
-          item.onClick();
-          setOpen(false); // close mobile nav
+          const footer = document.getElementById("book-consulting");
+          if (footer) {
+            footer.scrollIntoView({ behavior: "smooth" });
+          }
+          setTimeout(() => {
+            setShowForm(true);
+          }, 100);
         }}
-        className="text-white hover:text-gray-300 cursor-pointer"
+        className="px-6 py-2 text-white font-semibold text-base cursor-pointer shadow-lg tracking-[1.0px] hover:opacity-90 transition hover:scale-105"
+        style={{
+          background:
+            "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
+        }}
       >
-        {item.label}
+        Book Consulting
       </button>
-    ) : (
-      <Link
-        href={item.href}
-        className="text-white hover:text-gray-300"
-        onClick={() => setOpen(false)} // optionally close menu on link click
+    </div>
+
+    {/* Hamburger Menu Icon (Mobile only) */}
+    <div className="flex lg:hidden ml-auto">
+      <button
+        className="text-white transition hover:scale-105"
+        onClick={() => setOpen(!open)}
       >
-        {item.label}
-      </Link>
-    )}
-  </li>
-))}
+        {open ? <X size={28} /> : <Menu size={28} />}
+      </button>
+    </div>
+  </nav>
 
+  {/* Mobile Dropdown Menu */}
+  {open && (
+    <div className="lg:hidden w-full bg-white/5 backdrop-blur-[20px] shadow-lg border-b border-white/20 px-6 py-4">
+      <ul className="list-none m-0 p-0 flex flex-col gap-4">
+        {navItems.map((item) => (
+          <li key={item.label}>
+            {item.onClick ? (
+              <button
+                onClick={() => {
+                  item.onClick();
+                  setOpen(false);
+                }}
+                className="text-white hover:text-gray-300 cursor-pointer"
+              >
+                {item.label}
+              </button>
+            ) : (
+              <Link
+                href={item.href}
+                className="text-white hover:text-gray-300"
+                onClick={() => setOpen(false)}
+              >
+                {item.label}
+              </Link>
+            )}
+          </li>
+        ))}
 
+        {/* Mobile Book Consulting Button */}
+        <li>
+          <button
+            onClick={() => {
+              const footer = document.getElementById("book-consulting");
+              if (footer) {
+                footer.scrollIntoView({ behavior: "smooth" });
+              }
+              setTimeout(() => {
+                setShowForm(true);
+              }, 100);
+              setOpen(false);
+            }}
+            className="w-full transition hover:scale-105 px-6 py-2 text-white font-semibold cursor-pointer tracking-[1.9px]"
+            style={{
+              background:
+                "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
+            }}
+          >
+            Book Consulting
+          </button>
+        </li>
+      </ul>
+    </div>
+  )}
+</header>
 
-              {/* Book Consulting Button in mobile menu */}
-              <li>
-                <button
-                  onClick={() => {
-                    const footer = document.getElementById("book-consulting");
-                    if (footer) {
-                      footer.scrollIntoView({ behavior: "smooth" });
-                    }
-                    setTimeout(() => {
-                      setShowForm(true);
-                    }, 100);
-                    setOpen(false);
-                  }}
-                  className="w-full transition hover:scale-105 px-6 py-2 text-white font-semibold cursor-pointer tracking-[1.9px] "
-                  style={{
-                    background:
-                      "linear-gradient(90deg, #5F69A8, #616FB4, #657AC9, #6E8EEE, #80B3F6, #8FCDFF)",
-                  }}
-                >
-                  Book Consulting
-                </button>
-              </li>
-            </ul>
-          </div>
-        )}
-      </header>
 
       {/* Popup Form Component */}
       <ConsultingFormModal showForm={showForm} setShowForm={setShowForm} />

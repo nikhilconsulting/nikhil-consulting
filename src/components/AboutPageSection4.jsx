@@ -30,7 +30,7 @@ const features = [
 
 export default function AboutPageSection4() {
   return (
-    <section className="bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)]  py-12 px-4 sm:px-6 lg:px-16 min-h-screen lg:pt-20 lg:pb-26 pb-30">
+    <section className="bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)]  py-12 px-4 sm:px-6 lg:px-16 lg:pt-20 lg:pb-26 pb-30">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
         
         {/* Image Section + Heading */}

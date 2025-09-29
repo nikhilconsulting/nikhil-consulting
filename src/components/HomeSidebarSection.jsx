@@ -121,8 +121,8 @@ export default function homeSidebarSection({ isOpen, onClose }) {
 
           {/* Content */}
           <div className="p-4 text-white overflow-y-auto flex-1">
-            <span className="text-4xl font-semibold mb-4 flex justify-center">
-              Form
+            <span className="text-2xl font-semibold mb-4 flex justify-center">
+              Confirm Your Details
             </span>
             <SidebarForm key={formKey} onClose={onClose} />
 

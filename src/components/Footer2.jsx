@@ -1,12 +1,15 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import Cta2 from "@/components/Cta2";
+import { SiX } from "react-icons/si";
+
 import { useState, useEffect } from "react";
 import {
   FaLinkedin,
   FaInstagram,
   FaFacebook,
-  FaTwitter,
+  
   FaYoutube,
   FaWhatsapp,
   FaPhone,
@@ -38,27 +41,41 @@ const [selectedExpert, setSelectedExpert] = useState('');
            <footer id="book-consulting" className="py-12 text-white  bg-[linear-gradient(15deg,_#000000,_#382933,_#000000)] backdrop-blur-[15px]">
       <Cta2 />
         {/* Top Section */}
-        <div className="max-w-8xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2  xl:grid-cols-6 gap-y-10 gap-x-6 lg:gap-x-0 px-4 sm:px-6 lg:px-15 xl:ml-6 md:ml-20 lg:mr-10 pt-10 ">
+        <div className="max-w-8xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2  xl:grid-cols-6 gap-y-10 gap-x-6 lg:gap-x-0 px-4 sm:px-6 lg:px-15 2xl:ml-26 xl:ml-6 md:ml-20 lg:mr-10 pt-10 ">
           {/* Brand Section */}
-          <div className="xl:col-span-2 xl:mr-4">
-            <p className="text-base leading-relaxed text-gray-100">
-              At RankInventiv, we connect your business with the right experts—whether in digital marketing, tech, or ads. Our goal is simple: help you grow smarter, save budget, and achieve maximum ROI with strategies customized just for you.
-            </p>
+<div className="xl:col-span-2 -mt-10  ">
+  {/* Logo */}
+  <div className="relative w-64 h-24 -ml-4 -mb-2">
+    <Link href={"/"}>
+    <Image
+      src="/assets/images/logo/logo-2.png"
+      alt="RankInventiv Logo"
+      layout="fill"
+      objectFit="contain"
+      priority
+    />
+    </Link>
+  </div>
 
-            {/* Google Map */}
-            <div className="mt-4 lg:w-70 overflow-hidden">
-              <iframe
-                title="RankInventiv Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115403.50094890468!2d82.84627219726565!3d25.325718100000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2ff84c34878d%3A0x219a2452dac85f3a!2sNikhil%20Consulting%20%7C%20Business%20Growth%20%26%20Digital%20Marketer!5e0!3m2!1sen!2sus!4v1756276502921!5m2!1sen!2sus"
-                width="100%"
-                height="180"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </div>
+  <p className="text-base leading-relaxed text-gray-100">
+    At RankInventiv, we connect your business with the right experts—whether in digital marketing, tech, or ads. Our goal is simple: help you grow smarter, save budget, and achieve maximum ROI with strategies customized just for you.
+  </p>
+
+  {/* Google Map */}
+  <div className="mt-6 lg:w-70 overflow-hidden">
+    <iframe
+      title="RankInventiv Location"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115403.50094890468!2d82.84627219726565!3d25.325718100000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2ff84c34878d%3A0x219a2452dac85f3a!2sNikhil%20Consulting%20%7C%20Business%20Growth%20%26%20Digital%20Marketer!5e0!3m2!1sen!2sus!4v1756276502921!5m2!1sen!2sus"
+      width="100%"
+      height="120"
+      style={{ border: 0 }}
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</div>
+
 
           {/* For Businesses */}
           <div className="xl:ml-3">
@@ -109,11 +126,11 @@ const [selectedExpert, setSelectedExpert] = useState('');
           {/* Contact */}
           <div>
             <h3 className="font-semibold mb-4 text-lg">Get in Touch</h3>
-            <p className="text-base mb-3 leading-relaxed">
+            {/* <p className="text-base mb-3 leading-relaxed">
               2nd Floor, Lahurabir Rd, Jagatganj, <br />
               Near Sanskrit University, <br />
               Varanasi, Uttar Pradesh 221002
-            </p>
+            </p> */}
             <a href="mailto:rankinventiv@gmail.com" className="flex items-center gap-2 mb-2 text-base hover:underline hover:text-[#8FCDFF]">
               <FaEnvelope /> rankinventiv@gmail.com
             </a>
@@ -131,11 +148,11 @@ const [selectedExpert, setSelectedExpert] = useState('');
                 <FaFacebook className="cursor-pointer hover:scale-110 transition hover:text-[#8FCDFF]" />
               </Link>
               <Link href="https://x.com/rankinventiv" target="_blank" rel="noopener noreferrer">
-                <FaTwitter className="cursor-pointer hover:scale-110 transition hover:text-[#8FCDFF]" />
+                <SiX size={26} className="cursor-pointer mt-1 hover:scale-110 transition hover:text-[#8FCDFF]" />
               </Link>
-               <Link href="https://www.youtube.com/@Rankinventiv" target="_blank" rel="noopener noreferrer">
+               {/* <Link href="https://www.youtube.com/@Rankinventiv" target="_blank" rel="noopener noreferrer">
                 <FaYoutube className="cursor-pointer hover:scale-110 transition hover:text-[#8FCDFF]" />
-              </Link>
+              </Link> */}
               <Link href="https://maps.app.goo.gl/MNbdJh3Mn9J7joEn6" target="_blank" rel="noopener noreferrer">
                 <FaGooglePlusG className="cursor-pointer hover:scale-150 transition scale-[1.4] hover:text-[#8FCDFF]" />
               </Link>

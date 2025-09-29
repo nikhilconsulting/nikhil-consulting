@@ -1,11 +1,15 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
+import { SiX } from "react-icons/si";
+import { SiGooglemaps } from "react-icons/si";
+
+
 import { useState, useEffect } from "react";
 import {
   FaLinkedin,
   FaInstagram,
   FaFacebook,
-  FaTwitter,
   FaYoutube,
   FaWhatsapp,
   FaPhone,
@@ -15,6 +19,7 @@ import {
 import ContactFormModal from "./ContactFormModal";
 
 export default function GlassFooter() {
+  
 
   const [scrolled, setScrolled] = useState(false);
   const [showForm, setShowForm] = useState(false);
@@ -42,18 +47,31 @@ const [selectedExpert, setSelectedExpert] = useState('');
         {/* Top Section */}
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2  xl:grid-cols-5 gap-y-10 gap-x-6 px-4 sm:px-6 lg:px-6 xl:ml-30 md:ml-20 lg:mr-25 ">
           {/* Brand Section */}
-          <div className="xl:col-span-2 xl:mr-4">
-            <p className="text-base leading-relaxed text-gray-100">
-              At RankInventiv, we connect your business with the right experts—whether in digital marketing, tech, or ads. Our goal is simple: help you grow smarter, save budget, and achieve maximum ROI with strategies customized just for you.
-            </p>
+<div className="xl:col-span-2 -mt-10  ">
+  {/* Logo */}
+  <Link href={"/"}>
+  <div className="relative w-64 h-24 -ml-4 -mb-2">
+    <Image
+      src="/assets/images/logo/logo-2.png"
+      alt="RankInventiv Logo"
+      layout="fill"
+      objectFit="contain"
+      priority
+    />
+  </div>
+</Link>
+  {/* Description */}
+  <p className="text-base leading-relaxed text-gray-100 mt-0">
+    At RankInventiv, we connect your business with the right experts—whether in digital marketing, tech, or ads. Our goal is simple: help you grow smarter, save budget, and achieve maximum ROI with strategies customized just for you.
+  </p>
 
             {/* Google Map */}
-            <div className="mt-4 lg:w-70 overflow-hidden">
+            <div className="mt-4 lg:w-60 overflow-hidden">
               <iframe
                 title="RankInventiv Location"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115403.50094890468!2d82.84627219726565!3d25.325718100000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2ff84c34878d%3A0x219a2452dac85f3a!2sNikhil%20Consulting%20%7C%20Business%20Growth%20%26%20Digital%20Marketer!5e0!3m2!1sen!2sus!4v1756276502921!5m2!1sen!2sus"
                 width="100%"
-                height="180"
+                height="120"
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
@@ -119,14 +137,19 @@ const [selectedExpert, setSelectedExpert] = useState('');
                 <FaFacebook className="cursor-pointer hover:scale-110 transition" />
               </Link>
               <Link href="https://x.com/rankinventiv" target="_blank" rel="noopener noreferrer">
-                <FaTwitter className="cursor-pointer hover:scale-110 transition" />
+                <SiX size={26} className="cursor-pointer mt-1 hover:scale-110 transition" />
               </Link>
-               <Link href="https://www.youtube.com/@Rankinventiv" target="_blank" rel="noopener noreferrer">
+               {/* <Link href="https://www.youtube.com/@Rankinventiv" target="_blank" rel="noopener noreferrer">
                 <FaYoutube className="cursor-pointer hover:scale-110 transition" />
-              </Link>
-              <Link href="https://maps.app.goo.gl/MNbdJh3Mn9J7joEn6" target="_blank" rel="noopener noreferrer">
-                <FaGooglePlusG className="cursor-pointer hover:scale-150 transition scale-[1.4] " />
-              </Link>
+              </Link> */}
+             <Link
+  href="https://maps.app.goo.gl/MNbdJh3Mn9J7joEn6"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <SiGooglemaps className="cursor-pointer hover:scale-110 transition  text-[#fff]" />
+</Link>
+
             </div>
           </div>
         </div>

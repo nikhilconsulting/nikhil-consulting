@@ -13,7 +13,8 @@ import HeroSection2 from "@/components/HeroSection2";
 import HomeAboutSection from "@/components/AboutHomeSection";
 import PricingHomeSection from "@/components/PricingHomeSection";
 import WhatsAppPopup from "@/components/WhatsappButton";
-// import Navbar from "@/components/DemoNav";
+// import Header from "@/components/Header";
+
 
 
 
@@ -37,7 +38,8 @@ export default function Home() {
 <meta property="og:image:alt" content="RankInventiv - Digital Marketing Agency in Varanasi" /> */}
 
 <GlassNavbar2 />
-{/* <Navbar /> */}
+{/* <Header /> */}
+
 <WhatsAppPopup
 />
 
@@ -53,7 +55,7 @@ export default function Home() {
 {/* <ServicesSection2 /> */}
 
 
-<PricingHomeSection />
+{/* <PricingHomeSection /> */}
 
 
  <Testimonials2 />

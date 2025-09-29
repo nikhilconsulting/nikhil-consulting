@@ -10,7 +10,7 @@ const WorkingProcess = ({
       
       
     >
-      <div className="container mx-auto min-h-screen">
+      <div className="container mx-auto">
         <div className="section-title text-center mb-12">
           <h2 className="wow fadeInUp text-2xl md:text-3xl font-bold text-white">
             {title.split('\n').map((line, i) => (
