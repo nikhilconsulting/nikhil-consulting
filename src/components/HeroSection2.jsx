@@ -25,7 +25,7 @@ We focus on strategies that convert, not just generate traffic. Our team blends 
     ),
     button: (
       <Link
-        href="/solutions"
+        href="/contact-us"
         className="relative inline-flex items-center overflow-hidden group px-6 sm:px-8 py-2 sm:py-3 font-semibold text-white text-xl lg:text-base z-0"
       >
         <span className="relative z-10 flex items-center gap-2">
@@ -59,7 +59,7 @@ We focus on strategies that convert, not just generate traffic. Our team blends 
     ),
     button: (
       <Link
-        href="/solutions"
+        href="/contact-us"
         className="relative inline-flex items-center overflow-hidden group px-6 sm:px-8 py-2 sm:py-3 font-semibold text-white text-xl lg:text-base z-0"
       >
         <span className="relative z-10 flex items-center gap-2">
