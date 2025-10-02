@@ -100,7 +100,7 @@ const SMMPage = () => {
       description: 'We create and post content, run ad campaigns, and handle your daily social activity',
     },
     {
-      icon: '/assets/images/service-detail-page-images/social-media-marketing-working-process-steps-icons/track-growth-&-get-more-leads.png',
+      icon: '/assets/images/service-detail-page-images/social-media-marketing-working-process-steps-icons/63.png',
       title: 'Track Growth & Get More Leads',
       description: 'You’ll see more likes, comments, followers - and most importantly - real leads and conversions',
     },

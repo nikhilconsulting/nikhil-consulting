@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function AboutPageSection3() {
   return (
     <>
-   <section className=" relative bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)]  py-26 px-6 overflow-visible">
+   <section className=" relative bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)]  py-14 px-6 overflow-visible">
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-0">
 

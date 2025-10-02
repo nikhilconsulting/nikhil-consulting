@@ -8,49 +8,38 @@ const nftCards = [
     name: "Strategic Planning in Action",
     price: "Brainstorming sessions to create impactful digital solutions",
     image: "/assets/images/home-page-image/about-section-image/1.png",
-    style: "top-[20px] left-[48%] rotate-[-10deg]",
+    style: "top-[34px] left-[47%] rotate-[-10deg]",
+   
   },
   {
     name: "Delivering Results",
-    price: " Focused discussions that turn ideas into measurable outcomes",
+    price: "Focused discussions that turn ideas into measurable outcomes",
     image: "/assets/images/home-page-image/about-section-image/2.png",
     style: "top-[170px] left-[65%] rotate-[24deg]",
+    
   },
   {
-        name: "Collaborating for Success",
+    name: "Collaborating for Success",
     price: "Our team works closely with clients to understand their goals",
     image: "/assets/images/home-page-image/about-section-image/3.png",
-    style: "top-[340px] left-[45%] rotate-[-20deg]",
+    style: "top-[320px] left-[45%] rotate-[-30deg]",
+   
   },
 ];
 
+
 export default function NFTShowcaseSection() {
   return (
-    <section className="relative bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)] text-white px-6 py-20 md:px-20 overflow-hidden">
-      {/* Mobile: First Card on Top */}
-      <div className="block md:hidden mb-10 z-10 relative">
-        <div className="w-full max-w-xs mx-auto bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px] overflow-hidden shadow-xl">
-          <div className="p-2">
-            <img
-              src={nftCards[0].image}
-              alt={nftCards[0].name}
-              className="w-full h-60 object-cover"
-            />
-          </div>
-          <div className="p-3 bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px]">
-            <span className="text-2xl font-semibold">{nftCards[0].name}</span>
-            <p className="text-lg text-gray-100">{nftCards[0].price}</p>
-          </div>
-        </div>
-      </div>
+    <section className="relative grid bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)] text-white px-6 py-18 md:px-20 overflow-hidden">
+     <div className="grid grid-cols-1 xl:grid-cols-2 gap-12 max-w-7xl mx-auto items-start">
 
       {/* Left content */}
-      <div className="max-w-3xl z-10 relative md:mt-10">
+      <div className="max-w-3xl  z-10 relative lg:ml-20 xl:ml-0 ml-0  md:order-last xl:order-none">
         <span className="text-4xl md:text-5xl font-bold leading-tight">
           About Our <br />
           <span className="text-[#8FCDFF]">Work</span>
         </span>
-        <p className="mt-4 text-lg md:text-base text-gray-100 max-w-2xl text-justify">
+        <p className="mt-4 text-lg md:text-base text-gray-100 max-w-2xl  text-justify">
          At Rankinventiv, we believe in a simple truth effective marketing is a partnership, We're a team of passionate digital strategists and creative experts dedicated to helping ambitious businesses like yours find their voice and connect with their audience. Our mission is to move beyond generic campaigns and craft tailored, data-driven strategies that don't just generate clicks-they build lasting brand value and a clear return on your investment. We pride ourselves on transparent communication and a commitment to your long-term success.
         </p>
         <p className="mt-4 text-lg md:text-base text-gray-100 max-w-2xl text-justify">
@@ -58,7 +47,7 @@ export default function NFTShowcaseSection() {
         </p>
 
         {/* Buttons */}
-        <div className="mt-6 flex gap-4 flex-wrap">
+        <div className="mt-6 flex gap-4 flex-wrap ">
          <Link
   href="/services"
   className="relative inline-flex items-center overflow-hidden group text-xl  lg:text-base items-center text-white  px-6 py-2  shadow"
@@ -89,27 +78,79 @@ export default function NFTShowcaseSection() {
       </div>
 
       {/* Desktop Cards (Original Positioning) */}
-      <div className="absolute top-0 left-40 w-full h-full pointer-events-none hidden md:block">
-        {nftCards.map((card, index) => (
-          <div
-            key={index}
-            className={`absolute ${card.style} w-66 bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px] overflow-hidden shadow-2xl transform`}
-            style={{ zIndex: 5 - index }}
-          >
-            <div className="p-2 bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px]">
-              <img
-                src={card.image}
-                alt={card.name}
-                className="w-full h-54 object-cover"
-              />
-            </div>
-            <div className="p-3 bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px]">
-              <span className="text-lg font-semibold">{card.name}</span>
-              <p className="text-base text-gray-100">{card.price}</p>
-            </div>
-          </div>
-        ))}
+    {/* 👇 lg and up: Floating styled cards */}
+<div className="absolute top-0 left-40 w-full h-full pointer-events-none hidden xl:block">
+  {nftCards.map((card, index) => (
+    <div
+      key={index}
+      className={`absolute ${card.style} w-66 bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px] overflow-hidden shadow-2xl transform`}
+      style={{ zIndex: 5 - index }}
+    >
+      <div className="p-2">
+        <img
+          src={card.image}
+          alt={card.name}
+          className="w-full h-46 object-cover"
+        />
       </div>
+      <div className="p-2">
+        <span className="text-lg font-semibold">{card.name}</span>
+        <p className="text-base text-gray-100">{card.price}</p>
+      </div>
+    </div>
+  ))}
+</div>
+
+{/* 👇 md only: Stacked cards like point items */}
+
+<div className="w-full h-full pointer-events-none block xl:hidden md:block hidden order-first">
+  <div className="flex flex-row gap-x-6 relative lg:ml-10"> {/* ← shift left here */}
+    {nftCards.map((card, index) => (
+      <div
+        key={index}
+        className={` w-64 bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px] overflow-hidden shadow-2xl transform`}
+        style={{ zIndex: 5 - index }}
+      >
+        <div className="p-2">
+          <img
+            src={card.image}
+            alt={card.name}
+            className="w-full h-44 lg:h-54 object-cover"
+          />
+        </div>
+        <div className="p-2">
+          <span className="text-lg font-semibold text-white">{card.name}</span>
+          <p className="text-base text-gray-100">{card.price}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+</div>
+ {/* Mobile: First Card on Top */}
+      <div className="block md:hidden mb-10 z-10 relative order-first">
+        <div className="w-full max-w-xs mx-auto bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px] overflow-hidden shadow-xl">
+          <div className="p-2">
+            <img
+              src={nftCards[0].image}
+              alt={nftCards[0].name}
+              className="w-full h-60 object-cover"
+            />
+          </div>
+          <div className="p-3 bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] backdrop-blur-[15px]">
+            <span className="text-2xl font-semibold">{nftCards[0].name}</span>
+            <p className="text-lg text-gray-100">{nftCards[0].price}</p>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
 
       {/* Divider */}
       <div className="absolute bottom-0 left-0 w-full z-20">
