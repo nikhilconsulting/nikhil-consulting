@@ -7,8 +7,48 @@ import Image from "next/image";
 import SocialTicker from "./Ticker";
 
 const slides = [
+    {
+    title:
+    (
+      <>
+         AI-Driven Digital Marketing to Maximize Leads and Conversions
+      </>
+    ),
+    subheading: <>
+    
+    <span className="text-[#5ec2f4] font-bold ">Smarter Marketing, </span> Real Results
+    </>,
+    description: (
+      <>
+We focus on strategies that convert, not just generate traffic. Our team blends SEO, CRO, and AI-powered performance campaigns to drive leads, improve ROI, and accelerate growth. Experience smarter marketing designed to scale your business and amplify your digital impact 
+      </>
+    ),
+    button: (
+      <Link
+        href="/solutions"
+        className="relative inline-flex items-center overflow-hidden group px-6 sm:px-8 py-2 sm:py-3 font-semibold text-white text-xl lg:text-base z-0"
+      >
+        <span className="relative z-10 flex items-center gap-2">
+          Schedule Meeting
+          <FaArrowRight className="text-lg" />
+        </span>
+        <span
+          className="absolute inset-0 bg-gradient-to-r from-[#372935] via-black to-[#372935] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-0"
+          aria-hidden="true"
+        ></span>
+        <span
+          className="absolute inset-0 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] z-[-1]"
+          aria-hidden="true"
+        ></span>
+      </Link>
+    ),
+  },
   {
     title: "Scaling Brands with a Smarter Approach",
+        subheading: <>
+    
+     Innovation That <span className="text-[#5ec2f4] font-bold "> Delivers ROI </span> 
+    </>,
     description: (
       <>
         Welcome to <strong>Rankinventiv</strong>, We're not just an agency, we're
@@ -37,40 +77,7 @@ const slides = [
       </Link>
     ),
   },
-  {
-    title:
-    (
-      <>
-         The Future of Marketing is Here
-      </>
-    ),
-    description: (
-      <>
-        Harness the power of AI to transform your business. As a recognized
-        industry leader by Deloitte and Clutch, we craft intelligent strategies
-        that anticipate your needs and deliver unmatched market leadership 
-      </>
-    ),
-    button: (
-      <Link
-        href="/solutions"
-        className="relative inline-flex items-center overflow-hidden group px-6 sm:px-8 py-2 sm:py-3 font-semibold text-white text-xl lg:text-base z-0"
-      >
-        <span className="relative z-10 flex items-center gap-2">
-          Schedule Meeting
-          <FaArrowRight className="text-lg" />
-        </span>
-        <span
-          className="absolute inset-0 bg-gradient-to-r from-[#372935] via-black to-[#372935] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-0"
-          aria-hidden="true"
-        ></span>
-        <span
-          className="absolute inset-0 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] z-[-1]"
-          aria-hidden="true"
-        ></span>
-      </Link>
-    ),
-  },
+
 ];
 
 const HeroSection = () => {
@@ -93,7 +100,7 @@ const HeroSection = () => {
 
   return (
     <section
-      className="relative  h-[700px] pt-16 lg:pt-0 flex items-center transition-all duration-700 ease-in-out"
+      className="relative  h-[740px] pt-16 lg:pt-0 flex items-center transition-all duration-700 ease-in-out"
     >
         <Image
     src="/assets/images/home-page-image/herosection-bg-image.png"
@@ -113,11 +120,16 @@ const HeroSection = () => {
         fade ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
       }`}
     >
+       {/* Subheading Badge */}
+    <div className="inline-block bg-black/30 px-4 py-1 mt-6 md:mt-0 mb-4 rounded-full text-base tracking-wider text-white">
+               {slide.subheading || "Featured Project"} {/* <-- You can replace this text or make it dynamic */}
+  </div>
+
       <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight whitespace-normal sm:whitespace-normal">
         {slide.title}
       </h1>
 
-      <p className="text-lg sm:text-xl lg:text-lg mb-4 max-w-full sm:max-w-2xl lg:max-w-xl mx-auto px-2 lg:px-0">
+      <p className="text-lg sm:text-xl lg:text-lg mb-4 max-w-full sm:max-w-2xl lg:max-w-3xl mx-auto px-2 lg:px-0">
         {slide.description}
       </p>
 
