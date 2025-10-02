@@ -91,7 +91,7 @@ const HeroSection = () => {
         setCurrentSlide((prev) => (prev + 1) % slides.length);
         setFade(true); // fade in
       }, 500); // match transition duration
-    }, 12000);
+    }, 15000);
 
     return () => clearInterval(interval);
   }, []);

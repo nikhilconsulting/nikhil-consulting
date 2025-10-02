@@ -59,7 +59,7 @@ useEffect(() => {
 >
   <div className="w-full h-full p-2  ">
 <div
-  className={`w-full h-full transition-transform duration-500 overflow-hidden rounded-md ${
+  className={`w-full h-full transition-transform duration-500 overflow-hidden rounded-md hover:scale-95 ${
     isActive ? "md:scale-90 aura-shadow" : "md:scale-90 aura-shadow"
   }`}
 >
