@@ -88,7 +88,7 @@ export default function Pricing() {
 </div>
 
       <span className="text-4xl lg:text-5xl font-bold text-white tracking-tight z-1">
-         Our Plans
+         Best Seller Plans
         </span>
 
       {/* Pricing Cards */}

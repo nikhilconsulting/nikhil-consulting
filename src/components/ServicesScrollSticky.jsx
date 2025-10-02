@@ -128,7 +128,7 @@ export default function ServicesScrollSticky() {
 
   return (
     <section
-      className="relative w-full min-h-screen text-gray-200 py-12 bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)]"
+      className="relative w-full text-gray-200 py-12 bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)]"
     >
       {/* Heading + Button */}
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 flex flex-col md:flex-row justify-between items-center">
@@ -222,7 +222,7 @@ export default function ServicesScrollSticky() {
         {/* ✅ Desktop Layout: Scrollable text + sticky image */}
        <div className="hidden lg:grid lg:grid-cols-2 gap-12 lg:gap-20 pb-10">
           {/* Left: Scrollable Content */}
-        <div className="flex flex-col gap-26 flex-1  ">
+        <div className="flex flex-col gap-100 flex-1  ">
   {services.map((service, index) => (
 <div
   key={service.id}
