@@ -72,7 +72,7 @@ export default function Pricing() {
   const currentPlans = plans.monthly;
 
   return (
-    <div className="relative bg-black/10 py-12 px-4 mx-auto font-sans flex flex-col items-center justify-center">
+    <div className="relative  py-12 px-4 mx-auto flex flex-col items-center justify-center">
 
       {/* Background Image with Blur */}
 <div className="absolute inset-0 overflow-hidden">
@@ -80,10 +80,10 @@ export default function Pricing() {
     src="/assets/images/pricing-section-image/pricing-background-image.png"
     alt="Background"
     layout="fill"
-    objectFit="contain"
+    objectFit="cover"
     objectPosition="center"
     className="filter blur-sm"
-    priority={true} // agar chahte ho ki image jaldi load ho
+    priority={true}
   />
 </div>
 
@@ -96,7 +96,7 @@ export default function Pricing() {
 {currentPlans.map((plan, index) => (
           <div
             key={plan.name}
-       className={`rounded-3xl p-10 flex flex-col justify-between min-h-[540px] transform transition-transform duration-500 hover:scale-[1.02] origin-center w-[340px] mx-auto bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)] text-gray-900 shadow-md`}
+       className={`rounded-3xl p-10 -ml-4 md:-ml-0 flex flex-col justify-between min-h-[540px] transform transition-transform duration-500 hover:scale-[1.02] origin-center w-[340px] mx-auto bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)] text-gray-900 shadow-md`}
   >
             <span className="text-2xl text-gray-100 font-semibold mb-2">{plan.name}</span>
             <p className="text-[#8FCDFF] mb-2 text-base font-semibold">Goal : {plan.goal}</p>

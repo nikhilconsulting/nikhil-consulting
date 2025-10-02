@@ -54,10 +54,10 @@ export default function Home() {
 {/* <ServicesSection2 /> */}
 
 
-{/* <PricingHomeSection /> */}
+<PricingHomeSection />
 
 
- {/* <Testimonials2 /> */}
+ <Testimonials2 />
 
 <GlassFooter2 />
 
