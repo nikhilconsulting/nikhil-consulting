@@ -24,7 +24,7 @@ export default function WhatsAppButton() {
       {/* Chat Box - appears above the button */}
       {open && (
      <div
-  className={`transition-all duration-500 ease-in-out transform w-[360px] mb-3 rounded-lg overflow-hidden shadow-lg border border-gray-200 bg-white
+  className={`transition-all duration-500 ease-in-out transform w-[320px] mb-3 rounded-lg overflow-hidden shadow-lg border border-gray-200 bg-white
     ${open ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-10 opacity-0 scale-95 pointer-events-none'}
   `}
 >
