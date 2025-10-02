@@ -121,7 +121,7 @@ const HeroSection = () => {
       }`}
     >
        {/* Subheading Badge */}
-    <div className="inline-block bg-black/30 px-4 py-1 mt-6 md:mt-0 mb-4 rounded-full text-base tracking-wider text-white">
+    <div className="inline-block bg-black/30 px-4 py-1 mt-12 md:mt-0 mb-4 rounded-full text-base tracking-wider text-white">
                {slide.subheading || "Featured Project"} {/* <-- You can replace this text or make it dynamic */}
   </div>
 

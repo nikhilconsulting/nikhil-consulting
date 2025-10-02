@@ -31,7 +31,7 @@ export default function AboutPageSection2() {
 
   {/* Optional Tag/Label */}
   <div className="absolute top-0 right-3 bg-white text-black px-4 py-3 text-xl font-semibold shadow-md rounded-full z-20">
-    25+ Years
+    9+ Years
   </div>
 </div>
 
@@ -44,17 +44,16 @@ export default function AboutPageSection2() {
   </span>
 
 <p className="text-white text-lg lg:text-base leading-relaxed mt-4 text-justify">
-    At Rankinventiv, we help businesses transform their growth trajectory with tailored digital marketing solutions. Based in Noida and expanding in Varanasi, we merge local insights with proven strategies to deliver measurable results for startups, small enterprises, and established brands. Our team of specialists—seasoned in SEO, social media marketing, branding, paid advertising, and business consulting—crafts campaigns that align precisely with your audience, goals, and market landscape.
-  </p>
+ At Rankinventiv, we don't just execute digital marketing-we transform growth trajectories. Our core strength is merging deep local insights from our hubs in Noida and Varanasi with proven global strategies to deliver measurable results. Though our team is lean, it is highly experienced, specializing in SEO, social media, branding, paid advertising, and business consulting. We are a trusted partner to over 30+ top business owners in Varanasi, who rely on us to craft hyper-focused campaigns that align precisely with their audience, goals, and market landscape, consistently delivering the best possible ROI. </p>
   
 <p className="text-white text-lg lg:text-base leading-relaxed mt-4 text-justify">
-   We believe growth is built on understanding, not assumptions. That’s why every strategy we design focuses on attracting the right customers, fostering engagement, and converting interactions into lasting relationships. While our primary focus is delivering high-impact digital marketing services, we also offer consulting to help businesses strengthen visibility, streamline operations, and sustain momentum in competitive markets.
-  </p>
+We believe genuine growth is built on understanding, not assumptions. Beyond service execution, we guide local businesses through our consulting, providing them with strategic advice for better investment and return ROI.
+ </p>
             <ul className="mt-4 mb-2 grid md:grid-cols-2 gap-2 md:text-base text-lg  font-semibold text-gray-200  list-inside whitespace-nowrap">
-            <li><i className="fas fa-check text-[#8DCBFD] mr-2 mt-1" /> Local & Global Presence</li>
-            <li><i className="fas fa-check text-[#8DCBFD] mr-2 mt-1" /> Expert-Led Team</li>
-            <li><i className="fas fa-check text-[#8DCBFD] mr-2 mt-1" /> Sector-Wide Consulting</li>
-            <li><i className="fas fa-check text-[#8DCBFD] mr-2 mt-1" /> Sustainable Growth</li>
+            <li><i className="fas fa-check text-[#8DCBFD] mr-2 mt-1" />9+ year's of experience</li>
+            <li><i className="fas fa-check text-[#8DCBFD] mr-2 mt-1" />117+ Projects</li>
+            <li><i className="fas fa-check text-[#8DCBFD] mr-2 mt-1" />12+ Employees</li>
+            <li><i className="fas fa-check text-[#8DCBFD] mr-2 mt-1" />80+ Clients Consulted</li>
           </ul>
   {/* 🔘 View Services Button */}
  <div>
