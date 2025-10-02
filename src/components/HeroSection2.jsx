@@ -100,7 +100,7 @@ const HeroSection = () => {
 
   return (
     <section
-      className="relative  h-[740px] pt-16 lg:pt-0 flex items-center transition-all duration-700 ease-in-out"
+      className="relative h-[800px]  lg:h-[740px] pt-20  lg:pt-0 flex items-center transition-all duration-700 ease-in-out"
     >
         <Image
     src="/assets/images/home-page-image/herosection-bg-image.png"
@@ -113,7 +113,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black/60"></div>
 
 <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-12 max-w-7xl">
-  <div className="flex flex-col lg:flex-row items-center justify-center gap-10 pt-4 lg:pb-14">
+  <div className="flex flex-col lg:flex-row items-center justify-center gap-10 pt-4 pb-10 lg:pb-14">
     {/* Left Content */}
     <div
       className={`text-white text-center pb-40 lg:pb-16 transform transition-all duration-500 ${
@@ -129,18 +129,18 @@ const HeroSection = () => {
         {slide.title}
       </h1>
 
-      <p className="text-lg sm:text-xl lg:text-lg mb-4 max-w-full sm:max-w-2xl lg:max-w-3xl mx-auto px-2 lg:px-0">
+      <p className="text-base lg:text-lg mb-4 max-w-full sm:max-w-2xl lg:max-w-3xl mx-auto px-2 lg:px-0">
         {slide.description}
       </p>
 
-      <div className="mt-6">{slide.button}</div>
+      <div className="mt-6 lg:mb-0 ">{slide.button}</div>
     </div>
   </div>
 </div>
 
 
 
-      <div className="absolute  bottom-0 left-0 w-full z-20">
+      <div className="absolute bottom-0 left-0 w-full z-20">
 
         <SocialTicker />
       </div>
