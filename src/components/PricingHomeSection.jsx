@@ -92,11 +92,11 @@ export default function Pricing() {
         </span>
 
       {/* Pricing Cards */}
-     <div className="relative z-10 mt-12 grid lg:gap-12 gap-10 max-w-8xl mx-auto grid-cols-1 md:grid-cols-2 xl:grid-cols-4 items-center px-4 justify-center">
+     <div className="relative  z-10 mt-12 grid lg:gap-12 gap-10 max-w-8xl mx-auto grid-cols-1 md:grid-cols-2 xl:grid-cols-4 items-center px-4 justify-center">
 {currentPlans.map((plan, index) => (
           <div
             key={plan.name}
-       className={`rounded-3xl p-10 -ml-4 md:-ml-0 flex flex-col justify-between min-h-[540px] transform transition-transform duration-500 hover:scale-[1.02] origin-center w-[340px] mx-auto bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)] text-gray-900 shadow-md`}
+       className={`rounded-3xl p-10 -ml-4 md:-ml-0 flex flex-col justify-between min-h-[540px] transform transition-transform duration-500 hover:scale-[1.02] origin-center overflow-x-hidden w-[340px] mx-auto bg-[linear-gradient(125deg,_#382933,_#372935,_#372831)] text-gray-900 shadow-md`}
   >
             <span className="text-2xl text-gray-100 font-semibold mb-2">{plan.name}</span>
             <p className="text-[#8FCDFF] mb-2 text-base font-semibold">Goal : {plan.goal}</p>
