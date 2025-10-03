@@ -14,8 +14,8 @@ export default function Cta2() {
             Don't just compete-lead. Build powerful digital strategies that deliver a clear competitive advantage
           </p>
           <div className='mb-8 lg:mb-0'>
-          <Link href="/services" className="bg-gradient-to-r from-[#372935] via-black to-[#372935]  cursor-pointer transition hover:scale-105 text-white font-semibold py-3 px-5 transition duration-300 ">
-            Claim Your Advantage →
+          <Link href="/contact-us" className="bg-gradient-to-r from-[#372935] via-black to-[#372935]  cursor-pointer transition hover:scale-105 text-white font-semibold py-3 px-5 transition duration-300 ">
+            Connect To Team →
           </Link>
           </div>
         </div>
