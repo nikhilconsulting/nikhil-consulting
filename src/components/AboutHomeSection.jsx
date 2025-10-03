@@ -49,7 +49,7 @@ export default function NFTShowcaseSection() {
         {/* Buttons */}
         <div className="mt-6 flex gap-4 flex-wrap ">
          <Link
-  href="/services"
+  href="/about-us"
   className="relative inline-flex items-center overflow-hidden group text-xl  lg:text-base items-center text-white  px-6 py-2  shadow"
 >
 

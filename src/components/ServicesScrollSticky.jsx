@@ -212,7 +212,7 @@ export default function ServicesScrollSticky() {
 <div className="mt-10 flex justify-center lg:hidden">
   <Link href="/services">
     <button className="bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] text-white transition hover:scale-105 cursor-pointer px-6 py-3 text-xl">
-      Know More In Detail
+      Explore More Services
     </button>
   </Link>
 </div>

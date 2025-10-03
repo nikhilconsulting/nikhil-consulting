@@ -77,7 +77,7 @@ export default function TextImageSection() {
               guesswork, and achieve steady business growth with maximum ROI.
             </p>
             {/* Added Major Problems List */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-6 max-w-3xl mx-auto mt-6 ml-2 lg:ml-0 lg:mt-0">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-6 max-w-3xl mx-auto mt-6 ml-2 lg:ml-0 lg:mt-0 ">
               {[
                 "Wasted Ads Spend",
                 "Low Online Visibility",

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
+import ConsultingFormModal from "./ConsultingFormModal";
 
 const plans = {
   monthly: [
@@ -68,10 +69,12 @@ const plans = {
 };
 
 export default function Pricing() {
+     const [showForm, setShowForm] = useState(false); 
   // No billing toggle needed now since only monthly plans are shown
   const currentPlans = plans.monthly;
 
   return (
+    <>
   <div className="relative py-12 px-4 mx-auto flex flex-col items-center justify-center overflow-x-hidden">
 
   {/* Background Image with Blur */}
@@ -123,8 +126,8 @@ export default function Pricing() {
 
         <p className="text-[#8FCDFF] mb-4 text-base font-semibold">Ideal for : {plan.ideal}</p>
 
-        <Link
-          href="/services"
+        <div
+          onClick={() => setShowForm(true)}
           className="relative bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] text-white inline-flex items-center justify-center overflow-hidden group px-6 py-2 text-lg font-semibold cursor-pointer transition hover:scale-105"
         >
           <span className="relative z-10 flex items-center gap-2">
@@ -135,11 +138,37 @@ export default function Pricing() {
             className="absolute inset-0 bg-gradient-to-r from-[#372935] via-black to-[#372935] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-0"
             aria-hidden="true"
           ></span>
-        </Link>
+        </div>
       </div>
     ))}
   </div>
+
+<div
+  onClick={() => setShowForm(true)}
+  className="relative inline-flex mt-10 items-center overflow-hidden group px-6 sm:px-8 py-2 sm:py-3 font-semibold text-white text-xl lg:text-base z-0 cursor-pointer"
+>
+  <span className="relative z-10 flex items-center gap-2">
+    Make Own Custom Plan
+    <FaArrowRight className="text-lg" />
+  </span>
+  
+  {/* Hover animation overlay */}
+  <span
+    className="absolute inset-0  bg-gradient-to-r from-[#372935] via-black to-[#372935] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-0"
+    aria-hidden="true"
+  ></span>
+
+  {/* Base background gradient */}
+  <span
+    className="absolute inset-0 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] z-[-1]"
+    aria-hidden="true"
+  ></span>
 </div>
 
+
+</div>
+  {/* Popup Form Component */}
+      <ConsultingFormModal showForm={showForm} setShowForm={setShowForm} />
+</>
   );
 }

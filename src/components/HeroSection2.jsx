@@ -3,10 +3,15 @@ import React, { useState, useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
+import ConsultingFormModal from "./ConsultingFormModal";
+import HomeSidebarSection from "./HomeSidebarSection";
 
 import SocialTicker from "./Ticker";
 
-const slides = [
+
+
+const HeroSection = () => {
+  const slides = [
     {
     title:
     (
@@ -24,8 +29,8 @@ We focus on strategies that convert, not just generate traffic. Our team blends 
       </>
     ),
     button: (
-      <Link
-        href="/contact-us"
+      <div
+        onClick={() => setSidebarOpen(true)}
         className="relative inline-flex items-center overflow-hidden group px-6 sm:px-8 py-2 sm:py-3 font-semibold text-white text-xl lg:text-base z-0"
       >
         <span className="relative z-10 flex items-center gap-2">
@@ -40,7 +45,7 @@ We focus on strategies that convert, not just generate traffic. Our team blends 
           className="absolute inset-0 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] z-[-1]"
           aria-hidden="true"
         ></span>
-      </Link>
+      </div>
     ),
   },
   {
@@ -58,11 +63,11 @@ We focus on strategies that convert, not just generate traffic. Our team blends 
       </>
     ),
     button: (
-      <Link
-        href="/contact-us"
+      <div
+        onClick={() => setShowForm(true)}
         className="relative inline-flex items-center overflow-hidden group px-6 sm:px-8 py-2 sm:py-3 font-semibold text-white text-xl lg:text-base z-0"
       >
-        <span className="relative z-10 flex items-center gap-2">
+        <span  className="relative z-10 flex items-center gap-2">
           Get a Free Strategy Call
           <FaArrowRight className="text-lg" />
         </span>
@@ -74,15 +79,39 @@ We focus on strategies that convert, not just generate traffic. Our team blends 
           className="absolute inset-0 bg-gradient-to-r from-[#5F69A8] via-[#6E8EEE] to-[#8DCBFD] z-[-1]"
           aria-hidden="true"
         ></span>
-      </Link>
+      </div>
     ),
   },
 
 ];
+  const [sidebarOpen, setSidebarOpen] = useState(false); // for large screen sidebar
 
-const HeroSection = () => {
+   const [showForm, setShowForm] = useState(false); 
+   
   const [currentSlide, setCurrentSlide] = useState(0);
   const [fade, setFade] = useState(true);
+    const handleSubmit = async (e) => {
+    e.preventDefault();
+    const { name, email } = form;
+
+    try {
+      const res = await fetch("/api/Inquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email }),
+      });
+
+      const data = await res.json();
+      if (res.ok) {
+        alert("Inquiry sent!");
+        setForm({ name: "", email: "" });
+      } else {
+        alert(data.error || "Failed to send inquiry");
+      }
+    } catch (error) {
+      alert("Failed to send inquiry");
+    }
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -99,6 +128,7 @@ const HeroSection = () => {
   const slide = slides[currentSlide];
 
   return (
+    <>
     <section
       className="relative h-[800px]  lg:h-[740px] pt-20  lg:pt-0 flex items-center transition-all duration-700 ease-in-out"
     >
@@ -133,7 +163,7 @@ const HeroSection = () => {
         {slide.description}
       </p>
 
-      <div className="mt-6 lg:mb-0 ">{slide.button}</div>
+      <div className="mt-6 lg:mb-0 cursor-pointer">{slide.button}</div>
     </div>
   </div>
 </div>
@@ -145,6 +175,10 @@ const HeroSection = () => {
         <SocialTicker />
       </div>
     </section>
+      {/* Popup Form Component */}
+          <ConsultingFormModal showForm={showForm} setShowForm={setShowForm} />
+          <HomeSidebarSection isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+    </>
   );
 };
 
