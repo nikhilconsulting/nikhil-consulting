@@ -3,7 +3,7 @@ name: Deploy Next.js to VPS
 on:
   push:
     branches:
-      - main   # jab bhi main branch me push karo, ye chalega
+      - main  # Jab bhi main branch me push hoga, workflow chalega
 
 jobs:
   build-and-deploy:
