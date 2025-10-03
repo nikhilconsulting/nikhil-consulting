@@ -53,7 +53,6 @@ export default function Home() {
 
 {/* <ServicesSection2 /> */}
 
-
 <PricingHomeSection />
 
 
