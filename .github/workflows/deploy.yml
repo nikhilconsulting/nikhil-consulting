@@ -38,8 +38,8 @@ jobs:
           port: 22  # Add this explicitly unless you're using custom port
           debug: true
           script: |
-            docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
-            docker pull n1kh1ll/rankinventiv:latest
-            docker stop nextjs-app || true
-            docker rm nextjs-app || true
-            docker run -d --name nextjs-app -p 3000:3000 n1kh1ll/rankinventiv:latest
+              echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+              docker pull n1kh1ll/rankinventiv:latest
+              docker stop nextjs-app || true
+              docker rm nextjs-app || true
+              docker run -d --name nextjs-app -p 3000:3000 n1kh1ll/rankinventiv:latest
