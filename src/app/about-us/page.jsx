@@ -7,7 +7,6 @@ import AboutPageSection4 from '@/components/AboutPageSection4';
 import Banner from '@/components/Banner';
 import WhatsAppButton from '@/components/WhatsappButton';
 
-
 export default function page() {
   return (
     <>
