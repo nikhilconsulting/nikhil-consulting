@@ -135,7 +135,6 @@ const DownArrow = () => (
   </div>
 
   <div></div>
-
   <div className="col-span-3 text-left px-4 relative">
     <span className="absolute left-[-2.0rem] top-0 text-2xl font-bold whitespace-nowrap bg-[linear-gradient(90deg,#5F69A8,#616FB4,#657AC9,#6E8EEE,#80B3F6,#8FCDFF)] text-gray-100 px-1">
       04
