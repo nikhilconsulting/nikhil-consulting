@@ -107,24 +107,24 @@ const SMMPage = () => {
   ];
   return (
     <>
-    {/* <title>Social Media Marketing Management Company</title>
+    <title>Social Media Marketing Management Company | Rankinventiv</title>
 <meta name="description" content="We provide expert Social Media Marketing (SMM) services in Varanasi. Grow your brand, increase engagement, and boost leads with strategic social campaigns." />
 <meta name="keywords" content="Social Media Marketing Varanasi, SMM Services Varanasi, Social Media Expert Varanasi, Facebook Marketing Varanasi, Instagram Marketing Varanasi, LinkedIn Marketing Varanasi, Best SMM agency in Varanasi, Affordable social media marketing for small businesses, Hire social media marketing expert near me in Varanasi" />
-<link rel="canonical" href="https://www.rankinventiv.com/social-media-marketing" />
-<meta property="og:title" content="Social Media Marketing Management Company" />
-<meta property="og:description" content="Grow your social presence with expert SMM services in Varanasi from RankInventiv. Facebook, Instagram, LinkedIn & more." />
-<meta property="og:url" content="https://www.rankinventiv.com/social-media-marketing" />
+<link rel="canonical" href="https://www.rankinventiv.com/services/social-media-marketing-page" />
+<meta property="og:title" content="Social Media Marketing Management Company | Rankinventiv" />
+<meta property="og:description" content="We provide expert Social Media Marketing (SMM) services in Varanasi. Grow your brand, increase engagement, and boost leads with strategic social campaigns." />
+<meta property="og:url" content="https://www.rankinventiv.com/services/social-media-marketing-page" />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="https://www.rankinventiv.com/assets/images/smm-og-image.png" />
+<meta property="og:image" content="https://www.rankinventiv.com/assets/images/service-detail-page-images/social-media-marketing-og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="SMM Company in Varanasi - RankInventiv" /> */}
+<meta property="og:image:alt" content="SMM Company in Varanasi - RankInventiv" />
 
     <GlassNavbar2 />
     <Banner title="Social Media Marketing" />
     <WhatsAppButton />
     <ServiceSection
-      imageSrc="/assets/images/service-detail-page-images/Social Media.png"
+      imageSrc="/assets/images/service-detail-page-images/social-media-marketing-og-image.png"
       imageAlt="SEO project"
       heading="Social Media Marketing Overview"
       

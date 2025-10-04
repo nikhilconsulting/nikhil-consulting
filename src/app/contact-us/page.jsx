@@ -51,17 +51,17 @@ const faqsData = [
 
   return (
 <>
-{/* <title>Contact Us</title>
-<meta name="description" content="Get in touch with RankInventiv, your trusted digital marketing agency in Varanasi. Contact us for SEO, social media, PPC, and more. We’re here to help your business grow" />
+<title>Contact Us | Rankinventiv</title>
+<meta name="description" content="Get in touch with RankInventiv, your trusted digital marketing agency in Varanasi. Contact us for SEO, social media, PPC, and more. We’re here to help your business grow." />
 <link rel="canonical" href="https://www.rankinventiv.com/contact-us" />
-<meta property="og:title" content="Contact Us" />
-<meta property="og:description" content="Reach out to RankInventiv for expert digital marketing solutions. Let's grow your business online!" />
+<meta property="og:title" content="Contact Us | Rankinventiv" />
+<meta property="og:description" content="Get in touch with RankInventiv, your trusted digital marketing agency in Varanasi. Contact us for SEO, social media, PPC, and more. We’re here to help your business grow." />
 <meta property="og:url" content="https://www.rankinventiv.com/contact-us" />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="https://www.rankinventiv.com/assets/images/contact-og-image.png" />
+<meta property="og:image" content="https://www.rankinventiv.com/assets/images/contact-page-image/contact-us.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Contact RankInventiv - Digital Marketing Experts" /> */}
+<meta property="og:image:alt" content="Contact RankInventiv - Digital Marketing Experts" />
 
 <GlassNavbar2 />
 <Banner title="Contact Us" />

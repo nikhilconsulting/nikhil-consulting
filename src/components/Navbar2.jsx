@@ -111,7 +111,7 @@ const timer = setTimeout(() => {
     {/* -ml-8 means ~2rem left shift */}
     <Link href="/">
       <Image
-        src="/assets/images/logo/logo-3.png"
+        src="/assets/images/logo/logo.png"
         alt="Logo"
         width={200}
         height={100}

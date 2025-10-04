@@ -10,17 +10,17 @@ import WhatsAppButton from '@/components/WhatsappButton';
 export default function page() {
   return (
     <>
-    {/* <title>About Us</title>
+    <title>About Us | Rankinventiv</title>
 <meta name="description" content="RankInventiv is a trusted digital marketing agency in Varanasi helping businesses across India and beyond. Our team specializes in SEO, social media, ads, and branding to deliver measurable growth and long-term success." />
 <link rel="canonical" href="https://www.rankinventiv.com/about-us" />
-<meta property="og:title" content="About Us" />
-<meta property="og:description" content="Trusted digital marketing agency in Varanasi offering SEO, social media, and ads for business growth." />
+<meta property="og:title" content="About Us | Rankinventiv" />
+<meta property="og:description" content="RankInventiv is a trusted digital marketing agency in Varanasi helping businesses across India and beyond. Our team specializes in SEO, social media, ads, and branding to deliver measurable growth and long-term success." />
 <meta property="og:url" content="https://www.rankinventiv.com/about-us" />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="https://www.rankinventiv.com/assets/images/about-us-og-image.png" />
+<meta property="og:image" content="https://www.rankinventiv.com/assets/images/about-us-page-image/who-we-are.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="About RankInventiv - Digital Growth Experts" /> */}
+<meta property="og:image:alt" content="About RankInventiv - Digital Growth Experts" />
 
     <GlassNavbar2 />
     <Banner title="About Us" />

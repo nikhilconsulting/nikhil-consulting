@@ -11,18 +11,18 @@ const PrivacyPolicy = () => {
 
     
     <>
-        {/* <title>Privacy Policy | Rankinventiv </title>
+        <title>Privacy Policy | Rankinventiv </title>
 <meta name="description" content="Read the Privacy Policy of rankinventiv to understand how we collect, use, and protect your data." />
-<meta name="keywords" content="Google Ads Services Varanasi, PPC Management Varanasi, Google Ads Expert Varanasi, Pay-Per-Click Services Varanasi, Google Ads Campaign Varanasi, Online Advertising Varanasi, Best Google Ads company in Varanasi, Affordable Google Ads services for small businesses in Varanasi, Hire Google Ads expert near me in Varanasi" />
-<link rel="canonical" href="https://www.rankinventiv.com/google-ads" />
+{/* <meta name="keywords" content="Google Ads Services Varanasi, PPC Management Varanasi, Google Ads Expert Varanasi, Pay-Per-Click Services Varanasi, Google Ads Campaign Varanasi, Online Advertising Varanasi, Best Google Ads company in Varanasi, Affordable Google Ads services for small businesses in Varanasi, Hire Google Ads expert near me in Varanasi" /> */}
+<link rel="canonical" href="https://www.rankinventiv.com/privacy-policy" />
 <meta property="og:title" content="Privacy Policy | Rankinventiv " />
 <meta property="og:description" content="Read the Privacy Policy of rankinventiv to understand how we collect, use, and protect your data." />
-<meta property="og:url" content="https://www.rankinventiv.com/google-ads" />
+<meta property="og:url" content="https://www.rankinventiv.com/privacy-policy" />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="https://www.rankinventiv.com/assets/images/google-ads-og-image.png" />
+<meta property="og:image" content="https://www.rankinventiv.com/assets/images/logo/logo.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Google Ads Company in Varanasi - RankInventiv" /> */}
+<meta property="og:image:alt" content="Privacy Policy - RankInventiv" />
     <GlassNavbar2 /> 
     <Banner title="Privacy Policy" />
 <WhatsAppButton />

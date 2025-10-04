@@ -126,25 +126,25 @@ const SEOPage = () => {
   ];
   return (
     <>
-    {/* <title>Best SEO Company | Rankinventiv</title>
+    <title>Best SEO Company | Rankinventiv</title>
 <meta name="description" content="Looking for the best SEO company? RankInventiv provides top-notch SEO and digital marketing services to grow your business online." />
 <meta name="keywords" content="SEO Services Varanasi, SEO Company Varanasi, Best SEO Consultant Varanasi, Local SEO Varanasi, SEO Expert Varanasi, SEO Agency Varanasi, Affordable SEO Varanasi, Best SEO company for small business in Varanasi, Local SEO expert near me in Varanasi, Affordable SEO services in Varanasi, Hire SEO consultant in Varanasi, Improve Google rankings Varanasi business" />
-<link rel="canonical" href="https://www.rankinventiv.com/seo-services" />
+<link rel="canonical" href="https://www.rankinventiv.com/services/search-engine-optimisation-page" />
 <meta property="og:title" content="Best SEO Company | Rankinventiv" />
-<meta property="og:description" content="Get expert SEO services from RankInventiv. Improve your Google rankings and grow your business online." />
-<meta property="og:url" content="https://www.rankinventiv.com/seo-services" />
+<meta property="og:description" content="Looking for the best SEO company? RankInventiv provides top-notch SEO and digital marketing services to grow your business online." />
+<meta property="og:url" content="https://www.rankinventiv.com/services/search-engine-optimisation-page" />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="https://www.rankinventiv.com/assets/images/seo-services-og-image.png" />
+<meta property="og:image" content="https://www.rankinventiv.com/assets/images/service-detail-page-images/seo-og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Best SEO Company in Varanasi - RankInventiv" /> */}
+<meta property="og:image:alt" content="Best SEO Company in Varanasi - RankInventiv" />
 
     <GlassNavbar2 />
    
     <Banner title="Search Engine Optimisation (SEO)" />
      <WhatsAppButton />
     <ServiceSection
-      imageSrc="/assets/images/service-detail-page-images/SEO Service.png"
+      imageSrc="/assets/images/service-detail-page-images/seo-og-image.png"
       imageAlt="SEO project"
       heading="Planning & Growth Overview"
       

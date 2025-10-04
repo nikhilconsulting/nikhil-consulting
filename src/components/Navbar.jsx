@@ -72,7 +72,7 @@ const navItems = [
 <div className="flex items-center  flex-shrink-1">
   <Link href="/" >
     <Image
-      src="/assets/images/logo/logo-3.png" // <-- Replace with your actual image path if different
+      src="/assets/images/logo/logo.png" // <-- Replace with your actual image path if different
       alt="Logo"
       width={200}
       height={100}

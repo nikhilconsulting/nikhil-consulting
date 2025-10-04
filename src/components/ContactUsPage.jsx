@@ -89,7 +89,7 @@ export default function ContactUsPage() {
   </h1>
   <p className="text-gray-100 text-xl">Get In Touch with us</p>
 <Image
-  src="/assets/images/contact-page-image/Contact Us.png"
+  src="/assets/images/contact-page-image/contact-us.png"
   alt="Contact Us"
   width={800}
   height={800}

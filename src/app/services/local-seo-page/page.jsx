@@ -113,18 +113,18 @@ const faqsData = [
   ];
   return (
     <>
-    {/* <title>Local SEO Agency GMB Agency in Varanasi</title>
+    <title>Local SEO Agency GMB Agency in Varanasi | Rankinventiv</title>
 <meta name="description" content="Top Local SEO and GMB agency in Varanasi. Boost your business visibility, attract more customers, and improve Google rankings locally." />
 <meta name="keywords" content="Local SEO Varanasi, GMB Optimization Varanasi, Local SEO Agency Varanasi, Google My Business Agency Varanasi, Local Business SEO Varanasi, Google Maps SEO Varanasi, Local Search Optimization Varanasi, GMB Management Varanasi, Local Ranking Services Varanasi, Local Marketing Agency Varanasi, Best local SEO and GMB agency in Varanasi, Affordable local SEO services for small businesses in Varanasi, Hire GMB expert near me in Varanasi, Improve Google Maps ranking for Varanasi business, Local SEO strategies to attract more customers in Varanasi" />
-<link rel="canonical" href="https://www.rankinventiv.com/local-seo-page" />
-<meta property="og:title" content="Local SEO Agency GMB Agency in Varanasi" />
+<link rel="canonical" href="https://www.rankinventiv.com/services/local-seo-page" />
+<meta property="og:title" content="Local SEO Agency GMB Agency in Varanasi | Rankinventiv" />
 <meta property="og:description" content="Top Local SEO and GMB agency in Varanasi. Boost your business visibility, attract more customers, and improve Google rankings locally." />
-<meta property="og:url" content="https://www.rankinventiv.com/local-seo-page" />
+<meta property="og:url" content="https://www.rankinventiv.com/services/local-seo-page" />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="https://www.rankinventiv.com/assets/images/local-seo-og-image.png" />
+<meta property="og:image" content="https://www.rankinventiv.com/assets/images/service-detail-page-images/local-seo-og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Local SEO and GMB Services in Varanasi - RankInventiv" /> */}
+<meta property="og:image:alt" content="Local SEO and GMB Services in Varanasi - RankInventiv" />
 
     <GlassNavbar2 />
    
@@ -133,7 +133,7 @@ const faqsData = [
 />
  <WhatsAppButton />
     <ServiceSection
-      imageSrc="/assets/images/service-detail-page-images/Local.png"
+      imageSrc="/assets/images/service-detail-page-images/local-seo-og-image.png"
       imageAlt="Local SEO"
       heading="Local SEO Services Overview"
       // subheading="Overview"

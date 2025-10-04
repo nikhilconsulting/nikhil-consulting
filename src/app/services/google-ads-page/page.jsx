@@ -103,25 +103,25 @@ const GooglePage = () => {
   ];
   return (
     <>
-    {/* <title>Google Ads Agency in Varanasi</title>
+    <title>Google Ads Agency in Varanasi | Rankinventiv</title>
 <meta name="description" content="Expert Google Ads services in Varanasi. Boost website traffic, leads, and sales with targeted PPC campaigns tailored for your business." />
 <meta name="keywords" content="Google Ads Services Varanasi, PPC Management Varanasi, Google Ads Expert Varanasi, Pay-Per-Click Services Varanasi, Google Ads Campaign Varanasi, Online Advertising Varanasi, Best Google Ads company in Varanasi, Affordable Google Ads services for small businesses in Varanasi, Hire Google Ads expert near me in Varanasi" />
-<link rel="canonical" href="https://www.rankinventiv.com/google-ads" />
-<meta property="og:title" content="Google Ads Agency in Varanasi" />
-<meta property="og:description" content="Run high-performance Google Ads campaigns with RankInventiv. Get more leads and sales today." />
-<meta property="og:url" content="https://www.rankinventiv.com/google-ads" />
+<link rel="canonical" href="https://www.rankinventiv.com/services/google-ads-page" />
+<meta property="og:title" content="Google Ads Agency in Varanasi | Rankinventiv" />
+<meta property="og:description" content="Expert Google Ads services in Varanasi. Boost website traffic, leads, and sales with targeted PPC campaigns tailored for your business." />
+<meta property="og:url" content="https://www.rankinventiv.com/services/google-ads-page" />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="https://www.rankinventiv.com/assets/images/google-ads-og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Google Ads Company in Varanasi - RankInventiv" /> */}
+<meta property="og:image:alt" content="Google Ads Company in Varanasi - RankInventiv" />
 
     <GlassNavbar2 />
  
     <Banner title="Google Ads" />
        <WhatsAppButton />
     <ServiceSection
-      imageSrc="/assets/images/service-detail-page-images/Google ads.png"
+      imageSrc="/assets/images/service-detail-page-images/google-ads-og-image.png"
       imageAlt="SMM project"
       heading="Introduction of Projects Overview"
       description={`Running a successful business online requires smart advertising strategies that connect you with the right audience. Google Ads is one of the most effective ways to grow visibility, drive traffic, and increase sales. With our Google Ads expertise, we create campaigns that deliver real results. From search and display ads to remarketing and shopping ads, our strategies ensure maximum ROI. By focusing on data-driven decisions and continuous optimization, we help your business stay ahead in a competitive market.`}

@@ -107,18 +107,18 @@ const SMMPage = () => {
   ];
   return (
     <>
-    {/* <title>Social media Meta Ads Agency in Varanasi</title>
+    <title>Social media Meta Ads Agency in Varanasi | Rankinventiv</title>
 <meta name="description" content="Trusted digital marketing agency in Varanasi for Meta Ads, and SMM. Maximize ROI and grow your business online today." />
 <meta name="keywords" content="Meta Ads Services Varanasi, Social Media Marketing Varanasi, Paid Advertising Varanasi, Digital Marketing Agency Varanasi, Facebook Ads Varanasi, Instagram Ads Varanasi, PPC Management Varanasi, Online Advertising Varanasi, Affordable Facebook & Instagram ads services Varanasi, Hire social media marketing expert near me in Varanasi, Local digital marketing agency for paid campaigns, Meta Ads strategies for small businesses in Varanasi" />
-<link rel="canonical" href="https://www.rankinventiv.com/meta-ads" />
-<meta property="og:title" content="Social media Meta Ads Agency in Varanasi" />
-<meta property="og:description" content="Grow your business with Facebook and Instagram ads by RankInventiv. Local, affordable, result-driven." />
-<meta property="og:url" content="https://www.rankinventiv.com/meta-ads" />
+<link rel="canonical" href="https://www.rankinventiv.com/services/meta-ads-page" />
+<meta property="og:title" content="Social media Meta Ads Agency in Varanasi | Rankinventiv" />
+<meta property="og:description" content="Trusted digital marketing agency in Varanasi for Meta Ads, and SMM. Maximize ROI and grow your business online today." />
+<meta property="og:url" content="https://www.rankinventiv.com/services/meta-ads-page" />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="https://www.rankinventiv.com/assets/images/meta-ads-og-image.png" />
+<meta property="og:image" content="https://www.rankinventiv.com/assets/images/service-detail-page-images/meta-ads-og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Meta Ads Services in Varanasi - RankInventiv" /> */}
+<meta property="og:image:alt" content="Meta Ads Services in Varanasi - RankInventiv" />
 
     <GlassNavbar2 />
    
@@ -127,7 +127,7 @@ const SMMPage = () => {
 />
  <WhatsAppButton />
     <ServiceSection
-      imageSrc="/assets/images/service-detail-page-images/Meta Ads.png"
+      imageSrc="/assets/images/service-detail-page-images/meta-ads-og-image.png"
       imageAlt="Meta project"
       heading="Meta Ads Overview"
       // subheading="Overview"

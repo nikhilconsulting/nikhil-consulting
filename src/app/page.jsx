@@ -24,7 +24,7 @@ export default function Home() {
   return (
 <>
 
-{/* <title>Digital Marketing Company in Varanasi | Rankinventiv</title>
+<title>Digital Marketing Company in Varanasi | Rankinventiv</title>
 <meta name="description" content="RankInventiv is a digital marketing company in Varanasi that helps local businesses grow online with simple SEO, ads, and smart marketing solutions." />
 <meta name="keywords" content="Digital Marketing Agency in Varanasi, Best Digital marketing services in Varanasi, Varanasi digital marketing company, Online marketing services in Varanasi" />
 <link rel="canonical" href="https://www.rankinventiv.com/" />
@@ -32,10 +32,10 @@ export default function Home() {
 <meta property="og:description" content="RankInventiv is a digital marketing company in Varanasi that helps local businesses grow online with simple SEO, ads, and smart marketing solutions." />
 <meta property="og:url" content="https://www.rankinventiv.com/" />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="https://www.rankinventiv.com/assets/images/home-og-image.png" />
+<meta property="og:image" content="https://www.rankinventiv.com/assets/images/home-page-image/about-section-image/2.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="RankInventiv - Digital Marketing Agency in Varanasi" /> */}
+<meta property="og:image:alt" content="RankInventiv - Digital Marketing Company in Varanasi" />
 
 <GlassNavbar2 />
 

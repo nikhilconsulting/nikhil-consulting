@@ -8,18 +8,18 @@ import React from 'react';
 const page = () => {
   return (
     <>
-    {/* <title>Terms & Conditions | Rankinventiv</title>
+    <title>Terms & Conditions | Rankinventiv</title>
 <meta name="description" content="View the Terms & Conditions for using rankinventiv services, including user responsibilities and legal guidelines." />
-<meta name="keywords" content="Google Ads Services Varanasi, PPC Management Varanasi, Google Ads Expert Varanasi, Pay-Per-Click Services Varanasi, Google Ads Campaign Varanasi, Online Advertising Varanasi, Best Google Ads company in Varanasi, Affordable Google Ads services for small businesses in Varanasi, Hire Google Ads expert near me in Varanasi" />
-<link rel="canonical" href="https://www.rankinventiv.com/google-ads" />
+{/* <meta name="keywords" content="Google Ads Services Varanasi, PPC Management Varanasi, Google Ads Expert Varanasi, Pay-Per-Click Services Varanasi, Google Ads Campaign Varanasi, Online Advertising Varanasi, Best Google Ads company in Varanasi, Affordable Google Ads services for small businesses in Varanasi, Hire Google Ads expert near me in Varanasi" /> */}
+<link rel="canonical" href="https://www.rankinventiv.com/terms-of-services" />
 <meta property="og:title" content="Terms & Conditions | Rankinventiv" />
 <meta property="og:description" content="View the Terms & Conditions for using rankinventiv services, including user responsibilities and legal guidelines." />
-<meta property="og:url" content="https://www.rankinventiv.com/google-ads" />
+<meta property="og:url" content="https://www.rankinventiv.com/terms-of-services" />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="https://www.rankinventiv.com/assets/images/google-ads-og-image.png" />
+<meta property="og:image" content="https://www.rankinventiv.com/assets/images/logo/logo.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Google Ads Company in Varanasi - RankInventiv" /> */}
+<meta property="og:image:alt" content="Terms Of Services - RankInventiv" />
 
      <div
       className="min-h-screen w-full text-gray-200 bg-gradient-to-r from-[#382933] via-[#372935] to-[#372831] "

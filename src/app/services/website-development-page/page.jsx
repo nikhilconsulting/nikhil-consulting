@@ -108,24 +108,24 @@ const SMMPage = () => {
   ];
   return (
     <>
-    {/* <title>Best website Making Company in Varanasi</title>
+    <title>Best website Making Company in Varanasi | Rankinventiv</title>
 <meta name="description" content="RankInventiv – Trusted website development company in Varanasi. Create custom websites that attract visitors and boost your online presence." />
 <meta name="keywords" content="Website Development Varanasi, Website Development Company Varanasi, Website Design and Development Varanasi, Custom Website Developer Varanasi, Web Development Services Varanasi, Professional Website Developer Varanasi, Business Website Development Varanasi, Ecommerce Website Development Varanasi, Website Redesign Services Varanasi" />
-<link rel="canonical" href="https://www.rankinventiv.com/website-development" />
-<meta property="og:title" content="Best website Making Company in Varanasi" />
-<meta property="og:description" content="Custom website design and development services in Varanasi by RankInventiv. Build your brand online today." />
-<meta property="og:url" content="https://www.rankinventiv.com/website-development" />
+<link rel="canonical" href="https://www.rankinventiv.com/services/website-development-page" />
+<meta property="og:title" content="Best website Making Company in Varanasi | Rankinventiv" />
+<meta property="og:description" content="RankInventiv – Trusted website development company in Varanasi. Create custom websites that attract visitors and boost your online presence." />
+<meta property="og:url" content="https://www.rankinventiv.com/services/website-development-page" />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="https://www.rankinventiv.com/assets/images/web-dev-og-image.png" />
+<meta property="og:image" content="https://www.rankinventiv.com/assets/images/service-detail-page-images/website-development-og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Website Development Company in Varanasi - RankInventiv" /> */}
+<meta property="og:image:alt" content="Website Development Company in Varanasi - RankInventiv" />
 
     <GlassNavbar2 />
     <Banner title="Website Development" />
     <WhatsAppButton />
     <ServiceSection
-      imageSrc="/assets/images/service-detail-page-images/Website.png"
+      imageSrc="/assets/images/service-detail-page-images/website-development-og-image.png"
       imageAlt="SEO project"
       heading="Website Development Overview"
       // subheading="Overview"

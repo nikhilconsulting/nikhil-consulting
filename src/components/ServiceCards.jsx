@@ -6,14 +6,14 @@ import { FiArrowRight } from "react-icons/fi";
 
 const services = [
   {
-    image: "/assets/images/service-detail-page-images/SEO Service.png",
+    image: "/assets/images/service-detail-page-images/seo-og-image.png",
     title: "Search Engine Optimization",
     description:
       "Running a successful SEO campaign takes a clear process and strong teamwork. In this section, we explain our step-by-step approach to planning and executing effective strategies.",
     link: "/services/search-engine-optimisation-page",
   },
   {
-    image: "/assets/images/service-detail-page-images/Local.png",
+    image: "/assets/images/service-detail-page-images/local-seo-og-image.png",
     title: "Local SEO",
     description:
       "Local SEO helps your business appear in Google when nearby customers search for services like yours. In this section, we share how we manage Local SEO projects to boost your local reach. ",
@@ -21,28 +21,28 @@ const services = [
   },
  
   {
-    image: "/assets/images/service-detail-page-images/Google ads.png",
+    image: "/assets/images/service-detail-page-images/google-ads-og-image.png",
     title: "Google Ads",
     description:
       "Running a successful business online requires smart advertising strategies that connect you with the right audience. Google Ads is one of the most effective ways to grow visibility, drive traffic, and increase sales.",
     link: "/services/google-ads-page",
   },
     {
-    image: "/assets/images/service-detail-page-images/Meta Ads.png",
+    image: "/assets/images/service-detail-page-images/meta-ads-og-image.png",
     title: "Meta Ads",
     description:
       "We help businesses grow with powerful ad campaigns on Facebook and Instagram. In this section, we explain how our Meta Ads services connect your brand with the right audience and deliver measurable results. ",
     link: "/services/meta-ads-page",
   },
    {
-    image: "/assets/images/service-detail-page-images/Website.png",
+    image: "/assets/images/service-detail-page-images/website-development-og-image.png",
     title: "Website Development",
     description:
       "Your website is the digital face of your business. In this section, we explain how our web development and design services help build a strong online presence.",
     link: "/services/website-development-page",
   },
   {
-    image: "/assets/images/service-detail-page-images/Social Media.png",
+    image: "/assets/images/service-detail-page-images/social-media-marketing-og-image.png",
     title: "Social Media Marketing",
     description:
       "Social media marketing helps your brand connect with the right audience. In this section, we show how we create strong strategies that drive engagement, followers, and leads.",
