@@ -43,26 +43,26 @@ export default function Page() {
   return (
     <>
       <title>
-        Digital Marketing Consultant | Smart Growth, Budget Friendly
+        Digital Marketing Consultant in Varanasi | Nikhil Consulting
       </title>
       <meta
         name="description"
-        content="Grow smarter - our digital marketing consultant brings in experts from every field to deliver complete solutions that maximize your ROI."
+        content="Connect with Nikhil Consulting, a top Digital Marketing Consultant in Varanasi. Get expert SEO, social media, and online marketing solutions to grow your business."
       />
       <meta
         name="keywords"
-        content="best digital marketing consultant, freelance digital marketing consultant , digital marketing consultant near me , online business consultant , business growth consultant , affordable digital marketing services , SEO expert in Varanasi , digital marketing consultant in Varanasi , local business digital marketing consultant"
+        content="Digital Marketing Consultant Varanasi , Best digital marketing consultant, Freelance digital marketing consultant , Digital marketing consultant near me , online business consultant , business growth consultant , affordable digital marketing services , SEO expert in Varanasi , digital marketing consultant in Varanasi , local business digital marketing consultant"
       />
       <link rel="canonical" href="https://www.rankinventiv.com/digital-marketing-consultant" />
       <meta
         property="og:title"
-        content="Digital Marketing Consultant |  Smart Growth, Budget Friendly"
+        content="Digital Marketing Consultant in Varanasi | Nikhil Consulting"
       />
       <meta
         property="og:description"
-        content="Grow smarter - our digital marketing consultant brings in experts from every field to deliver complete solutions that maximize your ROI."
+        content="Connect with Nikhil Consulting, a top Digital Marketing Consultant in Varanasi. Get expert SEO, social media, and online marketing solutions to grow your business."
       />
-      <meta property="og:url" content="https://rankinventiv.com/digital-marketing-consultant" />
+      <meta property="og:url" content="https://www.rankinventiv.com/digital-marketing-consultant" />
       <meta property="og:type" content="website" />
       <meta property="og:image" content="https://www.rankinventiv.com/assets/images/consulting-page-images/digital-marketing-consultant-og-speaker-1.png" />
 <meta property="og:image:width" content="1200" />
