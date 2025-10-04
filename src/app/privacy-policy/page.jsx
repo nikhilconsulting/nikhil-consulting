@@ -19,7 +19,7 @@ const PrivacyPolicy = () => {
 <meta property="og:description" content="Read the Privacy Policy of rankinventiv to understand how we collect, use, and protect your data." />
 <meta property="og:url" content="https://www.rankinventiv.com/privacy-policy" />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="https://www.rankinventiv.com/assets/images/logo/logo.png" />
+<meta property="og:image" content="https://www.rankinventiv.com/assets/images/logo/meta-logo.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="Privacy Policy - RankInventiv" />

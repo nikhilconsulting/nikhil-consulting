@@ -15,7 +15,7 @@ export default function page() {
 <meta property="og:description" content="RankInventiv offers complete digital marketing services in Varanasi and across India. From SEO, social media, and paid ads to website growth strategies, we help businesses increase traffic, leads, and sales with customized solutions." />
 <meta property="og:url" content="https://www.rankinventiv.com/services" />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="https://www.rankinventiv.com/assets/images/logo/logo.png" />
+<meta property="og:image" content="https://www.rankinventiv.com/assets/images/logo/meta-logo.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="RankInventiv Services Page - SEO, Ads, Social Media" />

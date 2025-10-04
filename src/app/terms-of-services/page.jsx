@@ -16,7 +16,7 @@ const page = () => {
 <meta property="og:description" content="View the Terms & Conditions for using rankinventiv services, including user responsibilities and legal guidelines." />
 <meta property="og:url" content="https://www.rankinventiv.com/terms-of-services" />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="https://www.rankinventiv.com/assets/images/logo/logo.png" />
+<meta property="og:image" content="https://www.rankinventiv.com/assets/images/logo/meta-logo.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="Terms Of Services - RankInventiv" />
