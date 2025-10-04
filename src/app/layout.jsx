@@ -2,6 +2,7 @@
 
 import React, { useEffect } from "react";
 import { Roboto } from "next/font/google";
+import { usePathname } from "next/navigation";
 import "./globals.css";
 
 const roboto = Roboto({
@@ -10,7 +11,19 @@ const roboto = Roboto({
   variable: "--font-roboto",
 });
 
+const GA_MEASUREMENT_ID = "G-PTYV5WXGR7";
+
+function sendPageView(pathname) {
+  if (typeof window.gtag === "function") {
+    window.gtag("config", GA_MEASUREMENT_ID, {
+      page_path: pathname,
+    });
+  }
+}
+
 export default function RootLayout({ children }) {
+  const pathname = usePathname();
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       const disableContextMenu = (e) => e.preventDefault();
@@ -31,11 +44,31 @@ export default function RootLayout({ children }) {
     }
   }, []);
 
+  // Track page views on route change
+  useEffect(() => {
+    sendPageView(pathname);
+  }, [pathname]);
+
   return (
     <html lang="en">
-      <body className={`${roboto.variable} antialiased`}>
-        {children}
-      </body>
+      <head>
+        {/* Google Analytics Script */}
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_MEASUREMENT_ID}');
+            `,
+          }}
+        />
+      </head>
+      <body className={`${roboto.variable} antialiased`}>{children}</body>
     </html>
   );
 }
