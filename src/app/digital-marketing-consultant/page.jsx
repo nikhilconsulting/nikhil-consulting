@@ -64,7 +64,7 @@ export default function Page() {
       />
       <meta property="og:url" content="https://www.rankinventiv.com/digital-marketing-consultant" />
       <meta property="og:type" content="website" />
-      <meta property="og:image" content="https://www.rankinventiv.com/assets/images/consulting-page-images/digital-marketing-consultant-og-speaker-1.png" />
+      <meta property="og:image" content="https://www.rankinventiv.com/assets/images/consulting-page-images/why-choose-us-section-images/why-choose-us-2.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="Smart Digital Marketing Consultant - Rankinventiv" />
