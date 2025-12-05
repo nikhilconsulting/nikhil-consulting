@@ -6,4 +6,4 @@ services:
     container_name: nextjs_app
     restart: always
     ports:
-      - "3000:3000"
+      - "3000:3000"  # <--- this maps container port 3000 to server port 3000
