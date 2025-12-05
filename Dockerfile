@@ -1,21 +1,35 @@
-# Use official Node.js image as the base
-FROM node:18-alpine
+# ---------------------------
+# 1) Build Stage
+# ---------------------------
+FROM node:18-alpine AS builder
 
-# Set working directory
 WORKDIR /app
 
-# Copy package files and install dependencies
+# Copy dependency files
 COPY package*.json ./
+
+# Install dependencies
 RUN npm install
 
-# Copy project files
+# Copy all project files
 COPY . .
 
-# Build the Next.js app
+# Build Next.js (creates .next/standalone)
 RUN npm run build
 
-# Expose port
+
+
+# ---------------------------
+# 2) Production Runtime Stage
+# ---------------------------
+FROM node:18-alpine AS runner
+
+WORKDIR /app
+
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
+COPY --from=builder /app/public ./public
+
 EXPOSE 3000
 
-# Start the app
-CMD ["npm", "start"]
+CMD ["node", "server.js"]
