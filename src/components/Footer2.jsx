@@ -47,7 +47,7 @@ const [selectedExpert, setSelectedExpert] = useState('');
 <div className="xl:col-span-2 -mt-10  ">
   {/* Logo */}
   <div className="relative w-64 h-24 -ml-4 -mb-2">
-    <Link href={"/"}>
+    <Link href={"https://www.google.com/maps?cid=13860035564816964856"}>
     <Image
       src="/assets/images/logo/logo-2.png"
       alt="RankInventiv Logo"
