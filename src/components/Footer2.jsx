@@ -66,7 +66,7 @@ const [selectedExpert, setSelectedExpert] = useState('');
   <div className="mt-6 w-auto overflow-hidden">
     <iframe
       title="RankInventiv Location"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115403.50094890468!2d82.84627219726565!3d25.325718100000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2ff84c34878d%3A0x219a2452dac85f3a!2sNikhil%20Consulting%20%7C%20Business%20Growth%20%26%20Digital%20Marketer!5e0!3m2!1sen!2sus!4v1756276502921!5m2!1sen!2sus"
+      src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d115408.22405537314!2d82.99110895!3d25.32076265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x398e2f3b466f8205%3A0xc058bce99f321cf8!2s3rd%20Floor%2C%20Rankinventiv%2C%20C27%2F183%2C%20Lahurabir%20Rd%2C%20near%20Sanskrit%20University%20Road%2C%20Near%20Hotel%20Pradeep%2C%20Jagatganj%2C%20Chaukaghat%2C%20Varanasi%2C%20Uttar%20Pradesh%20221002!3m2!1d25.325644!2d82.99889399999999!5e0!3m2!1sen!2sin!4v1765126461023!5m2!1sen!2sin"
       width="100%"
       height="120"
       style={{ border: 0 }}
