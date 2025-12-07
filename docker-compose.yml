@@ -1,9 +1,26 @@
-version: '3.9'
+name: Build & Push Docker Image
 
-services:
-  web:
-    build: .
-    container_name: nextjs_app
-    restart: always
-    ports:
-      - "3000:3000"  # <--- this maps container port 3000 to server port 3000
+on:
+  push:
+    branches:
+      - main   # Or your default branch
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+
+      - name: Build Docker image
+        run: docker build -t yourdockerhub/my-next-app:latest .
+
+      - name: Push Docker image
+        run: docker push yourdockerhub/my-next-app:latest
