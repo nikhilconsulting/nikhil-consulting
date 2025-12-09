@@ -31,8 +31,8 @@ export default function Connect() {
    <div className="md:w-1/3 w-auto h-[160px] md:h-auto rounded-md overflow-hidden ml-auto">
   <iframe
     title="RankInventiv Office Location"
-      src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d115408.22405537314!2d82.99110895!3d25.32076265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x398e2f3b466f8205%3A0xc058bce99f321cf8!2s3rd%20Floor%2C%20Rankinventiv%2C%20C27%2F183%2C%20Lahurabir%20Rd%2C%20near%20Sanskrit%20University%20Road%2C%20Near%20Hotel%20Pradeep%2C%20Jagatganj%2C%20Chaukaghat%2C%20Varanasi%2C%20Uttar%20Pradesh%20221002!3m2!1d25.325644!2d82.99889399999999!5e0!3m2!1sen!2sin!4v1765126461023!5m2!1sen!2sin"
-     width="100%"
+    src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d115408.22405537314!2d82.99110895!3d25.32076265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x398e2f3b466f8205%3A0xc058bce99f321cf8!2s3rd%20Floor%2C%20Rankinventiv%2C%20C27%2F183%2C%20Lahurabir%20Rd%2C%20near%20Sanskrit%20University%20Road%2C%20Near%20Hotel%20Pradeep%2C%20Jagatganj%2C%20Chaukaghat%2C%20Varanasi%2C%20Uttar%20Pradesh%20221002!3m2!1d25.325644!2d82.99889399999999!5e0!3m2!1sen!2sin!4v1765126461023!5m2!1sen!2sin"
+    width="100%"
     height="100%"
     style={{ border: 0 }}
     allowFullScreen=""
