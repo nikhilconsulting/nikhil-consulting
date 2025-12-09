@@ -22,12 +22,12 @@ jobs:
 
       # 3️⃣ Build Docker image
       - name: Build Docker Image
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/my-next-app:latest .
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/rankinventiv-site:latest .
 
       # 4️⃣ Push image to Docker Hub
       - name: Push Docker Image
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/my-next-app:latest
-        
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/rankinventiv-site:latest
+
       # 5️⃣ Deploy to server
       - name: Deploy on Server
         uses: appleboy/ssh-action@v0.1.7
@@ -37,19 +37,19 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             # Stop and remove existing container if running
-            docker stop nextapp || true
-            docker rm nextapp || true
+            docker stop rankinventiv || true
+            docker rm rankinventiv || true
 
             # Pull the latest image
-            docker pull ${{ secrets.DOCKER_USERNAME }}/my-next-app:latest
+            docker pull ${{ secrets.DOCKER_USERNAME }}/rankinventiv-site:latest
 
             # Run new container
             docker run -d \
-              --name nextapp \
+              --name rankinventiv \
               --restart always \
               -p 3000:3000 \
               -e NODE_ENV=production \
-              ${{ secrets.DOCKER_USERNAME }}/my-next-app:latest
+              ${{ secrets.DOCKER_USERNAME }}/rankinventiv-site:latest
 
             # Clean up old dangling images
             docker image prune -af
