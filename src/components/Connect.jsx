@@ -21,7 +21,7 @@ export default function Connect() {
   <div className="flex flex-col md:flex-row gap-6 ">
     {/* Address Section */}
     <div className="md:w-1/2 whitespace-nowrap">
-      <h3 className="font-semibold mb-4">Office Address 1</h3>
+      <h3 className="font-semibold mb-4">Office Address:- 1</h3>
       <p>2nd Floor, Lahurabir Rd, Jagatganj,</p>
       <p>Near Sanskrit University, Varanasi,</p>
       <p>Uttar Pradesh - 221002, India</p>
@@ -49,7 +49,7 @@ export default function Connect() {
   <div className="flex flex-col md:flex-row gap-6">
     {/* Address Section */}
     <div className="md:w-1/2 whitespace-nowrap">
-     <h3 className="font-semibold mb-4">Office Address 2</h3>
+     <h3 className="font-semibold mb-4">Office Address:- 2</h3>
           <p>A-12/16,</p>
           <p>Sector 15, Noida</p>
           <p>Uttar Pradesh - 201301, India</p>

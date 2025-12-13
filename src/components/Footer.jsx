@@ -49,7 +49,7 @@ const [selectedExpert, setSelectedExpert] = useState('');
           {/* Brand Section */}
 <div className="xl:col-span-2 -mt-10  ">
   {/* Logo */}
-  <Link href={"https://www.google.com/maps?cid=13860035564816964856"}>
+  <Link href={"/"}>
   <div className="relative w-64 h-24 -ml-4 -mb-2">
     <Image
       src="/assets/images/logo/logo-2.png"
@@ -143,7 +143,7 @@ const [selectedExpert, setSelectedExpert] = useState('');
                 <FaYoutube className="cursor-pointer hover:scale-110 transition" />
               </Link> */}
              <Link
-  href="https://maps.app.goo.gl/MNbdJh3Mn9J7joEn6"
+  href="https://www.google.com/maps?cid=13860035564816964856"
   target="_blank"
   rel="noopener noreferrer"
 >
