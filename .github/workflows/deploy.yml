@@ -1,55 +1,57 @@
-name: Deploy to IONOS Server
+name: Deploy Next.js to IONOS Server
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout the code
-      - name: Checkout Code
+      # 1️⃣ Checkout code
+      - name: Checkout repo
         uses: actions/checkout@v3
 
-      # 2️⃣ Log in to Docker Hub
+      # 2️⃣ Setup Docker Buildx (IMPORTANT)
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      # 3️⃣ Login to Docker Hub
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_TOKEN }}
 
-      # 3️⃣ Build Docker image
-      - name: Build Docker Image
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/rankinventiv-site:latest .
+      # 4️⃣ Build & Push (OLD BEHAVIOR RESTORED)
+      - name: Build and Push Docker Image
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          push: true
+          tags: ${{ secrets.DOCKER_USERNAME }}/rankinventiv-site:latest
 
-      # 4️⃣ Push image to Docker Hub
-      - name: Push Docker Image
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/rankinventiv-site:latest
-
-      # 5️⃣ Deploy to server
+      # 5️⃣ Deploy to IONOS Server
       - name: Deploy on Server
         uses: appleboy/ssh-action@v0.1.7
         with:
           host: ${{ secrets.SERVER_IP }}
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
           script: |
-            # Stop and remove existing container if running
+            echo "${{ secrets.DOCKER_TOKEN }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+
+            docker pull ${{ secrets.DOCKER_USERNAME }}/rankinventiv-site:latest
+
             docker stop rankinventiv || true
             docker rm rankinventiv || true
 
-            # Pull the latest image
-            docker pull ${{ secrets.DOCKER_USERNAME }}/rankinventiv-site:latest
-
-            # Run new container
             docker run -d \
               --name rankinventiv \
               --restart always \
               -p 3000:3000 \
               -e NODE_ENV=production \
               ${{ secrets.DOCKER_USERNAME }}/rankinventiv-site:latest
-
-            # Clean up old dangling images
-            docker image prune -af
